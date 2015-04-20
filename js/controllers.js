@@ -1,9 +1,10 @@
-var gameApp = angular.module('gameApp', []);
+var gameControllers = angular.module('gameControllers', []);
 
 
-gameApp.controller('GameController', function GameController($scope, $http) {
+gameControllers.controller('Game1PracticeController', function GameController($scope, $http) {
     $http.get('js/game1.json').success(function (text) {
         $scope.words = text;
-
     });
 });
+
+
