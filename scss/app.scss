@@ -3,13 +3,14 @@ body {
 }
 
 .main {
-  padding-top: 25px;
-  color: white;
-
-  input {
-    color: black;
-
-  }
+  margin-top: 25px;
+  padding-top: 10px;
+  background-color: #ececec;
 
 }
 
+.word {
+  border: none;
+  margin-right: 1px;
+  background-color: #f7f7f7;
+}

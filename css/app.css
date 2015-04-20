@@ -1,14 +1,17 @@
-/*  ********************************************  ******************************************** */
 body {
   background-color: #343434;
 }
 
 .main {
-  padding-top: 25px;
-  color: white;
+  margin-top: 25px;
+  padding-top: 10px;
+  background-color: #ececec;
 }
-.main input {
-  color: black;
+
+.word {
+  border: none;
+  margin-right: 1px;
+  background-color: #f7f7f7;
 }
 
 /*# sourceMappingURL=app.css.map */
