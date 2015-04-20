@@ -14,4 +14,8 @@ body {
   background-color: #f7f7f7;
 }
 
+a {
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=app.css.map */
