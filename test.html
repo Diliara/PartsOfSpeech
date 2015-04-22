@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<p>
+    I am <span data-type="determines">a</span> die-hard <span data-type="non-count noun,singular noun">LEGO Star Wars</span> fan with <span data-type="determines">a</span> BSc in Interactive Arts + Technology (SIAT) from SFU. My <span data-type="count noun,plural noun">hobbies</span> include collecting minifigures, graphic t-shirts, and all things Yoda. I also love using my 27" iMac to create 2D and 3D film animation and interactive video games. As <span data-type="determines">a</span> Flash Character Animator on the LEGO Star Wars Creative Production team, I hope to 1) take my animation skills to the next level and become <span data-type="determines">a</span> 3D master, and 2) secure my status as the "coolest uncle EVER" to my 3 nieces and nephews!
+</p>
+<script>
+    function tokenizedWord(word, type) {
+        this.word = word;
+        this.type = type;
+    }
+    var paragraph = document.getElementsByTagName("p");
+    var words = [];
+    for(i = 0; i < paragraph[0].childNodes.length; i++) {
+        // check if the nodeValue and/or innerHTML is blank, omit if it is.
+        if (paragraph[0].childNodes[i].attributes) {
+            var word = paragraph[0].childNodes[i].innerHTML;
+            var type = paragraph[0].childNodes[i].getAttribute('data-type').split(',');
+            words.push(new tokenizedWord(word, type));
+        } else {
+            var segment = paragraph[0].childNodes[i].nodeValue.split(" ");
+            for(j = 0; j < segment.length; j++) {
+                words.push(new tokenizedWord(segment[j], ["wrong"]));
+            }
+        }
+    }
+    paragraph[0].innerHTML = "";
+    for(i = 0; i < words.length; i++) {
+        var tokenizedWord = words[i];
+        var node = document.createElement("a");
+        node.innerHTML = tokenizedWord.word + " ";
+        node.title = tokenizedWord.type[0];
+        if (tokenizedWord.type[1] != undefined) {
+            node.href  = "#" + tokenizedWord.type[1];
+        }
+        paragraph[0].appendChild(node);
+    }
+</script>
+</body>
+</html>
