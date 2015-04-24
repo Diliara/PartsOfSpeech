@@ -18,4 +18,12 @@ a {
   cursor: pointer;
 }
 
+.correct {
+  background-color: #ccfccc;
+}
+
+.wrong {
+  background-color: #fccdb6;
+}
+
 /*# sourceMappingURL=app.css.map */

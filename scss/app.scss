@@ -18,5 +18,12 @@ body {
 
 a {
   cursor: pointer;
+}
 
+.correct {
+  background-color: rgb(204, 252, 204);
+}
+
+.wrong {
+  background-color: rgb(252, 205, 182);
 }

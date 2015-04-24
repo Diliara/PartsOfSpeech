@@ -5,30 +5,36 @@
 
     },
     {
-        "wordItself": "am"
+        "wordItself": "am",
+        "partOfSpeech" : "undefined"
     },
     {
         "wordItself": "a",
         "partOfSpeech" : "determiner"
     },
     {
-        "wordItself": "die-hard"
+        "wordItself": "die-hard",
+        "partOfSpeech" : "undefined"
 
     },
     {
-        "wordItself": "LEGO"
+        "wordItself": "LEGO",
+        "partOfSpeech" : "undefined"
 
     },
     {
-        "wordItself": "Star Wars"
+        "wordItself": "Star Wars",
+        "partOfSpeech" : "undefined"
 
     },
     {
-        "wordItself": "fan"
+        "wordItself": "fan",
+        "partOfSpeech" : "undefined"
 
     },
     {
-        "wordItself": "with"
+        "wordItself": "with",
+        "partOfSpeech" : "undefined"
 
     },
     {
@@ -36,40 +42,344 @@
         "partOfSpeech" : "determiner"
     },
     {
-        "wordItself": "BSc"
+        "wordItself": "BSc",
+        "partOfSpeech" : "undefined"
 
     },
     {
-        "wordItself": "in"
+        "wordItself": "in",
+        "partOfSpeech" : "undefined"
 
     },
     {
-        "wordItself": "Interactive"
+        "wordItself": "Interactive",
+        "partOfSpeech" : "undefined"
 
     },
     {
-        "wordItself": "Arts"
+        "wordItself": "Arts",
+        "partOfSpeech" : "undefined"
 
     },
     {
-        "wordItself": "and"
+        "wordItself": "and",
+        "partOfSpeech" : "undefined"
 
     },
 
     {
-        "wordItself": "Technology"
+        "wordItself": "Technology",
+        "partOfSpeech" : "undefined"
 
     },
     {
-        "wordItself": "SIAT"
+        "wordItself": "(SIAT)",
+        "partOfSpeech" : "undefined"
 
     },
     {
-        "wordItself": "from"
+        "wordItself": "from",
+        "partOfSpeech" : "undefined"
 
     },
     {
-        "wordItself": "SFU"
-
+        "wordItself": "SFU.",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "My",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "hobbies",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "include",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "collecting",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "minifigures,",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "graphic",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "t-shirts,",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "and",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "all",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "thins",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "Yoda.",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "I",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "also",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "love",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "using",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "my",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "27inch",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "iMac",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "to",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "create",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "2D",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "and",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "3D",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "film",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "animation",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "interactive",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "video",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "games.",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "As",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "a",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "Flash",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "Character",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "Animator",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "on",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "the",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "LEGO",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "Star",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "Wars",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "Creative",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "Production",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "team,",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "I",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "hope",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "to",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "1)",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "take",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "my",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "animation",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "skills",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "to",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "the",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "next",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "level",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "and",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "become",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "a",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "3D",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "master,",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "and",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "2)",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "secure",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "my",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "status",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "as",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "the",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "'coolest",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "uncle",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "EVER'",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "to",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "my",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "3",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "nieces",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "and",
+        "partOfSpeech" : "undefined"
+    },
+    {
+        "wordItself": "nephews!",
+        "partOfSpeech" : "undefined"
     }
 ]
