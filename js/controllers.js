@@ -7,8 +7,6 @@ gameControllers.controller('Game1PracticeController', function GameController($s
     });
 
 
-
-
     //Looking for
     $scope.lookingFor = function (lookingForThis, theWordIs, wordIndex) {
 
@@ -21,6 +19,8 @@ gameControllers.controller('Game1PracticeController', function GameController($s
         }
     }
 
+
 });
+
 
 

@@ -13,3 +13,19 @@ gameApp.config(['$routeProvider', function ($routeProvider) {
             redirectTo: '/game1'
         });
 }]);
+
+
+gameApp.directive('tooltip', function(){
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs){
+            $(element).hover(function(){
+                // on mouseenter
+                $(element).tooltip('show');
+            }, function(){
+                // on mouseleave
+                $(element).tooltip('hide');
+            });
+        }
+    };
+});

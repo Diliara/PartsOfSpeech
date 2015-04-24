@@ -1,3 +1,9 @@
+$color-greyscale: #ececec;
+$color-darkest: #000000;
+$color-correct: #CCFCCC;
+$color-wrong: #FCCDB6;
+$color-btn: #f7f7f7;
+
 body {
   background-color: #343434;
 }
@@ -5,25 +11,43 @@ body {
 .main {
   margin-top: 25px;
   padding-top: 10px;
-  background-color: #ececec;
+  background-color: $color-greyscale;
 
 }
 
 .word {
   border: none;
-  margin-right: 1px;
-  background-color: #f7f7f7;
+  margin-right: 5px;
+  background-color: $color-btn;
 }
-
 
 a {
   cursor: pointer;
 }
 
 .correct {
-  background-color: rgb(204, 252, 204);
+  background-color: $color-correct;
+  pointer-events: none;
+  cursor: not-allowed;
+  &:hover {
+    background-color: $color-correct;
+  }
 }
 
 .wrong {
-  background-color: rgb(252, 205, 182);
+  pointer-events: none;
+  cursor: not-allowed;
+  background-color: $color-wrong;
+  &:hover {
+    background-color: $color-wrong;
+  }
+}
+
+.text {
+  .disabled {
+    background-color: $color-greyscale;
+    padding-left: 0;
+    padding-right: 0;
+    color: $color-darkest;
+  }
 }

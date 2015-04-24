@@ -10,7 +10,7 @@ body {
 
 .word {
   border: none;
-  margin-right: 1px;
+  margin-right: 5px;
   background-color: #f7f7f7;
 }
 
@@ -19,11 +19,28 @@ a {
 }
 
 .correct {
-  background-color: #ccfccc;
+  background-color: #CCFCCC;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.correct:hover {
+  background-color: #CCFCCC;
 }
 
 .wrong {
-  background-color: #fccdb6;
+  pointer-events: none;
+  cursor: not-allowed;
+  background-color: #FCCDB6;
+}
+.wrong:hover {
+  background-color: #FCCDB6;
+}
+
+.text .disabled {
+  background-color: #ececec;
+  padding-left: 0;
+  padding-right: 0;
+  color: #000000;
 }
 
 /*# sourceMappingURL=app.css.map */

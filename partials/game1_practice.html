@@ -2,11 +2,11 @@
     <h2>Practice</h2>
 
     <p>Task: Find 3 different
-        <a data-toggle="tooltip" title="A determiner is a word that introduces a noun such as 'a', 'the', 'this', 'these', 'those', 'some', 'many', 'my', 'our', or 'their'">determines</a> in the paragraph
+        <a data-toggle="tooltip" data-placement="right" title="A determiner is a word that introduces a noun such as 'a', 'the', 'this', 'these', 'those', 'some', 'many', 'my', 'our', or 'their'" tooltip>determines</a> in the paragraph
     </p>
 
-    <p>
-        <a data-partOfSpeech="{{ word.partOfSpeech }}" id="{{'word_' + $index}}" class="word btn btn-default" ng-repeat="word in words" ng-click="lookingFor('determiner', word.partOfSpeech, $index) ">{{word.wordItself}}</a>
+    <p class="text">
+        <a  data-partOfSpeech="{{ word.partOfSpeech }}" id="{{'word_' + $index}}" class="word btn btn-default {{word.btnStatus}}" ng-repeat="word in words" ng-click="lookingFor('determiner', word.partOfSpeech, $index) ">{{word.wordItself}}</a>
     </p>
 
 
