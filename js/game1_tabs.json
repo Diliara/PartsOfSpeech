@@ -1,0 +1,13 @@
+[
+
+    {
+        "title": "Singular Nouns",
+        "task": "Task: Find 3 different singular nouns in the paragraph",
+        "content": "Some text"
+    },
+    {
+        "title": "Plural Nouns",
+        "task": "Task: Find 3 different plural nouns in the paragraph",
+        "content": "Some text"
+    }
+]

@@ -11,7 +11,9 @@ body {
 .main {
   margin-top: 25px;
   padding-top: 10px;
+  padding-bottom: 10px;
   background-color: $color-greyscale;
+
 
 }
 
@@ -50,4 +52,28 @@ a {
     padding-right: 0;
     color: $color-darkest;
   }
+}
+
+
+
+.tab-content {
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-color: darken($color-greyscale, 10%) ;
+
+  .task-tab-content {
+    padding: 10px 0 0 4px;
+
+  }
+}
+
+.nav-tabs {
+  li.active {
+    a {
+     /* background-color: #E0EBFA; */
+
+    }
+
+  }
+
 }

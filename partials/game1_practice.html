@@ -1,15 +1,35 @@
 <div class="container main">
     <h2>Practice</h2>
 
-    <p>Task: Find 3 different
-        <a data-toggle="tooltip" data-placement="right" title="A determiner is a word that introduces a noun such as 'a', 'the', 'this', 'these', 'those', 'some', 'many', 'my', 'our', or 'their'" tooltip>determines</a> in the paragraph
-    </p>
 
-    <p class="text">
-        <a  data-partOfSpeech="{{ word.partOfSpeech }}" id="{{'word_' + $index}}" class="word btn btn-default {{word.btnStatus}}" ng-repeat="word in words" ng-click="lookingFor('determiner', word.partOfSpeech, $index) ">{{word.wordItself}}</a>
-    </p>
+    <div ng-controller="Game1PracticeTabsController">
 
 
+        <tabset>
+            <tab heading="Determines">
+                <div class="task-tab-content">
+                    <p>Task: Find 3 different
+                        <a data-toggle="tooltip" data-placement="right" title="A determiner is a word that introduces a noun such as 'a', 'the', 'this', 'these', 'those', 'some', 'many', 'my', 'our', or 'their'" tooltip>determines</a> in the paragraph
+                    </p>
+                    <p class="text">
+                        <a data-partOfSpeech="{{ word.partOfSpeech }}" id="{{'word_' + $index}}" class="word btn btn-default {{word.btnStatus}}" ng-repeat="word in words" ng-click="lookingFor('determiner', word.partOfSpeech, $index) ">{{word.wordItself}}</a>
+                    </p>
+                </div>
+            </tab>
+
+
+            <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
+                <div class="task-tab-content">
+                    <p>{{tab.task}} </p>
+                    <p>{{tab.content}}</p>
+                </div>
+            </tab>
+
+
+        </tabset>
+
+
+    </div>
 
 
 </div>
