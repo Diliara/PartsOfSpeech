@@ -1,26 +1,30 @@
 [
     {
         "title": "Determines",
-        "task": "Find 3 different determines in the paragraph.",
-        "partOfSpeech": "Determines",
+         "partOfSpeech": "determiner",
         "definition": "A determiner is a word that introduces a noun such as 'a', 'the', 'this', 'these', 'those', 'some', 'many', 'my', 'our', or 'their'",
-        "content": "Some text",
-        "counter": "3"
+         "counter": "3",
+        "taskNumber": 1
     },
     {
         "title": "Singular Nouns",
-        "task": "Find 3 different singular nouns in the paragraph",
-        "partOfSpeech": "Singular Nouns",
+         "partOfSpeech": "singularNoun",
         "definition": "Definition here...",
-        "content": "Some text",
-        "counter": "4"
+         "counter": "4",
+        "taskNumber": 2
     },
     {
         "title": "Plural Nouns",
-        "task": "Find 3 different plural nouns in the paragraph",
-        "partOfSpeech": "Plural Nouns",
+         "partOfSpeech": "pluralNoun",
         "definition": "Definition here...",
-        "content": "Some text",
-        "counter": "6"
+         "counter": "6",
+        "taskNumber": 3
+    },
+    {
+        "title": "Count Nouns",
+         "partOfSpeech": "countNoun",
+        "definition": "Definition here...",
+         "counter": "3",
+        "taskNumber": 4
     }
 ]

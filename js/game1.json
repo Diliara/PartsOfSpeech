@@ -110,7 +110,7 @@
     },
     {
         "wordItself": "hobbies",
-        "partOfSpeech": "undefined"
+        "partOfSpeech": "pluralNoun countNoun"
     },
     {
         "wordItself": "include",
@@ -122,7 +122,7 @@
     },
     {
         "wordItself": "minifigures,",
-        "partOfSpeech": "undefined"
+        "partOfSpeech": "pluralNoun"
     },
     {
         "wordItself": "graphic",
@@ -130,7 +130,7 @@
     },
     {
         "wordItself": "t-shirts,",
-        "partOfSpeech": "undefined"
+        "partOfSpeech": "pluralNouns"
     },
     {
         "wordItself": "and",
@@ -141,8 +141,8 @@
         "partOfSpeech": "undefined"
     },
     {
-        "wordItself": "thins",
-        "partOfSpeech": "undefined"
+        "wordItself": "things",
+        "partOfSpeech": "pluralNoun"
     },
     {
         "wordItself": "Yoda",
@@ -278,7 +278,7 @@
     },
     {
         "wordItself": "team,",
-        "partOfSpeech": "undefined"
+        "partOfSpeech": "singularNoun countNoun"
     },
     {
         "wordItself": "I",
@@ -327,7 +327,7 @@
     },
     {
         "wordItself": "level",
-        "partOfSpeech": "undefined"
+        "partOfSpeech": "singularNoun countNoun"
     },
     {
         "wordItself": "and",
