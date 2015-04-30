@@ -1,27 +1,14 @@
 'use strict';
 
-/**
- * Grunt Module
- */
 module.exports = function (grunt) {
 
-    /**
-     * Configuration
-     */
     grunt.initConfig({
-
-        /**
-         * Get package meta data
-         */
         pkg: grunt.file.readJSON('package.json'),
-
-        /**
-         * Sass
-         */
         sass: {
             dev: {
                 options: {
-                    style: 'expanded'                },
+                    style: 'expanded'
+                },
                 files: {
                     'css/app.css': 'scss/app.scss'
                 }
@@ -35,33 +22,18 @@ module.exports = function (grunt) {
                 }
             }
         },
-
-        /**
-         * Watch
-         */
         watch: {
-            options: {
-                livereload: true
-            },
-            sass: {
-                files: '/scss/{,*/}*.{scss,sass}',
+
+            css: {
+                files: 'scss/*.scss',
                 tasks: ['sass:dev']
             }
         }
-
-
     });
 
-    /**
-     * Load Grunt plugins
-     */
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-
-    /**
-     * Default task
-     * Run `grunt` on the command line
-     */
+    /* Default task. Run `grunt` on the command line */
     grunt.registerTask('default', [
         'sass:dev',
         'watch'

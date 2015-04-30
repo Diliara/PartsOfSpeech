@@ -27,12 +27,6 @@ body {
   margin-bottom: 0;
   padding-bottom: 20px;
 }
-.main .tab-content .task-tab-content .text .disabled {
-  background-color: #ececec;
-  padding-left: 0;
-  padding-right: 0;
-  color: #000000;
-}
 .main .tab-content .task-tab-content .text a {
   cursor: pointer;
 }
@@ -44,20 +38,28 @@ body {
   color: #000000;
 }
 .main .tab-content .task-tab-content .text .correct {
-  color: #CCFCCC;
+  color: #43D01C;
   pointer-events: none;
   cursor: not-allowed;
 }
 .main .tab-content .task-tab-content .text .correct:hover {
-  color: #CCFCCC;
+  color: #43D01C;
 }
 .main .tab-content .task-tab-content .text .wrong {
   pointer-events: none;
   cursor: not-allowed;
-  color: #FCCDB6;
+  color: #F02222;
 }
 .main .tab-content .task-tab-content .text .wrong:hover {
-  color: #FCCDB6;
+  color: #F02222;
+}
+.main .tab-content .task-tab-content .text .disabled {
+  color: #000000;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.main .tab-content .task-tab-content .text .disabled:hover {
+  text-decoration: none;
 }
 
 .nav-tabs li.active a {
