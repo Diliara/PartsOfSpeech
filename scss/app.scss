@@ -4,6 +4,7 @@ $color-darkest: #000000;
 $color-correct: #43D01C;
 $color-wrong: #F02222;
 $color-btn: #ffffff;
+$color-counter: #174BED;
 
 body {
   background-color: #343434;
@@ -12,7 +13,7 @@ body {
 .main {
   margin-top: 25px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   background-color: $color-greyscale;
 
   .tab-content {
@@ -21,7 +22,7 @@ body {
     border-color: darken($color-greyscale, 10%);
 
     .task-tab-content {
-      padding: 10px 0 0 15px;
+      padding: 10px 10px 20px 15px;
       background-color: $color-lightest;
       .part-of-speech {
         font-weight: bold;
@@ -33,7 +34,6 @@ body {
 
       .text {
         margin-bottom: 0;
-        padding-bottom: 20px;
         a {
           cursor: pointer;
         }
@@ -43,7 +43,6 @@ body {
           background-color: $color-btn;
           display: inline-block;
           color: $color-darkest;
-
 
         }
         .correct {
@@ -73,8 +72,26 @@ body {
 
       }
 
+      .counter {
+        text-align: right;
+        font-size: 30px;
+        margin-right: 10px;
+        background-color: $color-lightest;
+      }
+
+      .tab-counter {
+        color: $color-counter;
+
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
     }
   }
+
+
 
 }
 

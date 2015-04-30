@@ -5,7 +5,7 @@ body {
 .main {
   margin-top: 25px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   background-color: #ececec;
 }
 .main .tab-content {
@@ -14,7 +14,7 @@ body {
   border-color: lightgray;
 }
 .main .tab-content .task-tab-content {
-  padding: 10px 0 0 15px;
+  padding: 10px 10px 20px 15px;
   background-color: #ffffff;
 }
 .main .tab-content .task-tab-content .part-of-speech {
@@ -25,7 +25,6 @@ body {
 }
 .main .tab-content .task-tab-content .text {
   margin-bottom: 0;
-  padding-bottom: 20px;
 }
 .main .tab-content .task-tab-content .text a {
   cursor: pointer;
@@ -60,6 +59,18 @@ body {
 }
 .main .tab-content .task-tab-content .text .disabled:hover {
   text-decoration: none;
+}
+.main .tab-content .task-tab-content .counter {
+  text-align: right;
+  font-size: 30px;
+  margin-right: 10px;
+  background-color: #ffffff;
+}
+.main .tab-content .task-tab-content .tab-counter {
+  color: #174BED;
+}
+.main .tab-content .task-tab-content p:last-child {
+  margin-bottom: 0;
 }
 
 .nav-tabs li.active a {

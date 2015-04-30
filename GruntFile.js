@@ -1,9 +1,17 @@
-'use strict';
-
 module.exports = function (grunt) {
+
+    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        jshint: {
+            files: ['Gruntfile.js', 'js/*.js'],
+            options: {
+                globals: {
+                    jQuery: true
+                }
+            }
+        },
         sass: {
             dev: {
                 options: {
@@ -23,18 +31,23 @@ module.exports = function (grunt) {
             }
         },
         watch: {
-
             css: {
                 files: 'scss/*.scss',
                 tasks: ['sass:dev']
+            },
+            js: {
+                /* the same files I told JSHint to check */
+                files: ['<%= jshint.files %>'],
+                tasks: ['jshint']
             }
         }
     });
 
-    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+
 
     /* Default task. Run `grunt` on the command line */
     grunt.registerTask('default', [
+        'jshint',
         'sass:dev',
         'watch'
     ]);

@@ -2,9 +2,9 @@ var gameControllers = angular.module('gameControllers', ['ui.bootstrap']);
 
 gameControllers.controller('Game1PracticeTabsController', function ($scope, $http) {
 
-     $http.get('js/game1_tabs.json').success(function (tabsContent) {
-     $scope.tabs = tabsContent;
-     });
+    $http.get('js/game1_tabs.json').success(function (tabsContent) {
+        $scope.tabs = tabsContent;
+    });
 
 
 });
@@ -26,7 +26,7 @@ gameControllers.controller('Game1PracticeController', function ($scope, $http) {
         } else {
             $('#' + wordID).addClass('wrong');
         }
-    }
+    };
 
 
 });

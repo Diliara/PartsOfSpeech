@@ -9,13 +9,14 @@
 
             <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
                 <div class="task-tab-content">
-                    <h5>Tasks:</h5>
-                    <p>Find 3 different <span class="part-of-speech">{{ tab.partOfSpeech }}</span> in the paragraph.</p>
+                    <h5>Task:</h5>
+                    <p>Find <span class="tab-counter">{{ tab.counter }}</span> different <span class="part-of-speech">{{ tab.partOfSpeech }}</span> in the paragraph.</p>
                     <p class="part-of-speech-definition">{{tab.definition}}</p>
                     <hr>
                     <p class="text">
                         <a data-partOfSpeech="{{ word.partOfSpeech }}" id="{{'word_' + $index}}" class="word {{word.btnStatus}}" ng-repeat="word in words" ng-click="lookingFor('determiner', word.partOfSpeech, $index) ">{{word.wordItself}}</a>
                     </p>
+                    <p class="counter">0 / <span class="tab-counter">{{ tab.counter }}</span></p>
                 </div>
             </tab>
 
