@@ -8,49 +8,56 @@ body {
   padding-bottom: 10px;
   background-color: #ececec;
 }
-
-.word {
-  border: none;
-  margin-right: 5px;
-  background-color: #f7f7f7;
+.main .tab-content {
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-color: lightgray;
 }
-
-a {
-  cursor: pointer;
+.main .tab-content .task-tab-content {
+  padding: 10px 0 0 15px;
+  background-color: #ffffff;
 }
-
-.correct {
-  background-color: #CCFCCC;
-  pointer-events: none;
-  cursor: not-allowed;
+.main .tab-content .task-tab-content .part-of-speech {
+  font-weight: bold;
 }
-.correct:hover {
-  background-color: #CCFCCC;
+.main .tab-content .task-tab-content .part-of-speech-definition {
+  font-style: italic;
 }
-
-.wrong {
-  pointer-events: none;
-  cursor: not-allowed;
-  background-color: #FCCDB6;
+.main .tab-content .task-tab-content .text {
+  margin-bottom: 0;
+  padding-bottom: 20px;
 }
-.wrong:hover {
-  background-color: #FCCDB6;
-}
-
-.text .disabled {
+.main .tab-content .task-tab-content .text .disabled {
   background-color: #ececec;
   padding-left: 0;
   padding-right: 0;
   color: #000000;
 }
-
-.tab-content {
-  border-width: 0 1px 1px 1px;
-  border-style: solid;
-  border-color: lightgray;
+.main .tab-content .task-tab-content .text a {
+  cursor: pointer;
 }
-.tab-content .task-tab-content {
-  padding: 10px 0 0 4px;
+.main .tab-content .task-tab-content .text .word {
+  border: none;
+  padding: 4px;
+  background-color: #ffffff;
+  display: inline-block;
+  color: #000000;
+}
+.main .tab-content .task-tab-content .text .correct {
+  color: #CCFCCC;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.main .tab-content .task-tab-content .text .correct:hover {
+  color: #CCFCCC;
+}
+.main .tab-content .task-tab-content .text .wrong {
+  pointer-events: none;
+  cursor: not-allowed;
+  color: #FCCDB6;
+}
+.main .tab-content .task-tab-content .text .wrong:hover {
+  color: #FCCDB6;
 }
 
 .nav-tabs li.active a {

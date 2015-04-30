@@ -1,8 +1,9 @@
+$color-lightest: #ffffff;
 $color-greyscale: #ececec;
 $color-darkest: #000000;
 $color-correct: #CCFCCC;
 $color-wrong: #FCCDB6;
-$color-btn: #f7f7f7;
+$color-btn: #ffffff;
 
 body {
   background-color: #343434;
@@ -14,63 +15,71 @@ body {
   padding-bottom: 10px;
   background-color: $color-greyscale;
 
+  .tab-content {
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: darken($color-greyscale, 10%);
 
-}
+    .task-tab-content {
+      padding: 10px 0 0 15px;
+      background-color: $color-lightest;
+      .part-of-speech {
+        font-weight: bold;
+      }
+      .part-of-speech-definition {
+        font-style: italic;
 
-.word {
-  border: none;
-  margin-right: 5px;
-  background-color: $color-btn;
-}
+      }
 
-a {
-  cursor: pointer;
-}
+      .text {
+        margin-bottom: 0;
+        padding-bottom: 20px;
+        .disabled {
+          background-color: $color-greyscale;
+          padding-left: 0;
+          padding-right: 0;
+          color: $color-darkest;
+        }
+        a {
+          cursor: pointer;
+        }
+        .word {
+          border: none;
+          padding: 4px;
+          background-color: $color-btn;
+          display: inline-block;
+          color: $color-darkest;
 
-.correct {
-  background-color: $color-correct;
-  pointer-events: none;
-  cursor: not-allowed;
-  &:hover {
-    background-color: $color-correct;
+
+        }
+        .correct {
+          color: $color-correct;
+          pointer-events: none;
+          cursor: not-allowed;
+          &:hover {
+            color: $color-correct;
+          }
+        }
+        .wrong {
+          pointer-events: none;
+          cursor: not-allowed;
+          color: $color-wrong;
+          &:hover {
+            color: $color-wrong;
+          }
+        }
+
+      }
+
+    }
   }
-}
 
-.wrong {
-  pointer-events: none;
-  cursor: not-allowed;
-  background-color: $color-wrong;
-  &:hover {
-    background-color: $color-wrong;
-  }
-}
-
-.text {
-  .disabled {
-    background-color: $color-greyscale;
-    padding-left: 0;
-    padding-right: 0;
-    color: $color-darkest;
-  }
-}
-
-
-
-.tab-content {
-  border-width: 0 1px 1px 1px;
-  border-style: solid;
-  border-color: darken($color-greyscale, 10%) ;
-
-  .task-tab-content {
-    padding: 10px 0 0 4px;
-
-  }
 }
 
 .nav-tabs {
   li.active {
     a {
-     /* background-color: #E0EBFA; */
+      /* background-color: #E0EBFA; */
 
     }
 
