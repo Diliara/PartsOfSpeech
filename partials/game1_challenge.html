@@ -10,7 +10,7 @@
                     <p>Find <span class="tab-counter">{{ tab.counter }}</span> different <span class="part-of-speech">{{ tab.title }}</span> in the paragraph.</p>
                     <hr>
                     <p class="text">
-                        <a ng-repeat="word in words" id="{{'word_' + tab.taskNumber + '_' + $index}}" class="word {{word.btnStatus}}" data-partOfSpeech="{{ word.partOfSpeech }}" ng-click="lookingFor(tab.partOfSpeech, tab.taskNumber, word.partOfSpeech, $index) ">{{word.wordItself}}</a>
+                        <a ng-repeat="word in words" id="{{'word_' + tab.taskNumber + '_' + $index}}" class="word {{word.btnStatus}}" data-partOfSpeech="{{ word.partOfSpeech }}" ng-click="lookingFor(tab.title, tab.partOfSpeech, tab.taskNumber, word.partOfSpeech, $index) ">{{word.wordItself}}</a>
                     </p>
                     <p class="counter"><span class="current-score">0</span> / <span class="tab-counter">{{ tab.counter }}</span></p>
                 </div>

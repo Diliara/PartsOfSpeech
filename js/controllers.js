@@ -17,7 +17,7 @@ gameControllers.controller('Game1PracticeController', function ($scope, $http) {
     window.scoreCounter = 0;
 
     //Looking for
-    $scope.lookingFor = function (lookingForThis, taskNumber, theWordIs, wordIndex) {
+    $scope.lookingFor = function (partOfSpeechTitle, lookingForThis, taskNumber, theWordIs, wordIndex) {
 
         wordID = "word_" + taskNumber + "_" + wordIndex;
         wordIDElem = $('#' + wordID);
@@ -29,15 +29,26 @@ gameControllers.controller('Game1PracticeController', function ($scope, $http) {
 
         if (whereAreWeLooking.indexOf(lookingForPartOfSpeech) != -1) {
 
-            scoreCounter = scoreCounter + 1;
-            /* console.log("scoreCounter: " + scoreCounter); */
-            wordIDElem.closest('.task-tab-content').find('.current-score').text(scoreCounter);
-
             correctText = wordIDElem.text();
 
             wordIDElem.closest('.task-tab-content').find('a').filter(function () {
                 return $(this).text().toLowerCase() === correctText.toLowerCase();
             }).addClass('correct');
+
+            scoreCounter = scoreCounter + 1;
+            /* console.log("scoreCounter: " + scoreCounter); */
+            wordIDElem.closest('.task-tab-content').find('.current-score').text(scoreCounter);
+
+            outOfNumber = parseInt(wordIDElem.closest('.task-tab-content').find('.counter .tab-counter').text());
+
+            /* console.log("found: " + scoreCounter + "\n out of: " + outOfNumber); */
+
+            if (scoreCounter == outOfNumber) {
+                alert("Congratulations! You found all " + outOfNumber + " " + partOfSpeechTitle + "!" );
+
+            }
+
+
 
 
         } else {
@@ -48,7 +59,6 @@ gameControllers.controller('Game1PracticeController', function ($scope, $http) {
             }).addClass('wrong');
         }
     };
-
     $scope.changeTab = function () {
 
         //reset level - reset score, clean up the paragraph.
@@ -80,7 +90,7 @@ gameControllers.controller('Game1ChallengeController', function ($scope, $http) 
     window.scoreCounter = 0;
 
     //Looking for
-    $scope.lookingFor = function (lookingForThis, taskNumber, theWordIs, wordIndex) {
+    $scope.lookingFor = function (partOfSpeechTitle, lookingForThis, taskNumber, theWordIs, wordIndex) {
 
         wordID = "word_" + taskNumber + "_" + wordIndex;
         wordIDElem = $('#' + wordID);
@@ -92,15 +102,24 @@ gameControllers.controller('Game1ChallengeController', function ($scope, $http) 
 
         if (whereAreWeLooking.indexOf(lookingForPartOfSpeech) != -1) {
 
-            scoreCounter = scoreCounter + 1;
-            /* console.log("scoreCounter: " + scoreCounter); */
-            wordIDElem.closest('.task-tab-content').find('.current-score').text(scoreCounter);
-
             correctText = wordIDElem.text();
 
             wordIDElem.closest('.task-tab-content').find('a').filter(function () {
                 return $(this).text().toLowerCase() === correctText.toLowerCase();
             }).addClass('correct');
+
+            scoreCounter = scoreCounter + 1;
+            /* console.log("scoreCounter: " + scoreCounter); */
+            wordIDElem.closest('.task-tab-content').find('.current-score').text(scoreCounter);
+
+            outOfNumber = parseInt(wordIDElem.closest('.task-tab-content').find('.counter .tab-counter').text());
+            /* console.log("found: " + scoreCounter + "\n out of: " + outOfNumber); */
+
+            if (scoreCounter == outOfNumber) {
+                alert("Congratulations! You found all " + outOfNumber + " " + partOfSpeechTitle + "!" );
+
+            }
+
 
 
         } else {
