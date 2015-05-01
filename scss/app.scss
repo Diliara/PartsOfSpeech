@@ -47,6 +47,7 @@ body {
         }
         .correct {
           color: $color-correct;
+          background-color: transparentize($color-correct, 0.95);
           pointer-events: none;
           cursor: not-allowed;
           &:hover {
@@ -57,6 +58,8 @@ body {
           pointer-events: none;
           cursor: not-allowed;
           color: $color-wrong;
+          background-color: transparentize($color-wrong, 0.95);
+
           &:hover {
             color: $color-wrong;
           }
@@ -89,19 +92,6 @@ body {
       }
 
     }
-  }
-
-
-
-}
-
-.nav-tabs {
-  li.active {
-    a {
-      /* background-color: #E0EBFA; */
-
-    }
-
   }
 
 }

@@ -20,25 +20,29 @@ gameControllers.controller('Game1PracticeController', function ($scope, $http) {
     $scope.lookingFor = function (lookingForThis, taskNumber, theWordIs, wordIndex) {
 
         wordID = "word_" + taskNumber + "_" + wordIndex;
+        wordIDElem = $('#' + wordID);
 
         lookingForPartOfSpeech = lookingForThis.toLowerCase();
         whereAreWeLooking = theWordIs.toLowerCase();
 
-        console.log ("lookingForPartOfSpeech: " + lookingForPartOfSpeech + '\n' + "whereAreWeLooking: " + whereAreWeLooking);
+        /* console.log("lookingForPartOfSpeech: " + lookingForPartOfSpeech + '\n' + "whereAreWeLooking: " + whereAreWeLooking); */
+
 
         if (whereAreWeLooking.indexOf(lookingForPartOfSpeech) != -1) {
-            $('#' + wordID).addClass('correct');
 
-            /* find the html text for this ID & set all a tags that have the same text to correct/wrong class
-            htmlText = $('#' + wordID).text();
-            console.log ("htmlText: " + htmlText);
-            foundIn = $('a:contains(htmlText)');
-            console.log ("foundIn: " + foundIn);
-            foundIn.addClass('correct');
-            */
+            correctText = wordIDElem.text();
+
+            wordIDElem.closest('.text').children('a').filter(function () {
+                return $(this).text().toLowerCase() === correctText.toLowerCase();
+            }).addClass('correct');
+
 
         } else {
-            $('#' + wordID).addClass('wrong');
+            wrongText = wordIDElem.text();
+
+            wordIDElem.closest('.text').children('a').filter(function () {
+                return $(this).text().toLowerCase() === wrongText.toLowerCase();
+            }).addClass('wrong');
         }
     };
 

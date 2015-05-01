@@ -38,6 +38,7 @@ body {
 }
 .main .tab-content .task-tab-content .text .correct {
   color: #43D01C;
+  background-color: rgba(67, 208, 28, 0.05);
   pointer-events: none;
   cursor: not-allowed;
 }
@@ -48,6 +49,7 @@ body {
   pointer-events: none;
   cursor: not-allowed;
   color: #F02222;
+  background-color: rgba(240, 34, 34, 0.05);
 }
 .main .tab-content .task-tab-content .text .wrong:hover {
   color: #F02222;
@@ -71,10 +73,6 @@ body {
 }
 .main .tab-content .task-tab-content p:last-child {
   margin-bottom: 0;
-}
-
-.nav-tabs li.active a {
-  /* background-color: #E0EBFA; */
 }
 
 /*# sourceMappingURL=app.css.map */
