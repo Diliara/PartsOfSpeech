@@ -15,6 +15,7 @@ gameControllers.controller('Game1PracticeController', function ($scope, $http) {
         $scope.words = text;
     });
 
+    window.scoreCounter = 0;
 
     //Looking for
     $scope.lookingFor = function (lookingForThis, taskNumber, theWordIs, wordIndex) {
@@ -27,12 +28,15 @@ gameControllers.controller('Game1PracticeController', function ($scope, $http) {
 
         /* console.log("lookingForPartOfSpeech: " + lookingForPartOfSpeech + '\n' + "whereAreWeLooking: " + whereAreWeLooking); */
 
-
         if (whereAreWeLooking.indexOf(lookingForPartOfSpeech) != -1) {
+
+            scoreCounter = scoreCounter + 1;
+            console.log("scoreCounter: " + scoreCounter);
+            wordIDElem.closest('.task-tab-content').find('.current-score').text(scoreCounter);
 
             correctText = wordIDElem.text();
 
-            wordIDElem.closest('.text').children('a').filter(function () {
+            wordIDElem.closest('.task-tab-content').find('a').filter(function () {
                 return $(this).text().toLowerCase() === correctText.toLowerCase();
             }).addClass('correct');
 
@@ -40,11 +44,21 @@ gameControllers.controller('Game1PracticeController', function ($scope, $http) {
         } else {
             wrongText = wordIDElem.text();
 
-            wordIDElem.closest('.text').children('a').filter(function () {
+            wordIDElem.closest('.task-tab-content').find('a').filter(function () {
                 return $(this).text().toLowerCase() === wrongText.toLowerCase();
             }).addClass('wrong');
         }
     };
+
+    $scope.changeTab = function () {
+
+        //reset level - reset score, clean up the paragraph.
+        window.scoreCounter = 0;
+        $('a').removeClass('correct').removeClass('wrong');
+        $('.current-score').text(scoreCounter);
+       
+
+    }
 
 
 });

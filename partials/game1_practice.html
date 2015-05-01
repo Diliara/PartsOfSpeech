@@ -7,7 +7,7 @@
 
         <tabset>
 
-            <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
+            <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled" ng-click="changeTab()">
                 <div class="task-tab-content">
                     <h5>Task:</h5>
 
@@ -17,7 +17,7 @@
                     <p class="text">
                         <a ng-repeat="word in words" id="{{'word_' + tab.taskNumber + '_' + $index}}" class="word {{word.btnStatus}}" data-partOfSpeech="{{ word.partOfSpeech }}"  ng-click="lookingFor(tab.partOfSpeech, tab.taskNumber, word.partOfSpeech, $index) ">{{word.wordItself}}</a>
                     </p>
-                    <p class="counter">0 / <span class="tab-counter">{{ tab.counter }}</span></p>
+                    <p class="counter"><span class="current-score">0</span> / <span class="tab-counter">{{ tab.counter }}</span></p>
                 </div>
             </tab>
 
