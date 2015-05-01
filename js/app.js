@@ -9,6 +9,13 @@ gameApp.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'partials/game1_practice.html',
             controller: 'Game1PracticeController'
         }).
+        when('/home', {
+            redirectTo: '/game1'
+        }).
+        when('/game1_challenge', {
+            templateUrl: 'partials/game1_challenge.html',
+            controller: 'Game1ChallengeController'
+        }).
         otherwise({
             redirectTo: '/game1'
         });

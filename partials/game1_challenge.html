@@ -1,14 +1,13 @@
 <div class="container main">
-    <h2>Practice</h2>
+    <h2>Challenge</h2>
 
-    <div ng-controller="Game1PracticeTabsController" class="game-area">
+    <div ng-controller="Game1ChallengeTabsController" class="game-area">
         <tabset>
             <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled" ng-click="changeTab()">
                 <div class="task-tab-content">
                     <h5>Task:</h5>
 
                     <p>Find <span class="tab-counter">{{ tab.counter }}</span> different <span class="part-of-speech">{{ tab.title }}</span> in the paragraph.</p>
-                    <p class="part-of-speech-definition">{{tab.definition}}</p>
                     <hr>
                     <p class="text">
                         <a ng-repeat="word in words" id="{{'word_' + tab.taskNumber + '_' + $index}}" class="word {{word.btnStatus}}" data-partOfSpeech="{{ word.partOfSpeech }}" ng-click="lookingFor(tab.partOfSpeech, tab.taskNumber, word.partOfSpeech, $index) ">{{word.wordItself}}</a>
