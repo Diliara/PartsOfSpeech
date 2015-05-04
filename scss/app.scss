@@ -24,6 +24,11 @@ body {
   .game-area {
     margin-bottom: 10px;
 
+    .start-challenge {
+      display: none;
+
+    }
+
     .timer {
       text-align: right;
       display: block;
