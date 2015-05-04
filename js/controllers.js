@@ -78,9 +78,9 @@ gameControllers.controller('Game1ChallengeTabsController', function ($scope, $ht
     });
 
 
-    $scope.startChallenge = function () {
-        console.log("here");
-        $('.start-challenge').show();
+    $scope.startChallenge = function (tabID) {
+        console.log(tabID);
+        $('#' + tabID + ' .start-challenge').slideDown();
     };
 
 
