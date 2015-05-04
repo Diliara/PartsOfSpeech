@@ -13,10 +13,15 @@
                 </p>
 
                 <div>
-                    <button class="btn btn-primary" ng-click="startChallenge('tab_' + tab.taskNumber)">Start</button>
+                    <button class="btn btn-primary btn-start" ng-click="startChallenge('tab_' + tab.taskNumber, tab.timer)">Start</button>
                     <div class="start-challenge">
 
-                        <p class="timer" timer-plugin="{css_class: 'countdown', always_show_days: false, with_labels: true, with_seconds: true, with_separators: true, label_dd: '', label_hh: '', label_mm: 'M', label_ss: 'S', separator: ' ', separator_days: ',' }">0h 3m 0s</p>
+                      <!--  <p class="timer" timer-plugin="{css_class: 'countdown', always_show_days: false, with_labels: true, with_seconds: true, with_separators: true, label_dd: '', label_hh: '', label_mm: 'M', label_ss: 'S', separator: ' ', separator_days: ',' }">0h 3m 0s</p>
+-->
+                        <div class="set-timer"></div>
+
+                        <!-- <p class="timer">{{ tab.timer }}</p>-->
+
 
                         <p class="text">
                             <a ng-repeat="word in words" id="{{'word_' + tab.taskNumber + '_' + $index}}" class="word {{word.btnStatus}}" data-partOfSpeech="{{ word.partOfSpeech }}" ng-click="lookingFor(tab.title, tab.partOfSpeech, tab.taskNumber, word.partOfSpeech, $index) ">{{word.wordItself}}</a>

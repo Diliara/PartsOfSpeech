@@ -1,6 +1,7 @@
 /*
  * jQuery Countdown - v1.2.4
  * http://github.com/kemar/jquery.countdown
+ * http://www.jqueryscript.net/time-clock/Easy-Styleable-jQuery-Countdown-Plugin-Countdown-js.html
  * Licensed MIT
  */
 
