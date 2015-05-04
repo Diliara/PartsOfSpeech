@@ -44,11 +44,9 @@ gameControllers.controller('Game1PracticeController', function ($scope, $http) {
             /* console.log("found: " + scoreCounter + "\n out of: " + outOfNumber); */
 
             if (scoreCounter == outOfNumber) {
-                alert("Congratulations! You found all " + outOfNumber + " " + partOfSpeechTitle + "!" );
+                alert("Congratulations! You found all " + outOfNumber + " " + partOfSpeechTitle + "!");
 
             }
-
-
 
 
         } else {
@@ -78,6 +76,13 @@ gameControllers.controller('Game1ChallengeTabsController', function ($scope, $ht
     $http.get('js/game1_tabs.json').success(function (tabsContent) {
         $scope.tabs = tabsContent;
     });
+
+    /*
+     $scope.start = function (duration) {
+     $('.set-timer').append("<p class='timer' timer-plugin=\"" + "{css_class: \'countdown\', always_show_days: false, with_labels: true, with_seconds: true, with_separators: true, label_dd: '', label_hh: '', label_mm: 'M', label_ss: 'S', separator: ' ', separator_days: ',' }\">" + duration + "</p>");
+     console.log(duration);
+     };
+     */
 
 
 });
@@ -116,10 +121,9 @@ gameControllers.controller('Game1ChallengeController', function ($scope, $http) 
             /* console.log("found: " + scoreCounter + "\n out of: " + outOfNumber); */
 
             if (scoreCounter == outOfNumber) {
-                alert("Congratulations! You found all " + outOfNumber + " " + partOfSpeechTitle + "!" );
+                alert("Congratulations! You found all " + outOfNumber + " " + partOfSpeechTitle + "!");
 
             }
-
 
 
         } else {

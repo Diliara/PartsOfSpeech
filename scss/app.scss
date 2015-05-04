@@ -5,6 +5,7 @@ $color-correct: #43D01C;
 $color-wrong: #F02222;
 $color-btn: #ffffff;
 $color-counter: #174BED;
+$color-timer: #fdffe3;
 
 body {
   background-color: #343434;
@@ -16,87 +17,132 @@ body {
   padding-bottom: 20px;
   background-color: $color-greyscale;
 
+
+
+
+
   .game-area {
     margin-bottom: 10px;
 
-  }
+    .timer {
+      text-align: right;
+      display: block;
 
-  .tab-content {
-    border-width: 0 1px 1px 1px;
-    border-style: solid;
-    border-color: darken($color-greyscale, 10%);
+      .countdown {
+        background-color: transparentize($color-timer, 0.5);
+        padding: 20px 1px 10px 10px;
+        border: 1px solid #color-greyscale;
+        border-radius: 8px;
 
-    .task-tab-content {
-      padding: 10px 10px 20px 15px;
-      background-color: $color-lightest;
-      .part-of-speech {
-        font-weight: bold;
-      }
-      .part-of-speech-definition {
-        font-style: italic;
+        .item {
+          font-size: 27px;
 
-      }
-
-      .text {
-        margin-bottom: 0;
-        a {
-          cursor: pointer;
         }
-        .word {
-          border: none;
-          padding: 4px;
-          background-color: $color-btn;
-          display: inline-block;
+
+        .item-hh {
+          display: none;
+        }
+
+        .label {
+          text-transform: uppercase;
           color: $color-darkest;
+          font-size: 15px;
+          font-weight: normal;
 
         }
-        .correct {
-          color: $color-correct;
-          background-color: transparentize($color-correct, 0.95);
-          pointer-events: none;
-          cursor: not-allowed;
-          &:hover {
-            color: $color-correct;
-          }
-        }
-        .wrong {
-          pointer-events: none;
-          cursor: not-allowed;
-          color: $color-wrong;
-          background-color: transparentize($color-wrong, 0.95);
 
-          &:hover {
-            color: $color-wrong;
-          }
-        }
-        .disabled {
-          color: $color-darkest;
-          pointer-events: none;
-          cursor: not-allowed;
-          &:hover {
-            text-decoration: none;
-          }
-        }
-
-      }
-
-      .counter {
-        text-align: right;
-        font-size: 30px;
-        margin-right: 10px;
-        background-color: $color-lightest;
-      }
-
-      .tab-counter {
-        color: $color-counter;
-
-      }
-
-      p:last-child {
-        margin-bottom: 0;
       }
 
     }
+
+
+    .tab-content {
+      border-width: 0 1px 1px 1px;
+      border-style: solid;
+      border-color: darken($color-greyscale, 10%);
+
+
+
+
+      .task-tab-content {
+        padding: 10px 10px 20px 15px;
+        background-color: $color-lightest;
+
+        .challenge {
+          font-weight: bold;
+
+        }
+
+        .part-of-speech {
+          font-weight: bold;
+        }
+        .part-of-speech-definition {
+          font-style: italic;
+
+        }
+
+        .text {
+          margin-bottom: 0;
+          a {
+            cursor: pointer;
+          }
+          .word {
+            border: none;
+            padding: 4px;
+            background-color: $color-btn;
+            display: inline-block;
+            color: $color-darkest;
+
+          }
+          .correct {
+            color: $color-correct;
+            background-color: transparentize($color-correct, 0.95);
+            pointer-events: none;
+            cursor: not-allowed;
+            &:hover {
+              color: $color-correct;
+            }
+          }
+          .wrong {
+            pointer-events: none;
+            cursor: not-allowed;
+            color: $color-wrong;
+            background-color: transparentize($color-wrong, 0.95);
+
+            &:hover {
+              color: $color-wrong;
+            }
+          }
+          .disabled {
+            color: $color-darkest;
+            pointer-events: none;
+            cursor: not-allowed;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+
+        }
+
+        .counter {
+          text-align: right;
+          font-size: 30px;
+          margin-right: 10px;
+          background-color: $color-lightest;
+        }
+
+        .tab-counter {
+          color: $color-counter;
+
+        }
+
+        p:last-child {
+          margin-bottom: 0;
+        }
+
+      }
+    }
+
   }
 
 }

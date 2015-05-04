@@ -4,27 +4,41 @@
         "partOfSpeech": "determiner",
         "definition": "A determiner is a word that introduces a noun such as 'a', 'the', 'this', 'these', 'those', 'some', 'many', 'my', 'our', or 'their'",
         "counter": "3",
-        "taskNumber": 1
+        "taskNumber": 1,
+        "challenge": "in 1 minute",
+        "timer": "0h 1m 0s",
+        "min": 1
     },
     {
         "title": "Singular Nouns",
         "partOfSpeech": "singularNoun",
         "definition": "Definition here...",
         "counter": "4",
-        "taskNumber": 2
+        "taskNumber": 2,
+        "challenge": "in 3 minutes",
+        "timer": "0h 2m 0s"
+
     },
     {
         "title": "Plural Nouns",
         "partOfSpeech": "pluralNoun",
         "definition": "Definition here...",
         "counter": "6",
-        "taskNumber": 3
+        "taskNumber": 3,
+        "challenge": "in 3 minutes",
+        "timer": "0h 3m 0s"
+
+
     },
     {
         "title": "Count Nouns",
         "partOfSpeech": "countNoun",
         "definition": "Definition here...",
         "counter": "3",
-        "taskNumber": 4
+        "taskNumber": 4,
+        "challenge": "in 3 minutes",
+        "timer": "0h 4m 0s"
+
+
     }
 ]
