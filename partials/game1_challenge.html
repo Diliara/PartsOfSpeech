@@ -4,7 +4,7 @@
 
     <tabset class="game-area">
         <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled" ng-click="changeTab()">
-            <div class="task-tab-content"  id="{{'tab_' + tab.taskNumber}}">
+            <div class="task-tab-content" id="{{'tab_' + tab.taskNumber}}">
 
                 <h5>Task:</h5>
 
@@ -16,12 +16,9 @@
                     <button class="btn btn-primary btn-start" ng-click="startChallenge('tab_' + tab.taskNumber, tab.timer)">Start</button>
                     <div class="start-challenge">
 
-                      <!--  <p class="timer" timer-plugin="{css_class: 'countdown', always_show_days: false, with_labels: true, with_seconds: true, with_separators: true, label_dd: '', label_hh: '', label_mm: 'M', label_ss: 'S', separator: ' ', separator_days: ',' }">0h 3m 0s</p>
--->
-                        <div class="set-timer"></div>
-
-                        <!-- <p class="timer">{{ tab.timer }}</p>-->
-
+                        <div class="set-timer">
+                            <p class="timer"></p>
+                        </div>
 
                         <p class="text">
                             <a ng-repeat="word in words" id="{{'word_' + tab.taskNumber + '_' + $index}}" class="word {{word.btnStatus}}" data-partOfSpeech="{{ word.partOfSpeech }}" ng-click="lookingFor(tab.title, tab.partOfSpeech, tab.taskNumber, word.partOfSpeech, $index) ">{{word.wordItself}}</a>
