@@ -21,7 +21,7 @@ body {
 .main .game-area .timer .countdown {
   background-color: rgba(253, 255, 227, 0.5);
   padding: 20px 1px 10px 10px;
-  border: 1px solid #color-greyscale;
+  border: 1px solid #ececec;
   border-radius: 8px;
 }
 .main .game-area .timer .countdown .item {

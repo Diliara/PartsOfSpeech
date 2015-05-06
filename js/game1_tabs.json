@@ -40,5 +40,32 @@
         "timer": "0h 4m 0s"
 
 
+    },
+    {
+        "title": "Non-Count Nouns",
+        "partOfSpeech": "nonCountNoun",
+        "definition": "Definition here...",
+        "counter": "3",
+        "taskNumber": 4,
+        "challenge": "in 3 minutes",
+        "timer": "0h 4m 0s"
+    },
+    {
+        "title": "Pronouns",
+        "partOfSpeech": "pronoun",
+        "definition": "Definition here...",
+        "counter": "3",
+        "taskNumber": 4,
+        "challenge": "in 3 minutes",
+        "timer": "0h 4m 0s"
+    },
+    {
+        "title": "Vague Pronouns",
+        "partOfSpeech": "vaguePronoun",
+        "definition": "Definition here...",
+        "counter": "3",
+        "taskNumber": 4,
+        "challenge": "in 3 minutes",
+        "timer": "0h 4m 0s"
     }
 ]
