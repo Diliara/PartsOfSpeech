@@ -46,7 +46,7 @@
         "partOfSpeech": "nonCountNoun",
         "definition": "Definition here...",
         "counter": "3",
-        "taskNumber": 4,
+        "taskNumber": 5,
         "challenge": "in 3 minutes",
         "timer": "0h 4m 0s"
     },
@@ -55,7 +55,7 @@
         "partOfSpeech": "pronoun",
         "definition": "Definition here...",
         "counter": "3",
-        "taskNumber": 4,
+        "taskNumber": 6,
         "challenge": "in 3 minutes",
         "timer": "0h 4m 0s"
     },
@@ -64,7 +64,7 @@
         "partOfSpeech": "vaguePronoun",
         "definition": "Definition here...",
         "counter": "3",
-        "taskNumber": 4,
+        "taskNumber": 7,
         "challenge": "in 3 minutes",
         "timer": "0h 4m 0s"
     }
