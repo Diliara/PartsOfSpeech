@@ -1,36 +1,37 @@
 <div class="container main" ng-controller="Game1ChallengeTabsController">
     <h2>Challenge</h2>
 
+    <div class="game-area">
+        <tabset class="tabs-left">
+            <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled" ng-click="changeTab()">
+                <div class="task-tab-content" id="{{'tab_' + tab.taskNumber}}">
 
-    <tabset class="game-area">
-        <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled" ng-click="changeTab()">
-            <div class="task-tab-content" id="{{'tab_' + tab.taskNumber}}">
+                    <h5>Task:</h5>
 
-                <h5>Task:</h5>
+                    <p>Find <span class="tab-counter">{{ tab.counter }}</span> different
+                        <span class="part-of-speech">{{ tab.title }}</span> in the paragraph <span class="challenge">{{ tab.challenge }}</span>.
+                    </p>
 
-                <p>Find <span class="tab-counter">{{ tab.counter }}</span> different
-                    <span class="part-of-speech">{{ tab.title }}</span> in the paragraph <span class="challenge">{{ tab.challenge }}</span>.
-                </p>
+                    <div>
+                        <button class="btn btn-primary btn-start" ng-click="startChallenge('tab_' + tab.taskNumber, tab.timer)">Start</button>
+                        <div class="start-challenge">
 
-                <div>
-                    <button class="btn btn-primary btn-start" ng-click="startChallenge('tab_' + tab.taskNumber, tab.timer)">Start</button>
-                    <div class="start-challenge">
+                            <div class="set-timer">
+                                <p class="timer"></p>
+                            </div>
 
-                        <div class="set-timer">
-                            <p class="timer"></p>
+                            <p class="text">
+                                <a ng-repeat="word in words" id="{{'word_' + tab.taskNumber + '_' + $index}}" class="word {{word.btnStatus}}" data-partOfSpeech="{{ word.partOfSpeech }}" ng-click="lookingFor(tab.title, tab.partOfSpeech, tab.taskNumber, word.partOfSpeech, $index) ">{{word.wordItself}}</a>
+                            </p>
+
+                            <p class="counter"><span class="current-score">0</span> / <span class="tab-counter">{{ tab.counter }}</span></p>
+
                         </div>
-
-                        <p class="text">
-                            <a ng-repeat="word in words" id="{{'word_' + tab.taskNumber + '_' + $index}}" class="word {{word.btnStatus}}" data-partOfSpeech="{{ word.partOfSpeech }}" ng-click="lookingFor(tab.title, tab.partOfSpeech, tab.taskNumber, word.partOfSpeech, $index) ">{{word.wordItself}}</a>
-                        </p>
-
-                        <p class="counter"><span class="current-score">0</span> / <span class="tab-counter">{{ tab.counter }}</span></p>
-
                     </div>
                 </div>
-            </div>
-        </tab>
-    </tabset>
+            </tab>
+        </tabset>
+    </div>
 
     <p><a class="btn btn-default" href="#/home">Home</a></p>
 

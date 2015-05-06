@@ -1,7 +1,7 @@
-<div class="container main">
+<div class="container main" ng-controller="Game1PracticeTabsController">
     <h2>Practice</h2>
 
-    <div ng-controller="Game1PracticeTabsController" class="game-area">
+    <div class="game-area">
         <tabset class="tabs-left">
             <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled" ng-click="changeTab()">
                 <div class="task-tab-content">
