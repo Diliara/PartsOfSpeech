@@ -1,6 +1,8 @@
 $color-lightest: #ffffff;
 $color-greyscale: #ececec;
 $color-darkest: #000000;
+
+$color-background: #343434;
 $color-correct: #43D01C;
 $color-wrong: #F02222;
 $color-btn: #ffffff;
@@ -8,7 +10,7 @@ $color-counter: #174BED;
 $color-timer: #fdffe3;
 
 body {
-  background-color: #343434;
+  background-color: $color-background;
 }
 
 .main {
@@ -56,94 +58,188 @@ body {
 
     }
 
+  }
 
-    .tab-content {
-      border-width: 0 1px 1px 1px;
-      border-style: solid;
-      border-color: darken($color-greyscale, 10%);
+}
 
+/* Default Setup for Tabs */
 
+.tab-content {
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-color: darken($color-greyscale, 10%);
 
+  .task-tab-content {
+    padding: 10px 10px 20px 15px;
+    background-color: $color-lightest;
 
-      .task-tab-content {
-        padding: 10px 10px 20px 15px;
-        background-color: $color-lightest;
+    .challenge {
+      font-weight: bold;
 
-        .challenge {
-          font-weight: bold;
+    }
 
-        }
+    .part-of-speech {
+      font-weight: bold;
+    }
+    .part-of-speech-definition {
+      font-style: italic;
 
-        .part-of-speech {
-          font-weight: bold;
-        }
-        .part-of-speech-definition {
-          font-style: italic;
+    }
 
-        }
-
-        .text {
-          margin-bottom: 0;
-          a {
-            cursor: pointer;
-          }
-          .word {
-            border: none;
-            padding: 4px;
-            background-color: $color-btn;
-            display: inline-block;
-            color: $color-darkest;
-
-          }
-          .correct {
-            color: $color-correct;
-            background-color: transparentize($color-correct, 0.95);
-            pointer-events: none;
-            cursor: not-allowed;
-            &:hover {
-              color: $color-correct;
-            }
-          }
-          .wrong {
-            pointer-events: none;
-            cursor: not-allowed;
-            color: $color-wrong;
-            background-color: transparentize($color-wrong, 0.95);
-
-            &:hover {
-              color: $color-wrong;
-            }
-          }
-          .disabled {
-            color: $color-darkest;
-            pointer-events: none;
-            cursor: not-allowed;
-            &:hover {
-              text-decoration: none;
-            }
-          }
-
-        }
-
-        .counter {
-          text-align: right;
-          font-size: 30px;
-          margin-right: 10px;
-          background-color: $color-lightest;
-        }
-
-        .tab-counter {
-          color: $color-counter;
-
-        }
-
-        p:last-child {
-          margin-bottom: 0;
-        }
+    .text {
+      margin-bottom: 0;
+      a {
+        cursor: pointer;
+      }
+      .word {
+        border: none;
+        padding: 4px;
+        background-color: $color-btn;
+        display: inline-block;
+        color: $color-darkest;
 
       }
+      .correct {
+        color: $color-correct;
+        background-color: transparentize($color-correct, 0.95);
+        pointer-events: none;
+        cursor: not-allowed;
+        &:hover {
+          color: $color-correct;
+        }
+      }
+      .wrong {
+        pointer-events: none;
+        cursor: not-allowed;
+        color: $color-wrong;
+        background-color: transparentize($color-wrong, 0.95);
+
+        &:hover {
+          color: $color-wrong;
+        }
+      }
+      .disabled {
+        color: $color-darkest;
+        pointer-events: none;
+        cursor: not-allowed;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+    }
+
+    .counter {
+      text-align: right;
+      font-size: 30px;
+      margin-right: 10px;
+      background-color: $color-lightest;
+    }
+
+    .tab-counter {
+      color: $color-counter;
+
+    }
+
+    p:last-child {
+      margin-bottom: 0;
     }
 
   }
+}
 
+@media screen and (min-width: 1200px) {
+
+  @mixin border-radius($top-radius, $right-radius, $bottom-radius, $left-radius) {
+    -webkit-border-radius: $top-radius $right-radius $bottom-radius $left-radius;
+    -moz-border-radius: $top-radius $right-radius $bottom-radius $left-radius;
+    -ms-border-radius: $top-radius $right-radius $bottom-radius $left-radius;
+    border-radius: $top-radius $right-radius $bottom-radius $left-radius;
+  }
+
+  //@extend-elements
+  //original selectors
+  //.tabs-left > .nav-tabs > li > a, .tabs-right > .nav-tabs > li > a
+  %extend_tabs_a {
+    min-width: 74px;
+    margin-right: 0;
+    margin-bottom: 3px;
+  }
+
+  /* Custom Tabs */
+  .tabs-left {
+
+    > .nav-tabs {
+      background-color: $color-greyscale;
+      border-bottom: 0;
+      float: left;
+      margin-right: 19px;
+      border-right: 1px solid darken($color-greyscale, 10%);
+
+      > li {
+        float: none;
+        > a {
+          @extend %extend_tabs_a;
+          margin-right: -1px;
+          @include border-radius(4px, 0, 0, 4px);
+
+          &:hover {
+            border-color: $color-greyscale darken($color-greyscale, 10%) $color-greyscale $color-greyscale;
+          }
+          &:focus {
+            border-color: $color-greyscale darken($color-greyscale, 10%) $color-greyscale $color-greyscale;
+          }
+        }
+      }
+
+      > li:last-child {
+        padding-bottom: 2px;
+
+      }
+      /* Border Bottom Issue
+
+
+        &.active {
+          padding-bottom: 0;
+          > a {
+            margin-bottom: 0;
+            border-bottom: 0;
+          }
+        }
+
+      }
+*/
+      .active > a {
+        border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
+        *border-right-color: $color-lightest;
+        &:hover {
+          border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
+          *border-right-color: $color-lightest;
+        }
+        &:focus {
+          border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
+          *border-right-color: $color-lightest;
+        }
+      }
+
+    }
+
+    .tab-content {
+
+      border-width: 1px 1px 1px 0;
+
+      .task-tab-content {
+        padding: 10px 10px 17px 15px;
+      }
+    }
+  }
+
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+  .container {
+    width: 98%;
+
+  }
 }

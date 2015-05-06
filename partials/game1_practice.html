@@ -2,7 +2,7 @@
     <h2>Practice</h2>
 
     <div ng-controller="Game1PracticeTabsController" class="game-area">
-        <tabset>
+        <tabset class="tabs-left">
             <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled" ng-click="changeTab()">
                 <div class="task-tab-content">
                     <h5>Task:</h5>

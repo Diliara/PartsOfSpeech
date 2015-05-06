@@ -36,74 +36,148 @@ body {
   font-size: 15px;
   font-weight: normal;
 }
-.main .game-area .tab-content {
+
+/* Default Setup for Tabs */
+.tab-content {
   border-width: 0 1px 1px 1px;
   border-style: solid;
   border-color: lightgray;
 }
-.main .game-area .tab-content .task-tab-content {
+.tab-content .task-tab-content {
   padding: 10px 10px 20px 15px;
   background-color: #ffffff;
 }
-.main .game-area .tab-content .task-tab-content .challenge {
+.tab-content .task-tab-content .challenge {
   font-weight: bold;
 }
-.main .game-area .tab-content .task-tab-content .part-of-speech {
+.tab-content .task-tab-content .part-of-speech {
   font-weight: bold;
 }
-.main .game-area .tab-content .task-tab-content .part-of-speech-definition {
+.tab-content .task-tab-content .part-of-speech-definition {
   font-style: italic;
 }
-.main .game-area .tab-content .task-tab-content .text {
+.tab-content .task-tab-content .text {
   margin-bottom: 0;
 }
-.main .game-area .tab-content .task-tab-content .text a {
+.tab-content .task-tab-content .text a {
   cursor: pointer;
 }
-.main .game-area .tab-content .task-tab-content .text .word {
+.tab-content .task-tab-content .text .word {
   border: none;
   padding: 4px;
   background-color: #ffffff;
   display: inline-block;
   color: #000000;
 }
-.main .game-area .tab-content .task-tab-content .text .correct {
+.tab-content .task-tab-content .text .correct {
   color: #43D01C;
   background-color: rgba(67, 208, 28, 0.05);
   pointer-events: none;
   cursor: not-allowed;
 }
-.main .game-area .tab-content .task-tab-content .text .correct:hover {
+.tab-content .task-tab-content .text .correct:hover {
   color: #43D01C;
 }
-.main .game-area .tab-content .task-tab-content .text .wrong {
+.tab-content .task-tab-content .text .wrong {
   pointer-events: none;
   cursor: not-allowed;
   color: #F02222;
   background-color: rgba(240, 34, 34, 0.05);
 }
-.main .game-area .tab-content .task-tab-content .text .wrong:hover {
+.tab-content .task-tab-content .text .wrong:hover {
   color: #F02222;
 }
-.main .game-area .tab-content .task-tab-content .text .disabled {
+.tab-content .task-tab-content .text .disabled {
   color: #000000;
   pointer-events: none;
   cursor: not-allowed;
 }
-.main .game-area .tab-content .task-tab-content .text .disabled:hover {
+.tab-content .task-tab-content .text .disabled:hover {
   text-decoration: none;
 }
-.main .game-area .tab-content .task-tab-content .counter {
+.tab-content .task-tab-content .counter {
   text-align: right;
   font-size: 30px;
   margin-right: 10px;
   background-color: #ffffff;
 }
-.main .game-area .tab-content .task-tab-content .tab-counter {
+.tab-content .task-tab-content .tab-counter {
   color: #174BED;
 }
-.main .game-area .tab-content .task-tab-content p:last-child {
+.tab-content .task-tab-content p:last-child {
   margin-bottom: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .tabs-left > .nav-tabs > li > a {
+    min-width: 74px;
+    margin-right: 0;
+    margin-bottom: 3px;
+  }
+
+  /* Custom Tabs */
+  .tabs-left > .nav-tabs {
+    background-color: #ececec;
+    border-bottom: 0;
+    float: left;
+    margin-right: 19px;
+    border-right: 1px solid lightgray;
+      /* Border Bottom Issue
+
+
+        &.active {
+          padding-bottom: 0;
+          > a {
+            margin-bottom: 0;
+            border-bottom: 0;
+          }
+        }
+
+      }
+*/
+  }
+  .tabs-left > .nav-tabs > li {
+    float: none;
+  }
+  .tabs-left > .nav-tabs > li > a {
+    margin-right: -1px;
+    -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    -ms-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+  }
+  .tabs-left > .nav-tabs > li > a:hover {
+    border-color: #ececec lightgray #ececec #ececec;
+  }
+  .tabs-left > .nav-tabs > li > a:focus {
+    border-color: #ececec lightgray #ececec #ececec;
+  }
+  .tabs-left > .nav-tabs > li:last-child {
+    padding-bottom: 2px;
+  }
+  .tabs-left > .nav-tabs .active > a {
+    border-color: lightgray transparent lightgray lightgray;
+    *border-right-color: #ffffff;
+  }
+  .tabs-left > .nav-tabs .active > a:hover {
+    border-color: lightgray transparent lightgray lightgray;
+    *border-right-color: #ffffff;
+  }
+  .tabs-left > .nav-tabs .active > a:focus {
+    border-color: lightgray transparent lightgray lightgray;
+    *border-right-color: #ffffff;
+  }
+  .tabs-left .tab-content {
+    border-width: 1px 1px 1px 0;
+  }
+  .tabs-left .tab-content .task-tab-content {
+    padding: 10px 10px 17px 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .container {
+    width: 98%;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
