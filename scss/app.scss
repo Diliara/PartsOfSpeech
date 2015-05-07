@@ -21,6 +21,18 @@ $color-timer: #fdffe3;
   transform: translate(-50%, -50%);
 }
 
+@mixin header-style($align, $color-back, $font-size) {
+  text-align: $align;
+  color: $color-back;
+  font-size: $font-size;
+}
+
+@mixin home-area-setup($color-back, $height) {
+  background-color: $color-back;
+  height: $height;
+  position: relative;
+}
+
 @mixin border-radius($top-radius, $right-radius, $bottom-radius, $left-radius) {
   -webkit-border-radius: $top-radius $right-radius $bottom-radius $left-radius;
   -moz-border-radius: $top-radius $right-radius $bottom-radius $left-radius;
@@ -28,285 +40,302 @@ $color-timer: #fdffe3;
   border-radius: $top-radius $right-radius $bottom-radius $left-radius;
 }
 
-//@extend-elements
-//original selectors
-//.tabs-left > .nav-tabs > li > a, .tabs-right > .nav-tabs > li > a
-%extend_tabs_a {
-  min-width: 74px;
-  margin-right: 0;
-  margin-bottom: 3px;
-}
-
+/* Default - all screens */
 body {
   background-color: $color-background;
-}
 
-.main {
+  .main {
 
-  &.game-practice-area {
-    background-color: $color-background-practice;
-    height: 100vh;
-
-  }
-
-  &.game-challenge-area {
-    background-color: $color-background-challenge;
-    height: 100vh;
-
-  }
-
-  .header-area {
-    background-color: $color-background-header;
-    color: $color-lightest;
-    text-align: center;
-    height: 30vh;
-    position: relative;
-
-    .header-area-content {
-
-      padding-top: 5vh;
-      h2 {
-        font-size: 2.3em;
-      }
-      p {
-        font-size: 1.3em;
-
-      }
-
-    }
-  }
-
-  .practice-area {
-    background-color: $color-background-practice;
-    text-align: center;
-    height: 70vh;
-    position: relative;
-    h3 {
-      @include vertical-align;
-      color: $color-background;
-      font-size: 7vw;
-    }
-    &:hover {
-      background-color: lighten($color-background-practice, 3);
-    }
-
-  }
-
-  .challenge-area {
-    background-color: $color-background-challenge;
-    text-align: center;
-    height: 70vh;
-    position: relative;
-    h3 {
-      @include vertical-align;
-      color: $color-background;
-      font-size: 7vw;
-
-    }
-    &:hover {
-      background-color: lighten($color-background-challenge, 3);
-    }
-
-  }
-
-  .game-area {
-    margin-bottom: 10px;
-
-    .start-challenge {
-      display: none;
+    &.game-practice-area {
+      background-color: $color-background-practice;
+      height: 100vh;
 
     }
 
-    .timer {
-      text-align: right;
-      display: block;
+    &.game-challenge-area {
+      background-color: $color-background-challenge;
+      height: 100vh;
 
-      .countdown {
-        background-color: transparentize($color-timer, 0.5);
-        padding: 20px 1px 10px 10px;
-        border: 1px solid $color-greyscale;
-        border-radius: 8px;
+    }
 
-        .item {
-          font-size: 27px;
+    .header-area {
 
+      @include home-area-setup($color-background-header, 25vh);
+      .header-area-content {
+        color: $color-lightest;
+        text-align: center;
+        padding-top: 5vh;
+
+        h2 {
+          font-size: 2.3em;
         }
-
-        .item-hh {
-          display: none;
-        }
-
-        .label {
-          text-transform: uppercase;
-          color: $color-darkest;
-          font-size: 15px;
-          font-weight: normal;
+        p {
+          font-size: 1.3em;
 
         }
 
       }
-
     }
 
-  }
+    .practice-area {
+      @include home-area-setup($color-background-practice, 75vh);
 
-}
-
-/* ****************************************************************************** Default Setup for Tabs ******************************************************************* */
-
-.tab-content {
-  border-width: 0 1px 1px 1px;
-  border-style: solid;
-  border-color: darken($color-greyscale, 10%);
-
-  .task-tab-content {
-    padding: 10px 10px 20px 15px;
-    background-color: $color-lightest;
-
-    .challenge {
-      font-weight: bold;
-
-    }
-
-    .part-of-speech {
-      font-weight: bold;
-    }
-    .part-of-speech-definition {
-      font-style: italic;
-
-    }
-
-    .text {
-      margin-bottom: 0;
-      a {
-        cursor: pointer;
+      h3 {
+        @include vertical-align;
+        @include header-style(center, $color-background, 7vw);
       }
-      .word {
-        border: none;
-        padding: 4px;
-        background-color: $color-btn;
-        display: inline-block;
-        color: $color-darkest;
-
-      }
-      .correct {
-        color: $color-correct;
-        background-color: transparentize($color-correct, 0.95);
-        pointer-events: none;
-        cursor: not-allowed;
-        &:hover {
-          color: $color-correct;
-        }
-      }
-      .wrong {
-        pointer-events: none;
-        cursor: not-allowed;
-        color: $color-wrong;
-        background-color: transparentize($color-wrong, 0.95);
-
-        &:hover {
-          color: $color-wrong;
-        }
-      }
-      .disabled {
-        color: $color-darkest;
-        pointer-events: none;
-        cursor: not-allowed;
-        &:hover {
-          text-decoration: none;
-        }
-      }
-
-    }
-
-    .counter {
-      text-align: right;
-      font-size: 30px;
-      margin-right: 10px;
-      background-color: $color-lightest;
-    }
-
-    .tab-counter {
-      color: $color-counter;
-
-    }
-
-    p:last-child {
-      margin-bottom: 0;
-    }
-
-  }
-}
-
-/* ****************************************************************************** Custom Tabs ****************************************************************************** */
-
-.tabs-left {
-
-  > .nav-tabs {
-    height: 80vh;
-    background-color: $color-background-2;
-    border-bottom: 0;
-    float: left;
-    margin-right: 19px;
-    border-right: 1px solid darken($color-greyscale, 10%);
-
-    > li {
-      float: none;
-      > a {
-        @extend %extend_tabs_a;
-        margin-right: -1px;
-        @include border-radius(4px, 0, 0, 4px);
-
-        &:hover {
-          border-color: $color-greyscale darken($color-greyscale, 10%) $color-greyscale $color-greyscale;
-        }
-        &:focus {
-          border-color: $color-greyscale darken($color-greyscale, 10%) $color-greyscale $color-greyscale;
-        }
-      }
-    }
-
-    > li:last-child {
-      padding-bottom: 2px;
-
-    }
-    /* Border Bottom Issue
-
-
-      &.active {
-        padding-bottom: 0;
-        > a {
-          margin-bottom: 0;
-          border-bottom: 0;
-        }
-      }
-
-    }
-*/
-    .active > a {
-      border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
-      *border-right-color: $color-lightest;
       &:hover {
-        border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
-        *border-right-color: $color-lightest;
+        background-color: lighten($color-background-practice, 3);
       }
-      &:focus {
-        border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
-        *border-right-color: $color-lightest;
+
+    }
+
+    .challenge-area {
+      @include home-area-setup($color-background-challenge, 75vh);
+      h3 {
+        @include vertical-align;
+        @include header-style(center, $color-background, 7vw);
       }
+      &:hover {
+        background-color: lighten($color-background-challenge, 3);
+      }
+
+    }
+
+    .game-area {
+      margin-bottom: 10px;
+
+      .start-challenge {
+        display: none;
+
+      }
+
+      .timer {
+        text-align: right;
+        display: block;
+
+        .countdown {
+          background-color: transparentize($color-timer, 0.5);
+          padding: 20px 1px 10px 10px;
+          border: 1px solid $color-greyscale;
+          border-radius: 8px;
+
+          .item {
+            font-size: 27px;
+
+          }
+
+          .item-hh {
+            display: none;
+          }
+
+          .label {
+            text-transform: uppercase;
+            color: $color-darkest;
+            font-size: 15px;
+            font-weight: normal;
+
+          }
+
+        }
+
+      }
+
     }
 
   }
 
   .tab-content {
-
-    border-width: 1px 1px 1px 0;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: darken($color-greyscale, 10%);
 
     .task-tab-content {
-      height: 80vh;
+      padding: 10px 10px 20px 15px;
+      background-color: $color-lightest;
 
-      padding: 10px 10px 17px 15px;
+      .challenge {
+        font-weight: bold;
+
+      }
+
+      .part-of-speech {
+        font-weight: bold;
+      }
+      .part-of-speech-definition {
+        font-style: italic;
+
+      }
+
+      .text {
+        margin-bottom: 0;
+        a {
+          cursor: pointer;
+        }
+        .word {
+          border: none;
+          padding: 4px;
+          background-color: $color-btn;
+          display: inline-block;
+          color: $color-darkest;
+
+        }
+        .correct {
+          color: $color-correct;
+          background-color: transparentize($color-correct, 0.95);
+          pointer-events: none;
+          cursor: not-allowed;
+          &:hover {
+            color: $color-correct;
+          }
+        }
+        .wrong {
+          pointer-events: none;
+          cursor: not-allowed;
+          color: $color-wrong;
+          background-color: transparentize($color-wrong, 0.95);
+
+          &:hover {
+            color: $color-wrong;
+          }
+        }
+        .disabled {
+          color: $color-darkest;
+          pointer-events: none;
+          cursor: not-allowed;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+      }
+
+      .counter {
+        text-align: right;
+        font-size: 30px;
+        margin-right: 10px;
+        background-color: $color-lightest;
+      }
+
+      .tab-counter {
+        color: $color-counter;
+
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
     }
   }
 }
 
+/* Large Screens */
+@media screen and (min-width: 750px) {
+
+  //.tabs-left > .nav-tabs > li > a, .tabs-right > .nav-tabs > li > a
+  %extend_tabs_a {
+    min-width: 74px;
+    margin-right: 0;
+    margin-bottom: 3px;
+  }
+
+  .tabs-left {
+
+    > .nav-tabs {
+      height: 80vh;
+      background-color: $color-background-2;
+      border-bottom: 0;
+      float: left;
+      margin-right: 19px;
+      border-right: 1px solid darken($color-greyscale, 10%);
+
+      > li {
+        float: none;
+        > a {
+          @extend %extend_tabs_a;
+          margin-right: -1px;
+          @include border-radius(4px, 0, 0, 4px);
+
+          &:hover {
+            border-color: $color-greyscale darken($color-greyscale, 10%) $color-greyscale $color-greyscale;
+          }
+          &:focus {
+            border-color: $color-greyscale darken($color-greyscale, 10%) $color-greyscale $color-greyscale;
+          }
+        }
+      }
+
+      > li:last-child {
+        padding-bottom: 2px;
+
+      }
+      /* Border Bottom Issue
+
+
+        &.active {
+          padding-bottom: 0;
+          > a {
+            margin-bottom: 0;
+            border-bottom: 0;
+          }
+        }
+
+      }
+  */
+      .active > a {
+        border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
+        *border-right-color: $color-lightest;
+        &:hover {
+          border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
+          *border-right-color: $color-lightest;
+        }
+        &:focus {
+          border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
+          *border-right-color: $color-lightest;
+        }
+      }
+
+    }
+
+    .tab-content {
+
+      border-width: 1px 1px 1px 0;
+
+      .task-tab-content {
+        height: 80vh;
+
+        padding: 10px 10px 17px 15px;
+      }
+    }
+  }
+}
+
+/* Small Screens */
+@media screen and (max-width: 750px) {
+  .main {
+    .header-area {
+
+      @include home-area-setup($color-background-header, 35vh);
+      .header-area-content {
+        padding-top: 2vh;
+      }
+    }
+
+    .practice-area {
+      @include home-area-setup($color-background-practice, 65vh);
+
+      h3 {
+        @include header-style(left, $color-background, 7vw);
+      }
+    }
+
+    .challenge-area {
+      @include home-area-setup($color-background-challenge, 65vh);
+      h3 {
+        @include header-style(left, $color-background, 7vw);
+      }
+
+    }
+  }
+}
