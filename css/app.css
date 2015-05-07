@@ -1,12 +1,70 @@
-body {
-  background-color: #343434;
+.tabs-left > .nav-tabs > li > a {
+  min-width: 74px;
+  margin-right: 0;
+  margin-bottom: 3px;
 }
 
-.main {
-  margin-top: 25px;
-  padding-top: 10px;
-  padding-bottom: 20px;
-  background-color: #ececec;
+body {
+  background-color: #56626A;
+}
+
+.main.game-practice-area {
+  background-color: #4bd2e2;
+  height: 100vh;
+}
+.main.game-challenge-area {
+  background-color: #ffbc95;
+  height: 100vh;
+}
+.main .header-area {
+  background-color: #56626A;
+  color: #ffffff;
+  text-align: center;
+  height: 30vh;
+  position: relative;
+}
+.main .header-area .header-area-content {
+  padding-top: 5vh;
+}
+.main .header-area .header-area-content h2 {
+  font-size: 2.3em;
+}
+.main .header-area .header-area-content p {
+  font-size: 1.3em;
+}
+.main .practice-area {
+  background-color: #4bd2e2;
+  text-align: center;
+  height: 70vh;
+  position: relative;
+}
+.main .practice-area h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #56626A;
+  font-size: 7vw;
+}
+.main .practice-area:hover {
+  background-color: #58d5e4;
+}
+.main .challenge-area {
+  background-color: #ffbc95;
+  text-align: center;
+  height: 70vh;
+  position: relative;
+}
+.main .challenge-area h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #56626A;
+  font-size: 7vw;
+}
+.main .challenge-area:hover {
+  background-color: #ffc6a4;
 }
 .main .game-area {
   margin-bottom: 10px;
@@ -37,7 +95,7 @@ body {
   font-weight: normal;
 }
 
-/* Default Setup for Tabs */
+/* ****************************************************************************** Default Setup for Tabs ******************************************************************* */
 .tab-content {
   border-width: 0 1px 1px 1px;
   border-style: solid;
@@ -81,11 +139,11 @@ body {
 .tab-content .task-tab-content .text .wrong {
   pointer-events: none;
   cursor: not-allowed;
-  color: #F02222;
-  background-color: rgba(240, 34, 34, 0.05);
+  color: #DD3970;
+  background-color: rgba(221, 57, 112, 0.05);
 }
 .tab-content .task-tab-content .text .wrong:hover {
-  color: #F02222;
+  color: #DD3970;
 }
 .tab-content .task-tab-content .text .disabled {
   color: #000000;
@@ -102,82 +160,71 @@ body {
   background-color: #ffffff;
 }
 .tab-content .task-tab-content .tab-counter {
-  color: #174BED;
+  color: #FF822F;
 }
 .tab-content .task-tab-content p:last-child {
   margin-bottom: 0;
 }
 
-@media screen and (min-width: 1200px) {
-  .tabs-left > .nav-tabs > li > a {
-    min-width: 74px;
-    margin-right: 0;
-    margin-bottom: 3px;
-  }
-
-  /* Custom Tabs */
-  .tabs-left > .nav-tabs {
-    background-color: #ececec;
-    border-bottom: 0;
-    float: left;
-    margin-right: 19px;
-    border-right: 1px solid lightgray;
-      /* Border Bottom Issue
+/* ****************************************************************************** Custom Tabs ****************************************************************************** */
+.tabs-left > .nav-tabs {
+  height: 80vh;
+  background-color: #ececec;
+  border-bottom: 0;
+  float: left;
+  margin-right: 19px;
+  border-right: 1px solid lightgray;
+    /* Border Bottom Issue
 
 
-        &.active {
-          padding-bottom: 0;
-          > a {
-            margin-bottom: 0;
-            border-bottom: 0;
-          }
+      &.active {
+        padding-bottom: 0;
+        > a {
+          margin-bottom: 0;
+          border-bottom: 0;
         }
-
       }
+
+    }
 */
-  }
-  .tabs-left > .nav-tabs > li {
-    float: none;
-  }
-  .tabs-left > .nav-tabs > li > a {
-    margin-right: -1px;
-    -webkit-border-radius: 4px 0 0 4px;
-    -moz-border-radius: 4px 0 0 4px;
-    -ms-border-radius: 4px 0 0 4px;
-    border-radius: 4px 0 0 4px;
-  }
-  .tabs-left > .nav-tabs > li > a:hover {
-    border-color: #ececec lightgray #ececec #ececec;
-  }
-  .tabs-left > .nav-tabs > li > a:focus {
-    border-color: #ececec lightgray #ececec #ececec;
-  }
-  .tabs-left > .nav-tabs > li:last-child {
-    padding-bottom: 2px;
-  }
-  .tabs-left > .nav-tabs .active > a {
-    border-color: lightgray transparent lightgray lightgray;
-    *border-right-color: #ffffff;
-  }
-  .tabs-left > .nav-tabs .active > a:hover {
-    border-color: lightgray transparent lightgray lightgray;
-    *border-right-color: #ffffff;
-  }
-  .tabs-left > .nav-tabs .active > a:focus {
-    border-color: lightgray transparent lightgray lightgray;
-    *border-right-color: #ffffff;
-  }
-  .tabs-left .tab-content {
-    border-width: 1px 1px 1px 0;
-  }
-  .tabs-left .tab-content .task-tab-content {
-    padding: 10px 10px 17px 15px;
-  }
 }
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .container {
-    width: 98%;
-  }
+.tabs-left > .nav-tabs > li {
+  float: none;
+}
+.tabs-left > .nav-tabs > li > a {
+  margin-right: -1px;
+  -webkit-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  -ms-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+}
+.tabs-left > .nav-tabs > li > a:hover {
+  border-color: #ececec lightgray #ececec #ececec;
+}
+.tabs-left > .nav-tabs > li > a:focus {
+  border-color: #ececec lightgray #ececec #ececec;
+}
+.tabs-left > .nav-tabs > li:last-child {
+  padding-bottom: 2px;
+}
+.tabs-left > .nav-tabs .active > a {
+  border-color: lightgray transparent lightgray lightgray;
+  *border-right-color: #ffffff;
+}
+.tabs-left > .nav-tabs .active > a:hover {
+  border-color: lightgray transparent lightgray lightgray;
+  *border-right-color: #ffffff;
+}
+.tabs-left > .nav-tabs .active > a:focus {
+  border-color: lightgray transparent lightgray lightgray;
+  *border-right-color: #ffffff;
+}
+.tabs-left .tab-content {
+  border-width: 1px 1px 1px 0;
+}
+.tabs-left .tab-content .task-tab-content {
+  height: 80vh;
+  padding: 10px 10px 17px 15px;
 }
 
 /*# sourceMappingURL=app.css.map */

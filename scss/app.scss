@@ -2,22 +2,112 @@ $color-lightest: #ffffff;
 $color-greyscale: #ececec;
 $color-darkest: #000000;
 
-$color-background: #343434;
+$color-background: #56626A;
+$color-background-2: #ececec;
+$color-background-header: #56626A;
+$color-background-practice: #4bd2e2;
+$color-background-challenge: #ffbc95;
+
 $color-correct: #43D01C;
-$color-wrong: #F02222;
+$color-wrong: #DD3970;
 $color-btn: #ffffff;
-$color-counter: #174BED;
+$color-counter: #FF822F;
 $color-timer: #fdffe3;
+
+@mixin vertical-align {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin border-radius($top-radius, $right-radius, $bottom-radius, $left-radius) {
+  -webkit-border-radius: $top-radius $right-radius $bottom-radius $left-radius;
+  -moz-border-radius: $top-radius $right-radius $bottom-radius $left-radius;
+  -ms-border-radius: $top-radius $right-radius $bottom-radius $left-radius;
+  border-radius: $top-radius $right-radius $bottom-radius $left-radius;
+}
+
+//@extend-elements
+//original selectors
+//.tabs-left > .nav-tabs > li > a, .tabs-right > .nav-tabs > li > a
+%extend_tabs_a {
+  min-width: 74px;
+  margin-right: 0;
+  margin-bottom: 3px;
+}
 
 body {
   background-color: $color-background;
 }
 
 .main {
-  margin-top: 25px;
-  padding-top: 10px;
-  padding-bottom: 20px;
-  background-color: $color-greyscale;
+
+  &.game-practice-area {
+    background-color: $color-background-practice;
+    height: 100vh;
+
+  }
+
+  &.game-challenge-area {
+    background-color: $color-background-challenge;
+    height: 100vh;
+
+  }
+
+  .header-area {
+    background-color: $color-background-header;
+    color: $color-lightest;
+    text-align: center;
+    height: 30vh;
+    position: relative;
+
+    .header-area-content {
+
+      padding-top: 5vh;
+      h2 {
+        font-size: 2.3em;
+      }
+      p {
+        font-size: 1.3em;
+
+      }
+
+    }
+  }
+
+  .practice-area {
+    background-color: $color-background-practice;
+    text-align: center;
+    height: 70vh;
+    position: relative;
+    h3 {
+      @include vertical-align;
+      color: $color-background;
+      font-size: 7vw;
+    }
+    &:hover {
+      background-color: lighten($color-background-practice, 3);
+    }
+
+  }
+
+  .challenge-area {
+    background-color: $color-background-challenge;
+    text-align: center;
+    height: 70vh;
+    position: relative;
+    h3 {
+      @include vertical-align;
+      color: $color-background;
+      font-size: 7vw;
+
+    }
+    &:hover {
+      background-color: lighten($color-background-challenge, 3);
+    }
+
+  }
 
   .game-area {
     margin-bottom: 10px;
@@ -62,7 +152,7 @@ body {
 
 }
 
-/* Default Setup for Tabs */
+/* ****************************************************************************** Default Setup for Tabs ******************************************************************* */
 
 .tab-content {
   border-width: 0 1px 1px 1px;
@@ -148,98 +238,75 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+/* ****************************************************************************** Custom Tabs ****************************************************************************** */
 
-  @mixin border-radius($top-radius, $right-radius, $bottom-radius, $left-radius) {
-    -webkit-border-radius: $top-radius $right-radius $bottom-radius $left-radius;
-    -moz-border-radius: $top-radius $right-radius $bottom-radius $left-radius;
-    -ms-border-radius: $top-radius $right-radius $bottom-radius $left-radius;
-    border-radius: $top-radius $right-radius $bottom-radius $left-radius;
-  }
+.tabs-left {
 
-  //@extend-elements
-  //original selectors
-  //.tabs-left > .nav-tabs > li > a, .tabs-right > .nav-tabs > li > a
-  %extend_tabs_a {
-    min-width: 74px;
-    margin-right: 0;
-    margin-bottom: 3px;
-  }
+  > .nav-tabs {
+    height: 80vh;
+    background-color: $color-background-2;
+    border-bottom: 0;
+    float: left;
+    margin-right: 19px;
+    border-right: 1px solid darken($color-greyscale, 10%);
 
-  /* Custom Tabs */
-  .tabs-left {
+    > li {
+      float: none;
+      > a {
+        @extend %extend_tabs_a;
+        margin-right: -1px;
+        @include border-radius(4px, 0, 0, 4px);
 
-    > .nav-tabs {
-      background-color: $color-greyscale;
-      border-bottom: 0;
-      float: left;
-      margin-right: 19px;
-      border-right: 1px solid darken($color-greyscale, 10%);
-
-      > li {
-        float: none;
-        > a {
-          @extend %extend_tabs_a;
-          margin-right: -1px;
-          @include border-radius(4px, 0, 0, 4px);
-
-          &:hover {
-            border-color: $color-greyscale darken($color-greyscale, 10%) $color-greyscale $color-greyscale;
-          }
-          &:focus {
-            border-color: $color-greyscale darken($color-greyscale, 10%) $color-greyscale $color-greyscale;
-          }
-        }
-      }
-
-      > li:last-child {
-        padding-bottom: 2px;
-
-      }
-      /* Border Bottom Issue
-
-
-        &.active {
-          padding-bottom: 0;
-          > a {
-            margin-bottom: 0;
-            border-bottom: 0;
-          }
-        }
-
-      }
-*/
-      .active > a {
-        border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
-        *border-right-color: $color-lightest;
         &:hover {
-          border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
-          *border-right-color: $color-lightest;
+          border-color: $color-greyscale darken($color-greyscale, 10%) $color-greyscale $color-greyscale;
         }
         &:focus {
-          border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
-          *border-right-color: $color-lightest;
+          border-color: $color-greyscale darken($color-greyscale, 10%) $color-greyscale $color-greyscale;
+        }
+      }
+    }
+
+    > li:last-child {
+      padding-bottom: 2px;
+
+    }
+    /* Border Bottom Issue
+
+
+      &.active {
+        padding-bottom: 0;
+        > a {
+          margin-bottom: 0;
+          border-bottom: 0;
         }
       }
 
     }
-
-    .tab-content {
-
-      border-width: 1px 1px 1px 0;
-
-      .task-tab-content {
-        padding: 10px 10px 17px 15px;
+*/
+    .active > a {
+      border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
+      *border-right-color: $color-lightest;
+      &:hover {
+        border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
+        *border-right-color: $color-lightest;
+      }
+      &:focus {
+        border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
+        *border-right-color: $color-lightest;
       }
     }
-  }
-
-}
-
-
-@media screen and (min-width: 768px) and (max-width: 992px){
-  .container {
-    width: 98%;
 
   }
+
+  .tab-content {
+
+    border-width: 1px 1px 1px 0;
+
+    .task-tab-content {
+      height: 80vh;
+
+      padding: 10px 10px 17px 15px;
+    }
+  }
 }
+
