@@ -33,11 +33,10 @@ $color-timer: #fdffe3;
 }
 
 @mixin background($color-back) {
-  //fixed not full background color issue
-  //works with html, body 100%
+  //full background color; works with html, body 100%
   background-color: $color-back;
-  height: 100%;
   min-height: 100%;
+  overflow: hidden;
 }
 
 @mixin border-radius($top-radius, $right-radius, $bottom-radius, $left-radius) {
@@ -230,6 +229,9 @@ html, body {
 
   }
 }
+
+
+
 
 /* Large Screens */
 @media screen and (min-width: 750px) {
