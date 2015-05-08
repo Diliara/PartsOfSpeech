@@ -37,7 +37,7 @@ html, body {
   height: 75vh;
   position: relative;
 }
-.home-practice-area .home-practice-area-content h3 {
+.home-practice-area h3 {
   position: absolute;
   top: 35%;
   left: 20%;
@@ -234,7 +234,7 @@ html, body {
   }
 }
 /* Small Screens */
-@media screen and (max-width: 749px) {
+@media screen and (max-width: 749px) and (orientation: portrait) {
   .home-header-area {
     background-color: #56626A;
     height: 35vh;
@@ -254,6 +254,38 @@ html, body {
     background-color: #ffbc95;
     height: 65vh;
     position: relative;
+  }
+}
+@media screen and (max-width: 749px) and (orientation: landscape) {
+  .home-header-area {
+    background-color: #56626A;
+    height: 50vh;
+    position: relative;
+  }
+  .home-header-area .home-header-area-content {
+    padding-top: 1vh;
+  }
+
+  .home-practice-area {
+    background-color: #4bd2e2;
+    height: 50vh;
+    position: relative;
+  }
+  .home-practice-area h3 {
+    position: absolute;
+    top: 15%;
+    left: 20%;
+  }
+
+  .home-challenge-area {
+    background-color: #ffbc95;
+    height: 50vh;
+    position: relative;
+  }
+  .home-challenge-area h3 {
+    position: absolute;
+    top: 15%;
+    left: 20%;
   }
 }
 

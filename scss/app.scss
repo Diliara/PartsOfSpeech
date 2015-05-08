@@ -14,10 +14,10 @@ $color-btn: #ffffff;
 $color-counter: #FF822F;
 $color-timer: #fdffe3;
 
-@mixin vertical-align {
-  position: absolute;
-  top: 35%;
-  left: 20%;
+@mixin vertical-align($position, $top, $left) {
+  position: $position;
+  top: $top;
+  left: $left;
 }
 
 @mixin header-style($align, $color-back, $font-size) {
@@ -82,15 +82,12 @@ html, body {
 .home-practice-area {
   @include home-area-setup($color-background-practice, 75vh);
 
-  .home-practice-area-content {
-
-    h3 {
-      @include vertical-align;
-      @include header-style(center, $color-background, 7vw);
-
-    }
+  h3 {
+    @include vertical-align(absolute, 35%, 20%);
+    @include header-style(center, $color-background, 7vw);
 
   }
+
   &:hover {
     background-color: lighten($color-background-practice, 3);
   }
@@ -100,7 +97,7 @@ html, body {
 .home-challenge-area {
   @include home-area-setup($color-background-challenge, 75vh);
   h3 {
-    @include vertical-align;
+    @include vertical-align(absolute, 35%, 20%);
     @include header-style(center, $color-background, 7vw);
   }
   &:hover {
@@ -316,7 +313,7 @@ html, body {
 }
 
 /* Small Screens */
-@media screen and (max-width: 749px) {
+@media screen and (max-width: 749px) and (orientation: portrait) {
 
   .home-header-area {
 
@@ -331,6 +328,33 @@ html, body {
 
   .home-challenge-area {
     @include home-area-setup($color-background-challenge, 65vh);
+  }
+
+}
+
+@media screen and (max-width: 749px) and (orientation: landscape) {
+
+  .home-header-area {
+
+    @include home-area-setup($color-background-header, 50vh);
+    .home-header-area-content {
+      padding-top: 1vh;
+    }
+  }
+  .home-practice-area {
+    @include home-area-setup($color-background-practice, 50vh);
+
+    h3 {
+      @include vertical-align(absolute, 15%, 20%);
+
+    }
+  }
+
+  .home-challenge-area {
+    @include home-area-setup($color-background-challenge, 50vh);
+    h3 {
+      @include vertical-align(absolute, 15%, 20%);
+    }
   }
 
 }
