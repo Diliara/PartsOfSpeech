@@ -18,7 +18,7 @@ $color-timer: #fdffe3;
   position: absolute;
   top: 35%;
   left: 20%;
- }
+}
 
 @mixin header-style($align, $color-back, $font-size) {
   text-align: $align;
@@ -32,6 +32,14 @@ $color-timer: #fdffe3;
   position: relative;
 }
 
+@mixin background($color-back) {
+  //fixed not full background color issue
+  //works with html, body 100%
+  background-color: $color-back;
+  height: 100%;
+  min-height: 100%;
+}
+
 @mixin border-radius($top-radius, $right-radius, $bottom-radius, $left-radius) {
   -webkit-border-radius: $top-radius $right-radius $bottom-radius $left-radius;
   -moz-border-radius: $top-radius $right-radius $bottom-radius $left-radius;
@@ -40,103 +48,99 @@ $color-timer: #fdffe3;
 }
 
 /* Default - all screens */
-body {
-  background-color: $color-background;
 
-  .main {
+html, body {
+  height: 100%;
+}
 
-    &.game-practice-area {
-      background-color: $color-background-practice;
+.game-practice-area {
+  @include background($color-background-practice);
+}
+
+.game-challenge-area {
+  @include background($color-background-challenge);
+}
+
+.home-header-area {
+  @include home-area-setup($color-background-header, 25vh);
+  .home-header-area-content {
+    color: $color-lightest;
+    text-align: center;
+    padding-top: 5vh;
+
+    h2 {
+      font-size: 2.3em;
     }
-
-    &.game-challenge-area {
-      background-color: $color-background-challenge;
-    }
-
-    .home-header-area {
-      @include home-area-setup($color-background-header, 25vh);
-      .home-header-area-content {
-        color: $color-lightest;
-        text-align: center;
-        padding-top: 5vh;
-
-        h2 {
-          font-size: 2.3em;
-        }
-        p {
-          font-size: 1.3em;
-
-        }
-
-      }
-    }
-
-    .home-practice-area {
-      @include home-area-setup($color-background-practice, 75vh);
-
-      .home-practice-area-content {
-
-        h3 {
-          @include vertical-align;
-          @include header-style(center, $color-background, 7vw);
-
-        }
-
-      }
-      &:hover {
-        background-color: lighten($color-background-practice, 3);
-      }
+    p {
+      font-size: 1.3em;
 
     }
 
-    .home-challenge-area {
-      @include home-area-setup($color-background-challenge, 75vh);
-      h3 {
-        @include vertical-align;
-        @include header-style(center, $color-background, 7vw);
-      }
-      &:hover {
-        background-color: lighten($color-background-challenge, 3);
-      }
+  }
+}
+
+.home-practice-area {
+  @include home-area-setup($color-background-practice, 75vh);
+
+  .home-practice-area-content {
+
+    h3 {
+      @include vertical-align;
+      @include header-style(center, $color-background, 7vw);
 
     }
 
-    .game-area {
-      margin-bottom: 10px;
+  }
+  &:hover {
+    background-color: lighten($color-background-practice, 3);
+  }
 
-      .start-challenge {
+}
+
+.home-challenge-area {
+  @include home-area-setup($color-background-challenge, 75vh);
+  h3 {
+    @include vertical-align;
+    @include header-style(center, $color-background, 7vw);
+  }
+  &:hover {
+    background-color: lighten($color-background-challenge, 3);
+  }
+
+}
+
+.game-area {
+  margin-bottom: 10px;
+
+  .start-challenge {
+    display: none;
+
+  }
+
+  .timer {
+    text-align: right;
+    display: block;
+
+    .countdown {
+      background-color: transparentize($color-timer, 0.5);
+      padding: 20px 1px 10px 10px;
+      border: 1px solid $color-greyscale;
+      border-radius: 8px;
+
+      .item {
+        font-size: 27px;
+
+      }
+
+      .item-hh {
         display: none;
-
       }
 
-      .timer {
-        text-align: right;
-        display: block;
-
-        .countdown {
-          background-color: transparentize($color-timer, 0.5);
-          padding: 20px 1px 10px 10px;
-          border: 1px solid $color-greyscale;
-          border-radius: 8px;
-
-          .item {
-            font-size: 27px;
-
-          }
-
-          .item-hh {
-            display: none;
-          }
-
-          .label {
-            text-transform: uppercase;
-            color: $color-darkest;
-            font-size: 15px;
-            font-weight: normal;
-
-          }
-
-        }
+      .label {
+        text-transform: uppercase;
+        color: $color-darkest;
+        font-size: 15px;
+        font-weight: normal;
 
       }
 
@@ -144,88 +148,89 @@ body {
 
   }
 
-  .tab-content {
-    border-width: 0 1px 1px 1px;
-    border-style: solid;
-    border-color: darken($color-greyscale, 10%);
+}
 
-    .task-tab-content {
-      padding: 10px 10px 20px 15px;
-      background-color: $color-lightest;
+.tab-content {
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-color: darken($color-greyscale, 10%);
 
-      .challenge {
-        font-weight: bold;
+  .task-tab-content {
+    padding: 10px 10px 20px 15px;
+    background-color: $color-lightest;
+
+    .challenge {
+      font-weight: bold;
+
+    }
+
+    .part-of-speech {
+      font-weight: bold;
+    }
+    .part-of-speech-definition {
+      font-style: italic;
+
+    }
+
+    .text {
+      margin-bottom: 0;
+      a {
+        cursor: pointer;
+      }
+      .word {
+        border: none;
+        padding: 4px;
+        background-color: $color-btn;
+        display: inline-block;
+        color: $color-darkest;
 
       }
-
-      .part-of-speech {
-        font-weight: bold;
-      }
-      .part-of-speech-definition {
-        font-style: italic;
-
-      }
-
-      .text {
-        margin-bottom: 0;
-        a {
-          cursor: pointer;
-        }
-        .word {
-          border: none;
-          padding: 4px;
-          background-color: $color-btn;
-          display: inline-block;
-          color: $color-darkest;
-
-        }
-        .correct {
+      .correct {
+        color: $color-correct;
+        background-color: transparentize($color-correct, 0.95);
+        pointer-events: none;
+        cursor: not-allowed;
+        &:hover {
           color: $color-correct;
-          background-color: transparentize($color-correct, 0.95);
-          pointer-events: none;
-          cursor: not-allowed;
-          &:hover {
-            color: $color-correct;
-          }
         }
-        .wrong {
-          pointer-events: none;
-          cursor: not-allowed;
+      }
+      .wrong {
+        pointer-events: none;
+        cursor: not-allowed;
+        color: $color-wrong;
+        background-color: transparentize($color-wrong, 0.95);
+
+        &:hover {
           color: $color-wrong;
-          background-color: transparentize($color-wrong, 0.95);
-
-          &:hover {
-            color: $color-wrong;
-          }
         }
-        .disabled {
-          color: $color-darkest;
-          pointer-events: none;
-          cursor: not-allowed;
-          &:hover {
-            text-decoration: none;
-          }
+      }
+      .disabled {
+        color: $color-darkest;
+        pointer-events: none;
+        cursor: not-allowed;
+        &:hover {
+          text-decoration: none;
         }
-
-      }
-
-      .counter {
-        text-align: right;
-        font-size: 30px;
-        margin-right: 10px;
-        background-color: $color-lightest;
-      }
-
-      .tab-counter {
-        color: $color-counter;
-
-      }
-
-      p:last-child {
-        margin-bottom: 0;
       }
 
     }
+
+    .counter {
+      text-align: right;
+      font-size: 30px;
+      margin-right: 10px;
+      background-color: $color-lightest;
+    }
+
+    .tab-counter {
+      color: $color-counter;
+
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
   }
 }
 
@@ -311,30 +316,21 @@ body {
 }
 
 /* Small Screens */
-@media screen and (max-width: 750px) {
-  .main {
-    .home-header-area {
+@media screen and (max-width: 749px) {
 
-      @include home-area-setup($color-background-header, 40vh);
-      .home-header-area-content {
-        padding-top: 0;
-      }
-    }
+  .home-header-area {
 
-    .home-practice-area {
-      @include home-area-setup($color-background-practice, 60vh);
-
-      h3 {
-        @include header-style(left, $color-background, 7vw);
-      }
-    }
-
-    .home-challenge-area {
-      @include home-area-setup($color-background-challenge, 60vh);
-      h3 {
-        @include header-style(left, $color-background, 7vw);
-      }
-
+    @include home-area-setup($color-background-header, 35vh);
+    .home-header-area-content {
+      padding-top: 2vh;
     }
   }
+  .home-practice-area {
+    @include home-area-setup($color-background-practice, 65vh);
+  }
+
+  .home-challenge-area {
+    @include home-area-setup($color-background-challenge, 65vh);
+  }
+
 }

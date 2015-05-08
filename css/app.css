@@ -1,35 +1,43 @@
 /* Default - all screens */
-body {
-  background-color: #56626A;
+html, body {
+  height: 100%;
 }
-body .main.game-practice-area {
+
+.game-practice-area {
   background-color: #4bd2e2;
+  height: 100%;
+  min-height: 100%;
 }
-body .main.game-challenge-area {
+
+.game-challenge-area {
   background-color: #ffbc95;
+  height: 100%;
+  min-height: 100%;
 }
-body .main .home-header-area {
+
+.home-header-area {
   background-color: #56626A;
   height: 25vh;
   position: relative;
 }
-body .main .home-header-area .home-header-area-content {
+.home-header-area .home-header-area-content {
   color: #ffffff;
   text-align: center;
   padding-top: 5vh;
 }
-body .main .home-header-area .home-header-area-content h2 {
+.home-header-area .home-header-area-content h2 {
   font-size: 2.3em;
 }
-body .main .home-header-area .home-header-area-content p {
+.home-header-area .home-header-area-content p {
   font-size: 1.3em;
 }
-body .main .home-practice-area {
+
+.home-practice-area {
   background-color: #4bd2e2;
   height: 75vh;
   position: relative;
 }
-body .main .home-practice-area .home-practice-area-content h3 {
+.home-practice-area .home-practice-area-content h3 {
   position: absolute;
   top: 35%;
   left: 20%;
@@ -37,15 +45,16 @@ body .main .home-practice-area .home-practice-area-content h3 {
   color: #56626A;
   font-size: 7vw;
 }
-body .main .home-practice-area:hover {
+.home-practice-area:hover {
   background-color: #58d5e4;
 }
-body .main .home-challenge-area {
+
+.home-challenge-area {
   background-color: #ffbc95;
   height: 75vh;
   position: relative;
 }
-body .main .home-challenge-area h3 {
+.home-challenge-area h3 {
   position: absolute;
   top: 35%;
   left: 20%;
@@ -53,104 +62,106 @@ body .main .home-challenge-area h3 {
   color: #56626A;
   font-size: 7vw;
 }
-body .main .home-challenge-area:hover {
+.home-challenge-area:hover {
   background-color: #ffc6a4;
 }
-body .main .game-area {
+
+.game-area {
   margin-bottom: 10px;
 }
-body .main .game-area .start-challenge {
+.game-area .start-challenge {
   display: none;
 }
-body .main .game-area .timer {
+.game-area .timer {
   text-align: right;
   display: block;
 }
-body .main .game-area .timer .countdown {
+.game-area .timer .countdown {
   background-color: rgba(253, 255, 227, 0.5);
   padding: 20px 1px 10px 10px;
   border: 1px solid #ececec;
   border-radius: 8px;
 }
-body .main .game-area .timer .countdown .item {
+.game-area .timer .countdown .item {
   font-size: 27px;
 }
-body .main .game-area .timer .countdown .item-hh {
+.game-area .timer .countdown .item-hh {
   display: none;
 }
-body .main .game-area .timer .countdown .label {
+.game-area .timer .countdown .label {
   text-transform: uppercase;
   color: #000000;
   font-size: 15px;
   font-weight: normal;
 }
-body .tab-content {
+
+.tab-content {
   border-width: 0 1px 1px 1px;
   border-style: solid;
   border-color: lightgray;
 }
-body .tab-content .task-tab-content {
+.tab-content .task-tab-content {
   padding: 10px 10px 20px 15px;
   background-color: #ffffff;
 }
-body .tab-content .task-tab-content .challenge {
+.tab-content .task-tab-content .challenge {
   font-weight: bold;
 }
-body .tab-content .task-tab-content .part-of-speech {
+.tab-content .task-tab-content .part-of-speech {
   font-weight: bold;
 }
-body .tab-content .task-tab-content .part-of-speech-definition {
+.tab-content .task-tab-content .part-of-speech-definition {
   font-style: italic;
 }
-body .tab-content .task-tab-content .text {
+.tab-content .task-tab-content .text {
   margin-bottom: 0;
 }
-body .tab-content .task-tab-content .text a {
+.tab-content .task-tab-content .text a {
   cursor: pointer;
 }
-body .tab-content .task-tab-content .text .word {
+.tab-content .task-tab-content .text .word {
   border: none;
   padding: 4px;
   background-color: #ffffff;
   display: inline-block;
   color: #000000;
 }
-body .tab-content .task-tab-content .text .correct {
+.tab-content .task-tab-content .text .correct {
   color: #43D01C;
   background-color: rgba(67, 208, 28, 0.05);
   pointer-events: none;
   cursor: not-allowed;
 }
-body .tab-content .task-tab-content .text .correct:hover {
+.tab-content .task-tab-content .text .correct:hover {
   color: #43D01C;
 }
-body .tab-content .task-tab-content .text .wrong {
+.tab-content .task-tab-content .text .wrong {
   pointer-events: none;
   cursor: not-allowed;
   color: #DD3970;
   background-color: rgba(221, 57, 112, 0.05);
 }
-body .tab-content .task-tab-content .text .wrong:hover {
+.tab-content .task-tab-content .text .wrong:hover {
   color: #DD3970;
 }
-body .tab-content .task-tab-content .text .disabled {
+.tab-content .task-tab-content .text .disabled {
   color: #000000;
   pointer-events: none;
   cursor: not-allowed;
 }
-body .tab-content .task-tab-content .text .disabled:hover {
+.tab-content .task-tab-content .text .disabled:hover {
   text-decoration: none;
 }
-body .tab-content .task-tab-content .counter {
+.tab-content .task-tab-content .counter {
   text-align: right;
   font-size: 30px;
   margin-right: 10px;
   background-color: #ffffff;
 }
-body .tab-content .task-tab-content .tab-counter {
+.tab-content .task-tab-content .tab-counter {
   color: #FF822F;
 }
-body .tab-content .task-tab-content p:last-child {
+.tab-content .task-tab-content p:last-child {
   margin-bottom: 0;
 }
 
@@ -223,34 +234,26 @@ body .tab-content .task-tab-content p:last-child {
   }
 }
 /* Small Screens */
-@media screen and (max-width: 750px) {
-  .main .home-header-area {
+@media screen and (max-width: 749px) {
+  .home-header-area {
     background-color: #56626A;
-    height: 40vh;
+    height: 35vh;
     position: relative;
   }
-  .main .home-header-area .home-header-area-content {
-    padding-top: 0;
+  .home-header-area .home-header-area-content {
+    padding-top: 2vh;
   }
-  .main .home-practice-area {
+
+  .home-practice-area {
     background-color: #4bd2e2;
-    height: 60vh;
+    height: 65vh;
     position: relative;
   }
-  .main .home-practice-area h3 {
-    text-align: left;
-    color: #56626A;
-    font-size: 7vw;
-  }
-  .main .home-challenge-area {
+
+  .home-challenge-area {
     background-color: #ffbc95;
-    height: 60vh;
+    height: 65vh;
     position: relative;
-  }
-  .main .home-challenge-area h3 {
-    text-align: left;
-    color: #56626A;
-    font-size: 7vw;
   }
 }
 
