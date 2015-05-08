@@ -4,60 +4,56 @@ body {
 }
 body .main.game-practice-area {
   background-color: #4bd2e2;
-  height: 100vh;
 }
 body .main.game-challenge-area {
   background-color: #ffbc95;
-  height: 100vh;
 }
-body .main .header-area {
+body .main .home-header-area {
   background-color: #56626A;
   height: 25vh;
   position: relative;
 }
-body .main .header-area .header-area-content {
+body .main .home-header-area .home-header-area-content {
   color: #ffffff;
   text-align: center;
   padding-top: 5vh;
 }
-body .main .header-area .header-area-content h2 {
+body .main .home-header-area .home-header-area-content h2 {
   font-size: 2.3em;
 }
-body .main .header-area .header-area-content p {
+body .main .home-header-area .home-header-area-content p {
   font-size: 1.3em;
 }
-body .main .practice-area {
+body .main .home-practice-area {
   background-color: #4bd2e2;
   height: 75vh;
   position: relative;
 }
-body .main .practice-area h3 {
+body .main .home-practice-area .home-practice-area-content h3 {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 35%;
+  left: 20%;
   text-align: center;
   color: #56626A;
   font-size: 7vw;
 }
-body .main .practice-area:hover {
+body .main .home-practice-area:hover {
   background-color: #58d5e4;
 }
-body .main .challenge-area {
+body .main .home-challenge-area {
   background-color: #ffbc95;
   height: 75vh;
   position: relative;
 }
-body .main .challenge-area h3 {
+body .main .home-challenge-area h3 {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 35%;
+  left: 20%;
   text-align: center;
   color: #56626A;
   font-size: 7vw;
 }
-body .main .challenge-area:hover {
+body .main .home-challenge-area:hover {
   background-color: #ffc6a4;
 }
 body .main .game-area {
@@ -228,30 +224,30 @@ body .tab-content .task-tab-content p:last-child {
 }
 /* Small Screens */
 @media screen and (max-width: 750px) {
-  .main .header-area {
+  .main .home-header-area {
     background-color: #56626A;
-    height: 35vh;
+    height: 40vh;
     position: relative;
   }
-  .main .header-area .header-area-content {
-    padding-top: 2vh;
+  .main .home-header-area .home-header-area-content {
+    padding-top: 0;
   }
-  .main .practice-area {
+  .main .home-practice-area {
     background-color: #4bd2e2;
-    height: 65vh;
+    height: 60vh;
     position: relative;
   }
-  .main .practice-area h3 {
+  .main .home-practice-area h3 {
     text-align: left;
     color: #56626A;
     font-size: 7vw;
   }
-  .main .challenge-area {
+  .main .home-challenge-area {
     background-color: #ffbc95;
-    height: 65vh;
+    height: 60vh;
     position: relative;
   }
-  .main .challenge-area h3 {
+  .main .home-challenge-area h3 {
     text-align: left;
     color: #56626A;
     font-size: 7vw;

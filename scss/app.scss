@@ -16,10 +16,9 @@ $color-timer: #fdffe3;
 
 @mixin vertical-align {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+  top: 35%;
+  left: 20%;
+ }
 
 @mixin header-style($align, $color-back, $font-size) {
   text-align: $align;
@@ -48,20 +47,15 @@ body {
 
     &.game-practice-area {
       background-color: $color-background-practice;
-      height: 100vh;
-
     }
 
     &.game-challenge-area {
       background-color: $color-background-challenge;
-      height: 100vh;
-
     }
 
-    .header-area {
-
+    .home-header-area {
       @include home-area-setup($color-background-header, 25vh);
-      .header-area-content {
+      .home-header-area-content {
         color: $color-lightest;
         text-align: center;
         padding-top: 5vh;
@@ -77,12 +71,17 @@ body {
       }
     }
 
-    .practice-area {
+    .home-practice-area {
       @include home-area-setup($color-background-practice, 75vh);
 
-      h3 {
-        @include vertical-align;
-        @include header-style(center, $color-background, 7vw);
+      .home-practice-area-content {
+
+        h3 {
+          @include vertical-align;
+          @include header-style(center, $color-background, 7vw);
+
+        }
+
       }
       &:hover {
         background-color: lighten($color-background-practice, 3);
@@ -90,7 +89,7 @@ body {
 
     }
 
-    .challenge-area {
+    .home-challenge-area {
       @include home-area-setup($color-background-challenge, 75vh);
       h3 {
         @include vertical-align;
@@ -314,24 +313,24 @@ body {
 /* Small Screens */
 @media screen and (max-width: 750px) {
   .main {
-    .header-area {
+    .home-header-area {
 
-      @include home-area-setup($color-background-header, 35vh);
-      .header-area-content {
-        padding-top: 2vh;
+      @include home-area-setup($color-background-header, 40vh);
+      .home-header-area-content {
+        padding-top: 0;
       }
     }
 
-    .practice-area {
-      @include home-area-setup($color-background-practice, 65vh);
+    .home-practice-area {
+      @include home-area-setup($color-background-practice, 60vh);
 
       h3 {
         @include header-style(left, $color-background, 7vw);
       }
     }
 
-    .challenge-area {
-      @include home-area-setup($color-background-challenge, 65vh);
+    .home-challenge-area {
+      @include home-area-setup($color-background-challenge, 60vh);
       h3 {
         @include header-style(left, $color-background, 7vw);
       }
