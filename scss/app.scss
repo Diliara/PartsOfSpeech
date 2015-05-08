@@ -37,6 +37,9 @@ $color-timer: #fdffe3;
   background-color: $color-back;
   min-height: 100%;
   overflow: hidden;
+  h2 {
+    color: $color-background-header;
+  }
 }
 
 @mixin border-radius($top-radius, $right-radius, $bottom-radius, $left-radius) {
@@ -52,12 +55,39 @@ html, body {
   height: 100%;
 }
 
+h2 {
+  font-size: 2.3em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h4 {
+  font-size: 1.7em;
+}
+
+h5 {
+  font-size: 1.4em;
+}
+
+p {
+  font-size: 1.3em;
+}
+
+li {
+  font-size: 1.1em;
+
+}
+
 .game-practice-area {
   @include background($color-background-practice);
+
 }
 
 .game-challenge-area {
   @include background($color-background-challenge);
+
 }
 
 .home-header-area {
@@ -67,14 +97,6 @@ html, body {
     text-align: center;
     padding-top: 5vh;
 
-    h2 {
-      font-size: 2.3em;
-    }
-    p {
-      font-size: 1.3em;
-
-    }
-
   }
 }
 
@@ -83,7 +105,7 @@ html, body {
 
   h3 {
     @include vertical-align(absolute, 35%, 20%);
-    @include header-style(center, $color-background, 7vw);
+    @include header-style(center, $color-background-header, 7vw);
 
   }
 
@@ -97,7 +119,7 @@ html, body {
   @include home-area-setup($color-background-challenge, 75vh);
   h3 {
     @include vertical-align(absolute, 35%, 20%);
-    @include header-style(center, $color-background, 7vw);
+    @include header-style(center, $color-background-header, 7vw);
   }
   &:hover {
     background-color: lighten($color-background-challenge, 3);
@@ -157,7 +179,6 @@ html, body {
 
     .challenge {
       font-weight: bold;
-
     }
 
     .part-of-speech {
@@ -220,7 +241,6 @@ html, body {
 
     .tab-counter {
       color: $color-counter;
-
     }
 
     p:last-child {
@@ -229,9 +249,6 @@ html, body {
 
   }
 }
-
-
-
 
 /* Large Screens */
 @media screen and (min-width: 750px) {

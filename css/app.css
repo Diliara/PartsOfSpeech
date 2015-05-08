@@ -3,16 +3,46 @@ html, body {
   height: 100%;
 }
 
+h2 {
+  font-size: 2.3em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h4 {
+  font-size: 1.7em;
+}
+
+h5 {
+  font-size: 1.4em;
+}
+
+p {
+  font-size: 1.3em;
+}
+
+li {
+  font-size: 1.1em;
+}
+
 .game-practice-area {
   background-color: #4bd2e2;
   min-height: 100%;
   overflow: hidden;
+}
+.game-practice-area h2 {
+  color: #56626A;
 }
 
 .game-challenge-area {
   background-color: #ffbc95;
   min-height: 100%;
   overflow: hidden;
+}
+.game-challenge-area h2 {
+  color: #56626A;
 }
 
 .home-header-area {
@@ -24,12 +54,6 @@ html, body {
   color: #ffffff;
   text-align: center;
   padding-top: 5vh;
-}
-.home-header-area .home-header-area-content h2 {
-  font-size: 2.3em;
-}
-.home-header-area .home-header-area-content p {
-  font-size: 1.3em;
 }
 
 .home-practice-area {
