@@ -92,6 +92,7 @@ li {
 
 .game-area {
   margin-bottom: 10px;
+  position: relative;
 }
 .game-area .start-challenge {
   display: none;
@@ -118,75 +119,77 @@ li {
   font-size: 15px;
   font-weight: normal;
 }
-
-.tab-content {
+.game-area .tab-content {
   border-width: 0 1px 1px 1px;
   border-style: solid;
   border-color: lightgray;
 }
-.tab-content .task-tab-content {
+.game-area .tab-content .task-tab-content {
   padding: 10px 10px 20px 15px;
   background-color: #ffffff;
 }
-.tab-content .task-tab-content .challenge {
+.game-area .tab-content .task-tab-content .challenge {
   font-weight: bold;
 }
-.tab-content .task-tab-content .part-of-speech {
+.game-area .tab-content .task-tab-content .part-of-speech {
   font-weight: bold;
 }
-.tab-content .task-tab-content .part-of-speech-definition {
+.game-area .tab-content .task-tab-content .part-of-speech-definition {
   font-style: italic;
 }
-.tab-content .task-tab-content .text {
+.game-area .tab-content .task-tab-content .text {
   margin-bottom: 0;
 }
-.tab-content .task-tab-content .text a {
+.game-area .tab-content .task-tab-content .text a {
   cursor: pointer;
 }
-.tab-content .task-tab-content .text .word {
+.game-area .tab-content .task-tab-content .text .word {
   border: none;
   padding: 4px;
   background-color: #ffffff;
   display: inline-block;
   color: #000000;
 }
-.tab-content .task-tab-content .text .correct {
+.game-area .tab-content .task-tab-content .text .correct {
   color: #43D01C;
   background-color: rgba(67, 208, 28, 0.05);
   pointer-events: none;
   cursor: not-allowed;
 }
-.tab-content .task-tab-content .text .correct:hover {
+.game-area .tab-content .task-tab-content .text .correct:hover {
   color: #43D01C;
 }
-.tab-content .task-tab-content .text .wrong {
+.game-area .tab-content .task-tab-content .text .wrong {
   pointer-events: none;
   cursor: not-allowed;
   color: #DD3970;
   background-color: rgba(221, 57, 112, 0.05);
 }
-.tab-content .task-tab-content .text .wrong:hover {
+.game-area .tab-content .task-tab-content .text .wrong:hover {
   color: #DD3970;
 }
-.tab-content .task-tab-content .text .disabled {
+.game-area .tab-content .task-tab-content .text .disabled {
   color: #000000;
   pointer-events: none;
   cursor: not-allowed;
 }
-.tab-content .task-tab-content .text .disabled:hover {
+.game-area .tab-content .task-tab-content .text .disabled:hover {
   text-decoration: none;
 }
-.tab-content .task-tab-content .counter {
+.game-area .tab-content .task-tab-content .counter {
   text-align: right;
-  font-size: 30px;
+  font-size: 35px;
   margin-right: 10px;
   background-color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  right: 3px;
 }
-.tab-content .task-tab-content .tab-counter {
+.game-area .tab-content .task-tab-content .counter .current-score {
+  color: #43D01C;
+}
+.game-area .tab-content .task-tab-content .counter .tab-counter {
   color: #FF822F;
-}
-.tab-content .task-tab-content p:last-child {
-  margin-bottom: 0;
 }
 
 /* Large Screens */

@@ -9,12 +9,26 @@ gameControllers.controller('Game1PracticeTabsController', function ($scope, $htt
 
 });
 
-gameControllers.controller('Game1PracticeController', function ($scope, $http) {
+gameControllers.controller('Game1PracticeController', function ($scope, $http, $modal) {
     $http.get('js/game1.json').success(function (text) {
         $scope.words = text;
     });
 
     window.scoreCounter = 0;
+
+    $scope.open = function (msg) {
+
+        var modalInstance = $modal.open({
+            templateUrl: 'partials/congratulations.html',
+            controller: 'ModalInstanceCtrl',
+            resolve: {
+                msg: function () {
+                    return angular.copy(msg);
+                }
+            }
+        });
+
+    };
 
     //Looking for
     $scope.lookingFor = function (partOfSpeechTitle, lookingForThis, taskNumber, theWordIs, wordIndex) {
@@ -25,8 +39,6 @@ gameControllers.controller('Game1PracticeController', function ($scope, $http) {
         lookingForPartOfSpeech = lookingForThis.toLowerCase();
         whereAreWeLooking = theWordIs.toLowerCase();
 
-        /* console.log("lookingForPartOfSpeech: " + lookingForPartOfSpeech + '\n' + "whereAreWeLooking: " + whereAreWeLooking); */
-
         if (whereAreWeLooking.indexOf(lookingForPartOfSpeech) != -1) {
 
             correctText = wordIDElem.text();
@@ -36,15 +48,13 @@ gameControllers.controller('Game1PracticeController', function ($scope, $http) {
             }).addClass('correct');
 
             scoreCounter = scoreCounter + 1;
-            /* console.log("scoreCounter: " + scoreCounter); */
             wordIDElem.closest('.task-tab-content').find('.current-score').text(scoreCounter);
-
             outOfNumber = parseInt(wordIDElem.closest('.task-tab-content').find('.counter .tab-counter').text());
 
-            /* console.log("found: " + scoreCounter + "\n out of: " + outOfNumber); */
-
             if (scoreCounter == outOfNumber) {
-                alert("Congratulations! You found all " + outOfNumber + " " + partOfSpeechTitle + "!");
+               /* alert("Congratulations! You found all " + outOfNumber + " " + partOfSpeechTitle + "!");*/
+
+                $scope.open("Congratulations! You found all " + outOfNumber + " " + partOfSpeechTitle + "!");
 
             }
 
@@ -148,5 +158,15 @@ gameControllers.controller('Game1ChallengeController', function ($scope, $http) 
 
     };
 
+
+});
+
+
+gameControllers.controller('ModalInstanceCtrl', function ($scope, $modalInstance) {
+
+    $scope.ok = function () {
+        console.log("ok");
+        $modalInstance.close();
+     };
 
 });

@@ -129,10 +129,10 @@ li {
 
 .game-area {
   margin-bottom: 10px;
+  position: relative;
 
   .start-challenge {
     display: none;
-
   }
 
   .timer {
@@ -166,88 +166,95 @@ li {
 
   }
 
-}
+  .tab-content {
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: darken($color-greyscale, 10%);
 
-.tab-content {
-  border-width: 0 1px 1px 1px;
-  border-style: solid;
-  border-color: darken($color-greyscale, 10%);
+    .task-tab-content {
+      padding: 10px 10px 20px 15px;
+      background-color: $color-lightest;
 
-  .task-tab-content {
-    padding: 10px 10px 20px 15px;
-    background-color: $color-lightest;
-
-    .challenge {
-      font-weight: bold;
-    }
-
-    .part-of-speech {
-      font-weight: bold;
-    }
-    .part-of-speech-definition {
-      font-style: italic;
-
-    }
-
-    .text {
-      margin-bottom: 0;
-      a {
-        cursor: pointer;
+      .challenge {
+        font-weight: bold;
       }
-      .word {
-        border: none;
-        padding: 4px;
-        background-color: $color-btn;
-        display: inline-block;
-        color: $color-darkest;
+
+      .part-of-speech {
+        font-weight: bold;
+      }
+      .part-of-speech-definition {
+        font-style: italic;
 
       }
-      .correct {
-        color: $color-correct;
-        background-color: transparentize($color-correct, 0.95);
-        pointer-events: none;
-        cursor: not-allowed;
-        &:hover {
+
+      .text {
+        margin-bottom: 0;
+        a {
+          cursor: pointer;
+        }
+        .word {
+          border: none;
+          padding: 4px;
+          background-color: $color-btn;
+          display: inline-block;
+          color: $color-darkest;
+
+        }
+        .correct {
+          color: $color-correct;
+          background-color: transparentize($color-correct, 0.95);
+          pointer-events: none;
+          cursor: not-allowed;
+          &:hover {
+            color: $color-correct;
+          }
+        }
+        .wrong {
+          pointer-events: none;
+          cursor: not-allowed;
+          color: $color-wrong;
+          background-color: transparentize($color-wrong, 0.95);
+
+          &:hover {
+            color: $color-wrong;
+          }
+        }
+        .disabled {
+          color: $color-darkest;
+          pointer-events: none;
+          cursor: not-allowed;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+      }
+
+      .counter {
+        text-align: right;
+        font-size: 35px;
+        margin-right: 10px;
+        background-color: $color-lightest;
+        position: absolute;
+        bottom: 0;
+        right: 3px;
+
+        .current-score {
           color: $color-correct;
         }
-      }
-      .wrong {
-        pointer-events: none;
-        cursor: not-allowed;
-        color: $color-wrong;
-        background-color: transparentize($color-wrong, 0.95);
 
-        &:hover {
-          color: $color-wrong;
-        }
-      }
-      .disabled {
-        color: $color-darkest;
-        pointer-events: none;
-        cursor: not-allowed;
-        &:hover {
-          text-decoration: none;
+        .tab-counter {
+          color: $color-counter;
         }
       }
 
-    }
 
-    .counter {
-      text-align: right;
-      font-size: 30px;
-      margin-right: 10px;
-      background-color: $color-lightest;
-    }
 
-    .tab-counter {
-      color: $color-counter;
-    }
 
-    p:last-child {
-      margin-bottom: 0;
-    }
 
+    }
   }
+
 }
 
 /* Large Screens */
