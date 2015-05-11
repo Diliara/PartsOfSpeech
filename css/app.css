@@ -169,7 +169,7 @@ li {
   color: #DD3970;
 }
 .game-area .tab-content .task-tab-content .text .disabled {
-  color: #000000;
+  /* color: $color-darkest; */
   pointer-events: none;
   cursor: not-allowed;
 }
@@ -190,6 +190,14 @@ li {
 }
 .game-area .tab-content .task-tab-content .counter .tab-counter {
   color: #FF822F;
+}
+
+.modal-header {
+  background-color: rgba(67, 208, 28, 0.05);
+}
+
+.message {
+  color: #43D01C;
 }
 
 /* Large Screens */

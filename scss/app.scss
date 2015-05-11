@@ -220,7 +220,7 @@ li {
           }
         }
         .disabled {
-          color: $color-darkest;
+         /* color: $color-darkest; */
           pointer-events: none;
           cursor: not-allowed;
           &:hover {
@@ -248,13 +248,17 @@ li {
         }
       }
 
-
-
-
-
     }
   }
 
+}
+
+.modal-header {
+  background-color: transparentize($color-correct, 0.95);
+}
+
+.message {
+  color: $color-correct;
 }
 
 /* Large Screens */

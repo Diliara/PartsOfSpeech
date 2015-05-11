@@ -1,17 +1,16 @@
 var gameControllers = angular.module('gameControllers', ['ui.bootstrap']);
 
-gameControllers.controller('Game1PracticeTabsController', function ($scope, $http) {
-
-    $http.get('js/game1_tabs.json').success(function (tabsContent) {
-        $scope.tabs = tabsContent;
+gameControllers.controller('Game1PracticeController', function ($scope, $http) {
+    $http.get('js/game1.json').success(function (text) {
+        $scope.words = text;
     });
-
 
 });
 
-gameControllers.controller('Game1PracticeController', function ($scope, $http, $modal) {
-    $http.get('js/game1.json').success(function (text) {
-        $scope.words = text;
+gameControllers.controller('Game1PracticeTabsController', function ($scope, $http, $modal) {
+
+    $http.get('js/game1_tabs.json').success(function (tabsContent) {
+        $scope.tabs = tabsContent;
     });
 
     window.scoreCounter = 0;
@@ -20,14 +19,14 @@ gameControllers.controller('Game1PracticeController', function ($scope, $http, $
 
         var modalInstance = $modal.open({
             templateUrl: 'partials/congratulations.html',
-            controller: 'ModalInstanceCtrl',
+            controller: 'ModalWindowController',
             resolve: {
                 msg: function () {
-                    return angular.copy(msg);
+                    $scope.message = angular.copy(msg);
+                    return $scope.message;
                 }
             }
         });
-
     };
 
     //Looking for
@@ -52,9 +51,7 @@ gameControllers.controller('Game1PracticeController', function ($scope, $http, $
             outOfNumber = parseInt(wordIDElem.closest('.task-tab-content').find('.counter .tab-counter').text());
 
             if (scoreCounter == outOfNumber) {
-               /* alert("Congratulations! You found all " + outOfNumber + " " + partOfSpeechTitle + "!");*/
-
-                $scope.open("Congratulations! You found all " + outOfNumber + " " + partOfSpeechTitle + "!");
+                $scope.open("You found all " + outOfNumber + " " + partOfSpeechTitle + "!" + " Try a different task now!");
 
             }
 
@@ -73,13 +70,26 @@ gameControllers.controller('Game1PracticeController', function ($scope, $http, $
         window.scoreCounter = 0;
         $('a').removeClass('correct').removeClass('wrong');
         $('.current-score').text(scoreCounter);
-
-
     };
 
 
 });
 
+gameControllers.controller('ModalWindowController', function ($scope, $modalInstance, msg) {
+
+
+    $('.text a').addClass('disabled');
+
+    $scope.message = msg;
+
+    $scope.ok = function () {
+        $modalInstance.close();
+    };
+
+});
+
+
+/* ************************************* CHALLENGE ************************************* */
 
 gameControllers.controller('Game1ChallengeTabsController', function ($scope, $http) {
 
@@ -96,7 +106,6 @@ gameControllers.controller('Game1ChallengeTabsController', function ($scope, $ht
     };
 
 });
-
 gameControllers.controller('Game1ChallengeController', function ($scope, $http) {
     $http.get('js/game1.json').success(function (text) {
         $scope.words = text;
@@ -158,15 +167,5 @@ gameControllers.controller('Game1ChallengeController', function ($scope, $http) 
 
     };
 
-
-});
-
-
-gameControllers.controller('ModalInstanceCtrl', function ($scope, $modalInstance) {
-
-    $scope.ok = function () {
-        console.log("ok");
-        $modalInstance.close();
-     };
 
 });
