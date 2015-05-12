@@ -33,7 +33,7 @@ li {
   overflow: hidden;
 }
 .game-practice-area h2 {
-  color: #56626A;
+  color: #000000;
 }
 
 .game-challenge-area {
@@ -42,7 +42,7 @@ li {
   overflow: hidden;
 }
 .game-challenge-area h2 {
-  color: #56626A;
+  color: #000000;
 }
 
 .game-challenge-header-area {
@@ -193,10 +193,10 @@ li {
   bottom: 0;
   right: 3px;
 }
-.game-area .counter .current-score {
+.game-area .current-score {
   color: #43D01C;
 }
-.game-area .counter .tab-counter {
+.game-area .tab-counter {
   color: #FF822F;
 }
 
@@ -207,10 +207,12 @@ li {
   padding: 0 7px;
   background-color: #ffffff;
 }
-.total-counter .total-current-score {
+
+.total-current-score {
   color: #43D01C;
 }
-.total-counter .total-tab-counter {
+
+.total-tab-counter {
   color: #FF822F;
 }
 
@@ -220,6 +222,10 @@ li {
 
 .message {
   color: #43D01C;
+}
+
+.nav-tabs {
+  background-color: #ececec;
 }
 
 /* Large Screens */
@@ -292,13 +298,29 @@ li {
 }
 /* Small Screens */
 @media screen and (max-width: 749px) and (orientation: portrait) {
+  h2 {
+    font-size: 2.3em;
+  }
+
+  h5 {
+    font-size: 1.6em;
+  }
+
+  .text {
+    font-size: 1.5em;
+  }
+
+  .nav-tabs {
+    font-size: 1.2em;
+  }
+
   .home-header-area {
     background-color: #56626A;
     height: 35vh;
     position: relative;
   }
   .home-header-area .home-header-area-content {
-    padding-top: 2vh;
+    padding-top: 3vh;
   }
 
   .home-practice-area {
@@ -314,6 +336,22 @@ li {
   }
 }
 @media screen and (max-width: 749px) and (orientation: landscape) {
+  h2 {
+    font-size: 2.3em;
+  }
+
+  h5 {
+    font-size: 1.6em;
+  }
+
+  .text {
+    font-size: 1.5em;
+  }
+
+  .nav-tabs {
+    font-size: 1.2em;
+  }
+
   .home-header-area {
     background-color: #56626A;
     height: 50vh;

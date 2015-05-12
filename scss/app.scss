@@ -3,7 +3,7 @@ $color-greyscale: #ececec;
 $color-darkest: #000000;
 
 $color-background: #56626A;
-$color-background-2: #ececec;
+$color-inactive: #ececec;
 $color-background-header: #56626A;
 $color-background-practice: #4bd2e2;
 $color-background-challenge: #ffbc95;
@@ -32,13 +32,13 @@ $color-timer: #fdffe3;
   position: relative;
 }
 
-@mixin background($color-back) {
+@mixin background($color-back, $color-h2) {
   //full background color; works with html, body 100%
   background-color: $color-back;
   min-height: 100%;
   overflow: hidden;
   h2 {
-    color: $color-background-header;
+    color: $color-h2;
   }
 }
 
@@ -81,11 +81,11 @@ li {
 }
 
 .game-practice-area {
-  @include background($color-background-practice);
+  @include background($color-background-practice, $color-darkest);
 }
 
 .game-challenge-area {
-  @include background($color-background-challenge);
+  @include background($color-background-challenge, $color-darkest);
 
 }
 
@@ -250,15 +250,16 @@ li {
     position: absolute;
     bottom: 0;
     right: 3px;
-
-    .current-score {
-      color: $color-correct;
-    }
-
-    .tab-counter {
-      color: $color-counter;
-    }
   }
+
+  .current-score {
+    color: $color-correct;
+  }
+
+  .tab-counter {
+    color: $color-counter;
+  }
+
 }
 
 .total-counter {
@@ -267,14 +268,14 @@ li {
   font-size: 35px;
   padding: 0 7px;
   background-color: $color-lightest;
+}
 
-  .total-current-score {
-    color: $color-correct;
-  }
+.total-current-score {
+  color: $color-correct;
+}
 
-  .total-tab-counter {
-    color: $color-counter;
-  }
+.total-tab-counter {
+  color: $color-counter;
 }
 
 .modal-header {
@@ -283,6 +284,11 @@ li {
 
 .message {
   color: $color-correct;
+}
+
+
+.nav-tabs {
+  background-color: $color-inactive;
 }
 
 /* Large Screens */
@@ -299,7 +305,7 @@ li {
 
     > .nav-tabs {
       height: 55vh;
-      background-color: $color-background-2;
+      background-color: $color-inactive;
       border-bottom: 0;
       float: left;
       margin-right: 19px;
@@ -369,11 +375,26 @@ li {
 /* Small Screens */
 @media screen and (max-width: 749px) and (orientation: portrait) {
 
+  h2 {
+    font-size: 2.3em;
+  }
+  h5 {
+    font-size: 1.6em;
+  }
+  .text {
+    font-size: 1.5em;
+  }
+
+  .nav-tabs {
+    font-size: 1.2em;
+  }
+
+
   .home-header-area {
 
     @include home-area-setup($color-background-header, 35vh);
     .home-header-area-content {
-      padding-top: 2vh;
+      padding-top: 3vh;
     }
   }
   .home-practice-area {
@@ -387,6 +408,22 @@ li {
 }
 
 @media screen and (max-width: 749px) and (orientation: landscape) {
+
+  h2 {
+    font-size: 2.3em;
+  }
+
+  h5 {
+    font-size: 1.6em;
+  }
+
+  .text {
+    font-size: 1.5em;
+  }
+
+  .nav-tabs {
+    font-size: 1.2em;
+  }
 
   .home-header-area {
 
