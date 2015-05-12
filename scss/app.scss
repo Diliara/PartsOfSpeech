@@ -90,7 +90,7 @@ li {
 }
 
 .game-challenge-header-area {
-  height: 10vh;
+  height: 80px;
 
 }
 
@@ -131,9 +131,14 @@ li {
 
 }
 
+.set-timer {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 20px;
+}
+
 .timer {
-  text-align: right;
-  display: block;
 
   .countdown {
     background-color: transparentize($color-timer, 0.5);
@@ -169,8 +174,6 @@ li {
   .start-challenge {
     display: none;
   }
-
-
 
   .tab-content {
     border-width: 0 1px 1px 1px;
@@ -257,8 +260,6 @@ li {
     }
   }
 }
-
-
 
 .total-counter {
   display: inline-block;

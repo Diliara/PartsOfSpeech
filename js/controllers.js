@@ -98,14 +98,17 @@ gameControllers.controller('Game1ChallengeTabsController', function ($scope, $ht
     });
 
 
-    $scope.startChallenge = function (tabID, duration) {
-        $('.start-challenge').slideDown();
+    $scope.startChallenge = function () {
+         $('.start-challenge').slideDown();
         $('.btn-start').hide();
-        $('.set-timer').html("<p class='timer' timer-plugin=\"" + "{css_class: \'countdown\', always_show_days: false, with_labels: true, with_seconds: true, with_separators: true, label_dd: '', label_hh: '', label_mm: 'M', label_ss: 'S', separator: ' ', separator_days: ',' }\">0h 3m 0s</p>");
+        $('.set-timer').show();
+
+
 
     };
 
 });
+
 gameControllers.controller('Game1ChallengeController', function ($scope, $http) {
     $http.get('js/game1.json').success(function (text) {
         $scope.words = text;

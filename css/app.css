@@ -46,7 +46,7 @@ li {
 }
 
 .game-challenge-header-area {
-  height: 10vh;
+  height: 80px;
 }
 
 .home-header-area {
@@ -94,10 +94,13 @@ li {
   background-color: #ffc6a4;
 }
 
-.timer {
-  text-align: right;
-  display: block;
+.set-timer {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 20px;
 }
+
 .timer .countdown {
   background-color: rgba(253, 255, 227, 0.5);
   padding: 20px 1px 10px 10px;
