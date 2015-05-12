@@ -1,7 +1,14 @@
 <div class="container-fluid game-challenge-area" ng-controller="Game1ChallengeTabsController">
-    <h2>Challenge</h2>
 
-    <div class="game-area">
+    <header class="game-challenge-header-area">
+        <h2>Challenge</h2>
+
+        <div class="set-timer">
+             <p class="timer"></p>
+        </div>
+    </header>
+
+    <section class="game-area">
         <tabset class="tabs-left">
             <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled" ng-click="changeTab()">
                 <div class="task-tab-content" id="{{'tab_' + tab.taskNumber}}">
@@ -16,26 +23,24 @@
                         <button class="btn btn-primary btn-start" ng-click="startChallenge('tab_' + tab.taskNumber, tab.timer)">Start</button>
                         <div class="start-challenge">
 
-                            <div class="set-timer">
-                                <p class="timer"></p>
-                            </div>
 
                             <p class="text">
                                 <a ng-repeat="word in words" id="{{'word_' + tab.taskNumber + '_' + $index}}" class="word {{word.btnStatus}}" data-partOfSpeech="{{ word.partOfSpeech }}" ng-click="lookingFor(tab.title, tab.partOfSpeech, tab.taskNumber, word.partOfSpeech, $index) ">{{word.wordItself}}</a>
                             </p>
 
-                            <p class="counter"><span class="current-score">0</span> / <span class="tab-counter">{{ tab.counter }}</span></p>
 
                         </div>
                     </div>
                 </div>
             </tab>
         </tabset>
-    </div>
+    </section>
 
-    <p><a class="btn btn-default" href="#/home">Home</a></p>
+    <footer>
+        <p class="total-counter"><span class="total-current-score">0</span> / <span class="total-tab-counter">{{ totalCounter }}</span></p>
 
-
+        <p><a class="btn btn-default" href="#/home">Home</a></p>
+    </footer>
 </div>
 
 

@@ -4,7 +4,7 @@ html, body {
 }
 
 h2 {
-  font-size: 2.3em;
+  font-size: 3em;
 }
 
 h3 {
@@ -43,6 +43,10 @@ li {
 }
 .game-challenge-area h2 {
   color: #56626A;
+}
+
+.game-challenge-header-area {
+  height: 10vh;
 }
 
 .home-header-area {
@@ -90,34 +94,35 @@ li {
   background-color: #ffc6a4;
 }
 
+.timer {
+  text-align: right;
+  display: block;
+}
+.timer .countdown {
+  background-color: rgba(253, 255, 227, 0.5);
+  padding: 20px 1px 10px 10px;
+  border: 1px solid #ececec;
+  border-radius: 8px;
+}
+.timer .countdown .item {
+  font-size: 27px;
+}
+.timer .countdown .item-hh {
+  display: none;
+}
+.timer .countdown .label {
+  text-transform: uppercase;
+  color: #000000;
+  font-size: 15px;
+  font-weight: normal;
+}
+
 .game-area {
   margin-bottom: 10px;
   position: relative;
 }
 .game-area .start-challenge {
   display: none;
-}
-.game-area .timer {
-  text-align: right;
-  display: block;
-}
-.game-area .timer .countdown {
-  background-color: rgba(253, 255, 227, 0.5);
-  padding: 20px 1px 10px 10px;
-  border: 1px solid #ececec;
-  border-radius: 8px;
-}
-.game-area .timer .countdown .item {
-  font-size: 27px;
-}
-.game-area .timer .countdown .item-hh {
-  display: none;
-}
-.game-area .timer .countdown .label {
-  text-transform: uppercase;
-  color: #000000;
-  font-size: 15px;
-  font-weight: normal;
 }
 .game-area .tab-content {
   border-width: 0 1px 1px 1px;
@@ -176,7 +181,7 @@ li {
 .game-area .tab-content .task-tab-content .text .disabled:hover {
   text-decoration: none;
 }
-.game-area .tab-content .task-tab-content .counter {
+.game-area .counter {
   text-align: right;
   font-size: 35px;
   margin-right: 10px;
@@ -185,10 +190,24 @@ li {
   bottom: 0;
   right: 3px;
 }
-.game-area .tab-content .task-tab-content .counter .current-score {
+.game-area .counter .current-score {
   color: #43D01C;
 }
-.game-area .tab-content .task-tab-content .counter .tab-counter {
+.game-area .counter .tab-counter {
+  color: #FF822F;
+}
+
+.total-counter {
+  display: inline-block;
+  float: right;
+  font-size: 35px;
+  padding: 0 7px;
+  background-color: #ffffff;
+}
+.total-counter .total-current-score {
+  color: #43D01C;
+}
+.total-counter .total-tab-counter {
   color: #FF822F;
 }
 
@@ -209,7 +228,7 @@ li {
   }
 
   .tabs-left > .nav-tabs {
-    height: 80vh;
+    height: 55vh;
     background-color: #ececec;
     border-bottom: 0;
     float: left;
@@ -264,7 +283,7 @@ li {
     border-width: 1px 1px 1px 0;
   }
   .tabs-left .tab-content .task-tab-content {
-    height: 80vh;
+    height: 55vh;
     padding: 10px 10px 17px 15px;
   }
 }

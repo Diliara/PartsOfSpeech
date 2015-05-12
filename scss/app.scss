@@ -56,7 +56,7 @@ html, body {
 }
 
 h2 {
-  font-size: 2.3em;
+  font-size: 3em;
 }
 
 h3 {
@@ -82,11 +82,15 @@ li {
 
 .game-practice-area {
   @include background($color-background-practice);
-
 }
 
 .game-challenge-area {
   @include background($color-background-challenge);
+
+}
+
+.game-challenge-header-area {
+  height: 10vh;
 
 }
 
@@ -127,6 +131,37 @@ li {
 
 }
 
+.timer {
+  text-align: right;
+  display: block;
+
+  .countdown {
+    background-color: transparentize($color-timer, 0.5);
+    padding: 20px 1px 10px 10px;
+    border: 1px solid $color-greyscale;
+    border-radius: 8px;
+
+    .item {
+      font-size: 27px;
+
+    }
+
+    .item-hh {
+      display: none;
+    }
+
+    .label {
+      text-transform: uppercase;
+      color: $color-darkest;
+      font-size: 15px;
+      font-weight: normal;
+
+    }
+
+  }
+
+}
+
 .game-area {
   margin-bottom: 10px;
   position: relative;
@@ -135,36 +170,7 @@ li {
     display: none;
   }
 
-  .timer {
-    text-align: right;
-    display: block;
 
-    .countdown {
-      background-color: transparentize($color-timer, 0.5);
-      padding: 20px 1px 10px 10px;
-      border: 1px solid $color-greyscale;
-      border-radius: 8px;
-
-      .item {
-        font-size: 27px;
-
-      }
-
-      .item-hh {
-        display: none;
-      }
-
-      .label {
-        text-transform: uppercase;
-        color: $color-darkest;
-        font-size: 15px;
-        font-weight: normal;
-
-      }
-
-    }
-
-  }
 
   .tab-content {
     border-width: 0 1px 1px 1px;
@@ -220,7 +226,7 @@ li {
           }
         }
         .disabled {
-         /* color: $color-darkest; */
+          /* color: $color-darkest; */
           pointer-events: none;
           cursor: not-allowed;
           &:hover {
@@ -230,27 +236,44 @@ li {
 
       }
 
-      .counter {
-        text-align: right;
-        font-size: 35px;
-        margin-right: 10px;
-        background-color: $color-lightest;
-        position: absolute;
-        bottom: 0;
-        right: 3px;
-
-        .current-score {
-          color: $color-correct;
-        }
-
-        .tab-counter {
-          color: $color-counter;
-        }
-      }
-
     }
   }
 
+  .counter {
+    text-align: right;
+    font-size: 35px;
+    margin-right: 10px;
+    background-color: $color-lightest;
+    position: absolute;
+    bottom: 0;
+    right: 3px;
+
+    .current-score {
+      color: $color-correct;
+    }
+
+    .tab-counter {
+      color: $color-counter;
+    }
+  }
+}
+
+
+
+.total-counter {
+  display: inline-block;
+  float: right;
+  font-size: 35px;
+  padding: 0 7px;
+  background-color: $color-lightest;
+
+  .total-current-score {
+    color: $color-correct;
+  }
+
+  .total-tab-counter {
+    color: $color-counter;
+  }
 }
 
 .modal-header {
@@ -274,7 +297,7 @@ li {
   .tabs-left {
 
     > .nav-tabs {
-      height: 80vh;
+      height: 55vh;
       background-color: $color-background-2;
       border-bottom: 0;
       float: left;
@@ -334,7 +357,7 @@ li {
       border-width: 1px 1px 1px 0;
 
       .task-tab-content {
-        height: 80vh;
+        height: 55vh;
 
         padding: 10px 10px 17px 15px;
       }
