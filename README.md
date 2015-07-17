@@ -1,2 +1,2 @@
 # NounsGame
-Testing out Angluar for simple Game development
+SFU CODE simple game developed with AngularJS
