@@ -247,9 +247,9 @@ li {
     margin-right: 10px;
     background-color: $color-lightest;
     padding: 0 12px 0 10px;
-    position: absolute;
-    top: -55px;
-    right: -10px;
+    position: fixed;
+    top: 20px;
+    right: 50px;
   }
 
   .current-score {
