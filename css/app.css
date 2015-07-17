@@ -237,7 +237,7 @@ li {
   }
 
   .tabs-left > .nav-tabs {
-    height: 55vh;
+    height: 80vh;
     background-color: #ececec;
     border-bottom: 0;
     float: left;
@@ -292,7 +292,7 @@ li {
     border-width: 1px 1px 1px 0;
   }
   .tabs-left .tab-content .task-tab-content {
-    height: 55vh;
+    height: 80vh;
     padding: 10px 10px 17px 15px;
   }
 }
