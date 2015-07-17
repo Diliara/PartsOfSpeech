@@ -30,8 +30,8 @@ angular.module('gameApp')
             wordID = "word_" + taskNumber + "_" + wordIndex;
             wordIDElem = $('#' + wordID);
 
-            lookingForPartOfSpeech = lookingForThis.toLowerCase();
-            whereAreWeLooking = theWordIs.toLowerCase();
+            lookingForPartOfSpeech = lookingForThis;
+            whereAreWeLooking = theWordIs;
 
             /* console.log("lookingForPartOfSpeech: " + lookingForPartOfSpeech + '\n' + "whereAreWeLooking: " + whereAreWeLooking); */
 
