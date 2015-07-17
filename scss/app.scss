@@ -5,13 +5,13 @@ $color-darkest: #000000;
 $color-background: #56626A;
 $color-inactive: #ececec;
 $color-background-header: #56626A;
-$color-background-practice: #4bd2e2;
+$color-background-practice: #68CBDA;
 $color-background-challenge: #ffbc95;
 
 $color-correct: #43D01C;
 $color-wrong: #DD3970;
 $color-btn: #ffffff;
-$color-counter: #FF822F;
+$color-counter: #D47C33;
 $color-timer: #fdffe3;
 
 @mixin vertical-align($position, $top, $left) {
@@ -56,7 +56,7 @@ html, body {
 }
 
 h2 {
-  font-size: 3em;
+  font-size: 3.2em;
 }
 
 h3 {
@@ -81,17 +81,16 @@ li {
 }
 
 .game-practice-area {
-  @include background($color-background-practice, $color-darkest);
+  @include background($color-background-practice, $color-background-header);
 }
 
 .game-challenge-area {
-  @include background($color-background-challenge, $color-darkest);
+  @include background($color-background-challenge, $color-background-header);
 
 }
 
 .game-challenge-header-area {
-  height: 80px;
-
+  height: 75px;
 }
 
 .home-header-area {
@@ -247,9 +246,10 @@ li {
     font-size: 35px;
     margin-right: 10px;
     background-color: $color-lightest;
+    padding: 0 12px 0 10px;
     position: absolute;
-    bottom: 0;
-    right: 3px;
+    top: -55px;
+    right: -10px;
   }
 
   .current-score {
@@ -304,7 +304,7 @@ li {
   .tabs-left {
 
     > .nav-tabs {
-      height: 55vh;
+      height: 75vh;
       background-color: $color-inactive;
       border-bottom: 0;
       float: left;
@@ -313,6 +313,7 @@ li {
 
       > li {
         float: none;
+        font-size: 16px;
         > a {
           @extend %extend_tabs_a;
           margin-right: -1px;
@@ -364,7 +365,7 @@ li {
       border-width: 1px 1px 1px 0;
 
       .task-tab-content {
-        height: 55vh;
+        height: 75vh;
 
         padding: 10px 10px 17px 15px;
       }
@@ -433,7 +434,7 @@ li {
     }
   }
   .home-practice-area {
-    @include home-area-setup($color-background-practice, 50vh);
+    @include home-area-setup($color-background-header, 50vh);
 
     h3 {
       @include vertical-align(absolute, 15%, 20%);
@@ -442,7 +443,7 @@ li {
   }
 
   .home-challenge-area {
-    @include home-area-setup($color-background-challenge, 50vh);
+    @include home-area-setup($color-background-header, 50vh);
     h3 {
       @include vertical-align(absolute, 15%, 20%);
     }

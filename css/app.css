@@ -4,7 +4,7 @@ html, body {
 }
 
 h2 {
-  font-size: 3em;
+  font-size: 3.2em;
 }
 
 h3 {
@@ -28,12 +28,12 @@ li {
 }
 
 .game-practice-area {
-  background-color: #4bd2e2;
+  background-color: #68CBDA;
   min-height: 100%;
   overflow: hidden;
 }
 .game-practice-area h2 {
-  color: #000000;
+  color: #56626A;
 }
 
 .game-challenge-area {
@@ -42,11 +42,11 @@ li {
   overflow: hidden;
 }
 .game-challenge-area h2 {
-  color: #000000;
+  color: #56626A;
 }
 
 .game-challenge-header-area {
-  height: 80px;
+  height: 75px;
 }
 
 .home-header-area {
@@ -61,7 +61,7 @@ li {
 }
 
 .home-practice-area {
-  background-color: #4bd2e2;
+  background-color: #68CBDA;
   height: 75vh;
   position: relative;
 }
@@ -74,7 +74,7 @@ li {
   font-size: 7vw;
 }
 .home-practice-area:hover {
-  background-color: #58d5e4;
+  background-color: #74cfdd;
 }
 
 .home-challenge-area {
@@ -189,15 +189,16 @@ li {
   font-size: 35px;
   margin-right: 10px;
   background-color: #ffffff;
+  padding: 0 12px 0 10px;
   position: absolute;
-  bottom: 0;
-  right: 3px;
+  top: -55px;
+  right: -10px;
 }
 .game-area .current-score {
   color: #43D01C;
 }
 .game-area .tab-counter {
-  color: #FF822F;
+  color: #D47C33;
 }
 
 .total-counter {
@@ -213,7 +214,7 @@ li {
 }
 
 .total-tab-counter {
-  color: #FF822F;
+  color: #D47C33;
 }
 
 .modal-header {
@@ -237,7 +238,7 @@ li {
   }
 
   .tabs-left > .nav-tabs {
-    height: 80vh;
+    height: 75vh;
     background-color: #ececec;
     border-bottom: 0;
     float: left;
@@ -259,6 +260,7 @@ li {
   }
   .tabs-left > .nav-tabs > li {
     float: none;
+    font-size: 16px;
   }
   .tabs-left > .nav-tabs > li > a {
     margin-right: -1px;
@@ -292,7 +294,7 @@ li {
     border-width: 1px 1px 1px 0;
   }
   .tabs-left .tab-content .task-tab-content {
-    height: 80vh;
+    height: 75vh;
     padding: 10px 10px 17px 15px;
   }
 }
@@ -324,7 +326,7 @@ li {
   }
 
   .home-practice-area {
-    background-color: #4bd2e2;
+    background-color: #68CBDA;
     height: 65vh;
     position: relative;
   }
@@ -362,7 +364,7 @@ li {
   }
 
   .home-practice-area {
-    background-color: #4bd2e2;
+    background-color: #56626A;
     height: 50vh;
     position: relative;
   }
@@ -373,7 +375,7 @@ li {
   }
 
   .home-challenge-area {
-    background-color: #ffbc95;
+    background-color: #56626A;
     height: 50vh;
     position: relative;
   }
