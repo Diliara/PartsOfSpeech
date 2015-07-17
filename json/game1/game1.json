@@ -29,7 +29,7 @@
     },
     {
         "wordItself": "fan",
-        "partOfSpeech": "undefined"
+        "partOfSpeech": "singularNoun countNoun"
 
     },
     {
@@ -121,16 +121,24 @@
         "partOfSpeech": "undefined"
     },
     {
-        "wordItself": "minifigures,",
-        "partOfSpeech": "pluralNoun"
+        "wordItself": "minifigures",
+        "partOfSpeech": "pluralNoun countNoun"
     },
     {
-        "wordItself": "graphic",
-        "partOfSpeech": "undefined"
+        "wordItself": ",",
+        "partOfSpeech": "undefined",
+        "btnStatus": "disabled"
+
     },
     {
-        "wordItself": "t-shirts,",
-        "partOfSpeech": "pluralNouns"
+        "wordItself": "graphic t-shirts",
+        "partOfSpeech": "pluralNoun countNoun"
+    },
+    {
+        "wordItself": ",",
+        "partOfSpeech": "undefined",
+        "btnStatus": "disabled"
+
     },
     {
         "wordItself": "and",
@@ -146,7 +154,7 @@
     },
     {
         "wordItself": "Yoda",
-        "partOfSpeech": "undefined"
+        "partOfSpeech": "singularNoun nonCountNoun"
     },
     {
         "wordItself": ".",
@@ -156,7 +164,7 @@
     },
     {
         "wordItself": "I",
-        "partOfSpeech": "undefined"
+        "partOfSpeech": "pronoun"
     },
     {
         "wordItself": "also",
@@ -208,7 +216,7 @@
     },
     {
         "wordItself": "animation",
-        "partOfSpeech": "undefined"
+        "partOfSpeech": "singularNoun nonCountNoun"
     },
     {
         "wordItself": "interactive",
@@ -277,12 +285,18 @@
         "partOfSpeech": "undefined"
     },
     {
-        "wordItself": "team,",
+        "wordItself": "team",
         "partOfSpeech": "singularNoun countNoun"
     },
     {
+        "wordItself": ",",
+        "partOfSpeech": "undefined",
+        "btnStatus": "disabled"
+
+    },
+    {
         "wordItself": "I",
-        "partOfSpeech": "undefined"
+        "partOfSpeech": "pronoun"
     },
     {
         "wordItself": "hope",
@@ -311,7 +325,7 @@
     },
     {
         "wordItself": "skills",
-        "partOfSpeech": "undefined"
+        "partOfSpeech": "pluralNoun countNoun"
     },
     {
         "wordItself": "to",
@@ -347,7 +361,7 @@
     },
     {
         "wordItself": "master",
-        "partOfSpeech": "undefined"
+        "partOfSpeech": "singularNoun countNoun"
     },
     {
         "wordItself": ",",
@@ -375,7 +389,7 @@
     },
     {
         "wordItself": "status",
-        "partOfSpeech": "undefined"
+        "partOfSpeech": "singularNoun nonCountNoun"
     },
     {
         "wordItself": "as",
@@ -397,7 +411,7 @@
     },
     {
         "wordItself": "uncle",
-        "partOfSpeech": "undefined"
+        "partOfSpeech": "singularNoun countNoun"
     },
     {
         "wordItself": "EVER",
@@ -420,12 +434,12 @@
 
     },
     {
-        "wordItself": "3",
-        "partOfSpeech": "undefined"
+        "wordItself": "three",
+        "partOfSpeech": "determiner"
     },
     {
         "wordItself": "nieces",
-        "partOfSpeech": "undefined"
+        "partOfSpeech": "pluralNoun countNoun"
     },
     {
         "wordItself": "and",
@@ -433,7 +447,7 @@
     },
     {
         "wordItself": "nephews",
-        "partOfSpeech": "undefined"
+        "partOfSpeech": "pluralNoun countNoun"
     },
     {
         "wordItself": "!",
