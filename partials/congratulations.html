@@ -1,9 +1,13 @@
 <div ng-controller="Game1PracticeTabsController">
     <div class="modal-header">
-        <h3 class="modal-title">Congratulations!</h3>
+        <h3 class="modal-title"><span class="glyphicon glyphicon-star"></span> Congratulations! <span class="glyphicon glyphicon-star"></span></h3>
     </div>
     <div class="modal-body">
-        <p class="message"><span class="glyphicon glyphicon-star"></span> {{ message }} <span class="glyphicon glyphicon-star"></span></p>
+        <div class="message">
+            <p>You found all</p>
+            <p>{{ message }}</p>
+            <p>Try a different task now!</p>
+        </div>
     </div>
     <div class="modal-footer">
         <button class="btn btn-primary" ng-click="ok()">OK</button>

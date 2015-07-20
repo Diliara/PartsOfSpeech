@@ -74,7 +74,7 @@ li {
   font-size: 7vw;
 }
 .home-practice-area:hover {
-  background-color: #74cfdd;
+  background-color: #7cd2df;
 }
 
 .home-challenge-area {
@@ -91,7 +91,7 @@ li {
   font-size: 7vw;
 }
 .home-challenge-area:hover {
-  background-color: #ffc6a4;
+  background-color: #ffccaf;
 }
 
 .set-timer {
@@ -221,8 +221,12 @@ li {
   background-color: rgba(67, 208, 28, 0.05);
 }
 
+.modal-title {
+  color: #40c71b;
+}
+
 .message {
-  color: #43D01C;
+  color: #000000;
 }
 
 .nav-tabs {
@@ -239,6 +243,7 @@ li {
 
   .tabs-left > .nav-tabs {
     height: 75vh;
+    min-height: 440px;
     background-color: #ececec;
     border-bottom: 0;
     float: left;
@@ -295,6 +300,7 @@ li {
   }
   .tabs-left .tab-content .task-tab-content {
     height: 75vh;
+    min-height: 440px;
     padding: 10px 10px 17px 15px;
   }
 }

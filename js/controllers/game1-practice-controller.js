@@ -27,6 +27,9 @@ angular.module('gameApp')
             });
         };
 
+        correctWords = [];
+
+
         //Looking for
         $scope.lookingFor = function (partOfSpeechTitle, lookingForThis, taskNumber, theWordIs, wordIndex) {
 
@@ -44,6 +47,8 @@ angular.module('gameApp')
 
                 correctText = wordIDElem.text();
 
+                correctWords.push(correctText);
+
                 wordIDElem.closest('.task-tab-content').find('a').filter(function () {
                     return $(this).text().toLowerCase() === correctText.toLowerCase();
                 }).addClass('correct');
@@ -53,7 +58,8 @@ angular.module('gameApp')
                 outOfNumber = parseInt(wordIDElem.closest('.task-tab-content').find('.counter .tab-counter').text());
 
                 if (scoreCounter == outOfNumber) {
-                    $scope.open("You found all " + outOfNumber + " " + partOfSpeechTitle + "!" + " Try a different task now!");
+                    $scope.open(outOfNumber + " " + partOfSpeechTitle + ": " + correctWords.join(', '));
+                    correctWords = [];
 
                 }
 
@@ -72,6 +78,7 @@ angular.module('gameApp')
             window.scoreCounter = 0;
             $('a').removeClass('correct').removeClass('wrong');
             $('.current-score').text(scoreCounter);
+            correctWords = [];
         };
 
 
@@ -79,7 +86,7 @@ angular.module('gameApp')
     .controller('ModalWindowController', function ($scope, $modalInstance, msg) {
 
 
-        $('.text a').addClass('disabled');
+        //$('.text a').addClass('disabled');
 
         $scope.message = msg;
 

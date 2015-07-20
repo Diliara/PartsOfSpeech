@@ -113,7 +113,7 @@ li {
   }
 
   &:hover {
-    background-color: lighten($color-background-practice, 3);
+    background-color: lighten($color-background-practice, 5);
   }
 
 }
@@ -125,7 +125,7 @@ li {
     @include header-style(center, $color-background-header, 7vw);
   }
   &:hover {
-    background-color: lighten($color-background-challenge, 3);
+    background-color: lighten($color-background-challenge, 5);
   }
 
 }
@@ -282,8 +282,12 @@ li {
   background-color: transparentize($color-correct, 0.95);
 }
 
+.modal-title {
+  color: darken($color-correct, 2%);
+}
+
 .message {
-  color: $color-correct;
+  color: $color-darkest;
 }
 
 
@@ -305,6 +309,7 @@ li {
 
     > .nav-tabs {
       height: 75vh;
+      min-height: 440px;
       background-color: $color-inactive;
       border-bottom: 0;
       float: left;
@@ -366,6 +371,7 @@ li {
 
       .task-tab-content {
         height: 75vh;
+        min-height: 440px;
 
         padding: 10px 10px 17px 15px;
       }
