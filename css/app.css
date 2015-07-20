@@ -27,22 +27,46 @@ li {
   font-size: 1.1em;
 }
 
+.nav-tabs li {
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+
 .game-practice-area {
-  background-color: #68CBDA;
+  background-color: #b0b0b0;
   min-height: 100%;
   overflow: hidden;
 }
 .game-practice-area h2 {
-  color: #56626A;
+  font-family: 'Luckiest Guy', cursive;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke-color: #68CBDA;
+  -webkit-text-stroke-width: 2px;
+}
+.game-practice-area .nav-tabs {
+  background-color: #b0b0b0;
+}
+.game-practice-area .task-tab-content {
+  background-color: #FAFAFA;
+  border: 10px solid #68CBDA;
 }
 
 .game-challenge-area {
-  background-color: #ffbc95;
+  background-color: #b0b0b0;
   min-height: 100%;
   overflow: hidden;
 }
 .game-challenge-area h2 {
-  color: #56626A;
+  font-family: 'Luckiest Guy', cursive;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke-color: #ffbc95;
+  -webkit-text-stroke-width: 2px;
+}
+.game-challenge-area .nav-tabs {
+  background-color: #b0b0b0;
+}
+.game-challenge-area .task-tab-content {
+  background-color: #FAFAFA;
+  border: 10px solid #ffbc95;
 }
 
 .game-challenge-header-area {
@@ -61,7 +85,7 @@ li {
 }
 
 .home-practice-area {
-  background-color: #68CBDA;
+  background-color: #b0b0b0;
   height: 75vh;
   position: relative;
 }
@@ -70,15 +94,18 @@ li {
   top: 35%;
   left: 20%;
   text-align: center;
-  color: #56626A;
   font-size: 7vw;
+  font-family: 'Luckiest Guy', cursive;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke-color: #68CBDA;
+  -webkit-text-stroke-width: 2px;
 }
 .home-practice-area:hover {
-  background-color: #7cd2df;
+  background-color: #bdbdbd;
 }
 
 .home-challenge-area {
-  background-color: #ffbc95;
+  background-color: #b0b0b0;
   height: 75vh;
   position: relative;
 }
@@ -87,11 +114,14 @@ li {
   top: 35%;
   left: 20%;
   text-align: center;
-  color: #56626A;
   font-size: 7vw;
+  font-family: 'Luckiest Guy', cursive;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke-color: #ffbc95;
+  -webkit-text-stroke-width: 2px;
 }
 .home-challenge-area:hover {
-  background-color: #ffccaf;
+  background-color: #bdbdbd;
 }
 
 .set-timer {
@@ -126,11 +156,6 @@ li {
 }
 .game-area .start-challenge {
   display: none;
-}
-.game-area .tab-content {
-  border-width: 0 1px 1px 1px;
-  border-style: solid;
-  border-color: lightgray;
 }
 .game-area .tab-content .task-tab-content {
   padding: 10px 10px 20px 15px;
@@ -229,59 +254,101 @@ li {
   color: #000000;
 }
 
-.nav-tabs {
-  background-color: #ececec;
-}
-
 /* Large Screens */
 @media screen and (min-width: 750px) {
-  .tabs-left > .nav-tabs > li > a {
+  .tabs-right > .nav-tabs li a, .tabs-left > .nav-tabs li a {
     min-width: 74px;
     margin-right: 0;
     margin-bottom: 3px;
   }
 
+  .tabs-below > .nav-tabs {
+    border-bottom: 0;
+    border-top: 1px solid lightgray;
+  }
+  .tabs-below > .nav-tabs > li {
+    margin-top: -1px;
+    margin-bottom: 0;
+  }
+  .tabs-below > .nav-tabs > li > a {
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    -ms-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+  }
+  .tabs-below > .nav-tabs > li > a:hover {
+    border-top-color: lightgray;
+    border-bottom-color: transparent;
+  }
+  .tabs-below > .nav-tabs > li > a:focus {
+    border-top-color: lightgray;
+    border-bottom-color: transparent;
+  }
+  .tabs-below > .nav-tabs > .active > a {
+    border-color: transparent lightgray lightgray lightgray;
+  }
+  .tabs-below > .nav-tabs > .active > a:hover {
+    border-color: transparent lightgray lightgray lightgray;
+  }
+  .tabs-below > .nav-tabs > .active > a:focus {
+    border-color: transparent lightgray lightgray lightgray;
+  }
+
+  .tabs-right > .nav-tabs {
+    height: 75vh;
+    min-height: 440px;
+    border-bottom: 0;
+    float: right;
+    margin-left: 19px;
+  }
+  .tabs-right > .nav-tabs li {
+    float: none;
+    text-align: left;
+  }
+  .tabs-right > .nav-tabs li a {
+    margin-left: -1px;
+    -webkit-border-radius: 0 4px 4px 0;
+    -moz-border-radius: 0 4px 4px 0;
+    -ms-border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .tabs-right > .nav-tabs li a:hover, .tabs-right > .nav-tabs li a:hover {
+    border-color: #ececec;
+  }
+  .tabs-right > .nav-tabs .active > a {
+    border-color: lightgray lightgray lightgray transparent;
+    *border-left-color: #ffffff;
+  }
+  .tabs-right > .nav-tabs .active > a:hover {
+    border-color: lightgray lightgray lightgray transparent;
+    *border-left-color: #ffffff;
+  }
+  .tabs-right > .nav-tabs .active > a:focus {
+    border-color: lightgray lightgray lightgray transparent;
+    *border-left-color: #ffffff;
+  }
+
   .tabs-left > .nav-tabs {
     height: 75vh;
     min-height: 440px;
-    background-color: #ececec;
     border-bottom: 0;
     float: left;
     margin-right: 19px;
     border-right: 1px solid lightgray;
-      /* Border Bottom Issue
-
-
-        &.active {
-          padding-bottom: 0;
-          > a {
-            margin-bottom: 0;
-            border-bottom: 0;
-          }
-        }
-
-      }
-  */
   }
-  .tabs-left > .nav-tabs > li {
+  .tabs-left > .nav-tabs li {
     float: none;
-    font-size: 16px;
+    text-align: right;
   }
-  .tabs-left > .nav-tabs > li > a {
+  .tabs-left > .nav-tabs li a {
     margin-right: -1px;
     -webkit-border-radius: 4px 0 0 4px;
     -moz-border-radius: 4px 0 0 4px;
     -ms-border-radius: 4px 0 0 4px;
     border-radius: 4px 0 0 4px;
   }
-  .tabs-left > .nav-tabs > li > a:hover {
-    border-color: #ececec lightgray #ececec #ececec;
-  }
-  .tabs-left > .nav-tabs > li > a:focus {
-    border-color: #ececec lightgray #ececec #ececec;
-  }
-  .tabs-left > .nav-tabs > li:last-child {
-    padding-bottom: 2px;
+  .tabs-left > .nav-tabs li a:hover, .tabs-left > .nav-tabs li a:hover {
+    border-color: #ececec;
   }
   .tabs-left > .nav-tabs .active > a {
     border-color: lightgray transparent lightgray lightgray;
@@ -295,10 +362,25 @@ li {
     border-color: lightgray transparent lightgray lightgray;
     *border-right-color: #ffffff;
   }
-  .tabs-left .tab-content {
+
+  .tab-content .tab-pane {
+    display: none;
+  }
+  .tab-content .active {
+    display: block;
+  }
+
+  .pill-content .pill-pane {
+    display: none;
+  }
+  .pill-content .active {
+    display: block;
+  }
+
+  .tab-content {
     border-width: 1px 1px 1px 0;
   }
-  .tabs-left .tab-content .task-tab-content {
+  .tab-content .task-tab-content {
     height: 75vh;
     min-height: 440px;
     padding: 10px 10px 17px 15px;
@@ -332,13 +414,13 @@ li {
   }
 
   .home-practice-area {
-    background-color: #68CBDA;
+    background-color: #b0b0b0;
     height: 65vh;
     position: relative;
   }
 
   .home-challenge-area {
-    background-color: #ffbc95;
+    background-color: #b0b0b0;
     height: 65vh;
     position: relative;
   }

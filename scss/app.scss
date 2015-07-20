@@ -5,8 +5,12 @@ $color-darkest: #000000;
 $color-background: #56626A;
 $color-inactive: #ececec;
 $color-background-header: #56626A;
-$color-background-practice: #68CBDA;
-$color-background-challenge: #ffbc95;
+$color-background-practice: #b0b0b0;
+$color-practice: #68CBDA;
+$color-background-challenge: #b0b0b0;
+$color-challenge: #ffbc95;
+
+$color-paper: #FAFAFA;
 
 $color-correct: #43D01C;
 $color-wrong: #DD3970;
@@ -20,25 +24,33 @@ $color-timer: #fdffe3;
   left: $left;
 }
 
-@mixin header-style($align, $color-back, $font-size) {
-  text-align: $align;
-  color: $color-back;
-  font-size: $font-size;
-}
-
 @mixin home-area-setup($color-back, $height) {
   background-color: $color-back;
   height: $height;
   position: relative;
 }
 
+@mixin font-stroke($color-text, $color-stroke, $stroke-width) {
+  font-family: 'Luckiest Guy', cursive;
+  -webkit-text-fill-color: $color-text;
+  -webkit-text-stroke-color: $color-stroke;
+  -webkit-text-stroke-width: $stroke-width;
+}
+
+@mixin header-style($align, $color-text, $font-size) {
+  text-align: $align;
+  font-size: $font-size;
+
+  @include font-stroke($color-lightest, $color-text, 2px)
+
+}
+
 @mixin background($color-back, $color-h2) {
-  //full background color; works with html, body 100%
   background-color: $color-back;
   min-height: 100%;
   overflow: hidden;
   h2 {
-    color: $color-h2;
+    @include font-stroke($color-lightest, $color-h2, 2px)
   }
 }
 
@@ -80,12 +92,39 @@ li {
 
 }
 
+.nav-tabs {
+
+  li {
+    font-family: 'Alegreya Sans SC', sans-serif;
+  }
+
+}
+
 .game-practice-area {
-  @include background($color-background-practice, $color-background-header);
+  @include background($color-background-practice, $color-practice);
+
+  .nav-tabs {
+    background-color: $color-background-practice;
+
+  }
+
+  .task-tab-content {
+    background-color: $color-paper;
+    border: 10px solid $color-practice;
+  }
 }
 
 .game-challenge-area {
-  @include background($color-background-challenge, $color-background-header);
+  @include background($color-background-challenge, $color-challenge);
+  .nav-tabs {
+    background-color: $color-background-challenge;
+
+  }
+
+  .task-tab-content {
+    background-color: $color-paper;
+    border: 10px solid $color-challenge;
+  }
 
 }
 
@@ -108,7 +147,7 @@ li {
 
   h3 {
     @include vertical-align(absolute, 35%, 20%);
-    @include header-style(center, $color-background-header, 7vw);
+    @include header-style(center, $color-practice, 7vw);
 
   }
 
@@ -122,7 +161,7 @@ li {
   @include home-area-setup($color-background-challenge, 75vh);
   h3 {
     @include vertical-align(absolute, 35%, 20%);
-    @include header-style(center, $color-background-header, 7vw);
+    @include header-style(center, $color-challenge, 7vw);
   }
   &:hover {
     background-color: lighten($color-background-challenge, 5);
@@ -175,9 +214,6 @@ li {
   }
 
   .tab-content {
-    border-width: 0 1px 1px 1px;
-    border-style: solid;
-    border-color: darken($color-greyscale, 10%);
 
     .task-tab-content {
       padding: 10px 10px 20px 15px;
@@ -290,93 +326,146 @@ li {
   color: $color-darkest;
 }
 
-
-.nav-tabs {
-  background-color: $color-inactive;
-}
-
 /* Large Screens */
 @media screen and (min-width: 750px) {
 
-  //.tabs-left > .nav-tabs > li > a, .tabs-right > .nav-tabs > li > a
-  %extend_tabs_a {
+  %extend_li_a {
     min-width: 74px;
     margin-right: 0;
     margin-bottom: 3px;
   }
 
-  .tabs-left {
-
-    > .nav-tabs {
-      height: 75vh;
-      min-height: 440px;
-      background-color: $color-inactive;
-      border-bottom: 0;
-      float: left;
-      margin-right: 19px;
-      border-right: 1px solid darken($color-greyscale, 10%);
-
-      > li {
-        float: none;
-        font-size: 16px;
+  .tabs-below > .nav-tabs {
+    border-bottom: 0;
+    border-top: 1px solid darken($color-greyscale, 10%);
+    > {
+      li {
+        margin-top: -1px;
+        margin-bottom: 0;
         > a {
-          @extend %extend_tabs_a;
-          margin-right: -1px;
-          @include border-radius(4px, 0, 0, 4px);
-
+          @include border-radius(0, 0, 4px, 4px);
           &:hover {
-            border-color: $color-greyscale darken($color-greyscale, 10%) $color-greyscale $color-greyscale;
+            border-top-color: darken($color-greyscale, 10%);
+            border-bottom-color: transparent;
           }
           &:focus {
-            border-color: $color-greyscale darken($color-greyscale, 10%) $color-greyscale $color-greyscale;
+            border-top-color: darken($color-greyscale, 10%);
+            border-bottom-color: transparent;
           }
         }
       }
-
-      > li:last-child {
-        padding-bottom: 2px;
-
-      }
-      /* Border Bottom Issue
-
-
-        &.active {
-          padding-bottom: 0;
-          > a {
-            margin-bottom: 0;
-            border-bottom: 0;
-          }
-        }
-
-      }
-  */
       .active > a {
-        border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
-        *border-right-color: $color-lightest;
+        border-color: transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%) darken($color-greyscale, 10%);
         &:hover {
-          border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
-          *border-right-color: $color-lightest;
+          border-color: transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%) darken($color-greyscale, 10%);
         }
+
         &:focus {
-          border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
-          *border-right-color: $color-lightest;
+          border-color: transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%) darken($color-greyscale, 10%);
         }
-      }
-
-    }
-
-    .tab-content {
-
-      border-width: 1px 1px 1px 0;
-
-      .task-tab-content {
-        height: 75vh;
-        min-height: 440px;
-
-        padding: 10px 10px 17px 15px;
       }
     }
   }
+
+  .tabs-right > .nav-tabs {
+    height: 75vh;
+    min-height: 440px;
+    border-bottom: 0;
+    float: right;
+    margin-left: 19px;
+    li {
+      float: none;
+      text-align: left;
+      a {
+        @extend %extend_li_a;
+        margin-left: -1px;
+
+        @include border-radius(0, 4px, 4px, 0);
+
+        &:hover, &:hover {
+          border-color: $color-greyscale;
+        }
+
+      }
+    }
+    .active > a {
+      border-color: darken($color-greyscale, 10%) darken($color-greyscale, 10%) darken($color-greyscale, 10%) transparent;
+      *border-left-color: $color-lightest;
+      &:hover {
+        border-color: darken($color-greyscale, 10%) darken($color-greyscale, 10%) darken($color-greyscale, 10%) transparent;
+        *border-left-color: $color-lightest;
+      }
+      &:focus {
+        border-color: darken($color-greyscale, 10%) darken($color-greyscale, 10%) darken($color-greyscale, 10%) transparent;
+        *border-left-color: $color-lightest;
+      }
+    }
+  }
+
+  .tabs-left > .nav-tabs {
+    height: 75vh;
+    min-height: 440px;
+    border-bottom: 0;
+    float: left;
+    margin-right: 19px;
+    border-right: 1px solid darken($color-greyscale, 10%);
+    li {
+      float: none;
+      text-align: right;
+      a {
+        @extend %extend_li_a;
+        margin-right: -1px;
+        @include border-radius(4px, 0, 0, 4px);
+
+        &:hover, &:hover {
+          border-color: $color-greyscale;
+        }
+      }
+    }
+    .active > a {
+      border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
+      *border-right-color: $color-lightest;
+      &:hover {
+        border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
+        *border-right-color: $color-lightest;
+      }
+      &:focus {
+        border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
+        *border-right-color: $color-lightest;
+      }
+    }
+  }
+
+  .tab-content {
+    .tab-pane {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+  }
+  .pill-content {
+    .pill-pane {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+  }
+
+  .tab-content {
+
+    border-width: 1px 1px 1px 0;
+
+    .task-tab-content {
+      height: 75vh;
+      min-height: 440px;
+
+      padding: 10px 10px 17px 15px;
+
+    }
+  }
+
 }
 
 /* Small Screens */
@@ -395,7 +484,6 @@ li {
   .nav-tabs {
     font-size: 1.2em;
   }
-
 
   .home-header-area {
 
