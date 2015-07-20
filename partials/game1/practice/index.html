@@ -1,27 +1,46 @@
-<div class="game-practice-area"><div class="container" ng-controller="Game1PracticeTabsController">
-    <h2>Practice</h2>
+<div class="game-practice-area">
+    <div class="container-fluid" ng-controller="Game1PracticeTabsController">
+        <h2>Practice</h2>
 
-    <div class="game-area">
-        <tabset class="tabs-right">
-            <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled" ng-click="changeTab()">
-                <div class="task-tab-content">
-                    <h5>Task:</h5>
+        <div class="row">
+            <div class="col-md-9">
+                <div class="game-area">
 
-                    <p>Find <span class="tab-counter">{{ tab.counter }}</span> different <span class="part-of-speech">{{ tab.title }}</span> in the paragraph.</p>
-                    <p class="part-of-speech-definition">{{tab.definition}}</p>
-                    <hr>
-                    <p class="text">
-                        <a ng-repeat="word in words" id="{{'word_' + tab.taskNumber + '_' + $index}}" class="word {{word.btnStatus}}" data-partOfSpeech="{{ word.partOfSpeech }}" ng-click="lookingFor(tab.title, tab.partOfSpeech, tab.taskNumber, word.partOfSpeech, $index) ">{{word.wordItself}}</a>
-                    </p>
-                    <p class="counter"><span class="current-score">0</span> / <span class="tab-counter">{{ tab.counter }}</span></p>
+                    <tabset class="tabs-left">
+                        <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled" ng-click="changeTab()">
+
+                            <div class="task-tab-content">
+
+                                <h5>Task:</h5>
+
+                                <p>Find <span class="tab-counter">{{ tab.counter }}</span> different <span class="part-of-speech">{{ tab.title }}</span> in the paragraph.</p>
+                                <p class="part-of-speech-definition">{{tab.definition}}</p>
+                                <hr>
+                                <p class="text">
+                                    <a ng-repeat="word in words" id="{{'word_' + tab.taskNumber + '_' + $index}}" class="word {{word.btnStatus}}" data-partOfSpeech="{{ word.partOfSpeech }}" ng-click="lookingFor(tab.title, tab.partOfSpeech, tab.taskNumber, word.partOfSpeech, $index) ">{{word.wordItself}}</a>
+                                </p>
+                                <p class="counter"><span class="current-score">0</span> <span class="current-score-slash">/</span> <span class="current-score-tab-counter">{{ tab.counter }}</span>
+                                </p>
+
+                            </div>
+
+                        </tab>
+                    </tabset>
+
+
                 </div>
-            </tab>
-        </tabset>
+            </div>
+
+            <div class="col-md-3">
+                <div class="score-panel">
+                    <div class="score-screen"></div>
+                    <div class="power-btn"></div>
+                </div>
+                <p><a class="btn btn-default btn-lg btn-home" href="#/home">Home</a></p>
+            </div>
+        </div>
+
+
     </div>
-
-    <p><a class="btn btn-default btn-lg" href="#/home">Home</a></p>
-
-
-</div>
 </div>
 

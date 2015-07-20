@@ -14,9 +14,11 @@ $color-paper: #FAFAFA;
 
 $color-correct: #43D01C;
 $color-wrong: #DD3970;
-$color-btn: #ffffff;
+$color-btn: transparent;
 $color-counter: #D47C33;
 $color-timer: #fdffe3;
+
+$color-phone-border: #ffd829;
 
 @mixin vertical-align($position, $top, $left) {
   position: $position;
@@ -68,7 +70,7 @@ html, body {
 }
 
 h2 {
-  font-size: 3.2em;
+  font-size: 3.6em;
 }
 
 h3 {
@@ -87,15 +89,11 @@ p {
   font-size: 1.3em;
 }
 
-li {
-  font-size: 1.1em;
-
-}
-
 .nav-tabs {
 
   li {
     font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 1.3em;
   }
 
 }
@@ -103,15 +101,45 @@ li {
 .game-practice-area {
   @include background($color-background-practice, $color-practice);
 
+  .tabs-left {
+    .nav-tabs {
+      border-right: 10px solid $color-practice;
+
+      /*
+      trying to round the corner
+      &:after {
+        width: 50px;
+        height: 50px;
+        @include border-radius(50px, 50px, 50px, 50px);
+        border: 10px solid $color-practice;
+        position: absolute;
+        top: 5px;
+        left: 145px;
+        z-index: -999;
+      }
+     */
+
+    }
+
+  }
+
   .nav-tabs {
     background-color: $color-background-practice;
 
+    li {
+      a {
+        @include font-stroke($color-lightest, $color-practice, 0.3px);
+      }
+    }
   }
 
   .task-tab-content {
     background-color: $color-paper;
     border: 10px solid $color-practice;
+    @include border-radius(20px, 20px, 20px, 20px);
+
   }
+
 }
 
 .game-challenge-area {
@@ -119,11 +147,21 @@ li {
   .nav-tabs {
     background-color: $color-background-challenge;
 
+    li {
+      a {
+        @include font-stroke($color-lightest, $color-practice, 0.3px);
+      }
+    }
+
   }
 
   .task-tab-content {
     background-color: $color-paper;
     border: 10px solid $color-challenge;
+  }
+
+  .tabs-left > .nav-tabs {
+    border-right: 10px solid $color-challenge;
   }
 
 }
@@ -216,9 +254,6 @@ li {
   .tab-content {
 
     .task-tab-content {
-      padding: 10px 10px 20px 15px;
-      background-color: $color-lightest;
-
       .challenge {
         font-weight: bold;
       }
@@ -264,7 +299,6 @@ li {
           }
         }
         .disabled {
-          /* color: $color-darkest; */
           pointer-events: none;
           cursor: not-allowed;
           &:hover {
@@ -277,27 +311,30 @@ li {
     }
   }
 
-  .counter {
-    text-align: right;
-    font-size: 35px;
-    margin-right: 10px;
-    background-color: $color-lightest;
-    padding: 0 12px 0 10px;
-    position: fixed;
-    top: 20px;
-    right: 50px;
+  .current-score {
+    @include font-stroke($color-lightest, $color-correct, 1px);
   }
 
-  .current-score {
-    color: $color-correct;
+  .current-score-slash {
+    @include font-stroke($color-lightest, $color-greyscale, 1px);
+
+  }
+
+  .tab-counter, .current-score-tab-counter {
+    @include font-stroke($color-lightest, $color-counter, 1px);
   }
 
   .tab-counter {
-    color: $color-counter;
+    font-size: 30px;
   }
 
 }
 
+.btn-home {
+  margin-top: 20px;
+}
+
+/*
 .total-counter {
   display: inline-block;
   float: right;
@@ -307,12 +344,15 @@ li {
 }
 
 .total-current-score {
-  color: $color-correct;
+  @include font-stroke($color-lightest, $color-correct, 1px);
+
 }
 
 .total-tab-counter {
-  color: $color-counter;
+  @include font-stroke($color-lightest, $color-counter, 1px);
+
 }
+*/
 
 .modal-header {
   background-color: transparentize($color-correct, 0.95);
@@ -329,10 +369,47 @@ li {
 /* Large Screens */
 @media screen and (min-width: 750px) {
 
-  %extend_li_a {
+  %extend-list-a {
     min-width: 74px;
     margin-right: 0;
     margin-bottom: 3px;
+  }
+
+  .score-panel {
+    min-height: 420px;
+    width: 200px;
+    background-color: $color-lightest;
+    border: 5px solid $color-phone-border;
+    @include border-radius(15px, 15px, 15px, 15px);
+
+    .score-screen {
+      background-color: $color-darkest;
+      min-height: 310px;
+      margin-top: 45px;
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+    .power-btn {
+      width: 40px;
+      height: 40px;
+      border: 3px solid $color-phone-border;
+      border-radius: 50%;
+      margin-top: 8px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .counter {
+    text-align: right;
+    font-size: 45px;
+    margin-right: 10px;
+    background-color: $color-darkest;
+    padding: 0 12px 0 10px;
+    position: absolute;
+    top: 140px;
+    right: -200px;
+    z-index: 9999;
   }
 
   .tabs-below > .nav-tabs {
@@ -368,8 +445,9 @@ li {
   }
 
   .tabs-right > .nav-tabs {
+    padding-top: 20px;
     height: 75vh;
-    min-height: 440px;
+    min-height: 600px;
     border-bottom: 0;
     float: right;
     margin-left: 19px;
@@ -377,7 +455,7 @@ li {
       float: none;
       text-align: left;
       a {
-        @extend %extend_li_a;
+        @extend %extend-list-a;
         margin-left: -1px;
 
         @include border-radius(0, 4px, 4px, 0);
@@ -402,37 +480,48 @@ li {
     }
   }
 
-  .tabs-left > .nav-tabs {
-    height: 75vh;
-    min-height: 440px;
-    border-bottom: 0;
-    float: left;
-    margin-right: 19px;
-    border-right: 1px solid darken($color-greyscale, 10%);
-    li {
-      float: none;
-      text-align: right;
-      a {
-        @extend %extend_li_a;
-        margin-right: -1px;
-        @include border-radius(4px, 0, 0, 4px);
+  .tabs-left {
 
-        &:hover, &:hover {
-          border-color: $color-greyscale;
+    .nav-tabs {
+      height: 75vh;
+      min-height: 600px;
+      padding-top: 20px;
+      border-bottom: 0;
+      float: left;
+      margin-right: 19px;
+
+      li {
+        float: none;
+        text-align: right;
+        margin-right: -25px;
+        a {
+          @extend %extend-list-a;
+          @include border-radius(4px, 0, 0, 4px);
+          padding-right: 35px;
+          &:hover, &:hover {
+            border-color: $color-greyscale;
+          }
         }
       }
+
+      .active > a {
+
+        border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
+        *border-right-color: $color-lightest;
+        &:hover {
+          border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
+          *border-right-color: $color-lightest;
+        }
+        &:focus {
+          border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
+          *border-right-color: $color-lightest;
+        }
+      }
+
     }
-    .active > a {
-      border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
-      *border-right-color: $color-lightest;
-      &:hover {
-        border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
-        *border-right-color: $color-lightest;
-      }
-      &:focus {
-        border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
-        *border-right-color: $color-lightest;
-      }
+
+    .task-tab-content {
+      padding: 15px 40px 20px 210px;
     }
   }
 
@@ -459,16 +548,33 @@ li {
 
     .task-tab-content {
       height: 75vh;
-      min-height: 440px;
-
-      padding: 10px 10px 17px 15px;
-
+      min-height: 600px;
     }
+
   }
 
 }
 
 /* Small Screens */
+
+@media screen and (max-width: 992px) {
+  .score-panel {
+    display: none;
+  }
+
+  .counter {
+    text-align: right;
+    font-size: 35px;
+    margin-right: 10px;
+    background-color: $color-lightest;
+    padding: 0 12px 0 10px;
+    position: fixed;
+    top: 20px;
+    right: 50px;
+  }
+
+}
+
 @media screen and (max-width: 749px) and (orientation: portrait) {
 
   h2 {
@@ -483,6 +589,8 @@ li {
 
   .nav-tabs {
     font-size: 1.2em;
+    border: none !important;
+
   }
 
   .home-header-area {
@@ -498,6 +606,10 @@ li {
 
   .home-challenge-area {
     @include home-area-setup($color-background-challenge, 65vh);
+  }
+
+  .task-tab-content {
+    padding: 15px 30px;
   }
 
 }
@@ -518,6 +630,8 @@ li {
 
   .nav-tabs {
     font-size: 1.2em;
+    border: none !important;
+
   }
 
   .home-header-area {
@@ -541,6 +655,10 @@ li {
     h3 {
       @include vertical-align(absolute, 15%, 20%);
     }
+  }
+
+  .task-tab-content {
+    padding: 15px 30px;
   }
 
 }
