@@ -15,10 +15,11 @@ $color-paper: #FAFAFA;
 $color-correct: #43D01C;
 $color-wrong: #DD3970;
 $color-btn: transparent;
-$color-counter: #D47C33;
+$color-counter: #0d003e;
 $color-timer: #fdffe3;
 
 $color-phone-border: #ffd829;
+$color-sticky: #BAEAFF;
 
 @mixin vertical-align($position, $top, $left) {
   position: $position;
@@ -94,6 +95,7 @@ p {
   li {
     font-family: 'Alegreya Sans SC', sans-serif;
     font-size: 1.3em;
+    font-weight: bold;
   }
 
 }
@@ -101,43 +103,29 @@ p {
 .game-practice-area {
   @include background($color-background-practice, $color-practice);
 
-  .tabs-left {
-    .nav-tabs {
-      border-right: 10px solid $color-practice;
-
-      /*
-      trying to round the corner
-      &:after {
-        width: 50px;
-        height: 50px;
-        @include border-radius(50px, 50px, 50px, 50px);
-        border: 10px solid $color-practice;
-        position: absolute;
-        top: 5px;
-        left: 145px;
-        z-index: -999;
-      }
-     */
-
-    }
-
-  }
-
   .nav-tabs {
     background-color: $color-background-practice;
-
     li {
       a {
-        @include font-stroke($color-lightest, $color-practice, 0.3px);
+        color: $color-darkest;
       }
     }
   }
 
   .task-tab-content {
     background-color: $color-paper;
-    border: 10px solid $color-practice;
+    border-top: 10px solid $color-practice;
+    border-bottom: 10px solid $color-practice;
+    border-right: 10px solid $color-practice;
+
     @include border-radius(20px, 20px, 20px, 20px);
 
+  }
+
+  .tabs-left {
+    .nav-tabs {
+      border-right: 10px solid $color-practice;
+    }
   }
 
 }
@@ -146,12 +134,6 @@ p {
   @include background($color-background-challenge, $color-challenge);
   .nav-tabs {
     background-color: $color-background-challenge;
-
-    li {
-      a {
-        @include font-stroke($color-lightest, $color-practice, 0.3px);
-      }
-    }
 
   }
 
@@ -371,7 +353,6 @@ p {
 
   %extend-list-a {
     min-width: 74px;
-    margin-right: 0;
     margin-bottom: 3px;
   }
 
@@ -432,14 +413,7 @@ p {
         }
       }
       .active > a {
-        border-color: transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%) darken($color-greyscale, 10%);
-        &:hover {
-          border-color: transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%) darken($color-greyscale, 10%);
-        }
-
-        &:focus {
-          border-color: transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%) darken($color-greyscale, 10%);
-        }
+        background-color: $color-sticky;
       }
     }
   }
@@ -467,16 +441,8 @@ p {
       }
     }
     .active > a {
-      border-color: darken($color-greyscale, 10%) darken($color-greyscale, 10%) darken($color-greyscale, 10%) transparent;
-      *border-left-color: $color-lightest;
-      &:hover {
-        border-color: darken($color-greyscale, 10%) darken($color-greyscale, 10%) darken($color-greyscale, 10%) transparent;
-        *border-left-color: $color-lightest;
-      }
-      &:focus {
-        border-color: darken($color-greyscale, 10%) darken($color-greyscale, 10%) darken($color-greyscale, 10%) transparent;
-        *border-left-color: $color-lightest;
-      }
+      background-color: $color-sticky;
+
     }
   }
 
@@ -488,33 +454,32 @@ p {
       padding-top: 20px;
       border-bottom: 0;
       float: left;
-      margin-right: 19px;
 
       li {
         float: none;
         text-align: right;
-        margin-right: -25px;
+        margin-bottom: 5px;
+        margin-right: -13px;
         a {
           @extend %extend-list-a;
           @include border-radius(4px, 0, 0, 4px);
-          padding-right: 35px;
-          &:hover, &:hover {
-            border-color: $color-greyscale;
+          border: none;
+
+          background-color: transparentize($color-sticky, 0.7);
+ 
+          &:hover, &:visited, &:focus {
+            background-color: $color-sticky;
+            border: none;
+
           }
         }
       }
 
-      .active > a {
-
-        border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
-        *border-right-color: $color-lightest;
-        &:hover {
-          border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
-          *border-right-color: $color-lightest;
-        }
-        &:focus {
-          border-color: darken($color-greyscale, 10%) transparent darken($color-greyscale, 10%) darken($color-greyscale, 10%);
-          *border-right-color: $color-lightest;
+      .active {
+        margin-right: -25px;
+        a {
+          background-color: $color-sticky;
+          padding-right: 27px;
         }
       }
 
@@ -533,6 +498,7 @@ p {
       display: block;
     }
   }
+
   .pill-content {
     .pill-pane {
       display: none;

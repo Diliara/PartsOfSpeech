@@ -26,6 +26,7 @@ p {
 .nav-tabs li {
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 1.3em;
+  font-weight: bold;
 }
 
 .game-practice-area {
@@ -39,38 +40,24 @@ p {
   -webkit-text-stroke-color: #68CBDA;
   -webkit-text-stroke-width: 2px;
 }
-.game-practice-area .tabs-left .nav-tabs {
-  border-right: 10px solid #68CBDA;
- /*
- trying to round the corner
- &:after {
-   width: 50px;
-   height: 50px;
-   @include border-radius(50px, 50px, 50px, 50px);
-   border: 10px solid $color-practice;
-   position: absolute;
-   top: 5px;
-   left: 145px;
-   z-index: -999;
- }
-*/
-}
 .game-practice-area .nav-tabs {
   background-color: #b0b0b0;
 }
 .game-practice-area .nav-tabs li a {
-  font-family: 'Luckiest Guy', cursive;
-  -webkit-text-fill-color: #ffffff;
-  -webkit-text-stroke-color: #68CBDA;
-  -webkit-text-stroke-width: 0.3px;
+  color: #000000;
 }
 .game-practice-area .task-tab-content {
   background-color: #FAFAFA;
-  border: 10px solid #68CBDA;
+  border-top: 10px solid #68CBDA;
+  border-bottom: 10px solid #68CBDA;
+  border-right: 10px solid #68CBDA;
   -webkit-border-radius: 20px 20px 20px 20px;
   -moz-border-radius: 20px 20px 20px 20px;
   -ms-border-radius: 20px 20px 20px 20px;
   border-radius: 20px 20px 20px 20px;
+}
+.game-practice-area .tabs-left .nav-tabs {
+  border-right: 10px solid #68CBDA;
 }
 
 .game-challenge-area {
@@ -86,12 +73,6 @@ p {
 }
 .game-challenge-area .nav-tabs {
   background-color: #b0b0b0;
-}
-.game-challenge-area .nav-tabs li a {
-  font-family: 'Luckiest Guy', cursive;
-  -webkit-text-fill-color: #ffffff;
-  -webkit-text-stroke-color: #68CBDA;
-  -webkit-text-stroke-width: 0.3px;
 }
 .game-challenge-area .task-tab-content {
   background-color: #FAFAFA;
@@ -251,7 +232,7 @@ p {
 .game-area .tab-counter, .game-area .current-score-tab-counter {
   font-family: 'Luckiest Guy', cursive;
   -webkit-text-fill-color: #ffffff;
-  -webkit-text-stroke-color: #D47C33;
+  -webkit-text-stroke-color: #0d003e;
   -webkit-text-stroke-width: 1px;
 }
 .game-area .tab-counter {
@@ -297,7 +278,6 @@ p {
 @media screen and (min-width: 750px) {
   .tabs-right > .nav-tabs li a, .tabs-left .nav-tabs li a {
     min-width: 74px;
-    margin-right: 0;
     margin-bottom: 3px;
   }
 
@@ -363,13 +343,7 @@ p {
     border-bottom-color: transparent;
   }
   .tabs-below > .nav-tabs > .active > a {
-    border-color: transparent lightgray lightgray lightgray;
-  }
-  .tabs-below > .nav-tabs > .active > a:hover {
-    border-color: transparent lightgray lightgray lightgray;
-  }
-  .tabs-below > .nav-tabs > .active > a:focus {
-    border-color: transparent lightgray lightgray lightgray;
+    background-color: #BAEAFF;
   }
 
   .tabs-right > .nav-tabs {
@@ -395,16 +369,7 @@ p {
     border-color: #ececec;
   }
   .tabs-right > .nav-tabs .active > a {
-    border-color: lightgray lightgray lightgray transparent;
-    *border-left-color: #ffffff;
-  }
-  .tabs-right > .nav-tabs .active > a:hover {
-    border-color: lightgray lightgray lightgray transparent;
-    *border-left-color: #ffffff;
-  }
-  .tabs-right > .nav-tabs .active > a:focus {
-    border-color: lightgray lightgray lightgray transparent;
-    *border-left-color: #ffffff;
+    background-color: #BAEAFF;
   }
 
   .tabs-left .nav-tabs {
@@ -413,34 +378,31 @@ p {
     padding-top: 20px;
     border-bottom: 0;
     float: left;
-    margin-right: 19px;
   }
   .tabs-left .nav-tabs li {
     float: none;
     text-align: right;
-    margin-right: -25px;
+    margin-bottom: 5px;
+    margin-right: -13px;
   }
   .tabs-left .nav-tabs li a {
     -webkit-border-radius: 4px 0 0 4px;
     -moz-border-radius: 4px 0 0 4px;
     -ms-border-radius: 4px 0 0 4px;
     border-radius: 4px 0 0 4px;
-    padding-right: 35px;
+    border: none;
+    background-color: rgba(186, 234, 255, 0.3);
   }
-  .tabs-left .nav-tabs li a:hover, .tabs-left .nav-tabs li a:hover {
-    border-color: #ececec;
+  .tabs-left .nav-tabs li a:hover, .tabs-left .nav-tabs li a:visited, .tabs-left .nav-tabs li a:focus {
+    background-color: #BAEAFF;
+    border: none;
   }
-  .tabs-left .nav-tabs .active > a {
-    border-color: lightgray transparent lightgray lightgray;
-    *border-right-color: #ffffff;
+  .tabs-left .nav-tabs .active {
+    margin-right: -25px;
   }
-  .tabs-left .nav-tabs .active > a:hover {
-    border-color: lightgray transparent lightgray lightgray;
-    *border-right-color: #ffffff;
-  }
-  .tabs-left .nav-tabs .active > a:focus {
-    border-color: lightgray transparent lightgray lightgray;
-    *border-right-color: #ffffff;
+  .tabs-left .nav-tabs .active a {
+    background-color: #BAEAFF;
+    padding-right: 27px;
   }
   .tabs-left .task-tab-content {
     padding: 15px 40px 20px 210px;
