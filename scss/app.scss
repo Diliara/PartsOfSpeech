@@ -105,7 +105,7 @@ $color-home: #5e72b2;
     border-left: 10px solid $color-theme;
     border-right: 10px solid $color-theme;
 
-    @include border-radius(20px, 20px, 0px, 0px);
+    @include border-radius(0, 20px, 0, 0);
 
   }
 
@@ -170,7 +170,7 @@ p {
 }
 
 .home-header-area {
-  @include home-area-setup($color-home, 25vh);
+  @include home-area-setup(transparentize($color-home, 0.5), 25vh);
   .home-header-area-content {
     color: $color-lightest;
     text-align: center;
@@ -627,7 +627,7 @@ p {
 
 @mixin design-for-mobile() {
   h2 {
-    font-size: 2.3em;
+    font-size: 2.9em;
   }
   h5 {
     font-size: 1.6em;
@@ -654,6 +654,13 @@ p {
 }
 
 @media screen and (max-width: 749px) and (orientation: portrait) {
+
+  .counter {
+    margin-right: 10px;
+    position: fixed;
+    top: 60px;
+    right: 20px;
+  }
 
   @include design-for-mobile();
 

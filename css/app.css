@@ -65,10 +65,10 @@ p {
   border-bottom: 10px dashed #63737b;
   border-left: 10px solid #68CBDA;
   border-right: 10px solid #68CBDA;
-  -webkit-border-radius: 20px 20px 0px 0px;
-  -moz-border-radius: 20px 20px 0px 0px;
-  -ms-border-radius: 20px 20px 0px 0px;
-  border-radius: 20px 20px 0px 0px;
+  -webkit-border-radius: 0 20px 0 0;
+  -moz-border-radius: 0 20px 0 0;
+  -ms-border-radius: 0 20px 0 0;
+  border-radius: 0 20px 0 0;
 }
 .game-practice-area .tabs-left .nav-tabs {
   border-right: 10px solid #68CBDA;
@@ -110,10 +110,10 @@ p {
   border-bottom: 10px dashed #63737b;
   border-left: 10px solid #ffbc95;
   border-right: 10px solid #ffbc95;
-  -webkit-border-radius: 20px 20px 0px 0px;
-  -moz-border-radius: 20px 20px 0px 0px;
-  -ms-border-radius: 20px 20px 0px 0px;
-  border-radius: 20px 20px 0px 0px;
+  -webkit-border-radius: 0 20px 0 0;
+  -moz-border-radius: 0 20px 0 0;
+  -ms-border-radius: 0 20px 0 0;
+  border-radius: 0 20px 0 0;
 }
 .game-challenge-area .tabs-left .nav-tabs {
   border-right: 10px solid #ffbc95;
@@ -128,7 +128,7 @@ p {
 }
 
 .home-header-area {
-  background-color: #5e72b2;
+  background-color: rgba(94, 114, 178, 0.5);
   height: 25vh;
   position: relative;
 }
@@ -560,8 +560,15 @@ p {
   }
 }
 @media screen and (max-width: 749px) and (orientation: portrait) {
+  .counter {
+    margin-right: 10px;
+    position: fixed;
+    top: 60px;
+    right: 20px;
+  }
+
   h2 {
-    font-size: 2.3em;
+    font-size: 2.9em;
   }
 
   h5 {
@@ -630,7 +637,7 @@ p {
 }
 @media screen and (max-width: 749px) and (orientation: landscape) {
   h2 {
-    font-size: 2.3em;
+    font-size: 2.9em;
   }
 
   h5 {
