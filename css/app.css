@@ -568,7 +568,7 @@ p {
   }
 
   .home-practice-area {
-    background-color: #63737b;
+    background-color: #BAEAFF;
     height: 50vh;
     position: relative;
   }
@@ -585,7 +585,7 @@ p {
   }
 
   .home-challenge-area {
-    background-color: #63737b;
+    background-color: #ffdd9a;
     height: 50vh;
     position: relative;
   }
