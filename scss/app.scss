@@ -161,9 +161,10 @@ p {
   @include color-theme($color-sticky-challenge, $color-background-challenge, $color-challenge);
 }
 
+/*
 .game-challenge-header-area {
   height: 75px;
-}
+}*/
 
 .home {
   background-color: $color-background-header;
@@ -251,7 +252,6 @@ p {
   }
 
   .tab-content {
-
     .task-tab-content {
       .challenge {
         font-weight: bold;
@@ -308,26 +308,26 @@ p {
     }
   }
 
-  .current-score {
-    @include font-stroke($color-lightest, $color-correct, 1px);
-  }
-
-  .current-score-slash {
-    @include font-stroke($color-lightest, $color-greyscale, 1px);
-
-  }
-
-  .tab-counter, .current-score-tab-counter {
-    @include font-stroke($color-lightest, $color-counter, 1px);
-  }
-
   .tab-counter {
     font-size: 30px;
   }
 
 }
 
-.btn-home, .btn-challenge {
+.current-score, .total-current-score {
+  @include font-stroke($color-lightest, $color-correct, 1px);
+}
+
+.current-score-slash, .total-current-score-slash {
+  @include font-stroke($color-lightest, $color-greyscale, 1px);
+
+}
+
+.tab-counter, .current-score-tab-counter, .total-tab-counter {
+  @include font-stroke($color-lightest, $color-counter, 1px);
+}
+
+.btn-home, .btn-challenge, .btn-practice {
   text-align: left;
   color: $color-darkest;
   border: none;
@@ -360,30 +360,16 @@ p {
 
   width: 150px;
   background-color: $color-sticky-challenge;
-  &:hover, &:visited, &:focus {
-    background-color: lighten($color-sticky-challenge, 10%);
-  }
 }
 
-/*
-.total-counter {
-  display: inline-block;
-  float: right;
-  font-size: 35px;
-  padding: 0 7px;
-  background-color: $color-lightest;
-}
+.btn-practice {
+  margin-left: -125px;
+  margin-top: 180px;
 
-.total-current-score {
-  @include font-stroke($color-lightest, $color-correct, 1px);
+  width: 150px;
+  background-color: $color-sticky-practice;
 
 }
-
-.total-tab-counter {
-  @include font-stroke($color-lightest, $color-counter, 1px);
-
-}
-*/
 
 .modal-header {
   background-color: transparentize($color-correct, 0.95);
@@ -412,18 +398,6 @@ p {
     min-width: 74px;
     margin-bottom: 3px;
   }
-
-  /*
-  .binder {
-    width: 40px;
-    color: $color-darkest;
-    height: 10px;
-    border: 5px solid $color-correct;
-    z-index: 99999;
-    position: relative;
-    top: -600px;
-  }
-*/
 
   .score-panel {
     min-height: 420px;
@@ -460,6 +434,14 @@ p {
     top: 140px;
     right: -210px;
     z-index: 9999;
+  }
+
+  .total-counter {
+    display: inline-block;
+    float: right;
+    font-size: 35px;
+    padding: 0 7px;
+    background-color: $color-darkest;
   }
 
   .tabs-below > .nav-tabs {
@@ -626,9 +608,19 @@ p {
 }
 
 @mixin design-for-mobile() {
-  h2 {
-    font-size: 2.9em;
+  .home-header-area-content {
+    h2 {
+      font-size: 2.1em;
+    }
   }
+
+  .game-challenge-area, .game-practice-area {
+    h2 {
+      font-size: 2.8em;
+    }
+  }
+
+
   h5 {
     font-size: 1.6em;
   }
@@ -650,7 +642,28 @@ p {
   }
   .task-tab-content {
     padding: 15px 30px;
+
   }
+
+  .game-practice-area {
+    .task-tab-content {
+      border-top: 5px solid $color-practice;
+      border-bottom: 5px dashed $color-background-practice;
+      border-left: 5px solid $color-practice;
+      border-right: 5px solid $color-practice;
+    }
+  }
+
+  .game-challenge-area {
+
+    .task-tab-content {
+      border-top: 5px solid $color-challenge;
+      border-bottom: 5px dashed $color-background-challenge;
+      border-left: 5px solid $color-challenge;
+      border-right: 5px solid $color-challenge;
+    }
+  }
+
 }
 
 @media screen and (max-width: 749px) and (orientation: portrait) {
@@ -658,7 +671,7 @@ p {
   .counter {
     margin-right: 10px;
     position: fixed;
-    top: 60px;
+    top: 70px;
     right: 20px;
   }
 

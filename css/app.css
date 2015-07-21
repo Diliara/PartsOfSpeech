@@ -119,10 +119,10 @@ p {
   border-right: 10px solid #ffbc95;
 }
 
+/*
 .game-challenge-header-area {
   height: 75px;
-}
-
+}*/
 .home {
   background-color: #63737b;
 }
@@ -260,29 +260,32 @@ p {
 .game-area .tab-content .task-tab-content .text .disabled:hover {
   text-decoration: none;
 }
-.game-area .current-score {
+.game-area .tab-counter {
+  font-size: 30px;
+}
+
+.current-score, .total-current-score {
   font-family: 'Luckiest Guy', cursive;
   -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-color: #43D01C;
   -webkit-text-stroke-width: 1px;
 }
-.game-area .current-score-slash {
+
+.current-score-slash, .total-current-score-slash {
   font-family: 'Luckiest Guy', cursive;
   -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-color: #ececec;
   -webkit-text-stroke-width: 1px;
 }
-.game-area .tab-counter, .game-area .current-score-tab-counter {
+
+.tab-counter, .current-score-tab-counter, .total-tab-counter {
   font-family: 'Luckiest Guy', cursive;
   -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-color: #0d003e;
   -webkit-text-stroke-width: 1px;
 }
-.game-area .tab-counter {
-  font-size: 30px;
-}
 
-.btn-home, .btn-challenge {
+.btn-home, .btn-challenge, .btn-practice {
   text-align: left;
   color: #000000;
   border: none;
@@ -294,7 +297,7 @@ p {
   font-size: 1.3em;
   font-weight: bold;
 }
-.btn-home:hover, .btn-home:visited, .btn-home:focus, .btn-challenge:hover, .btn-challenge:visited, .btn-challenge:focus {
+.btn-home:hover, .btn-home:visited, .btn-home:focus, .btn-challenge:hover, .btn-challenge:visited, .btn-challenge:focus, .btn-practice:hover, .btn-practice:visited, .btn-practice:focus {
   border: none;
 }
 
@@ -314,29 +317,14 @@ p {
   width: 150px;
   background-color: #ffdd9a;
 }
-.btn-challenge:hover, .btn-challenge:visited, .btn-challenge:focus {
-  background-color: #ffeecd;
+
+.btn-practice {
+  margin-left: -125px;
+  margin-top: 180px;
+  width: 150px;
+  background-color: #BAEAFF;
 }
 
-/*
-.total-counter {
-  display: inline-block;
-  float: right;
-  font-size: 35px;
-  padding: 0 7px;
-  background-color: $color-lightest;
-}
-
-.total-current-score {
-  @include font-stroke($color-lightest, $color-correct, 1px);
-
-}
-
-.total-tab-counter {
-  @include font-stroke($color-lightest, $color-counter, 1px);
-
-}
-*/
 .modal-header {
   background-color: rgba(67, 208, 28, 0.05);
 }
@@ -364,17 +352,6 @@ p {
     margin-bottom: 3px;
   }
 
-  /*
-  .binder {
-    width: 40px;
-    color: $color-darkest;
-    height: 10px;
-    border: 5px solid $color-correct;
-    z-index: 99999;
-    position: relative;
-    top: -600px;
-  }
-*/
   .score-panel {
     min-height: 420px;
     width: 200px;
@@ -412,6 +389,14 @@ p {
     top: 140px;
     right: -210px;
     z-index: 9999;
+  }
+
+  .total-counter {
+    display: inline-block;
+    float: right;
+    font-size: 35px;
+    padding: 0 7px;
+    background-color: #000000;
   }
 
   .tabs-below > .nav-tabs {
@@ -563,12 +548,16 @@ p {
   .counter {
     margin-right: 10px;
     position: fixed;
-    top: 60px;
+    top: 70px;
     right: 20px;
   }
 
-  h2 {
-    font-size: 2.9em;
+  .home-header-area-content h2 {
+    font-size: 2.1em;
+  }
+
+  .game-challenge-area h2, .game-practice-area h2 {
+    font-size: 2.8em;
   }
 
   h5 {
@@ -596,6 +585,20 @@ p {
 
   .task-tab-content {
     padding: 15px 30px;
+  }
+
+  .game-practice-area .task-tab-content {
+    border-top: 5px solid #68CBDA;
+    border-bottom: 5px dashed #63737b;
+    border-left: 5px solid #68CBDA;
+    border-right: 5px solid #68CBDA;
+  }
+
+  .game-challenge-area .task-tab-content {
+    border-top: 5px solid #ffbc95;
+    border-bottom: 5px dashed #63737b;
+    border-left: 5px solid #ffbc95;
+    border-right: 5px solid #ffbc95;
   }
 
   .home-header-area {
@@ -636,8 +639,12 @@ p {
   }
 }
 @media screen and (max-width: 749px) and (orientation: landscape) {
-  h2 {
-    font-size: 2.9em;
+  .home-header-area-content h2 {
+    font-size: 2.1em;
+  }
+
+  .game-challenge-area h2, .game-practice-area h2 {
+    font-size: 2.8em;
   }
 
   h5 {
@@ -665,6 +672,20 @@ p {
 
   .task-tab-content {
     padding: 15px 30px;
+  }
+
+  .game-practice-area .task-tab-content {
+    border-top: 5px solid #68CBDA;
+    border-bottom: 5px dashed #63737b;
+    border-left: 5px solid #68CBDA;
+    border-right: 5px solid #68CBDA;
+  }
+
+  .game-challenge-area .task-tab-content {
+    border-top: 5px solid #ffbc95;
+    border-bottom: 5px dashed #63737b;
+    border-left: 5px solid #ffbc95;
+    border-right: 5px solid #ffbc95;
   }
 
   .home-header-area {
