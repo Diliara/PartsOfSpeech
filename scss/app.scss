@@ -5,12 +5,9 @@ $color-darkest: #000000;
 $color-background: #56626A;
 $color-inactive: #ececec;
 $color-background-header: #63737b;
-//56626A
 $color-background-practice: #63737b;
-//#b0b0b0;
 $color-practice: #68CBDA;
 $color-background-challenge: #63737b;
-//#b0b0b0;
 $color-challenge: #ffbc95;
 
 $color-paper: #FAFAFA;
@@ -24,6 +21,8 @@ $color-timer: #fdffe3;
 $color-phone-border: #ffd829;
 $color-sticky-practice: #BAEAFF;
 $color-sticky-challenge: #ffdd9a;
+
+$color-home: #5e72b2;
 
 @mixin vertical-align($position, $top, $left) {
   position: $position;
@@ -101,9 +100,12 @@ $color-sticky-challenge: #ffdd9a;
 
   .task-tab-content {
     background-color: $color-paper;
-    border: 10px solid $color-theme;
+    border-top: 10px solid $color-theme;
+    border-bottom: 10px dashed $color-background-theme;
+    border-left: 10px dashed $color-background-theme;
+    border-right: 10px solid $color-theme;
 
-    @include border-radius(20px, 20px, 20px, 20px);
+    @include border-radius(20px, 20px, 0px, 0px);
 
   }
 
@@ -163,8 +165,12 @@ p {
   height: 75px;
 }
 
+.home {
+  background-color: $color-background-header;
+}
+
 .home-header-area {
-  @include home-area-setup($color-background-header, 25vh);
+  @include home-area-setup($color-home, 25vh);
   .home-header-area-content {
     color: $color-lightest;
     text-align: center;
@@ -183,7 +189,7 @@ p {
   }
 
   &:hover {
-    background-color: lighten($color-sticky-practice, 5);
+    background-color: transparentize($color-sticky-practice, 0.2);
   }
 
 }
@@ -191,11 +197,11 @@ p {
 .home-challenge-area {
   @include home-area-setup($color-sticky-challenge, 75vh);
   h3 {
-    @include vertical-align(absolute, 35%, 20%);
+    @include vertical-align(absolute, 35%, 16%);
     @include h3-style(center, $color-challenge, 7vw, 4px);
   }
   &:hover {
-    background-color: lighten($color-sticky-challenge, 5);
+    background-color: transparentize($color-sticky-challenge, 0.2);
   }
 
 }
@@ -250,7 +256,6 @@ p {
       .challenge {
         font-weight: bold;
       }
-
       .part-of-speech {
         font-family: 'Alegreya Sans SC', sans-serif;
         font-size: 1.2em;
@@ -258,9 +263,7 @@ p {
       }
       .part-of-speech-definition {
         font-style: italic;
-
       }
-
       .text {
         margin-bottom: 0;
         a {
@@ -302,7 +305,6 @@ p {
         }
 
       }
-
     }
   }
 
@@ -325,8 +327,39 @@ p {
 
 }
 
+.btn-home, .btn-challenge {
+  text-align: left;
+  margin-left: -30px;
+  color: $color-darkest;
+  border: none;
+  @include border-radius(0, 5px, 5px, 0);
+
+  &:hover, &:visited, &:focus {
+    border: none;
+  }
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+
+}
+
 .btn-home {
-  margin-top: 20px;
+  width: 120px;
+  margin-top: 60px;
+  background-color: $color-home;
+  &:hover, &:visited, &:focus {
+    background-color: lighten($color-home, 10%);
+  }
+
+}
+
+.btn-challenge {
+  width: 150px;
+
+  background-color: $color-sticky-challenge;
+  &:hover, &:visited, &:focus {
+    background-color: lighten($color-sticky-challenge, 10%);
+  }
 }
 
 /*
@@ -377,6 +410,18 @@ p {
     margin-bottom: 3px;
   }
 
+  /*
+  .binder {
+    width: 40px;
+    color: $color-darkest;
+    height: 10px;
+    border: 5px solid $color-correct;
+    z-index: 99999;
+    position: relative;
+    top: -600px;
+  }
+*/
+
   .score-panel {
     min-height: 420px;
     width: 200px;
@@ -423,11 +468,7 @@ p {
         margin-bottom: 0;
         > a {
           @include border-radius(0, 0, 4px, 4px);
-          &:hover {
-            border-top-color: darken($color-greyscale, 10%);
-            border-bottom-color: transparent;
-          }
-          &:focus {
+          &:hover, &:focus {
             border-top-color: darken($color-greyscale, 10%);
             border-bottom-color: transparent;
           }
@@ -572,7 +613,7 @@ p {
 
   .home-header-area {
 
-    @include home-area-setup($color-background-header, 35vh);
+    @include home-area-setup($color-home, 35vh);
     .home-header-area-content {
       padding-top: 3vh;
     }
@@ -620,7 +661,7 @@ p {
 
   .home-header-area {
 
-    @include home-area-setup($color-background-header, 50vh);
+    @include home-area-setup($color-home, 50vh);
     .home-header-area-content {
       padding-top: 1vh;
     }

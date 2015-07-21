@@ -61,11 +61,14 @@ p {
 }
 .game-practice-area .task-tab-content {
   background-color: #FAFAFA;
-  border: 10px solid #68CBDA;
-  -webkit-border-radius: 20px 20px 20px 20px;
-  -moz-border-radius: 20px 20px 20px 20px;
-  -ms-border-radius: 20px 20px 20px 20px;
-  border-radius: 20px 20px 20px 20px;
+  border-top: 10px solid #68CBDA;
+  border-bottom: 10px dashed #63737b;
+  border-left: 10px dashed #63737b;
+  border-right: 10px solid #68CBDA;
+  -webkit-border-radius: 20px 20px 0px 0px;
+  -moz-border-radius: 20px 20px 0px 0px;
+  -ms-border-radius: 20px 20px 0px 0px;
+  border-radius: 20px 20px 0px 0px;
 }
 .game-practice-area .tabs-left .nav-tabs {
   border-right: 10px solid #68CBDA;
@@ -103,11 +106,14 @@ p {
 }
 .game-challenge-area .task-tab-content {
   background-color: #FAFAFA;
-  border: 10px solid #ffbc95;
-  -webkit-border-radius: 20px 20px 20px 20px;
-  -moz-border-radius: 20px 20px 20px 20px;
-  -ms-border-radius: 20px 20px 20px 20px;
-  border-radius: 20px 20px 20px 20px;
+  border-top: 10px solid #ffbc95;
+  border-bottom: 10px dashed #63737b;
+  border-left: 10px dashed #63737b;
+  border-right: 10px solid #ffbc95;
+  -webkit-border-radius: 20px 20px 0px 0px;
+  -moz-border-radius: 20px 20px 0px 0px;
+  -ms-border-radius: 20px 20px 0px 0px;
+  border-radius: 20px 20px 0px 0px;
 }
 .game-challenge-area .tabs-left .nav-tabs {
   border-right: 10px solid #ffbc95;
@@ -117,8 +123,12 @@ p {
   height: 75px;
 }
 
-.home-header-area {
+.home {
   background-color: #63737b;
+}
+
+.home-header-area {
+  background-color: #5e72b2;
   height: 25vh;
   position: relative;
 }
@@ -145,7 +155,7 @@ p {
   -webkit-text-stroke-width: 4px;
 }
 .home-practice-area:hover {
-  background-color: #d4f2ff;
+  background-color: rgba(186, 234, 255, 0.8);
 }
 
 .home-challenge-area {
@@ -156,7 +166,7 @@ p {
 .home-challenge-area h3 {
   position: absolute;
   top: 35%;
-  left: 20%;
+  left: 16%;
   text-align: center;
   font-size: 7vw;
   font-family: 'Luckiest Guy', cursive;
@@ -165,7 +175,7 @@ p {
   -webkit-text-stroke-width: 4px;
 }
 .home-challenge-area:hover {
-  background-color: #ffe6b4;
+  background-color: rgba(255, 221, 154, 0.8);
 }
 
 .set-timer {
@@ -272,8 +282,38 @@ p {
   font-size: 30px;
 }
 
+.btn-home, .btn-challenge {
+  text-align: left;
+  margin-left: -30px;
+  color: #000000;
+  border: none;
+  -webkit-border-radius: 0 5px 5px 0;
+  -moz-border-radius: 0 5px 5px 0;
+  -ms-border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 5px 0;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.btn-home:hover, .btn-home:visited, .btn-home:focus, .btn-challenge:hover, .btn-challenge:visited, .btn-challenge:focus {
+  border: none;
+}
+
 .btn-home {
-  margin-top: 20px;
+  width: 120px;
+  margin-top: 60px;
+  background-color: #5e72b2;
+}
+.btn-home:hover, .btn-home:visited, .btn-home:focus {
+  background-color: #8190c3;
+}
+
+.btn-challenge {
+  width: 150px;
+  background-color: #ffdd9a;
+}
+.btn-challenge:hover, .btn-challenge:visited, .btn-challenge:focus {
+  background-color: #ffeecd;
 }
 
 /*
@@ -322,6 +362,17 @@ p {
     margin-bottom: 3px;
   }
 
+  /*
+  .binder {
+    width: 40px;
+    color: $color-darkest;
+    height: 10px;
+    border: 5px solid $color-correct;
+    z-index: 99999;
+    position: relative;
+    top: -600px;
+  }
+*/
   .score-panel {
     min-height: 420px;
     width: 200px;
@@ -375,11 +426,7 @@ p {
     -ms-border-radius: 0 0 4px 4px;
     border-radius: 0 0 4px 4px;
   }
-  .tabs-below > .nav-tabs > li > a:hover {
-    border-top-color: lightgray;
-    border-bottom-color: transparent;
-  }
-  .tabs-below > .nav-tabs > li > a:focus {
+  .tabs-below > .nav-tabs > li > a:hover, .tabs-below > .nav-tabs > li > a:focus {
     border-top-color: lightgray;
     border-bottom-color: transparent;
   }
@@ -500,7 +547,7 @@ p {
   }
 
   .home-header-area {
-    background-color: #63737b;
+    background-color: #5e72b2;
     height: 35vh;
     position: relative;
   }
@@ -559,7 +606,7 @@ p {
   }
 
   .home-header-area {
-    background-color: #63737b;
+    background-color: #5e72b2;
     height: 50vh;
     position: relative;
   }
