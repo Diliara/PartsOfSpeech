@@ -327,50 +327,6 @@ p {
   @include font-stroke($color-lightest, $color-counter, 1px);
 }
 
-.btn-home, .btn-challenge, .btn-practice {
-  text-align: left;
-  color: $color-darkest;
-  border: none;
-  @include border-radius(0, 5px, 5px, 0);
-
-  &:hover, &:visited, &:focus {
-    border: none;
-  }
-  font-family: 'Alegreya Sans SC', sans-serif;
-  font-size: 1.3em;
-  font-weight: bold;
-
-}
-
-.btn-home {
-  margin-left: -30px;
-  margin-top: 60px;
-
-  width: 120px;
-  background-color: $color-home;
-  &:hover, &:visited, &:focus {
-    background-color: lighten($color-home, 10%);
-  }
-
-}
-
-.btn-challenge {
-  margin-left: -125px;
-  margin-top: 180px;
-
-  width: 150px;
-  background-color: $color-sticky-challenge;
-}
-
-.btn-practice {
-  margin-left: -125px;
-  margin-top: 180px;
-
-  width: 150px;
-  background-color: $color-sticky-practice;
-
-}
-
 .modal-header {
   background-color: transparentize($color-correct, 0.95);
 }
@@ -389,6 +345,34 @@ p {
   font-style: italic;
   margin-left: 20px;
   padding-bottom: 10px;
+}
+
+.btn-home, .btn-challenge, .btn-practice {
+  text-align: left;
+  color: $color-darkest;
+  border: none;
+  @include border-radius(0, 5px, 5px, 0);
+
+  &:hover, &:visited, &:focus {
+    border: none;
+  }
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+
+}
+
+.btn-home {
+  width: 120px;
+  background-color: lighten($color-home, 10%);
+}
+
+.btn-challenge {
+  background-color: $color-sticky-challenge;
+}
+
+.btn-practice {
+  background-color: $color-sticky-practice;
 }
 
 /* Large Screens */
@@ -425,23 +409,25 @@ p {
   }
 
   .counter {
-    text-align: right;
-    font-size: 45px;
-    margin-right: 10px;
-    background-color: $color-darkest;
-    padding: 0 12px 0 10px;
     position: absolute;
     top: 140px;
     right: -210px;
+    text-align: right;
+    margin-right: 10px;
     z-index: 9999;
+    font-size: 45px;
+    padding: 0 12px 0 10px;
+    background-color: $color-darkest;
   }
 
   .total-counter {
-    display: inline-block;
-    float: right;
-    font-size: 35px;
-    padding: 0 7px;
-    background-color: $color-darkest;
+    position: relative;
+    top: -350px;
+    left: 25px;
+    text-align: left;
+    font-size: 45px;
+    padding: 0 12px 0 10px;
+
   }
 
   .tabs-below > .nav-tabs {
@@ -556,17 +542,56 @@ p {
 
   }
 
+  .btn-home {
+    margin-left: -30px;
+    width: 120px;
+    background-color: lighten($color-home, 10%);
+  }
+
+  .btn-challenge, .btn-practice {
+    margin-left: -125px;
+    width: 150px;
+  }
+
+  .game-practice-area {
+
+    .btn-home {
+      margin-top: -10px;
+    }
+
+    .btn-challenge {
+      margin-top: 100px;
+      background-color: $color-sticky-challenge;
+    }
+
+  }
+
+  .game-challenge-area {
+    .btn-home {
+      margin-top: -90px;
+    }
+    .btn-practice {
+      margin-top: 20px;
+      background-color: $color-sticky-practice;
+    }
+
+  }
+
 }
 
 /* Small Screens */
 
 @media screen and (max-width: 992px) {
 
+  .btn-home, .btn-challenge, .btn-practice {
+   margin-top: 10px !important;
+  }
+
   .score-panel {
     display: none;
   }
 
-  .counter {
+  .counter, .total-counter {
     text-align: right;
     font-size: 35px;
     margin-right: 10px;
@@ -582,7 +607,12 @@ p {
 
   }
 
-  .btn-home, .btn-challenge {
+  .total-counter {
+    left: inherit;
+    padding-left: 10px;
+  }
+
+  .btn-home, .btn-challenge, .btn-practice {
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -592,7 +622,7 @@ p {
 
   }
 
-  .btn-challenge {
+  .btn-challenge, .btn-practice {
     margin-left: 20px;
   }
 
@@ -619,7 +649,6 @@ p {
       font-size: 2.8em;
     }
   }
-
 
   h5 {
     font-size: 1.6em;
