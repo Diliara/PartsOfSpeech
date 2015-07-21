@@ -63,7 +63,7 @@ p {
   background-color: #FAFAFA;
   border-top: 10px solid #68CBDA;
   border-bottom: 10px dashed #63737b;
-  border-left: 10px dashed #63737b;
+  border-left: 10px solid #68CBDA;
   border-right: 10px solid #68CBDA;
   -webkit-border-radius: 20px 20px 0px 0px;
   -moz-border-radius: 20px 20px 0px 0px;
@@ -108,7 +108,7 @@ p {
   background-color: #FAFAFA;
   border-top: 10px solid #ffbc95;
   border-bottom: 10px dashed #63737b;
-  border-left: 10px dashed #63737b;
+  border-left: 10px solid #ffbc95;
   border-right: 10px solid #ffbc95;
   -webkit-border-radius: 20px 20px 0px 0px;
   -moz-border-radius: 20px 20px 0px 0px;
@@ -284,7 +284,6 @@ p {
 
 .btn-home, .btn-challenge {
   text-align: left;
-  margin-left: -30px;
   color: #000000;
   border: none;
   -webkit-border-radius: 0 5px 5px 0;
@@ -300,8 +299,9 @@ p {
 }
 
 .btn-home {
-  width: 120px;
+  margin-left: -30px;
   margin-top: 60px;
+  width: 120px;
   background-color: #5e72b2;
 }
 .btn-home:hover, .btn-home:visited, .btn-home:focus {
@@ -309,6 +309,8 @@ p {
 }
 
 .btn-challenge {
+  margin-left: -125px;
+  margin-top: 180px;
   width: 150px;
   background-color: #ffdd9a;
 }
@@ -474,10 +476,10 @@ p {
     margin-right: -13px;
   }
   .tabs-left .nav-tabs li a {
-    -webkit-border-radius: 4px 0 0 4px;
-    -moz-border-radius: 4px 0 0 4px;
-    -ms-border-radius: 4px 0 0 4px;
-    border-radius: 4px 0 0 4px;
+    -webkit-border-radius: 5px 0 0 5px;
+    -moz-border-radius: 5px 0 0 5px;
+    -ms-border-radius: 5px 0 0 5px;
+    border-radius: 5px 0 0 5px;
   }
   .tabs-left .nav-tabs .active {
     margin-right: -25px;
@@ -521,11 +523,40 @@ p {
     text-align: right;
     font-size: 35px;
     margin-right: 10px;
-    background-color: #ffffff;
+    background-color: #000000;
     padding: 0 12px 0 10px;
     position: fixed;
     top: 20px;
     right: 50px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -ms-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    border: 2px solid #ffd829;
+  }
+
+  .btn-home, .btn-challenge {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 100px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -ms-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+  }
+
+  .btn-challenge {
+    margin-left: 20px;
+  }
+
+  .btn-home {
+    margin-left: 20px;
+  }
+
+  .task-tab-content {
+    margin-top: 10px;
   }
 }
 @media screen and (max-width: 749px) and (orientation: portrait) {
@@ -544,6 +575,20 @@ p {
   .nav-tabs {
     font-size: 1.2em;
     border: none !important;
+  }
+  .nav-tabs li {
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+  .nav-tabs li a {
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -ms-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+  }
+
+  .task-tab-content {
+    padding: 15px 30px;
   }
 
   .home-header-area {
@@ -582,10 +627,6 @@ p {
     -webkit-text-stroke-color: #ffbc95;
     -webkit-text-stroke-width: 1.5px;
   }
-
-  .task-tab-content {
-    padding: 15px 30px;
-  }
 }
 @media screen and (max-width: 749px) and (orientation: landscape) {
   h2 {
@@ -603,6 +644,20 @@ p {
   .nav-tabs {
     font-size: 1.2em;
     border: none !important;
+  }
+  .nav-tabs li {
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+  .nav-tabs li a {
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -ms-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+  }
+
+  .task-tab-content {
+    padding: 15px 30px;
   }
 
   .home-header-area {
@@ -646,10 +701,6 @@ p {
     -webkit-text-fill-color: #ffffff;
     -webkit-text-stroke-color: #ffbc95;
     -webkit-text-stroke-width: 1.5px;
-  }
-
-  .task-tab-content {
-    padding: 15px 30px;
   }
 }
 

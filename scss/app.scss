@@ -102,7 +102,7 @@ $color-home: #5e72b2;
     background-color: $color-paper;
     border-top: 10px solid $color-theme;
     border-bottom: 10px dashed $color-background-theme;
-    border-left: 10px dashed $color-background-theme;
+    border-left: 10px solid $color-theme;
     border-right: 10px solid $color-theme;
 
     @include border-radius(20px, 20px, 0px, 0px);
@@ -329,7 +329,6 @@ p {
 
 .btn-home, .btn-challenge {
   text-align: left;
-  margin-left: -30px;
   color: $color-darkest;
   border: none;
   @include border-radius(0, 5px, 5px, 0);
@@ -344,8 +343,10 @@ p {
 }
 
 .btn-home {
-  width: 120px;
+  margin-left: -30px;
   margin-top: 60px;
+
+  width: 120px;
   background-color: $color-home;
   &:hover, &:visited, &:focus {
     background-color: lighten($color-home, 10%);
@@ -354,8 +355,10 @@ p {
 }
 
 .btn-challenge {
-  width: 150px;
+  margin-left: -125px;
+  margin-top: 180px;
 
+  width: 150px;
   background-color: $color-sticky-challenge;
   &:hover, &:visited, &:focus {
     background-color: lighten($color-sticky-challenge, 10%);
@@ -524,7 +527,7 @@ p {
         margin-right: -13px;
         a {
           @extend %extend-list-a;
-          @include border-radius(4px, 0, 0, 4px);
+          @include border-radius(5px, 0, 0, 5px);
         }
       }
 
@@ -576,6 +579,7 @@ p {
 /* Small Screens */
 
 @media screen and (max-width: 992px) {
+
   .score-panel {
     display: none;
   }
@@ -584,17 +588,44 @@ p {
     text-align: right;
     font-size: 35px;
     margin-right: 10px;
-    background-color: $color-lightest;
+    background-color: $color-darkest;
     padding: 0 12px 0 10px;
     position: fixed;
     top: 20px;
     right: 50px;
+
+    @include border-radius(5px, 5px, 5px, 5px);
+
+    border: 2px solid $color-phone-border;
+
+  }
+
+  .btn-home, .btn-challenge {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 100px;
+    @include border-radius(5px, 5px, 5px, 5px);
+
+  }
+
+  .btn-challenge {
+    margin-left: 20px;
+  }
+
+  .btn-home {
+    margin-left: 20px;
+
+  }
+
+  .task-tab-content {
+    margin-top: 10px;
   }
 
 }
 
-@media screen and (max-width: 749px) and (orientation: portrait) {
-
+@mixin design-for-mobile() {
   h2 {
     font-size: 2.3em;
   }
@@ -604,12 +635,27 @@ p {
   .text {
     font-size: 1.5em;
   }
-
   .nav-tabs {
     font-size: 1.2em;
     border: none !important;
 
+    li {
+      margin-bottom: 10px;
+      margin-right: 10px;
+      a {
+        @include border-radius(5px, 5px, 5px, 5px);
+      }
+    }
+
   }
+  .task-tab-content {
+    padding: 15px 30px;
+  }
+}
+
+@media screen and (max-width: 749px) and (orientation: portrait) {
+
+  @include design-for-mobile();
 
   .home-header-area {
 
@@ -633,31 +679,11 @@ p {
     }
   }
 
-  .task-tab-content {
-    padding: 15px 30px;
-  }
-
 }
 
 @media screen and (max-width: 749px) and (orientation: landscape) {
 
-  h2 {
-    font-size: 2.3em;
-  }
-
-  h5 {
-    font-size: 1.6em;
-  }
-
-  .text {
-    font-size: 1.5em;
-  }
-
-  .nav-tabs {
-    font-size: 1.2em;
-    border: none !important;
-
-  }
+  @include design-for-mobile();
 
   .home-header-area {
 
@@ -675,7 +701,6 @@ p {
 
     }
   }
-
   .home-challenge-area {
     @include home-area-setup($color-sticky-challenge, 50vh);
     h3 {
@@ -683,10 +708,6 @@ p {
       @include h3-style(center, $color-challenge, 7vw, 1.5px);
 
     }
-  }
-
-  .task-tab-content {
-    padding: 15px 30px;
   }
 
 }
