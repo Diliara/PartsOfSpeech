@@ -44,11 +44,11 @@ $color-sticky-challenge: #ffdd9a;
   -webkit-text-stroke-width: $stroke-width;
 }
 
-@mixin h3-style($align, $color-text, $font-size) {
+@mixin h3-style($align, $color-text, $font-size, $stroke-size) {
   text-align: $align;
   font-size: $font-size;
 
-  @include font-stroke($color-lightest, $color-text, 4px)
+  @include font-stroke($color-lightest, $color-text, $stroke-size);
 
 }
 
@@ -77,6 +77,7 @@ $color-sticky-challenge: #ffdd9a;
 
     li {
       a {
+        border: none;
         background-color: transparentize($color-sticky-theme, 0.7);
         &:hover, &:visited, &:focus {
           background-color: $color-sticky-theme;
@@ -89,6 +90,10 @@ $color-sticky-challenge: #ffdd9a;
     .active {
       a {
         background-color: $color-sticky-theme;
+        border: none;
+        &:focus, &:hover, &:visited {
+          border: none;
+        }
       }
     }
 
@@ -173,7 +178,7 @@ p {
 
   h3 {
     @include vertical-align(absolute, 35%, 20%);
-    @include h3-style(center, $color-practice, 7vw);
+    @include h3-style(center, $color-practice, 7vw, 4px);
 
   }
 
@@ -187,7 +192,7 @@ p {
   @include home-area-setup($color-sticky-challenge, 75vh);
   h3 {
     @include vertical-align(absolute, 35%, 20%);
-    @include h3-style(center, $color-challenge, 7vw);
+    @include h3-style(center, $color-challenge, 7vw, 4px);
   }
   &:hover {
     background-color: lighten($color-sticky-challenge, 5);
@@ -479,24 +484,12 @@ p {
         a {
           @extend %extend-list-a;
           @include border-radius(4px, 0, 0, 4px);
-          border: none;
-
-          /*
-           background-color: transparentize($color-sticky-practice, 0.7);
-
-           &:hover, &:visited, &:focus {
-             background-color: $color-sticky-practice;
-             border: none;
-             color: $color-darkest;
-           }
-           */
         }
       }
 
       .active {
         margin-right: -25px;
         a {
-          // background-color: $color-sticky-practice;
           padding-right: 27px;
         }
       }
@@ -587,10 +580,16 @@ p {
 
   .home-practice-area {
     @include home-area-setup($color-sticky-practice, 65vh);
+    h3 {
+      @include h3-style(center, $color-practice, 7vw, 1.5px);
+    }
   }
 
   .home-challenge-area {
     @include home-area-setup($color-sticky-challenge, 65vh);
+    h3 {
+      @include h3-style(center, $color-challenge, 7vw, 1.5px);
+    }
   }
 
   .task-tab-content {
@@ -631,6 +630,7 @@ p {
 
     h3 {
       @include vertical-align(absolute, 15%, 20%);
+      @include h3-style(center, $color-practice, 7vw, 1.5px);
 
     }
   }
@@ -639,6 +639,8 @@ p {
     @include home-area-setup($color-background-header, 50vh);
     h3 {
       @include vertical-align(absolute, 15%, 20%);
+      @include h3-style(center, $color-challenge, 7vw, 1.5px);
+
     }
   }
 

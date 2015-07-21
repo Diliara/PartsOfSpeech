@@ -44,6 +44,7 @@ p {
   background-color: #63737b;
 }
 .game-practice-area .nav-tabs li a {
+  border: none;
   background-color: rgba(186, 234, 255, 0.3);
 }
 .game-practice-area .nav-tabs li a:hover, .game-practice-area .nav-tabs li a:visited, .game-practice-area .nav-tabs li a:focus {
@@ -53,6 +54,10 @@ p {
 }
 .game-practice-area .nav-tabs .active a {
   background-color: #BAEAFF;
+  border: none;
+}
+.game-practice-area .nav-tabs .active a:focus, .game-practice-area .nav-tabs .active a:hover, .game-practice-area .nav-tabs .active a:visited {
+  border: none;
 }
 .game-practice-area .task-tab-content {
   background-color: #FAFAFA;
@@ -81,6 +86,7 @@ p {
   background-color: #63737b;
 }
 .game-challenge-area .nav-tabs li a {
+  border: none;
   background-color: rgba(255, 221, 154, 0.3);
 }
 .game-challenge-area .nav-tabs li a:hover, .game-challenge-area .nav-tabs li a:visited, .game-challenge-area .nav-tabs li a:focus {
@@ -90,6 +96,10 @@ p {
 }
 .game-challenge-area .nav-tabs .active a {
   background-color: #ffdd9a;
+  border: none;
+}
+.game-challenge-area .nav-tabs .active a:focus, .game-challenge-area .nav-tabs .active a:hover, .game-challenge-area .nav-tabs .active a:visited {
+  border: none;
 }
 .game-challenge-area .task-tab-content {
   background-color: #FAFAFA;
@@ -421,16 +431,6 @@ p {
     -moz-border-radius: 4px 0 0 4px;
     -ms-border-radius: 4px 0 0 4px;
     border-radius: 4px 0 0 4px;
-    border: none;
-          /*
-           background-color: transparentize($color-sticky-practice, 0.7);
-
-           &:hover, &:visited, &:focus {
-             background-color: $color-sticky-practice;
-             border: none;
-             color: $color-darkest;
-           }
-           */
   }
   .tabs-left .nav-tabs .active {
     margin-right: -25px;
@@ -513,11 +513,27 @@ p {
     height: 65vh;
     position: relative;
   }
+  .home-practice-area h3 {
+    text-align: center;
+    font-size: 7vw;
+    font-family: 'Luckiest Guy', cursive;
+    -webkit-text-fill-color: #ffffff;
+    -webkit-text-stroke-color: #68CBDA;
+    -webkit-text-stroke-width: 1.5px;
+  }
 
   .home-challenge-area {
     background-color: #ffdd9a;
     height: 65vh;
     position: relative;
+  }
+  .home-challenge-area h3 {
+    text-align: center;
+    font-size: 7vw;
+    font-family: 'Luckiest Guy', cursive;
+    -webkit-text-fill-color: #ffffff;
+    -webkit-text-stroke-color: #ffbc95;
+    -webkit-text-stroke-width: 1.5px;
   }
 
   .task-tab-content {
@@ -560,6 +576,12 @@ p {
     position: absolute;
     top: 15%;
     left: 20%;
+    text-align: center;
+    font-size: 7vw;
+    font-family: 'Luckiest Guy', cursive;
+    -webkit-text-fill-color: #ffffff;
+    -webkit-text-stroke-color: #68CBDA;
+    -webkit-text-stroke-width: 1.5px;
   }
 
   .home-challenge-area {
@@ -571,6 +593,12 @@ p {
     position: absolute;
     top: 15%;
     left: 20%;
+    text-align: center;
+    font-size: 7vw;
+    font-family: 'Luckiest Guy', cursive;
+    -webkit-text-fill-color: #ffffff;
+    -webkit-text-stroke-color: #ffbc95;
+    -webkit-text-stroke-width: 1.5px;
   }
 
   .task-tab-content {
