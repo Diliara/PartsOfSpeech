@@ -626,7 +626,7 @@ p {
     }
   }
   .home-practice-area {
-    @include home-area-setup($color-background-header, 50vh);
+    @include home-area-setup($color-sticky-practice, 50vh);
 
     h3 {
       @include vertical-align(absolute, 15%, 20%);
@@ -636,7 +636,7 @@ p {
   }
 
   .home-challenge-area {
-    @include home-area-setup($color-background-header, 50vh);
+    @include home-area-setup($color-sticky-challenge, 50vh);
     h3 {
       @include vertical-align(absolute, 15%, 20%);
       @include h3-style(center, $color-challenge, 7vw, 1.5px);
