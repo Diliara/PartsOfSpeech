@@ -4,10 +4,13 @@ $color-darkest: #000000;
 
 $color-background: #56626A;
 $color-inactive: #ececec;
-$color-background-header: #56626A;
-$color-background-practice: #b0b0b0;
+$color-background-header: #63737b;
+//56626A
+$color-background-practice: #63737b;
+//#b0b0b0;
 $color-practice: #68CBDA;
-$color-background-challenge: #b0b0b0;
+$color-background-challenge: #63737b;
+//#b0b0b0;
 $color-challenge: #ffbc95;
 
 $color-paper: #FAFAFA;
@@ -19,7 +22,8 @@ $color-counter: #0d003e;
 $color-timer: #fdffe3;
 
 $color-phone-border: #ffd829;
-$color-sticky: #BAEAFF;
+$color-sticky-practice: #BAEAFF;
+$color-sticky-challenge: #ffdd9a;
 
 @mixin vertical-align($position, $top, $left) {
   position: $position;
@@ -40,11 +44,11 @@ $color-sticky: #BAEAFF;
   -webkit-text-stroke-width: $stroke-width;
 }
 
-@mixin header-style($align, $color-text, $font-size) {
+@mixin h3-style($align, $color-text, $font-size) {
   text-align: $align;
   font-size: $font-size;
 
-  @include font-stroke($color-lightest, $color-text, 2px)
+  @include font-stroke($color-lightest, $color-text, 4px)
 
 }
 
@@ -62,6 +66,48 @@ $color-sticky: #BAEAFF;
   -moz-border-radius: $top-radius $right-radius $bottom-radius $left-radius;
   -ms-border-radius: $top-radius $right-radius $bottom-radius $left-radius;
   border-radius: $top-radius $right-radius $bottom-radius $left-radius;
+}
+
+@mixin color-theme($color-sticky-theme, $color-background-theme, $color-theme) {
+
+  @include background($color-background-theme, $color-theme);
+
+  .nav-tabs {
+    background-color: $color-background-theme;
+
+    li {
+      a {
+        background-color: transparentize($color-sticky-theme, 0.7);
+        &:hover, &:visited, &:focus {
+          background-color: $color-sticky-theme;
+          border: none;
+          color: $color-darkest;
+        }
+      }
+    }
+
+    .active {
+      a {
+        background-color: $color-sticky-theme;
+      }
+    }
+
+  }
+
+  .task-tab-content {
+    background-color: $color-paper;
+    border: 10px solid $color-theme;
+
+    @include border-radius(20px, 20px, 20px, 20px);
+
+  }
+
+  .tabs-left {
+    .nav-tabs {
+      border-right: 10px solid $color-theme;
+    }
+  }
+
 }
 
 /* Default - all screens */
@@ -101,51 +147,11 @@ p {
 }
 
 .game-practice-area {
-  @include background($color-background-practice, $color-practice);
-
-  .nav-tabs {
-    background-color: $color-background-practice;
-    li {
-      a {
-        color: $color-darkest;
-      }
-    }
-  }
-
-  .task-tab-content {
-    background-color: $color-paper;
-    border-top: 10px solid $color-practice;
-    border-bottom: 10px solid $color-practice;
-    border-right: 10px solid $color-practice;
-
-    @include border-radius(20px, 20px, 20px, 20px);
-
-  }
-
-  .tabs-left {
-    .nav-tabs {
-      border-right: 10px solid $color-practice;
-    }
-  }
-
+  @include color-theme($color-sticky-practice, $color-background-practice, $color-practice);
 }
 
 .game-challenge-area {
-  @include background($color-background-challenge, $color-challenge);
-  .nav-tabs {
-    background-color: $color-background-challenge;
-
-  }
-
-  .task-tab-content {
-    background-color: $color-paper;
-    border: 10px solid $color-challenge;
-  }
-
-  .tabs-left > .nav-tabs {
-    border-right: 10px solid $color-challenge;
-  }
-
+  @include color-theme($color-sticky-challenge, $color-background-challenge, $color-challenge);
 }
 
 .game-challenge-header-area {
@@ -163,28 +169,28 @@ p {
 }
 
 .home-practice-area {
-  @include home-area-setup($color-background-practice, 75vh);
+  @include home-area-setup($color-sticky-practice, 75vh);
 
   h3 {
     @include vertical-align(absolute, 35%, 20%);
-    @include header-style(center, $color-practice, 7vw);
+    @include h3-style(center, $color-practice, 7vw);
 
   }
 
   &:hover {
-    background-color: lighten($color-background-practice, 5);
+    background-color: lighten($color-sticky-practice, 5);
   }
 
 }
 
 .home-challenge-area {
-  @include home-area-setup($color-background-challenge, 75vh);
+  @include home-area-setup($color-sticky-challenge, 75vh);
   h3 {
     @include vertical-align(absolute, 35%, 20%);
-    @include header-style(center, $color-challenge, 7vw);
+    @include h3-style(center, $color-challenge, 7vw);
   }
   &:hover {
-    background-color: lighten($color-background-challenge, 5);
+    background-color: lighten($color-sticky-challenge, 5);
   }
 
 }
@@ -241,6 +247,8 @@ p {
       }
 
       .part-of-speech {
+        font-family: 'Alegreya Sans SC', sans-serif;
+        font-size: 1.2em;
         font-weight: bold;
       }
       .part-of-speech-definition {
@@ -346,6 +354,14 @@ p {
 
 .message {
   color: $color-darkest;
+  margin-left: 10px;
+  padding-top: 10px;
+}
+
+.congratsMsg {
+  font-style: italic;
+  margin-left: 20px;
+  padding-bottom: 10px;
 }
 
 /* Large Screens */
@@ -389,7 +405,7 @@ p {
     padding: 0 12px 0 10px;
     position: absolute;
     top: 140px;
-    right: -200px;
+    right: -210px;
     z-index: 9999;
   }
 
@@ -413,7 +429,7 @@ p {
         }
       }
       .active > a {
-        background-color: $color-sticky;
+        background-color: $color-sticky-practice;
       }
     }
   }
@@ -441,7 +457,7 @@ p {
       }
     }
     .active > a {
-      background-color: $color-sticky;
+      background-color: $color-sticky-practice;
 
     }
   }
@@ -465,20 +481,22 @@ p {
           @include border-radius(4px, 0, 0, 4px);
           border: none;
 
-          background-color: transparentize($color-sticky, 0.7);
- 
-          &:hover, &:visited, &:focus {
-            background-color: $color-sticky;
-            border: none;
+          /*
+           background-color: transparentize($color-sticky-practice, 0.7);
 
-          }
+           &:hover, &:visited, &:focus {
+             background-color: $color-sticky-practice;
+             border: none;
+             color: $color-darkest;
+           }
+           */
         }
       }
 
       .active {
         margin-right: -25px;
         a {
-          background-color: $color-sticky;
+          // background-color: $color-sticky-practice;
           padding-right: 27px;
         }
       }
@@ -486,7 +504,7 @@ p {
     }
 
     .task-tab-content {
-      padding: 15px 40px 20px 210px;
+      padding: 35px 40px 20px 210px;
     }
   }
 
@@ -566,12 +584,13 @@ p {
       padding-top: 3vh;
     }
   }
+
   .home-practice-area {
-    @include home-area-setup($color-background-practice, 65vh);
+    @include home-area-setup($color-sticky-practice, 65vh);
   }
 
   .home-challenge-area {
-    @include home-area-setup($color-background-challenge, 65vh);
+    @include home-area-setup($color-sticky-challenge, 65vh);
   }
 
   .task-tab-content {

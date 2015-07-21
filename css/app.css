@@ -30,7 +30,7 @@ p {
 }
 
 .game-practice-area {
-  background-color: #b0b0b0;
+  background-color: #63737b;
   min-height: 100%;
   overflow: hidden;
 }
@@ -41,16 +41,22 @@ p {
   -webkit-text-stroke-width: 2px;
 }
 .game-practice-area .nav-tabs {
-  background-color: #b0b0b0;
+  background-color: #63737b;
 }
 .game-practice-area .nav-tabs li a {
+  background-color: rgba(186, 234, 255, 0.3);
+}
+.game-practice-area .nav-tabs li a:hover, .game-practice-area .nav-tabs li a:visited, .game-practice-area .nav-tabs li a:focus {
+  background-color: #BAEAFF;
+  border: none;
   color: #000000;
+}
+.game-practice-area .nav-tabs .active a {
+  background-color: #BAEAFF;
 }
 .game-practice-area .task-tab-content {
   background-color: #FAFAFA;
-  border-top: 10px solid #68CBDA;
-  border-bottom: 10px solid #68CBDA;
-  border-right: 10px solid #68CBDA;
+  border: 10px solid #68CBDA;
   -webkit-border-radius: 20px 20px 20px 20px;
   -moz-border-radius: 20px 20px 20px 20px;
   -ms-border-radius: 20px 20px 20px 20px;
@@ -61,7 +67,7 @@ p {
 }
 
 .game-challenge-area {
-  background-color: #b0b0b0;
+  background-color: #63737b;
   min-height: 100%;
   overflow: hidden;
 }
@@ -72,13 +78,28 @@ p {
   -webkit-text-stroke-width: 2px;
 }
 .game-challenge-area .nav-tabs {
-  background-color: #b0b0b0;
+  background-color: #63737b;
+}
+.game-challenge-area .nav-tabs li a {
+  background-color: rgba(255, 221, 154, 0.3);
+}
+.game-challenge-area .nav-tabs li a:hover, .game-challenge-area .nav-tabs li a:visited, .game-challenge-area .nav-tabs li a:focus {
+  background-color: #ffdd9a;
+  border: none;
+  color: #000000;
+}
+.game-challenge-area .nav-tabs .active a {
+  background-color: #ffdd9a;
 }
 .game-challenge-area .task-tab-content {
   background-color: #FAFAFA;
   border: 10px solid #ffbc95;
+  -webkit-border-radius: 20px 20px 20px 20px;
+  -moz-border-radius: 20px 20px 20px 20px;
+  -ms-border-radius: 20px 20px 20px 20px;
+  border-radius: 20px 20px 20px 20px;
 }
-.game-challenge-area .tabs-left > .nav-tabs {
+.game-challenge-area .tabs-left .nav-tabs {
   border-right: 10px solid #ffbc95;
 }
 
@@ -87,7 +108,7 @@ p {
 }
 
 .home-header-area {
-  background-color: #56626A;
+  background-color: #63737b;
   height: 25vh;
   position: relative;
 }
@@ -98,7 +119,7 @@ p {
 }
 
 .home-practice-area {
-  background-color: #b0b0b0;
+  background-color: #BAEAFF;
   height: 75vh;
   position: relative;
 }
@@ -111,14 +132,14 @@ p {
   font-family: 'Luckiest Guy', cursive;
   -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-color: #68CBDA;
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 4px;
 }
 .home-practice-area:hover {
-  background-color: #bdbdbd;
+  background-color: #d4f2ff;
 }
 
 .home-challenge-area {
-  background-color: #b0b0b0;
+  background-color: #ffdd9a;
   height: 75vh;
   position: relative;
 }
@@ -131,10 +152,10 @@ p {
   font-family: 'Luckiest Guy', cursive;
   -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-color: #ffbc95;
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 4px;
 }
 .home-challenge-area:hover {
-  background-color: #bdbdbd;
+  background-color: #ffe6b4;
 }
 
 .set-timer {
@@ -174,6 +195,8 @@ p {
   font-weight: bold;
 }
 .game-area .tab-content .task-tab-content .part-of-speech {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 1.2em;
   font-weight: bold;
 }
 .game-area .tab-content .task-tab-content .part-of-speech-definition {
@@ -272,6 +295,14 @@ p {
 
 .message {
   color: #000000;
+  margin-left: 10px;
+  padding-top: 10px;
+}
+
+.congratsMsg {
+  font-style: italic;
+  margin-left: 20px;
+  padding-bottom: 10px;
 }
 
 /* Large Screens */
@@ -316,7 +347,7 @@ p {
     padding: 0 12px 0 10px;
     position: absolute;
     top: 140px;
-    right: -200px;
+    right: -210px;
     z-index: 9999;
   }
 
@@ -391,21 +422,24 @@ p {
     -ms-border-radius: 4px 0 0 4px;
     border-radius: 4px 0 0 4px;
     border: none;
-    background-color: rgba(186, 234, 255, 0.3);
-  }
-  .tabs-left .nav-tabs li a:hover, .tabs-left .nav-tabs li a:visited, .tabs-left .nav-tabs li a:focus {
-    background-color: #BAEAFF;
-    border: none;
+          /*
+           background-color: transparentize($color-sticky-practice, 0.7);
+
+           &:hover, &:visited, &:focus {
+             background-color: $color-sticky-practice;
+             border: none;
+             color: $color-darkest;
+           }
+           */
   }
   .tabs-left .nav-tabs .active {
     margin-right: -25px;
   }
   .tabs-left .nav-tabs .active a {
-    background-color: #BAEAFF;
     padding-right: 27px;
   }
   .tabs-left .task-tab-content {
-    padding: 15px 40px 20px 210px;
+    padding: 35px 40px 20px 210px;
   }
 
   .tab-content .tab-pane {
@@ -466,7 +500,7 @@ p {
   }
 
   .home-header-area {
-    background-color: #56626A;
+    background-color: #63737b;
     height: 35vh;
     position: relative;
   }
@@ -475,13 +509,13 @@ p {
   }
 
   .home-practice-area {
-    background-color: #b0b0b0;
+    background-color: #BAEAFF;
     height: 65vh;
     position: relative;
   }
 
   .home-challenge-area {
-    background-color: #b0b0b0;
+    background-color: #ffdd9a;
     height: 65vh;
     position: relative;
   }
@@ -509,7 +543,7 @@ p {
   }
 
   .home-header-area {
-    background-color: #56626A;
+    background-color: #63737b;
     height: 50vh;
     position: relative;
   }
@@ -518,7 +552,7 @@ p {
   }
 
   .home-practice-area {
-    background-color: #56626A;
+    background-color: #63737b;
     height: 50vh;
     position: relative;
   }
@@ -529,7 +563,7 @@ p {
   }
 
   .home-challenge-area {
-    background-color: #56626A;
+    background-color: #63737b;
     height: 50vh;
     position: relative;
   }
