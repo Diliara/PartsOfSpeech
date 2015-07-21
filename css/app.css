@@ -571,7 +571,7 @@ p {
   }
 }
 @media screen and (max-width: 749px) and (orientation: portrait) {
-  .counter {
+  .counter, .total-counter {
     margin-right: 10px;
     position: fixed;
     top: 70px;
