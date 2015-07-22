@@ -20,7 +20,7 @@ angular.module('gameApp')
             $scope.words = text;
         });
 
-        $scope.totalCounter = 12;
+        $scope.totalCounter = 33;
 
         window.scoreCounter = 0;
 

@@ -181,7 +181,7 @@ p {
 }
 
 .home-practice-area {
-  @include home-area-setup($color-sticky-practice, 75vh);
+  @include home-area-setup(transparentize($color-sticky-practice, 0.1), 75vh);
 
   h3 {
     @include vertical-align(absolute, 35%, 20%);
@@ -190,55 +190,19 @@ p {
   }
 
   &:hover {
-    background-color: transparentize($color-sticky-practice, 0.2);
+    background-color: $color-sticky-practice;
   }
 
 }
 
 .home-challenge-area {
-  @include home-area-setup($color-sticky-challenge, 75vh);
+  @include home-area-setup(transparentize($color-sticky-challenge, 0.1), 75vh);
   h3 {
     @include vertical-align(absolute, 35%, 16%);
     @include h3-style(center, $color-challenge, 7vw, 4px);
   }
   &:hover {
-    background-color: transparentize($color-sticky-challenge, 0.2);
-  }
-
-}
-
-.set-timer {
-  display: none;
-  position: absolute;
-  top: 40px;
-  right: 20px;
-}
-
-.timer {
-
-  .countdown {
-    background-color: transparentize($color-timer, 0.5);
-    padding: 20px 1px 10px 10px;
-    border: 1px solid $color-greyscale;
-    border-radius: 8px;
-
-    .item {
-      font-size: 27px;
-
-    }
-
-    .item-hh {
-      display: none;
-    }
-
-    .label {
-      text-transform: uppercase;
-      color: $color-darkest;
-      font-size: 15px;
-      font-weight: normal;
-
-    }
-
+    background-color: $color-sticky-challenge;
   }
 
 }
@@ -253,10 +217,11 @@ p {
 
   .tab-content {
     .task-tab-content {
-      .challenge {
-        font-weight: bold;
+      .challenge-amount {
+        @include font-stroke($color-lightest, $color-challenge, 1px);
+        font-size: 1.5em;
       }
-      .part-of-speech {
+      .challenge-unit, .part-of-speech {
         font-family: 'Alegreya Sans SC', sans-serif;
         font-size: 1.2em;
         font-weight: bold;
@@ -327,6 +292,39 @@ p {
   @include font-stroke($color-lightest, $color-counter, 1px);
 }
 
+.counter-label, .total-counter-label, .total-timer-label {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: $color-greyscale;
+}
+
+.timer {
+
+  .countdown {
+    @include font-stroke($color-lightest, $color-challenge, 1px);
+    padding: 20px 1px 10px 10px;
+
+    .item {
+      font-size: 37px;
+
+    }
+
+    .label {
+      text-transform: uppercase;
+      font-size: 25px;
+      font-weight: normal;
+
+    }
+
+    .item-hh {
+      display: none;
+    }
+
+  }
+
+}
+
 .modal-header {
   background-color: transparentize($color-correct, 0.95);
 }
@@ -347,19 +345,33 @@ p {
   padding-bottom: 10px;
 }
 
+.btn-start {
+  color: $color-darkest;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 2.3em;
+  font-weight: normal;
+
+  @include border-radius(15px, 15px, 0, 0);
+
+  background-color: transparent;
+  border-top: 1px dashed darken($color-greyscale, 10%);
+  border-left: 1px dashed darken($color-greyscale, 10%);
+  border-right: 1px dashed darken($color-greyscale, 10%);
+
+  width: 100%;
+  height: 200px;
+
+  text-align: center;
+
+}
+
 .btn-home, .btn-challenge, .btn-practice {
   text-align: left;
   color: $color-darkest;
-  border: none;
   @include border-radius(0, 5px, 5px, 0);
-
-  &:hover, &:visited, &:focus {
-    border: none;
-  }
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 1.3em;
   font-weight: bold;
-
 }
 
 .btn-home {
@@ -420,14 +432,45 @@ p {
     background-color: $color-darkest;
   }
 
+  .counter-label {
+    position: absolute;
+    top: 80px;
+    right: -150px;
+    text-align: right;
+    margin-right: 10px;
+    z-index: 99991;
+  }
+
+  .total-counter-label {
+    position: relative;
+    top: -360px;
+    left: 32px;
+  }
+
   .total-counter {
     position: relative;
-    top: -350px;
-    left: 25px;
+    top: -370px;
+    left: 32px;
     text-align: left;
     font-size: 45px;
     padding: 0 12px 0 10px;
+  }
 
+  .total-timer-label {
+    position: relative;
+    top: -360px;
+    left: 32px;
+  }
+
+  .set-timer {
+    // display: none;
+    position: relative;
+    top: -390px;
+    right: -60px;
+
+    .separator {
+      display: block;
+    }
   }
 
   .tabs-below > .nav-tabs {
@@ -568,10 +611,10 @@ p {
 
   .game-challenge-area {
     .btn-home {
-      margin-top: -90px;
+      margin-top: -520px;
     }
     .btn-practice {
-      margin-top: 20px;
+      margin-top: -410px;
       background-color: $color-sticky-practice;
     }
 
@@ -583,8 +626,12 @@ p {
 
 @media screen and (max-width: 992px) {
 
+  .counter-label, .total-counter-label, .total-timer-label {
+    display: none;
+  }
+
   .btn-home, .btn-challenge, .btn-practice {
-   margin-top: 10px !important;
+    margin-top: 10px !important;
   }
 
   .score-panel {

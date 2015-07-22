@@ -139,7 +139,7 @@ p {
 }
 
 .home-practice-area {
-  background-color: #BAEAFF;
+  background-color: rgba(186, 234, 255, 0.9);
   height: 75vh;
   position: relative;
 }
@@ -155,11 +155,11 @@ p {
   -webkit-text-stroke-width: 4px;
 }
 .home-practice-area:hover {
-  background-color: rgba(186, 234, 255, 0.8);
+  background-color: #BAEAFF;
 }
 
 .home-challenge-area {
-  background-color: #ffdd9a;
+  background-color: rgba(255, 221, 154, 0.9);
   height: 75vh;
   position: relative;
 }
@@ -175,33 +175,7 @@ p {
   -webkit-text-stroke-width: 4px;
 }
 .home-challenge-area:hover {
-  background-color: rgba(255, 221, 154, 0.8);
-}
-
-.set-timer {
-  display: none;
-  position: absolute;
-  top: 40px;
-  right: 20px;
-}
-
-.timer .countdown {
-  background-color: rgba(253, 255, 227, 0.5);
-  padding: 20px 1px 10px 10px;
-  border: 1px solid #ececec;
-  border-radius: 8px;
-}
-.timer .countdown .item {
-  font-size: 27px;
-}
-.timer .countdown .item-hh {
-  display: none;
-}
-.timer .countdown .label {
-  text-transform: uppercase;
-  color: #000000;
-  font-size: 15px;
-  font-weight: normal;
+  background-color: #ffdd9a;
 }
 
 .game-area {
@@ -211,10 +185,14 @@ p {
 .game-area .start-challenge {
   display: none;
 }
-.game-area .tab-content .task-tab-content .challenge {
-  font-weight: bold;
+.game-area .tab-content .task-tab-content .challenge-amount {
+  font-family: 'Luckiest Guy', cursive;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke-color: #ffbc95;
+  -webkit-text-stroke-width: 1px;
+  font-size: 1.5em;
 }
-.game-area .tab-content .task-tab-content .part-of-speech {
+.game-area .tab-content .task-tab-content .challenge-unit, .game-area .tab-content .task-tab-content .part-of-speech {
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 1.2em;
   font-weight: bold;
@@ -285,6 +263,32 @@ p {
   -webkit-text-stroke-width: 1px;
 }
 
+.counter-label, .total-counter-label, .total-timer-label {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #ececec;
+}
+
+.timer .countdown {
+  font-family: 'Luckiest Guy', cursive;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke-color: #ffbc95;
+  -webkit-text-stroke-width: 1px;
+  padding: 20px 1px 10px 10px;
+}
+.timer .countdown .item {
+  font-size: 37px;
+}
+.timer .countdown .label {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: normal;
+}
+.timer .countdown .item-hh {
+  display: none;
+}
+
 .modal-header {
   background-color: rgba(67, 208, 28, 0.05);
 }
@@ -305,10 +309,27 @@ p {
   padding-bottom: 10px;
 }
 
+.btn-start {
+  color: #000000;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 2.3em;
+  font-weight: normal;
+  -webkit-border-radius: 15px 15px 0 0;
+  -moz-border-radius: 15px 15px 0 0;
+  -ms-border-radius: 15px 15px 0 0;
+  border-radius: 15px 15px 0 0;
+  background-color: transparent;
+  border-top: 1px dashed lightgray;
+  border-left: 1px dashed lightgray;
+  border-right: 1px dashed lightgray;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+}
+
 .btn-home, .btn-challenge, .btn-practice {
   text-align: left;
   color: #000000;
-  border: none;
   -webkit-border-radius: 0 5px 5px 0;
   -moz-border-radius: 0 5px 5px 0;
   -ms-border-radius: 0 5px 5px 0;
@@ -316,9 +337,6 @@ p {
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 1.3em;
   font-weight: bold;
-}
-.btn-home:hover, .btn-home:visited, .btn-home:focus, .btn-challenge:hover, .btn-challenge:visited, .btn-challenge:focus, .btn-practice:hover, .btn-practice:visited, .btn-practice:focus {
-  border: none;
 }
 
 .btn-home {
@@ -380,13 +398,43 @@ p {
     background-color: #000000;
   }
 
+  .counter-label {
+    position: absolute;
+    top: 80px;
+    right: -150px;
+    text-align: right;
+    margin-right: 10px;
+    z-index: 99991;
+  }
+
+  .total-counter-label {
+    position: relative;
+    top: -360px;
+    left: 32px;
+  }
+
   .total-counter {
     position: relative;
-    top: -350px;
-    left: 25px;
+    top: -370px;
+    left: 32px;
     text-align: left;
     font-size: 45px;
     padding: 0 12px 0 10px;
+  }
+
+  .total-timer-label {
+    position: relative;
+    top: -360px;
+    left: 32px;
+  }
+
+  .set-timer {
+    position: relative;
+    top: -390px;
+    right: -60px;
+  }
+  .set-timer .separator {
+    display: block;
   }
 
   .tabs-below > .nav-tabs {
@@ -508,15 +556,19 @@ p {
   }
 
   .game-challenge-area .btn-home {
-    margin-top: -90px;
+    margin-top: -520px;
   }
   .game-challenge-area .btn-practice {
-    margin-top: 20px;
+    margin-top: -410px;
     background-color: #BAEAFF;
   }
 }
 /* Small Screens */
 @media screen and (max-width: 992px) {
+  .counter-label, .total-counter-label, .total-timer-label {
+    display: none;
+  }
+
   .btn-home, .btn-challenge, .btn-practice {
     margin-top: 10px !important;
   }

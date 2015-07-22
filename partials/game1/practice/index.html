@@ -18,6 +18,7 @@
                                 <p class="text">
                                     <a ng-repeat="word in words" id="{{'word_' + tab.taskNumber + '_' + $index}}" class="word {{word.btnStatus}}" data-partOfSpeech="{{ word.partOfSpeech }}" ng-click="lookingFor(tab.title, tab.partOfSpeech, tab.taskNumber, word.partOfSpeech, $index) ">{{word.wordItself}}</a>
                                 </p>
+                                <p class="counter-label">Score: </p>
                                 <p class="counter"><span class="current-score">0</span> <span class="current-score-slash">/</span> <span class="current-score-tab-counter">{{ tab.counter }}</span>
                                 </p>
 

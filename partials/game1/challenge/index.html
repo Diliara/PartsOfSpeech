@@ -14,13 +14,13 @@
                                 <h5>Task:</h5>
 
                                 <p>Find <span class="tab-counter">{{ tab.counter }}</span> different
-                                    <span class="part-of-speech">{{ tab.title }}</span> in the paragraph <span class="challenge">{{ tab.challenge }}</span>.
+                                    <span class="part-of-speech">{{ tab.title }}</span> in the paragraph in <span class="challenge-amount">{{ tab.challengeAmount }}</span> <span class="challenge-unit">{{ tab.challengeUnit }}</span>.
                                 </p>
 
                                 <hr>
 
                                 <div>
-                                    <button class="btn btn-primary btn-start" ng-click="startChallenge('tab_' + tab.taskNumber, tab.timer)">Start</button>
+                                    <button class="btn btn-start" ng-click="startChallenge('tab_' + tab.taskNumber, tab.timer)">Start</button>
                                     <div class="start-challenge">
 
 
@@ -44,8 +44,10 @@
                     <div class="power-btn"></div>
                 </div>
 
+                <p class="total-counter-label">Score: </p>
                 <p class="total-counter"><span class="total-current-score">0</span> <span class="total-current-score-slash">/</span> <span class="total-tab-counter">{{ totalCounter }}</span></p>
 
+                <p class="total-timer-label">Timer: </p>
                 <div class="set-timer">
                     <p class="timer" timer-plugin="{css_class: 'countdown', always_show_days: false, with_labels: true, with_seconds: true, with_separators: true, label_dd: '', label_hh: '', label_mm: 'M', label_ss: 'S', separator: ' ', separator_days: ',' }">0h 3m 0s</p>
                 </div>
