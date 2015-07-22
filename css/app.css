@@ -599,6 +599,25 @@ p {
     padding-left: 10px;
   }
 
+  .set-timer {
+    background-color: #000000;
+    padding: 6px 12px 0 10px;
+    position: fixed;
+    top: 100px;
+    right: 60px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -ms-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    border: 2px solid #ffd829;
+  }
+  .set-timer .timer {
+    margin-bottom: 0;
+  }
+  .set-timer .separator {
+    display: none;
+  }
+
   .btn-home, .btn-challenge, .btn-practice {
     margin-top: 20px;
     margin-left: auto;
@@ -629,6 +648,11 @@ p {
     position: fixed;
     top: 70px;
     right: 20px;
+  }
+
+  .set-timer {
+    top: 140px;
+    right: 30px;
   }
 
   .home-header-area-content h2 {

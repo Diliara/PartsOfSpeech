@@ -661,6 +661,25 @@ p {
     padding-left: 10px;
   }
 
+  .set-timer {
+    background-color: $color-darkest;
+    padding: 6px 12px 0 10px;
+    position: fixed;
+    top: 100px;
+    right: 60px;
+    @include border-radius(5px, 5px, 5px, 5px);
+
+    border: 2px solid $color-phone-border;
+
+    .timer {
+      margin-bottom: 0;
+    }
+    .separator {
+      display: none;
+    }
+
+  }
+
   .btn-home, .btn-challenge, .btn-practice {
     margin-top: 20px;
     margin-left: auto;
@@ -755,6 +774,12 @@ p {
     position: fixed;
     top: 70px;
     right: 20px;
+  }
+
+  .set-timer {
+    top: 140px;
+    right: 30px;
+
   }
 
   @include design-for-mobile();
