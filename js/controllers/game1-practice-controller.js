@@ -55,12 +55,12 @@ angular.module('gameApp')
 
                 scoreCounter = scoreCounter + 1;
                 wordIDElem.closest('.task-tab-content').find('.current-score').text(scoreCounter);
-                outOfNumber = parseInt(wordIDElem.closest('.task-tab-content').find('.current-score-tab-counter').text());
+                outOfNumberLocal = parseInt(wordIDElem.closest('.task-tab-content').find('.tab-counter').text());
                 // console.log ("scoreCounter: " + scoreCounter);
-                // console.log ("outOfNumber: " + outOfNumber);
+                // console.log ("outOfNumberLocal: " + outOfNumberLocal);
 
-                if (scoreCounter == outOfNumber) {
-                    congratsMsg = outOfNumber + " " + partOfSpeechTitle + ": " + correctWords.join(', ');
+                if (scoreCounter == outOfNumberLocal) {
+                    congratsMsg = outOfNumberLocal + " " + partOfSpeechTitle + ": " + correctWords.join(', ');
 
                     $scope.open(congratsMsg);
                     correctWords = [];
