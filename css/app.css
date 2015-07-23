@@ -139,7 +139,7 @@ p {
 }
 
 .home-practice-area {
-  background-color: rgba(186, 234, 255, 0.8);
+  background-color: rgba(186, 234, 255, 0.9);
   height: 75vh;
   position: relative;
 }
@@ -159,7 +159,7 @@ p {
 }
 
 .home-challenge-area {
-  background-color: rgba(255, 221, 154, 0.8);
+  background-color: rgba(255, 221, 154, 0.9);
   height: 75vh;
   position: relative;
 }
@@ -718,7 +718,7 @@ p {
   }
 
   .home-practice-area {
-    background-color: #BAEAFF;
+    background-color: rgba(186, 234, 255, 0.9);
     height: 65vh;
     position: relative;
   }
@@ -732,7 +732,7 @@ p {
   }
 
   .home-challenge-area {
-    background-color: #ffdd9a;
+    background-color: rgba(255, 221, 154, 0.9);
     height: 65vh;
     position: relative;
   }
@@ -809,7 +809,7 @@ p {
   }
 
   .home-practice-area {
-    background-color: #BAEAFF;
+    background-color: rgba(186, 234, 255, 0.9);
     height: 50vh;
     position: relative;
   }
@@ -826,7 +826,7 @@ p {
   }
 
   .home-challenge-area {
-    background-color: #ffdd9a;
+    background-color: rgba(255, 221, 154, 0.9);
     height: 50vh;
     position: relative;
   }

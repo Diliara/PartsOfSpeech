@@ -181,7 +181,7 @@ p {
 }
 
 .home-practice-area {
-  @include home-area-setup(transparentize($color-sticky-practice, 0.2), 75vh);
+  @include home-area-setup(transparentize($color-sticky-practice, 0.1), 75vh);
 
   h3 {
     @include vertical-align(absolute, 35%, 20%);
@@ -196,7 +196,7 @@ p {
 }
 
 .home-challenge-area {
-  @include home-area-setup(transparentize($color-sticky-challenge, 0.2), 75vh);
+  @include home-area-setup(transparentize($color-sticky-challenge, 0.1), 75vh);
   h3 {
     @include vertical-align(absolute, 35%, 16%);
     @include h3-style(center, $color-challenge, 7vw, 4px);
@@ -793,14 +793,14 @@ p {
   }
 
   .home-practice-area {
-    @include home-area-setup($color-sticky-practice, 65vh);
+    @include home-area-setup(transparentize($color-sticky-practice, 0.1), 65vh);
     h3 {
       @include h3-style(center, $color-practice, 7vw, 1.5px);
     }
   }
 
   .home-challenge-area {
-    @include home-area-setup($color-sticky-challenge, 65vh);
+    @include home-area-setup(transparentize($color-sticky-challenge, 0.1), 65vh);
     h3 {
       @include h3-style(center, $color-challenge, 7vw, 1.5px);
     }
@@ -820,7 +820,7 @@ p {
     }
   }
   .home-practice-area {
-    @include home-area-setup($color-sticky-practice, 50vh);
+    @include home-area-setup(transparentize($color-sticky-practice, 0.1), 50vh);
 
     h3 {
       @include vertical-align(absolute, 15%, 20%);
@@ -829,7 +829,7 @@ p {
     }
   }
   .home-challenge-area {
-    @include home-area-setup($color-sticky-challenge, 50vh);
+    @include home-area-setup(transparentize($color-sticky-challenge, 0.1), 50vh);
     h3 {
       @include vertical-align(absolute, 15%, 20%);
       @include h3-style(center, $color-challenge, 7vw, 1.5px);
