@@ -16,6 +16,7 @@ angular.module('gameApp')
 
         $http.get('json/game1/game1_tabs.json').success(function (tabsContent) {
             $scope.tabs = tabsContent;
+            $scope.sections = tabsContent;
         });
 
         $scope.startChallenge = function () {
@@ -97,8 +98,8 @@ angular.module('gameApp')
             correctWords = [];
 
 
-            $('.start-challenge').slideUp();
-            $('.btn-start').show();
+         //   $('.start-challenge').slideUp();
+         //   $('.btn-start').show();
 
 
         };

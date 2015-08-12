@@ -119,10 +119,6 @@ p {
   border-right: 10px solid #ffbc95;
 }
 
-/*
-.game-challenge-header-area {
-  height: 75px;
-}*/
 .home {
   background-color: #63737b;
 }
@@ -249,7 +245,7 @@ p {
   -webkit-text-stroke-width: 1px;
 }
 
-.current-score-slash, .total-current-score-slash {
+.current-score-slash {
   font-family: 'Luckiest Guy', cursive;
   -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-color: #ececec;
@@ -270,11 +266,19 @@ p {
   color: #ececec;
 }
 
+.section-score {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 14px;
+}
+.section-score .section-score-current {
+  color: #43D01C;
+}
+
 .timer .countdown {
   font-family: 'Luckiest Guy', cursive;
   -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-color: #ffbc95;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 0.5px;
   padding: 20px 1px 10px 10px;
 }
 .timer .countdown .item {
@@ -358,84 +362,6 @@ p {
   .tabs-right > .nav-tabs li a, .tabs-left .nav-tabs li a {
     min-width: 74px;
     margin-bottom: 3px;
-  }
-
-  .score-panel {
-    min-height: 420px;
-    width: 200px;
-    background-color: #ffffff;
-    border: 5px solid #ffd829;
-    -webkit-border-radius: 15px 15px 15px 15px;
-    -moz-border-radius: 15px 15px 15px 15px;
-    -ms-border-radius: 15px 15px 15px 15px;
-    border-radius: 15px 15px 15px 15px;
-  }
-  .score-panel .score-screen {
-    background-color: #000000;
-    min-height: 310px;
-    margin-top: 45px;
-    margin-left: 8px;
-    margin-right: 8px;
-  }
-  .score-panel .power-btn {
-    width: 40px;
-    height: 40px;
-    border: 3px solid #ffd829;
-    border-radius: 50%;
-    margin-top: 8px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .counter {
-    position: absolute;
-    top: 140px;
-    right: -210px;
-    text-align: right;
-    margin-right: 10px;
-    z-index: 9999;
-    font-size: 45px;
-    padding: 0 12px 0 10px;
-    background-color: #000000;
-  }
-
-  .counter-label {
-    position: absolute;
-    top: 80px;
-    right: -150px;
-    text-align: right;
-    margin-right: 10px;
-    z-index: 99991;
-  }
-
-  .total-counter-label {
-    position: relative;
-    top: -360px;
-    left: 32px;
-  }
-
-  .total-counter {
-    position: relative;
-    top: -370px;
-    left: 32px;
-    text-align: left;
-    font-size: 45px;
-    padding: 0 12px 0 10px;
-  }
-
-  .total-timer-label {
-    position: relative;
-    top: -360px;
-    left: 32px;
-  }
-
-  .set-timer {
-    position: relative;
-    top: -390px;
-    right: -60px;
-  }
-  .set-timer .separator {
-    display: block;
   }
 
   .tabs-below > .nav-tabs {
@@ -555,6 +481,51 @@ p {
     margin-top: 100px;
     background-color: #ffdd9a;
   }
+  .game-practice-area .score-panel {
+    min-height: 420px;
+    width: 200px;
+    background-color: #ffffff;
+    border: 5px solid #ffd829;
+    -webkit-border-radius: 15px 15px 15px 15px;
+    -moz-border-radius: 15px 15px 15px 15px;
+    -ms-border-radius: 15px 15px 15px 15px;
+    border-radius: 15px 15px 15px 15px;
+  }
+  .game-practice-area .score-panel .score-screen {
+    background-color: #000000;
+    min-height: 310px;
+    margin-top: 45px;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .game-practice-area .score-panel .power-btn {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #ffd829;
+    border-radius: 50%;
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .game-practice-area .counter {
+    position: absolute;
+    top: 140px;
+    right: -210px;
+    text-align: right;
+    margin-right: 10px;
+    z-index: 9999;
+    font-size: 45px;
+    padding: 0 12px 0 10px;
+    background-color: #000000;
+  }
+  .game-practice-area .counter-label {
+    position: absolute;
+    top: 80px;
+    right: -150px;
+    text-align: right;
+    margin-right: 10px;
+    z-index: 99991;
+  }
 
   .game-challenge-area .btn-home {
     margin-top: -520px;
@@ -562,6 +533,68 @@ p {
   .game-challenge-area .btn-practice {
     margin-top: -410px;
     background-color: #BAEAFF;
+  }
+  .game-challenge-area .score-panel-large {
+    min-height: 620px;
+    width: 440px;
+    background-color: #ffffff;
+    border: 3px solid #cfc9bf;
+    -webkit-border-radius: 25px 25px 25px 25px;
+    -moz-border-radius: 25px 25px 25px 25px;
+    -ms-border-radius: 25px 25px 25px 25px;
+    border-radius: 25px 25px 25px 25px;
+  }
+  .game-challenge-area .score-panel-large .score-screen {
+    background-color: #000000;
+    min-height: 515px;
+    margin-top: 45px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .game-challenge-area .score-panel-large .power-btn {
+    width: 35px;
+    height: 35px;
+    border: 2px solid rgba(207, 201, 191, 0.2);
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .game-challenge-area .total-counter-label {
+    position: relative;
+    top: -550px;
+    left: 60px;
+  }
+  .game-challenge-area .total-counter-label .score-sections {
+    font-size: 18px;
+    list-style-type: none;
+    padding-left: 10px;
+    margin-bottom: 1px;
+  }
+  .game-challenge-area .total-counter-label .score-sections .section-score {
+    margin-left: 200px;
+    font-size: 23px;
+    margin-top: -28px;
+  }
+  .game-challenge-area .total-counter-label hr {
+    width: 300px;
+    margin-left: 0;
+  }
+  .game-challenge-area .total-counter-label hr + p {
+    font-size: 18px;
+    margin-left: 10px;
+  }
+  .game-challenge-area .total-counter-label .total-score {
+    margin-top: -40px;
+    margin-left: 200px;
+  }
+  .game-challenge-area .total-timer-label {
+    position: relative;
+    top: -560px;
+    left: 60px;
+  }
+  .game-challenge-area .total-timer-label .set-timer {
+    margin-left: 10px;
   }
 }
 /* Small Screens */

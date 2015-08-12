@@ -19,6 +19,10 @@ $color-counter: #0d003e;
 $color-timer: #fdffe3;
 
 $color-phone-border: #ffd829;
+$color-tablet-border: #cfc9bf;
+
+$color-tablet: #000000; //0D1129
+
 $color-sticky-practice: #BAEAFF;
 $color-sticky-challenge: #ffdd9a;
 
@@ -161,11 +165,6 @@ p {
   @include color-theme($color-sticky-challenge, $color-background-challenge, $color-challenge);
 }
 
-/*
-.game-challenge-header-area {
-  height: 75px;
-}*/
-
 .home {
   background-color: $color-background-header;
 }
@@ -283,7 +282,7 @@ p {
   @include font-stroke($color-lightest, $color-correct, 1px);
 }
 
-.current-score-slash, .total-current-score-slash {
+.current-score-slash {
   @include font-stroke($color-lightest, $color-greyscale, 1px);
 
 }
@@ -299,22 +298,38 @@ p {
   color: $color-greyscale;
 }
 
+.section-score {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 14px;
+
+  .section-score-current {
+    color: $color-correct;
+  }
+
+  .section-score-total {
+
+  }
+
+  .total-current-score-slash {
+
+  }
+}
+
 .timer {
 
+
   .countdown {
-    @include font-stroke($color-lightest, $color-challenge, 1px);
+    @include font-stroke($color-lightest, $color-challenge, 0.5px);
     padding: 20px 1px 10px 10px;
 
     .item {
       font-size: 37px;
-
     }
 
     .label {
       text-transform: uppercase;
       font-size: 25px;
       font-weight: normal;
-
     }
 
     .item-hh {
@@ -395,84 +410,6 @@ p {
   %extend-list-a {
     min-width: 74px;
     margin-bottom: 3px;
-  }
-
-  .score-panel {
-    min-height: 420px;
-    width: 200px;
-    background-color: $color-lightest;
-    border: 5px solid $color-phone-border;
-    @include border-radius(15px, 15px, 15px, 15px);
-
-    .score-screen {
-      background-color: $color-darkest;
-      min-height: 310px;
-      margin-top: 45px;
-      margin-left: 8px;
-      margin-right: 8px;
-    }
-    .power-btn {
-      width: 40px;
-      height: 40px;
-      border: 3px solid $color-phone-border;
-      border-radius: 50%;
-      margin-top: 8px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-
-  .counter {
-    position: absolute;
-    top: 140px;
-    right: -210px;
-    text-align: right;
-    margin-right: 10px;
-    z-index: 9999;
-    font-size: 45px;
-    padding: 0 12px 0 10px;
-    background-color: $color-darkest;
-  }
-
-  .counter-label {
-    position: absolute;
-    top: 80px;
-    right: -150px;
-    text-align: right;
-    margin-right: 10px;
-    z-index: 99991;
-  }
-
-  .total-counter-label {
-    position: relative;
-    top: -360px;
-    left: 32px;
-  }
-
-  .total-counter {
-    position: relative;
-    top: -370px;
-    left: 32px;
-    text-align: left;
-    font-size: 45px;
-    padding: 0 12px 0 10px;
-  }
-
-  .total-timer-label {
-    position: relative;
-    top: -360px;
-    left: 32px;
-  }
-
-  .set-timer {
-    // display: none;
-    position: relative;
-    top: -390px;
-    right: -60px;
-
-    .separator {
-      display: block;
-    }
   }
 
   .tabs-below > .nav-tabs {
@@ -609,6 +546,51 @@ p {
       background-color: $color-sticky-challenge;
     }
 
+    .score-panel {
+      min-height: 420px;
+      width: 200px;
+      background-color: $color-lightest;
+      border: 5px solid $color-phone-border;
+      @include border-radius(15px, 15px, 15px, 15px);
+
+      .score-screen {
+        background-color: $color-darkest;
+        min-height: 310px;
+        margin-top: 45px;
+        margin-left: 8px;
+        margin-right: 8px;
+      }
+      .power-btn {
+        width: 40px;
+        height: 40px;
+        border: 3px solid $color-phone-border;
+        border-radius: 50%;
+        margin-top: 8px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .counter {
+      position: absolute;
+      top: 140px;
+      right: -210px;
+      text-align: right;
+      margin-right: 10px;
+      z-index: 9999;
+      font-size: 45px;
+      padding: 0 12px 0 10px;
+      background-color: $color-darkest;
+    }
+
+    .counter-label {
+      position: absolute;
+      top: 80px;
+      right: -150px;
+      text-align: right;
+      margin-right: 10px;
+      z-index: 99991;
+    }
   }
 
   .game-challenge-area {
@@ -619,6 +601,82 @@ p {
       margin-top: -410px;
       background-color: $color-sticky-practice;
     }
+
+    .score-panel-large {
+      min-height: 620px;
+      width: 440px;
+      background-color: $color-lightest;
+      border: 3px solid $color-tablet-border;
+      @include border-radius(25px, 25px, 25px, 25px);
+
+      .score-screen {
+        background-color: $color-tablet;
+        min-height: 515px;
+        margin-top: 45px;
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+      .power-btn {
+        width: 35px;
+        height: 35px;
+        border: 2px solid transparentize($color-tablet-border, 0.8);
+        border-radius: 50%;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .total-counter-label {
+      position: relative;
+      top: -550px;
+      left: 60px;
+
+      .score-sections {
+        font-size: 18px;
+        list-style-type: none;
+        padding-left: 10px;
+        margin-bottom: 1px;
+
+        .section-score {
+          margin-left: 200px;
+          font-size: 23px;
+          margin-top: -28px;
+
+        }
+
+      }
+
+      hr {
+        width: 300px;
+        margin-left: 0;
+
+        & + p {
+          font-size: 18px;
+          margin-left: 10px;
+        }
+      }
+
+      .total-score {
+
+        margin-top: -40px;
+        margin-left: 200px;
+
+      }
+    }
+
+    .total-timer-label {
+      position: relative;
+      top: -560px;
+      left: 60px;
+
+      .set-timer {
+        margin-left: 10px;
+      }
+
+    }
+
+
 
   }
 
