@@ -3,7 +3,7 @@
         <h2>Practice</h2>
 
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-9">
                 <div class="game-area">
                     <tabset class="tabs-left">
                         <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled" ng-click="changeTab()">
@@ -18,8 +18,8 @@
                                 <p class="text">
                                     <a ng-repeat="word in words" id="{{'word_' + tab.taskNumber + '_' + $index}}" class="word {{word.btnStatus}}" data-partOfSpeech="{{ word.partOfSpeech }}" ng-click="lookingFor(tab.title, tab.partOfSpeech, tab.taskNumber, word.partOfSpeech, $index) ">{{word.wordItself}}</a>
                                 </p>
-                                <p class="counter-label">Score: </p>
-                                <p class="counter"><span class="current-score">0</span> <span class="current-score-slash">/</span> <span class="current-score-tab-counter">{{ tab.counter }}</span>
+                                <p class="score-label">Score: </p>
+                                <p class="score"><span class="current-score">0</span> <span class="current-score-slash">/</span> <span class="current-score-tab-counter">{{ tab.counter }}</span>
                                 </p>
 
                             </div>
@@ -31,7 +31,7 @@
             </div>
 
 
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="i-phone">
                     <div class="device-screen"></div>
                     <div class="device-btn"></div>

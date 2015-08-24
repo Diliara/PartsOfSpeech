@@ -122,6 +122,68 @@ $color-home: #5e72b2;
 
 }
 
+@mixin design-for-mobile() {
+  .home-header-area-content {
+    h2 {
+      font-size: 2.1em;
+    }
+  }
+  .game-challenge-area, .game-practice-area {
+    h2 {
+      font-size: 2.8em;
+    }
+  }
+  h5 {
+    font-size: 1.7em;
+  }
+
+  /*
+  .part-of-speech-definition {
+    font-size: 1.4em;
+  }*/
+
+  .text {
+    font-size: 1.7em;
+  }
+  .nav-tabs {
+    font-size: 1.2em;
+    border: none !important;
+
+    li {
+      margin-bottom: 10px;
+      margin-right: 10px;
+      a {
+        @include border-radius(5px, 5px, 5px, 5px);
+      }
+    }
+
+  }
+  .task-tab-content {
+    padding: 15px 30px;
+
+  }
+
+  .game-practice-area {
+    .task-tab-content {
+      border-top: 5px solid $color-practice;
+      border-bottom: 10px dashed $color-background-practice;
+      border-left: 5px solid $color-practice;
+      border-right: 5px solid $color-practice;
+    }
+  }
+
+  .game-challenge-area {
+
+    .task-tab-content {
+      border-top: 5px solid $color-challenge;
+      border-bottom: 10px dashed $color-background-challenge;
+      border-left: 5px solid $color-challenge;
+      border-right: 5px solid $color-challenge;
+    }
+  }
+
+}
+
 /* Default - all screens */
 
 html, body {
@@ -292,7 +354,7 @@ p {
   @include font-stroke($color-lightest, $color-counter, 1px);
 }
 
-.counter-label, .total-counter-label, .total-timer-label {
+.score-label, .total-counter-label, .total-timer-label {
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 1.8em;
   font-weight: bold;
@@ -571,19 +633,7 @@ p {
       }
     }
 
-    .counter {
-      position: absolute;
-      top: 140px;
-      right: -210px;
-      text-align: right;
-      margin-right: 10px;
-      z-index: 9999;
-      font-size: 45px;
-      padding: 0 12px 0 10px;
-      background-color: $color-darkest;
-    }
-
-    .counter-label {
+    .score-label {
       position: absolute;
       top: 80px;
       right: -150px;
@@ -679,11 +729,25 @@ p {
 
 }
 
+@media screen and (min-width: 993px) {
+  .score {
+    position: absolute;
+    top: 140px;
+    right: -210px;
+    text-align: right;
+    margin-right: 10px;
+    z-index: 9999;
+    font-size: 45px;
+    padding: 0 12px 0 10px;
+    background-color: $color-darkest;
+  }
+}
+
 /* Small Screens */
 
 @media screen and (max-width: 992px) {
 
-  .counter-label, .total-counter-label, .total-timer-label {
+  .score-label, .total-counter-label, .total-timer-label {
     display: none;
   }
 
@@ -691,11 +755,11 @@ p {
     margin-top: 10px !important;
   }
 
-  .i-phone {
+  .i-phone, .i-pad {
     display: none;
   }
 
-  .counter, .total-counter {
+  .score, .total-counter {
     text-align: right;
     font-size: 35px;
     margin-right: 10px;
@@ -760,71 +824,9 @@ p {
 
 }
 
-@mixin design-for-mobile() {
-  .home-header-area-content {
-    h2 {
-      font-size: 2.1em;
-    }
-  }
-  .game-challenge-area, .game-practice-area {
-    h2 {
-      font-size: 2.8em;
-    }
-  }
-  h5 {
-    font-size: 1.7em;
-  }
-
-  /*
-  .part-of-speech-definition {
-    font-size: 1.4em;
-  }*/
-
-  .text {
-    font-size: 1.7em;
-  }
-  .nav-tabs {
-    font-size: 1.2em;
-    border: none !important;
-
-    li {
-      margin-bottom: 10px;
-      margin-right: 10px;
-      a {
-        @include border-radius(5px, 5px, 5px, 5px);
-      }
-    }
-
-  }
-  .task-tab-content {
-    padding: 15px 30px;
-
-  }
-
-  .game-practice-area {
-    .task-tab-content {
-      border-top: 5px solid $color-practice;
-      border-bottom: 10px dashed $color-background-practice;
-      border-left: 5px solid $color-practice;
-      border-right: 5px solid $color-practice;
-    }
-  }
-
-  .game-challenge-area {
-
-    .task-tab-content {
-      border-top: 5px solid $color-challenge;
-      border-bottom: 10px dashed $color-background-challenge;
-      border-left: 5px solid $color-challenge;
-      border-right: 5px solid $color-challenge;
-    }
-  }
-
-}
-
 @media screen and (max-width: 749px) and (orientation: portrait) {
 
-  .counter, .total-counter {
+  .score, .total-counter {
     margin-right: 10px;
     position: fixed;
     top: 70px;
