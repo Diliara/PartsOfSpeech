@@ -29,6 +29,20 @@ $color-sticky-challenge: #ffdd9a;
 
 $color-home: #5e72b2;
 
+$i-pad-width: 290px;
+
+$i-pad-scores-left-margin: 150px;
+
+$i-pad-scores-font-size: 16px;
+$i-pad-padding-l-r: 15px;
+$i-pad-padding-top: 35px;
+
+$i-pad-display-top: -460px;
+$i-pad-display-left: 20px;
+
+$nav-buttons-under-i-pad-margin-top: 90px;
+$nav-buttons-under-i-phone-margin-top: 90px;
+
 @mixin vertical-align($position, $top, $left) {
   position: $position;
   top: $top;
@@ -644,6 +658,10 @@ p {
       margin-right: 15px;
       z-index: 99991;
     }
+
+    .nav-buttons {
+      margin-top: $nav-buttons-under-i-phone-margin-top;
+    }
   }
 
   .game-challenge-area {
@@ -656,7 +674,8 @@ p {
     }
 
     .i-pad {
-      width: 380px;
+      width: $i-pad-width;
+      margin-left: -10px;
       background-color: $color-lightest;
       border: 3px solid $color-tablet-border;
       @include border-radius(25px, 25px, 25px, 25px);
@@ -664,7 +683,7 @@ p {
       .device-screen {
         background-color: $color-tablet;
         min-height: 430px;
-        margin: 40px 20px 0 20px;
+        margin: $i-pad-padding-top $i-pad-padding-l-r 0 $i-pad-padding-l-r;
       }
       .device-btn {
         width: 27px;
@@ -677,9 +696,9 @@ p {
     }
 
     .display-scores, .display-timer {
-      top: -460px;
+      top: $i-pad-display-top; //-460px
       position: relative;
-      left: 40px;
+      left: $i-pad-display-left; //40px
 
       p {
         font-size: 1em;
@@ -690,13 +709,13 @@ p {
     .display-scores {
 
       .score-sections {
-        font-size: 18px;
+        font-size: $i-pad-scores-font-size;
         list-style-type: none;
         padding-left: 10px;
         margin-bottom: 1px;
 
         .section-score {
-          margin-left: 200px;
+          margin-left: $i-pad-scores-left-margin;
           font-size: 23px;
           margin-top: -28px;
 
@@ -705,7 +724,7 @@ p {
       }
 
       hr {
-        width: 300px;
+        width: $i-pad-width - 80px;
         margin-left: 0;
 
         & + p {
@@ -717,7 +736,7 @@ p {
       .total-score {
 
         margin-top: -40px;
-        margin-left: 200px;
+        margin-left: $i-pad-scores-left-margin;
 
         font-size: 1.3em;
 
@@ -735,7 +754,7 @@ p {
     }
 
     .nav-buttons {
-      margin-top: 40px;
+      margin-top: $nav-buttons-under-i-pad-margin-top;
     }
 
   }

@@ -512,6 +512,9 @@ p {
     margin-right: 15px;
     z-index: 99991;
   }
+  .game-practice-area .nav-buttons {
+    margin-top: 90px;
+  }
 
   .game-challenge-area .btn-home {
     margin-top: -820px;
@@ -521,7 +524,8 @@ p {
     background-color: #BAEAFF;
   }
   .game-challenge-area .i-pad {
-    width: 380px;
+    width: 290px;
+    margin-left: -10px;
     background-color: #ffffff;
     border: 3px solid #cfc9bf;
     -webkit-border-radius: 25px 25px 25px 25px;
@@ -532,7 +536,7 @@ p {
   .game-challenge-area .i-pad .device-screen {
     background-color: #000000;
     min-height: 430px;
-    margin: 40px 20px 0 20px;
+    margin: 35px 15px 0 15px;
   }
   .game-challenge-area .i-pad .device-btn {
     width: 27px;
@@ -544,24 +548,24 @@ p {
   .game-challenge-area .display-scores, .game-challenge-area .display-timer {
     top: -460px;
     position: relative;
-    left: 40px;
+    left: 20px;
   }
   .game-challenge-area .display-scores p, .game-challenge-area .display-timer p {
     font-size: 1em;
   }
   .game-challenge-area .display-scores .score-sections {
-    font-size: 18px;
+    font-size: 16px;
     list-style-type: none;
     padding-left: 10px;
     margin-bottom: 1px;
   }
   .game-challenge-area .display-scores .score-sections .section-score {
-    margin-left: 200px;
+    margin-left: 150px;
     font-size: 23px;
     margin-top: -28px;
   }
   .game-challenge-area .display-scores hr {
-    width: 300px;
+    width: 210px;
     margin-left: 0;
   }
   .game-challenge-area .display-scores hr + p {
@@ -570,7 +574,7 @@ p {
   }
   .game-challenge-area .display-scores .total-score {
     margin-top: -40px;
-    margin-left: 200px;
+    margin-left: 150px;
     font-size: 1.3em;
   }
   .game-challenge-area .display-timer {
@@ -580,7 +584,7 @@ p {
     margin-left: 10px;
   }
   .game-challenge-area .nav-buttons {
-    margin-top: 40px;
+    margin-top: 90px;
   }
 }
 @media screen and (min-width: 993px) {
