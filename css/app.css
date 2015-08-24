@@ -260,7 +260,7 @@ p {
   -webkit-text-stroke-width: 1px;
 }
 
-.score-label, .total-counter-label, .total-timer-label {
+.score-label, .display-scores, .display-timer {
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 1.8em;
   font-weight: bold;
@@ -483,7 +483,6 @@ p {
     background-color: #ffdd9a;
   }
   .game-practice-area .i-phone {
-    min-height: 300px;
     width: 180px;
     background-color: #ffffff;
     border: 3px solid #ffd829;
@@ -522,8 +521,7 @@ p {
     background-color: #BAEAFF;
   }
   .game-challenge-area .i-pad {
-    min-height: 500px;
-    width: 410px;
+    width: 380px;
     background-color: #ffffff;
     border: 3px solid #cfc9bf;
     -webkit-border-radius: 25px 25px 25px 25px;
@@ -533,10 +531,8 @@ p {
   }
   .game-challenge-area .i-pad .device-screen {
     background-color: #000000;
-    min-height: 500px;
-    margin-top: 45px;
-    margin-left: 30px;
-    margin-right: 30px;
+    min-height: 430px;
+    margin: 40px 20px 0 20px;
   }
   .game-challenge-area .i-pad .device-btn {
     width: 27px;
@@ -545,41 +541,46 @@ p {
     border-radius: 50%;
     margin: 7px auto;
   }
-  .game-challenge-area .total-counter-label {
+  .game-challenge-area .display-scores, .game-challenge-area .display-timer {
+    top: -460px;
     position: relative;
-    top: -530px;
-    left: 60px;
+    left: 40px;
   }
-  .game-challenge-area .total-counter-label .score-sections {
+  .game-challenge-area .display-scores p, .game-challenge-area .display-timer p {
+    font-size: 1em;
+  }
+  .game-challenge-area .display-scores .score-sections {
     font-size: 18px;
     list-style-type: none;
     padding-left: 10px;
     margin-bottom: 1px;
   }
-  .game-challenge-area .total-counter-label .score-sections .section-score {
+  .game-challenge-area .display-scores .score-sections .section-score {
     margin-left: 200px;
     font-size: 23px;
     margin-top: -28px;
   }
-  .game-challenge-area .total-counter-label hr {
+  .game-challenge-area .display-scores hr {
     width: 300px;
     margin-left: 0;
   }
-  .game-challenge-area .total-counter-label hr + p {
+  .game-challenge-area .display-scores hr + p {
     font-size: 18px;
     margin-left: 10px;
   }
-  .game-challenge-area .total-counter-label .total-score {
+  .game-challenge-area .display-scores .total-score {
     margin-top: -40px;
     margin-left: 200px;
+    font-size: 1.3em;
   }
-  .game-challenge-area .total-timer-label {
-    position: relative;
-    top: -540px;
-    left: 60px;
+  .game-challenge-area .display-timer {
+    margin-top: -10px;
   }
-  .game-challenge-area .total-timer-label .set-timer {
+  .game-challenge-area .display-timer .set-timer {
     margin-left: 10px;
+  }
+  .game-challenge-area .nav-buttons {
+    margin-top: 40px;
   }
 }
 @media screen and (min-width: 993px) {
@@ -602,7 +603,7 @@ p {
 }
 /* Small Screens */
 @media screen and (max-width: 992px) {
-  .score-label, .total-counter-label, .total-timer-label {
+  .score-label, .display-scores, .display-timer {
     display: none;
   }
 

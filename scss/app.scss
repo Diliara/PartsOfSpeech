@@ -179,7 +179,6 @@ $color-home: #5e72b2;
 
 }
 
-
 @mixin design-for-tablets() {
 
   .text {
@@ -360,7 +359,7 @@ p {
   @include font-stroke($color-lightest, $color-counter, 1px);
 }
 
-.score-label, .total-counter-label, .total-timer-label {
+.score-label, .display-scores, .display-timer {
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 1.8em;
   font-weight: bold;
@@ -532,7 +531,7 @@ p {
   .tabs-left {
 
     .nav-tabs {
-     /* height: 75vh; */
+      /* height: 75vh; */
       min-height: 800px;
       padding-top: 20px;
       border-bottom: 0;
@@ -586,7 +585,7 @@ p {
     border-width: 1px 1px 1px 0;
 
     .task-tab-content {
- /*     height: 75vh; */
+      /*     height: 75vh; */
       min-height: 800px;
     }
 
@@ -615,7 +614,6 @@ p {
     }
 
     .i-phone {
-      min-height: 300px;
       width: 180px;
       background-color: $color-lightest;
       border: 3px solid $color-phone-border;
@@ -658,18 +656,15 @@ p {
     }
 
     .i-pad {
-      min-height: 500px;
-      width: 410px;
+      width: 380px;
       background-color: $color-lightest;
       border: 3px solid $color-tablet-border;
       @include border-radius(25px, 25px, 25px, 25px);
 
       .device-screen {
         background-color: $color-tablet;
-        min-height: 500px;
-        margin-top: 45px;
-        margin-left: 30px;
-        margin-right: 30px;
+        min-height: 430px;
+        margin: 40px 20px 0 20px;
       }
       .device-btn {
         width: 27px;
@@ -681,10 +676,18 @@ p {
       }
     }
 
-    .total-counter-label {
+    .display-scores, .display-timer {
+      top: -460px;
       position: relative;
-      top: -530px;
-      left: 60px;
+      left: 40px;
+
+      p {
+        font-size: 1em;
+      }
+
+    }
+
+    .display-scores {
 
       .score-sections {
         font-size: 18px;
@@ -716,18 +719,23 @@ p {
         margin-top: -40px;
         margin-left: 200px;
 
+        font-size: 1.3em;
+
       }
     }
 
-    .total-timer-label {
-      position: relative;
-      top: -540px;
-      left: 60px;
+    .display-timer {
+
+      margin-top: -10px;
 
       .set-timer {
         margin-left: 10px;
       }
 
+    }
+
+    .nav-buttons {
+      margin-top: 40px;
     }
 
   }
@@ -747,10 +755,7 @@ p {
     background-color: $color-darkest;
   }
 
-
-
 }
-
 
 @media screen and (max-width: 1536px) {
 
@@ -762,7 +767,7 @@ p {
 
 @media screen and (max-width: 992px) {
 
-  .score-label, .total-counter-label, .total-timer-label {
+  .score-label, .display-scores, .display-timer {
     display: none;
   }
 
