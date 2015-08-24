@@ -122,7 +122,7 @@ $color-home: #5e72b2;
 
 }
 
-@mixin design-for-mobile() {
+@mixin design-for-phones() {
   .home-header-area-content {
     h2 {
       font-size: 2.1em;
@@ -136,11 +136,6 @@ $color-home: #5e72b2;
   h5 {
     font-size: 1.7em;
   }
-
-  /*
-  .part-of-speech-definition {
-    font-size: 1.4em;
-  }*/
 
   .text {
     font-size: 1.7em;
@@ -180,6 +175,19 @@ $color-home: #5e72b2;
       border-left: 5px solid $color-challenge;
       border-right: 5px solid $color-challenge;
     }
+  }
+
+}
+
+
+@mixin design-for-tablets() {
+
+  h5 {
+    font-size: 1.7em;
+  }
+
+  .text {
+    font-size: 1.5em;
   }
 
 }
@@ -743,6 +751,13 @@ p {
   }
 }
 
+
+@media screen and (max-width: 1536px) {
+
+  @include design-for-tablets();
+
+}
+
 /* Small Screens */
 
 @media screen and (max-width: 992px) {
@@ -839,7 +854,7 @@ p {
 
   }
 
-  @include design-for-mobile();
+  @include design-for-phones();
 
   .home-header-area {
 
@@ -867,7 +882,7 @@ p {
 
 @media screen and (max-width: 749px) and (orientation: landscape) {
 
-  @include design-for-mobile();
+  @include design-for-phones();
 
   .home-header-area {
 

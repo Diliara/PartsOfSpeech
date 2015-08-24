@@ -597,6 +597,15 @@ p {
     background-color: #000000;
   }
 }
+@media screen and (max-width: 1536px) {
+  h5 {
+    font-size: 1.7em;
+  }
+
+  .text {
+    font-size: 1.5em;
+  }
+}
 /* Small Screens */
 @media screen and (max-width: 992px) {
   .score-label, .total-counter-label, .total-timer-label {
@@ -700,10 +709,6 @@ p {
     font-size: 1.7em;
   }
 
-  /*
-  .part-of-speech-definition {
-    font-size: 1.4em;
-  }*/
   .text {
     font-size: 1.7em;
   }
@@ -791,10 +796,6 @@ p {
     font-size: 1.7em;
   }
 
-  /*
-  .part-of-speech-definition {
-    font-size: 1.4em;
-  }*/
   .text {
     font-size: 1.7em;
   }
