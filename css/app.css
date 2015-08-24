@@ -597,7 +597,7 @@ p {
 }
 @media screen and (max-width: 1536px) {
   .text {
-    font-size: 1.7em;
+    font-size: 1.8em;
   }
 }
 /* Small Screens */
@@ -704,7 +704,7 @@ p {
   }
 
   .text {
-    font-size: 1.7em;
+    font-size: 1.8em;
   }
 
   .nav-tabs {
@@ -791,7 +791,7 @@ p {
   }
 
   .text {
-    font-size: 1.7em;
+    font-size: 1.8em;
   }
 
   .nav-tabs {
