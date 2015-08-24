@@ -21,7 +21,8 @@ $color-timer: #fdffe3;
 $color-phone-border: #ffd829;
 $color-tablet-border: #cfc9bf;
 
-$color-tablet: #000000; //0D1129
+$color-tablet: #000000;
+//0D1129
 
 $color-sticky-practice: #BAEAFF;
 $color-sticky-challenge: #ffdd9a;
@@ -317,7 +318,6 @@ p {
 
 .timer {
 
-
   .countdown {
     @include font-stroke($color-lightest, $color-challenge, 0.5px);
     padding: 20px 1px 10px 10px;
@@ -546,21 +546,21 @@ p {
       background-color: $color-sticky-challenge;
     }
 
-    .score-panel {
+    .i-phone {
       min-height: 420px;
       width: 200px;
       background-color: $color-lightest;
       border: 5px solid $color-phone-border;
       @include border-radius(15px, 15px, 15px, 15px);
 
-      .score-screen {
+      .device-screen {
         background-color: $color-darkest;
         min-height: 310px;
         margin-top: 45px;
         margin-left: 8px;
         margin-right: 8px;
       }
-      .power-btn {
+      .device-btn {
         width: 40px;
         height: 40px;
         border: 3px solid $color-phone-border;
@@ -602,21 +602,21 @@ p {
       background-color: $color-sticky-practice;
     }
 
-    .score-panel-large {
+    .i-pad {
       min-height: 500px;
-      width: 440px;
+      width: 410px;
       background-color: $color-lightest;
       border: 3px solid $color-tablet-border;
       @include border-radius(25px, 25px, 25px, 25px);
 
-      .score-screen {
+      .device-screen {
         background-color: $color-tablet;
         min-height: 500px;
         margin-top: 45px;
         margin-left: 30px;
         margin-right: 30px;
       }
-      .power-btn {
+      .device-btn {
         width: 27px;
         height: 27px;
         border: 2px solid transparentize($color-tablet-border, 0.8);
@@ -675,8 +675,6 @@ p {
 
     }
 
-
-
   }
 
 }
@@ -693,7 +691,7 @@ p {
     margin-top: 10px !important;
   }
 
-  .score-panel {
+  .i-phone {
     display: none;
   }
 

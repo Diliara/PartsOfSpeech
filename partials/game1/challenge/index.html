@@ -5,10 +5,8 @@
 
 
         <div class="row" ng-controller="Game1ChallengeTabsController">
-            <div class="col-md-7">
+            <div class="col-md-8">
                 <section class="game-area">
-
-
                     <tabset class="tabs-left">
                         <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled" ng-click="changeTab()">
                             <div class="task-tab-content" id="{{'tab_' + tab.taskNumber}}">
@@ -45,11 +43,11 @@
                 </section>
             </div>
 
-            <div class="col-md-5">
+            <div class="col-md-4">
 
-                <div class="score-panel-large">
-                    <div class="score-screen"></div>
-                    <div class="power-btn"></div>
+                <div class="i-pad">
+                    <div class="device-screen"></div>
+                    <div class="device-btn"></div>
                 </div>
 
                 <div class="total-counter-label">
