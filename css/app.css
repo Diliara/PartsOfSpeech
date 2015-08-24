@@ -12,11 +12,11 @@ h3 {
 }
 
 h4 {
-  font-size: 1.7em;
+  font-size: 1.8em;
 }
 
 h5 {
-  font-size: 1.4em;
+  font-size: 1.7em;
 }
 
 p {
@@ -197,6 +197,7 @@ p {
   font-style: italic;
 }
 .game-area .tab-content .task-tab-content .text {
+  font-size: 1.5em;
   margin-bottom: 0;
 }
 .game-area .tab-content .task-tab-content .text a {
@@ -413,8 +414,8 @@ p {
   }
 
   .tabs-left .nav-tabs {
-    height: 75vh;
-    min-height: 600px;
+    /* height: 75vh; */
+    min-height: 800px;
     padding-top: 20px;
     border-bottom: 0;
     float: left;
@@ -459,8 +460,8 @@ p {
     border-width: 1px 1px 1px 0;
   }
   .tab-content .task-tab-content {
-    height: 75vh;
-    min-height: 600px;
+    /*     height: 75vh; */
+    min-height: 800px;
   }
 
   .btn-home {
@@ -595,13 +596,7 @@ p {
   }
 }
 @media screen and (max-width: 1536px) {
-  h5 {
-    font-size: 1.7em;
-  }
-
-  .text {
-    font-size: 1.5em;
-  }
+  /* anything? */
 }
 /* Small Screens */
 @media screen and (max-width: 992px) {

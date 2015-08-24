@@ -182,13 +182,7 @@ $color-home: #5e72b2;
 
 @mixin design-for-tablets() {
 
-  h5 {
-    font-size: 1.7em;
-  }
-
-  .text {
-    font-size: 1.5em;
-  }
+/* anything? */
 
 }
 
@@ -207,11 +201,11 @@ h3 {
 }
 
 h4 {
-  font-size: 1.7em;
+  font-size: 1.8em;
 }
 
 h5 {
-  font-size: 1.4em;
+  font-size: 1.7em;
 }
 
 p {
@@ -300,6 +294,8 @@ p {
         font-style: italic;
       }
       .text {
+        font-size: 1.5em;
+
         margin-bottom: 0;
         a {
           cursor: pointer;
@@ -534,8 +530,8 @@ p {
   .tabs-left {
 
     .nav-tabs {
-      height: 75vh;
-      min-height: 600px;
+     /* height: 75vh; */
+      min-height: 800px;
       padding-top: 20px;
       border-bottom: 0;
       float: left;
@@ -588,8 +584,8 @@ p {
     border-width: 1px 1px 1px 0;
 
     .task-tab-content {
-      height: 75vh;
-      min-height: 600px;
+ /*     height: 75vh; */
+      min-height: 800px;
     }
 
   }
@@ -748,6 +744,9 @@ p {
     padding: 0 12px 0 10px;
     background-color: $color-darkest;
   }
+
+
+
 }
 
 
