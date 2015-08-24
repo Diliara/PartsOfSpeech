@@ -182,7 +182,9 @@ $color-home: #5e72b2;
 
 @mixin design-for-tablets() {
 
-/* anything? */
+  .text {
+    font-size: 1.7em;
+  }
 
 }
 

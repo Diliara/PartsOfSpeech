@@ -596,7 +596,9 @@ p {
   }
 }
 @media screen and (max-width: 1536px) {
-  /* anything? */
+  .text {
+    font-size: 1.7em;
+  }
 }
 /* Small Screens */
 @media screen and (max-width: 992px) {
