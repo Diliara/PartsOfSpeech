@@ -617,36 +617,35 @@ p {
     }
 
     .i-phone {
-      min-height: 420px;
-      width: 200px;
+      min-height: 300px;
+      width: 180px;
       background-color: $color-lightest;
-      border: 5px solid $color-phone-border;
+      border: 3px solid $color-phone-border;
       @include border-radius(15px, 15px, 15px, 15px);
 
       .device-screen {
         background-color: $color-darkest;
-        min-height: 310px;
-        margin-top: 45px;
-        margin-left: 8px;
-        margin-right: 8px;
+        min-height: 250px;
+        margin: 30px 8px 0 8px;
+
       }
       .device-btn {
-        width: 40px;
-        height: 40px;
-        border: 3px solid $color-phone-border;
+        width: 25px;
+        height: 25px;
+        border: 2px solid $color-phone-border;
         border-radius: 50%;
-        margin-top: 8px;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 4px auto;
       }
+
+      margin: 0;
     }
 
     .score-label {
       position: absolute;
-      top: 80px;
-      right: -150px;
+      top: 70px;
+      right: -160px;
       text-align: right;
-      margin-right: 10px;
+      margin-right: 15px;
       z-index: 99991;
     }
   }
@@ -740,12 +739,12 @@ p {
 @media screen and (min-width: 993px) {
   .score {
     position: absolute;
-    top: 140px;
-    right: -210px;
+    top: 120px;
+    right: -200px;
     text-align: right;
     margin-right: 10px;
     z-index: 9999;
-    font-size: 45px;
+    font-size: 43px;
     padding: 0 12px 0 10px;
     background-color: $color-darkest;
   }
