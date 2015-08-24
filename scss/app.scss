@@ -545,7 +545,6 @@ p {
   .tabs-left {
 
     .nav-tabs {
-      /* height: 75vh; */
       min-height: 800px;
       padding-top: 20px;
       border-bottom: 0;
@@ -599,7 +598,6 @@ p {
     border-width: 1px 1px 1px 0;
 
     .task-tab-content {
-      /*     height: 75vh; */
       min-height: 800px;
     }
 
@@ -696,9 +694,9 @@ p {
     }
 
     .display-scores, .display-timer {
-      top: $i-pad-display-top; //-460px
+      top: $i-pad-display-top;
       position: relative;
-      left: $i-pad-display-left; //40px
+      left: $i-pad-display-left;
 
       p {
         font-size: 1em;
@@ -839,22 +837,9 @@ p {
   }
 
   .btn-home, .btn-challenge, .btn-practice {
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
-    margin-bottom: 100px;
+    margin: 20px auto 20px auto;
     @include border-radius(5px, 5px, 5px, 5px);
-
-  }
-
-  .btn-challenge, .btn-practice {
-    margin-left: 20px;
-  }
-
-  .btn-home {
-    margin-left: 20px;
-
   }
 
   .task-tab-content {

@@ -414,7 +414,6 @@ p {
   }
 
   .tabs-left .nav-tabs {
-    /* height: 75vh; */
     min-height: 800px;
     padding-top: 20px;
     border-bottom: 0;
@@ -460,7 +459,6 @@ p {
     border-width: 1px 1px 1px 0;
   }
   .tab-content .task-tab-content {
-    /*     height: 75vh; */
     min-height: 800px;
   }
 
@@ -660,23 +658,12 @@ p {
   }
 
   .btn-home, .btn-challenge, .btn-practice {
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
-    margin-bottom: 100px;
+    margin: 20px auto 20px auto;
     -webkit-border-radius: 5px 5px 5px 5px;
     -moz-border-radius: 5px 5px 5px 5px;
     -ms-border-radius: 5px 5px 5px 5px;
     border-radius: 5px 5px 5px 5px;
-  }
-
-  .btn-challenge, .btn-practice {
-    margin-left: 20px;
-  }
-
-  .btn-home {
-    margin-left: 20px;
   }
 
   .task-tab-content {
