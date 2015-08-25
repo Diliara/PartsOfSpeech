@@ -872,14 +872,14 @@ p {
   }
 
   .set-timer {
-    top: 140px;
-    right: 30px;
+    top: 70px;
+    right: 20px;
 
   }
 
   .total-score {
-    right: 30px;
-    top: 70px;
+    right: 20px;
+    top: 140px;
   }
 
   @include design-for-phones();
