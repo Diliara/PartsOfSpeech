@@ -263,7 +263,7 @@ p {
 .score-label, .display-scores, .display-timer {
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 1.8em;
-  font-weight: bold;
+  font-weight: normal;
   color: #ececec;
 }
 
@@ -279,7 +279,7 @@ p {
   font-family: 'Luckiest Guy', cursive;
   -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-color: #ffbc95;
-  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-width: 1px;
   padding: 20px 1px 10px 10px;
 }
 .timer .countdown .item {
@@ -543,44 +543,6 @@ p {
     border-radius: 50%;
     margin: 7px auto;
   }
-  .game-challenge-area .display-scores, .game-challenge-area .display-timer {
-    top: -460px;
-    position: relative;
-    left: 20px;
-  }
-  .game-challenge-area .display-scores p, .game-challenge-area .display-timer p {
-    font-size: 1em;
-  }
-  .game-challenge-area .display-scores .score-sections {
-    font-size: 16px;
-    list-style-type: none;
-    padding-left: 10px;
-    margin-bottom: 1px;
-  }
-  .game-challenge-area .display-scores .score-sections .section-score {
-    margin-left: 150px;
-    font-size: 23px;
-    margin-top: -28px;
-  }
-  .game-challenge-area .display-scores hr {
-    width: 210px;
-    margin-left: 0;
-  }
-  .game-challenge-area .display-scores hr + p {
-    font-size: 18px;
-    margin-left: 10px;
-  }
-  .game-challenge-area .display-scores .total-score {
-    margin-top: -40px;
-    margin-left: 150px;
-    font-size: 1.3em;
-  }
-  .game-challenge-area .display-timer {
-    margin-top: -10px;
-  }
-  .game-challenge-area .display-timer .set-timer {
-    margin-left: 10px;
-  }
   .game-challenge-area .nav-buttons {
     margin-top: 90px;
   }
@@ -597,6 +559,47 @@ p {
     padding: 0 12px 0 10px;
     background-color: #000000;
   }
+
+  .display-scores, .display-timer {
+    top: -460px;
+    position: relative;
+    left: 20px;
+  }
+  .display-scores p, .display-timer p {
+    font-size: 1em;
+  }
+
+  .display-scores .score-sections {
+    font-size: 16px;
+    list-style-type: none;
+    padding-left: 10px;
+    margin-bottom: 1px;
+  }
+  .display-scores .score-sections .section-score {
+    margin-left: 140px;
+    font-size: 23px;
+    margin-top: -28px;
+  }
+  .display-scores hr {
+    width: 210px;
+    margin-left: 0;
+  }
+  .display-scores hr + p {
+    font-size: 18px;
+    margin-left: 10px;
+  }
+  .display-scores .total-score {
+    margin-top: -40px;
+    margin-left: 140px;
+    font-size: 1.4em;
+  }
+
+  .display-timer {
+    margin-top: -10px;
+  }
+  .display-timer .set-timer {
+    margin-left: 10px;
+  }
 }
 @media screen and (max-width: 1536px) {
   .text {
@@ -605,7 +608,7 @@ p {
 }
 /* Small Screens */
 @media screen and (max-width: 992px) {
-  .score-label, .display-scores, .display-timer {
+  .score-label, .display-timer > p:first-child, .display-scores > p:not(.total-score), .display-scores dl, .display-scores hr {
     display: none;
   }
 
@@ -617,44 +620,51 @@ p {
     display: none;
   }
 
-  .score, .total-counter {
+  .score, .total-counter, .total-score, .set-timer {
     text-align: right;
-    font-size: 35px;
     margin-right: 10px;
     background-color: #000000;
     padding: 0 12px 0 10px;
     position: fixed;
-    top: 20px;
-    right: 50px;
     -webkit-border-radius: 5px 5px 5px 5px;
     -moz-border-radius: 5px 5px 5px 5px;
     -ms-border-radius: 5px 5px 5px 5px;
     border-radius: 5px 5px 5px 5px;
+  }
+
+  .score, .total-counter {
+    font-size: 35px;
+    top: 20px;
+    right: 50px;
     border: 2px solid #ffd829;
   }
 
-  .total-counter {
-    left: inherit;
-    padding-left: 10px;
+  .total-score {
+    font-size: 35px;
+    top: 20px;
+    right: 50px;
+    border: 2px solid #cfc9bf;
   }
 
   .set-timer {
-    background-color: #000000;
     padding: 6px 0 0 6px;
-    position: fixed;
-    top: 100px;
-    right: 60px;
-    -webkit-border-radius: 5px 5px 5px 5px;
-    -moz-border-radius: 5px 5px 5px 5px;
-    -ms-border-radius: 5px 5px 5px 5px;
-    border-radius: 5px 5px 5px 5px;
-    border: 2px solid #ffd829;
+    top: 20px;
+    right: 180px;
+    border: 2px solid #cfc9bf;
+  }
+  .set-timer p {
+    font-size: 35px;
   }
   .set-timer .timer {
     margin-bottom: 0;
   }
   .set-timer .separator {
     display: none;
+  }
+
+  .total-counter {
+    left: inherit;
+    padding-left: 10px;
   }
 
   .btn-home, .btn-challenge, .btn-practice {
@@ -681,6 +691,11 @@ p {
   .set-timer {
     top: 140px;
     right: 30px;
+  }
+
+  .total-score {
+    right: 30px;
+    top: 70px;
   }
 
   .home-header-area-content h2 {

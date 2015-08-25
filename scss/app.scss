@@ -22,7 +22,6 @@ $color-phone-border: #ffd829;
 $color-tablet-border: #cfc9bf;
 
 $color-tablet: #000000;
-//0D1129
 
 $color-sticky-practice: #BAEAFF;
 $color-sticky-challenge: #ffdd9a;
@@ -31,7 +30,7 @@ $color-home: #5e72b2;
 
 $i-pad-width: 290px;
 
-$i-pad-scores-left-margin: 150px;
+$i-pad-scores-left-margin: 140px;
 
 $i-pad-scores-font-size: 16px;
 $i-pad-padding-l-r: 15px;
@@ -376,7 +375,7 @@ p {
 .score-label, .display-scores, .display-timer {
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 1.8em;
-  font-weight: bold;
+  font-weight: normal;
   color: $color-greyscale;
 }
 
@@ -400,7 +399,7 @@ p {
 .timer {
 
   .countdown {
-    @include font-stroke($color-lightest, $color-challenge, 0.5px);
+    @include font-stroke($color-lightest, $color-challenge, 1px);
     padding: 20px 1px 10px 10px;
 
     .item {
@@ -693,63 +692,7 @@ p {
       }
     }
 
-    .display-scores, .display-timer {
-      top: $i-pad-display-top;
-      position: relative;
-      left: $i-pad-display-left;
 
-      p {
-        font-size: 1em;
-      }
-
-    }
-
-    .display-scores {
-
-      .score-sections {
-        font-size: $i-pad-scores-font-size;
-        list-style-type: none;
-        padding-left: 10px;
-        margin-bottom: 1px;
-
-        .section-score {
-          margin-left: $i-pad-scores-left-margin;
-          font-size: 23px;
-          margin-top: -28px;
-
-        }
-
-      }
-
-      hr {
-        width: $i-pad-width - 80px;
-        margin-left: 0;
-
-        & + p {
-          font-size: 18px;
-          margin-left: 10px;
-        }
-      }
-
-      .total-score {
-
-        margin-top: -40px;
-        margin-left: $i-pad-scores-left-margin;
-
-        font-size: 1.3em;
-
-      }
-    }
-
-    .display-timer {
-
-      margin-top: -10px;
-
-      .set-timer {
-        margin-left: 10px;
-      }
-
-    }
 
     .nav-buttons {
       margin-top: $nav-buttons-under-i-pad-margin-top;
@@ -772,6 +715,68 @@ p {
     background-color: $color-darkest;
   }
 
+  .display-scores, .display-timer {
+    top: $i-pad-display-top;
+    position: relative;
+    left: $i-pad-display-left;
+
+    p {
+      font-size: 1em;
+    }
+
+  }
+
+  .display-scores {
+
+    .score-sections {
+      font-size: $i-pad-scores-font-size;
+      list-style-type: none;
+      padding-left: 10px;
+      margin-bottom: 1px;
+
+      .section-score {
+        margin-left: $i-pad-scores-left-margin;
+        font-size: 23px;
+        margin-top: -28px;
+
+      }
+
+    }
+
+    hr {
+      width: $i-pad-width - 80px;
+      margin-left: 0;
+
+      & + p {
+        font-size: 18px;
+        margin-left: 10px;
+      }
+    }
+
+    .total-score {
+
+      margin-top: -40px;
+      margin-left: $i-pad-scores-left-margin;
+
+      font-size: 1.4em;
+
+    }
+  }
+
+  .display-timer {
+
+    margin-top: -10px;
+
+    .set-timer {
+      margin-left: 10px;
+    }
+
+  }
+
+
+
+
+
 }
 
 @media screen and (max-width: 1536px) {
@@ -784,7 +789,7 @@ p {
 
 @media screen and (max-width: 992px) {
 
-  .score-label, .display-scores, .display-timer {
+  .score-label, .display-timer > p:first-child, .display-scores > p:not(.total-score), .display-scores dl, .display-scores hr {
     display: none;
   }
 
@@ -796,36 +801,40 @@ p {
     display: none;
   }
 
-  .score, .total-counter {
+  .score, .total-counter, .total-score, .set-timer {
     text-align: right;
-    font-size: 35px;
     margin-right: 10px;
     background-color: $color-darkest;
     padding: 0 12px 0 10px;
     position: fixed;
-    top: 20px;
-    right: 50px;
 
     @include border-radius(5px, 5px, 5px, 5px);
 
-    border: 2px solid $color-phone-border;
-
   }
 
-  .total-counter {
-    left: inherit;
-    padding-left: 10px;
+  .score, .total-counter {
+    font-size: 35px;
+    top: 20px;
+    right: 50px;
+    border: 2px solid $color-phone-border;
+  }
+
+  .total-score {
+    font-size: 35px;
+    top: 20px;
+    right: 50px;
+    border: 2px solid $color-tablet-border;
   }
 
   .set-timer {
-    background-color: $color-darkest;
     padding: 6px 0 0 6px;
-    position: fixed;
-    top: 100px;
-    right: 60px;
-    @include border-radius(5px, 5px, 5px, 5px);
+    top: 20px;
+    right: 180px;
+    border: 2px solid $color-tablet-border;
 
-    border: 2px solid $color-phone-border;
+    p {
+      font-size: 35px;
+    }
 
     .timer {
       margin-bottom: 0;
@@ -834,6 +843,11 @@ p {
       display: none;
     }
 
+  }
+
+  .total-counter {
+    left: inherit;
+    padding-left: 10px;
   }
 
   .btn-home, .btn-challenge, .btn-practice {
@@ -861,6 +875,11 @@ p {
     top: 140px;
     right: 30px;
 
+  }
+
+  .total-score {
+    right: 30px;
+    top: 70px;
   }
 
   @include design-for-phones();
