@@ -64,9 +64,11 @@ angular.module('gameApp')
                 }).addClass('correct');
 
                 scoreCounterLocal = scoreCounterLocal + 1;
-                //console.log("scoreCounterLocal: " + scoreCounterLocal);
+                console.log("scoreCounterLocal: " + scoreCounterLocal);
                 scoreCounterTotal = scoreCounterTotal + 1;
                 wordIDElem.closest('.game-challenge-area').find('.total-current-score').text(scoreCounterTotal);
+             /*   wordIDElem.closest('.game-challenge-area').find('.section-score-current').text(scoreCounterLocal); */
+
 
                 outOfNumberLocal = parseInt(wordIDElem.closest('.task-tab-content').find('.tab-counter').text());
                 outOfNumberTotal = parseInt(wordIDElem.closest('.game-challenge-area').find('.total-tab-counter').text());
@@ -94,12 +96,12 @@ angular.module('gameApp')
             //reset level - reset score, clean up the paragraph.
             window.scoreCounterLocal = 0;
             $('a').removeClass('correct').removeClass('wrong');
-           // $('.total-current-score').text(scoreCounterTotal);
+            // $('.total-current-score').text(scoreCounterTotal);
             correctWords = [];
 
 
-         //   $('.start-challenge').slideUp();
-         //   $('.btn-start').show();
+            //   $('.start-challenge').slideUp();
+            //   $('.btn-start').show();
 
 
         };
