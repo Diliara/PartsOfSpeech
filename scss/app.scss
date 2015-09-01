@@ -226,6 +226,30 @@ p {
   font-size: 1.3em;
 }
 
+.listOfGames {
+
+  background-color: $color-background;
+  color: $color-lightest;
+  height: 100vh;
+
+  padding-top: 5vh;
+  padding-left: 4vw;
+
+  ul {
+    padding-top: 10px;
+    list-style-type: none;
+    font-size: 18px;
+
+    li {
+      padding-bottom: 7px;
+    }
+
+    a {
+      color: $color-sticky-practice;
+    }
+  }
+}
+
 .nav-tabs {
 
   li {
@@ -692,8 +716,6 @@ p {
       }
     }
 
-
-
     .nav-buttons {
       margin-top: $nav-buttons-under-i-pad-margin-top;
     }
@@ -772,10 +794,6 @@ p {
     }
 
   }
-
-
-
-
 
 }
 

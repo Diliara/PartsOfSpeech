@@ -23,6 +23,25 @@ p {
   font-size: 1.3em;
 }
 
+.listOfGames {
+  background-color: #56626A;
+  color: #ffffff;
+  height: 100vh;
+  padding-top: 5vh;
+  padding-left: 4vw;
+}
+.listOfGames ul {
+  padding-top: 10px;
+  list-style-type: none;
+  font-size: 18px;
+}
+.listOfGames ul li {
+  padding-bottom: 7px;
+}
+.listOfGames ul a {
+  color: #BAEAFF;
+}
+
 .nav-tabs li {
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 1.3em;
