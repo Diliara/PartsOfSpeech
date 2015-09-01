@@ -1,0 +1,48 @@
+<div class="game-practice-area">
+    <div class="container-fluid" ng-controller="Game0PracticeTabsController">
+        <h2>Practice</h2>
+
+        <div class="row">
+            <div class="col-lg-10 col-md-9">
+                <div class="game-area">
+                    <tabset class="tabs-left">
+                        <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled" ng-click="changeTab()">
+
+                            <div class="task-tab-content">
+
+                                <h5>Task:</h5>
+
+                                <p>Find <span class="tab-counter">{{ tab.counter }}</span> different <span class="part-of-speech">{{ tab.title }}</span> in the paragraph.</p>
+                                <p class="part-of-speech-definition">{{tab.definition}}</p>
+                                <hr>
+                                <p class="text">
+                                    <a ng-repeat="word in words" id="{{'word_' + tab.taskNumber + '_' + $index}}" class="word {{word.btnStatus}}" data-partOfSpeech="{{ word.partOfSpeech }}" ng-click="lookingFor(tab.title, tab.partOfSpeech, tab.taskNumber, word.partOfSpeech, $index) ">{{word.wordItself}}</a>
+                                </p>
+                                <p class="score-label">Score: </p>
+                                <p class="score"><span class="current-score">0</span> <span class="current-score-slash">/</span> <span class="current-score-tab-counter">{{ tab.counter }}</span>
+                                </p>
+
+                            </div>
+
+                        </tab>
+                    </tabset>
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-2 col-md-3">
+                <div class="i-phone">
+                    <div class="device-screen"></div>
+                    <div class="device-btn"></div>
+                </div>
+                <p class="nav-buttons"><a class="btn btn-home" href="#/game0">Home</a>
+               <a class="btn btn-challenge" href="#/game0/challenge">Challenge</a></p>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+

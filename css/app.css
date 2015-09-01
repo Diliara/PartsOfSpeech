@@ -42,6 +42,12 @@ p {
   color: #BAEAFF;
 }
 
+.goToHome {
+  width: 30px;
+  position: absolute;
+  right: 0;
+}
+
 .nav-tabs li {
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 1.3em;
