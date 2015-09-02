@@ -1,30 +1,17 @@
 angular.module('gameApp')
-
-    .controller('Game1ChallengeController', function ($scope, $http) {
-
-        $http.get('json/game1/game1.json').success(function (text) {
+    .controller('TestPracticeController', function ($scope, $http) {
+        $http.get('json/test/test.json').success(function (text) {
             $scope.words = text;
         });
 
-        $scope.totalCounter = 33;
-        window.scoreCounterLocal = 0;
-        window.scoreCounterTotal = 0;
-
     })
+    .controller('TestPracticeTabsController', function ($scope, $http, $modal) {
 
-    .controller('Game1ChallengeTabsController', function ($scope, $http, $modal) {
-
-        $http.get('json/game1/game1_tabs.json').success(function (tabsContent) {
+        $http.get('json/test/test_tabs.json').success(function (tabsContent) {
             $scope.tabs = tabsContent;
-            $scope.sections = tabsContent;
         });
 
-        $scope.startChallenge = function () {
-            $('.start-challenge').slideDown();
-            $('.btn-start').hide();
-            $('.set-timer').show();
-        };
-
+        window.scoreCounter = 0;
 
         $scope.open = function (msg) {
 
@@ -42,6 +29,7 @@ angular.module('gameApp')
 
         correctWords = [];
 
+
         //Looking for
         $scope.lookingFor = function (partOfSpeechTitle, lookingForThis, taskNumber, theWordIs, wordIndex) {
 
@@ -51,34 +39,31 @@ angular.module('gameApp')
             lookingForPartOfSpeech = lookingForThis;
             whereAreWeLooking = theWordIs;
 
-            /* console.log("lookingForPartOfSpeech: " + lookingForPartOfSpeech + '\n' + "whereAreWeLooking: " + whereAreWeLooking); */
+            //  console.log("lookingForPartOfSpeech: " + lookingForPartOfSpeech);
+            //   console.log("whereAreWeLooking: " + whereAreWeLooking);
+            //   console.log("whereAreWeLooking.indexOf(lookingForPartOfSpeech): " + whereAreWeLooking.indexOf(lookingForPartOfSpeech));
 
             if (whereAreWeLooking.indexOf(lookingForPartOfSpeech) != -1) {
 
                 correctText = wordIDElem.text();
-                correctWords.push(correctText);
 
+                correctWords.push(correctText);
 
                 wordIDElem.closest('.task-tab-content').find('a').filter(function () {
                     return $(this).text().toLowerCase() === correctText.toLowerCase();
                 }).addClass('correct');
 
-                scoreCounterLocal = scoreCounterLocal + 1;
-                console.log("scoreCounterLocal: " + scoreCounterLocal);
-                scoreCounterTotal = scoreCounterTotal + 1;
-                wordIDElem.closest('.game-challenge-area').find('.total-current-score').text(scoreCounterTotal);
-             /*   wordIDElem.closest('.game-challenge-area').find('.section-score-current').text(scoreCounterLocal); */
-
-
+                scoreCounter = scoreCounter + 1;
+                wordIDElem.closest('.task-tab-content').find('.current-score').text(scoreCounter);
                 outOfNumberLocal = parseInt(wordIDElem.closest('.task-tab-content').find('.tab-counter').text());
-                outOfNumberTotal = parseInt(wordIDElem.closest('.game-challenge-area').find('.total-tab-counter').text());
-                console.log("found scoreCounterLocal: " + scoreCounterLocal + " outOfNumberLocal: " + outOfNumberLocal);
+                // console.log ("scoreCounter: " + scoreCounter);
+                // console.log ("outOfNumberLocal: " + outOfNumberLocal);
 
-                if (scoreCounterLocal == outOfNumberLocal) {
+                if (scoreCounter == outOfNumberLocal) {
                     congratsMsg = outOfNumberLocal + " " + partOfSpeechTitle + ": " + correctWords.join(', ');
+
                     $scope.open(congratsMsg);
                     correctWords = [];
-                    console.log("scoreCounterTotal: " + scoreCounterTotal);
                 }
 
 
@@ -90,25 +75,17 @@ angular.module('gameApp')
                 }).addClass('wrong');
             }
         };
-
         $scope.changeTab = function () {
 
             //reset level - reset score, clean up the paragraph.
-            window.scoreCounterLocal = 0;
+            window.scoreCounter = 0;
             $('a').removeClass('correct').removeClass('wrong');
-            // $('.total-current-score').text(scoreCounterTotal);
+            $('.current-score').text(scoreCounter);
             correctWords = [];
-
-
-            //   $('.start-challenge').slideUp();
-            //   $('.btn-start').show();
-
-
         };
 
+
     })
-
-
     .controller('ModalWindowController', function ($scope, $modalInstance, msg) {
         //$('.text a').addClass('disabled');
         $scope.message = msg;
@@ -117,4 +94,5 @@ angular.module('gameApp')
         };
 
     });
+
 

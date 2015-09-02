@@ -1,8 +1,8 @@
 angular.module('gameApp')
 
-    .controller('Game0ChallengeController', function ($scope, $http) {
+    .controller('GameChallengeController', function ($scope, $http) {
 
-        $http.get('json/game0/game0.json').success(function (text) {
+        $http.get('json/game/game.json').success(function (text) {
             $scope.words = text;
         });
 
@@ -12,9 +12,9 @@ angular.module('gameApp')
 
     })
 
-    .controller('Game0ChallengeTabsController', function ($scope, $http, $modal) {
+    .controller('GameChallengeTabsController', function ($scope, $http, $modal) {
 
-        $http.get('json/game0/game0_tabs.json').success(function (tabsContent) {
+        $http.get('json/game/game_tabs.json').success(function (tabsContent) {
             $scope.tabs = tabsContent;
             $scope.sections = tabsContent;
         });

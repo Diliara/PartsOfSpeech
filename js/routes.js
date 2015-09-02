@@ -3,31 +3,31 @@ angular.module('gameApp')
         $routeProvider.when('/', {
             templateUrl: 'partials/index.html'
         })
-            .when('/game0', {
-                templateUrl: 'partials/game0/index.html'
+            .when('/test', {
+                templateUrl: 'partials/test/index.html'
             })
 
-            .when('/game1', {
-                templateUrl: 'partials/game1/index.html'
+            .when('/game', {
+                templateUrl: 'partials/game/index.html'
             })
 
 
-            .when('/game0/practice', {
-                templateUrl: 'partials/game0/practice/index.html',
-                controller: 'Game0PracticeController'
+            .when('/test/practice', {
+                templateUrl: 'partials/test/practice/index.html',
+                controller: 'TestPracticeController'
             })
-            .when('/game0/challenge', {
-                templateUrl: 'partials/game0/challenge/index.html',
-                controller: 'Game0ChallengeController'
+            .when('/test/challenge', {
+                templateUrl: 'partials/test/challenge/index.html',
+                controller: 'TestChallengeController'
             })
 
-            .when('/game1/practice', {
-                templateUrl: 'partials/game1/practice/index.html',
-                controller: 'Game1PracticeController'
+            .when('/game/practice', {
+                templateUrl: 'partials/game/practice/index.html',
+                controller: 'GamePracticeController'
             })
-            .when('/game1/challenge', {
-                templateUrl: 'partials/game1/challenge/index.html',
-                controller: 'Game1ChallengeController'
+            .when('/game/challenge', {
+                templateUrl: 'partials/game/challenge/index.html',
+                controller: 'GameChallengeController'
             })
 
             .when('/home', {
