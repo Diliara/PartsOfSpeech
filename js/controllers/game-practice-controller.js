@@ -11,6 +11,10 @@ angular.module('gameApp')
             $scope.tabs = tabsContent;
         });
 
+        $scope.getTemplateUrl = function(name){
+            return 'partials/game/definitions/' + name + '.html';
+        };
+
         window.scoreCounter = 0;
 
         $scope.open = function (msg) {

@@ -218,8 +218,8 @@ p {
   font-size: 1.2em;
   font-weight: bold;
 }
-.game-area .tab-content .task-tab-content .part-of-speech-definition {
-  font-style: italic;
+.game-area .tab-content .task-tab-content .definition p, .game-area .tab-content .task-tab-content .definition ul {
+  font-size: 15px;
 }
 .game-area .tab-content .task-tab-content .text {
   font-size: 1.5em;

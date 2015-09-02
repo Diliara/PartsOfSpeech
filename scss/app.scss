@@ -334,9 +334,12 @@ p {
         font-size: 1.2em;
         font-weight: bold;
       }
-      .part-of-speech-definition {
-        font-style: italic;
+      .definition {
+        p, ul {
+          font-size: 15px;
+        }
       }
+
       .text {
         font-size: 1.5em;
 

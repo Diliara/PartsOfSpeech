@@ -1,0 +1,56 @@
+[
+    {
+        "taskNumber": 1,
+        "title": "Determines",
+        "name": "determiner",
+        "counter": "0",
+        "challengeAmount": "30",
+        "challengeUnit": "seconds",
+        "timer": "0h 0m 30s"
+    },
+    {
+        "taskNumber": 2,
+        "title": "Articles",
+        "name": "article",
+        "counter": "0",
+        "challengeAmount": "30",
+        "challengeUnit": "seconds",
+        "timer": "0h 0m 30s"
+    },
+    {
+        "taskNumber": 3,
+        "title": "Pronouns",
+        "name": "pronoun",
+        "counter": "0",
+        "challengeAmount": "30",
+        "challengeUnit": "seconds",
+        "timer": "0h 0m 30s"
+    },
+    {
+        "taskNumber": 4,
+        "title": "Prepositions",
+        "name": "preposition",
+        "counter": "0",
+        "challengeAmount": "30",
+        "challengeUnit": "seconds",
+        "timer": "0h 0m 30s"
+    },
+    {
+        "taskNumber": 5,
+        "title": "Verbs",
+        "name": "verb",
+        "counter": "0",
+        "challengeAmount": "30",
+        "challengeUnit": "seconds",
+        "timer": "0h 0m 30s"
+    },
+    {
+        "taskNumber": 6,
+        "title": "Conjunctions",
+        "name": "conjunction",
+        "counter": "0",
+        "challengeAmount": "30",
+        "challengeUnit": "seconds",
+        "timer": "0h 0m 30s"
+    }
+]
