@@ -1,4 +1,4 @@
-# NounsGame
-SFU CODE simple game developed with AngularJS
+# PartsOfSpeech
+simple game developed with AngularJS
 
-[diliara.github.io/NounsGame](http://diliara.github.io/NounsGame)
+[diliara.github.io/PartsOfSpeech](http://diliara.github.io/PartsOfSpeech)
