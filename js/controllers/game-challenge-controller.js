@@ -67,7 +67,7 @@ angular.module('gameApp')
                 console.log("scoreCounterLocal: " + scoreCounterLocal);
                 scoreCounterTotal = scoreCounterTotal + 1;
                 wordIDElem.closest('.game-challenge-area').find('.total-current-score').text(scoreCounterTotal);
-             /*   wordIDElem.closest('.game-challenge-area').find('.section-score-current').text(scoreCounterLocal); */
+                /*   wordIDElem.closest('.game-challenge-area').find('.section-score-current').text(scoreCounterLocal); */
 
 
                 outOfNumberLocal = parseInt(wordIDElem.closest('.task-tab-content').find('.tab-counter').text());
@@ -75,7 +75,14 @@ angular.module('gameApp')
                 console.log("found scoreCounterLocal: " + scoreCounterLocal + " outOfNumberLocal: " + outOfNumberLocal);
 
                 if (scoreCounterLocal == outOfNumberLocal) {
-                    congratsMsg = outOfNumberLocal + " " + partOfSpeechTitle + ": " + correctWords.join(', ');
+
+                    if (outOfNumberLocal == 1) {
+                        congratsMsg = outOfNumberLocal + " " + partOfSpeechTitle.substring(0, partOfSpeechTitle.length - 1) + ": " + correctWords.join(', ');
+                    } else {
+                        congratsMsg = outOfNumberLocal + " " + partOfSpeechTitle + ": " + correctWords.join(', ');
+                    }
+
+
                     $scope.open(congratsMsg);
                     correctWords = [];
                     console.log("scoreCounterTotal: " + scoreCounterTotal);

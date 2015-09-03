@@ -60,9 +60,9 @@ angular.module('gameApp')
             lookingForPartOfSpeech = lookingForThis;
             whereAreWeLooking = theWordIs;
 
-            console.log("lookingForPartOfSpeech: " + lookingForPartOfSpeech);
-            console.log("whereAreWeLooking: " + whereAreWeLooking);
-            console.log("whereAreWeLooking.indexOf(lookingForPartOfSpeech): " + whereAreWeLooking.indexOf(lookingForPartOfSpeech));
+            // console.log("lookingForPartOfSpeech: " + lookingForPartOfSpeech);
+            // console.log("whereAreWeLooking: " + whereAreWeLooking);
+            // console.log("whereAreWeLooking.indexOf(lookingForPartOfSpeech): " + whereAreWeLooking.indexOf(lookingForPartOfSpeech));
 
             if (whereAreWeLooking.indexOf(lookingForPartOfSpeech) != -1) {
 
@@ -77,11 +77,20 @@ angular.module('gameApp')
                 scoreCounter = scoreCounter + 1;
                 wordIDElem.closest('.task-tab-content').find('.current-score').text(scoreCounter);
                 outOfNumberLocal = parseInt(wordIDElem.closest('.task-tab-content').find('.tab-counter').text());
+
                 // console.log ("scoreCounter: " + scoreCounter);
-                // console.log ("outOfNumberLocal: " + outOfNumberLocal);
+                //console.log("outOfNumberLocal: " + outOfNumberLocal);
+                //console.log("partOfSpeechTitle: " + partOfSpeechTitle);
+
 
                 if (scoreCounter == outOfNumberLocal) {
-                    congratsMsg = outOfNumberLocal + " " + partOfSpeechTitle + ": " + correctWords.join(', ');
+
+                    if (outOfNumberLocal == 1) {
+                        congratsMsg = outOfNumberLocal + " " + partOfSpeechTitle.substring(0, partOfSpeechTitle.length - 1) + ": " + correctWords.join(', ');
+                    } else {
+                        congratsMsg = outOfNumberLocal + " " + partOfSpeechTitle + ": " + correctWords.join(', ');
+                    }
+
 
                     $scope.open(congratsMsg);
                     correctWords = [];

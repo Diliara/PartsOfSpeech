@@ -60,7 +60,12 @@ angular.module('gameApp')
                 // console.log ("outOfNumberLocal: " + outOfNumberLocal);
 
                 if (scoreCounter == outOfNumberLocal) {
-                    congratsMsg = outOfNumberLocal + " " + partOfSpeechTitle + ": " + correctWords.join(', ');
+
+                    if (outOfNumberLocal == 1) {
+                        congratsMsg = outOfNumberLocal + " " + partOfSpeechTitle.substring(0, partOfSpeechTitle.length - 1) + ": " + correctWords.join(', ');
+                    } else {
+                        congratsMsg = outOfNumberLocal + " " + partOfSpeechTitle + ": " + correctWords.join(', ');
+                    }
 
                     $scope.open(congratsMsg);
                     correctWords = [];

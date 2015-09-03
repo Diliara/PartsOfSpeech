@@ -12,7 +12,7 @@
         "taskNumber": 2,
         "title": "Articles",
         "partOfSpeech": "article",
-        "counter": "0",
+        "counter": "3",
         "challengeAmount": "30",
         "challengeUnit": "seconds",
         "timer": "0h 0m 30s"
@@ -21,7 +21,7 @@
         "taskNumber": 3,
         "title": "Pronouns",
         "partOfSpeech": "pronoun",
-        "counter": "0",
+        "counter": "3",
         "challengeAmount": "30",
         "challengeUnit": "seconds",
         "timer": "0h 0m 30s"
@@ -30,7 +30,7 @@
         "taskNumber": 4,
         "title": "Prepositions",
         "partOfSpeech": "preposition",
-        "counter": "0",
+        "counter": "5",
         "challengeAmount": "30",
         "challengeUnit": "seconds",
         "timer": "0h 0m 30s"
@@ -39,7 +39,7 @@
         "taskNumber": 5,
         "title": "Verbs",
         "partOfSpeech": "verb",
-        "counter": "0",
+        "counter": "5",
         "challengeAmount": "30",
         "challengeUnit": "seconds",
         "timer": "0h 0m 30s"
@@ -48,7 +48,7 @@
         "taskNumber": 6,
         "title": "Conjunctions",
         "partOfSpeech": "conjunction",
-        "counter": "0",
+        "counter": "1",
         "challengeAmount": "30",
         "challengeUnit": "seconds",
         "timer": "0h 0m 30s"
