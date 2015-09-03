@@ -1,7 +1,434 @@
 [
     {
-        "wordItself": "word",
-        "partOfSpeech": "undefined"
-
+        "wordItself": "Darryl Kobayashi",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "is",
+        "partOfSpeech": "verb",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "the",
+        "partOfSpeech": "determiner article",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "founder",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "and",
+        "partOfSpeech": "conjunction",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "CEO",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "of",
+        "partOfSpeech": "preposition",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "Green Grass Ventures",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": ".",
+        "partOfSpeech": "undefined",
+        "btnStatus": "disabled"
+    }    ,
+    {
+        "wordItself": "Prior",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "to",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "this",
+        "partOfSpeech": "determiner",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "position",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": ",",
+        "partOfSpeech": "undefined",
+        "btnStatus": "disabled"
+    }
+    ,
+    {
+        "wordItself": "he",
+        "partOfSpeech": "pronoun",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "was",
+        "partOfSpeech": "verb",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "an",
+        "partOfSpeech": "determiner article",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "IBM",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "Fellow",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "who",
+        "partOfSpeech": "pronoun",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "was recognized",
+        "partOfSpeech": "verb",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "by",
+        "partOfSpeech": "preposition",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "the",
+        "partOfSpeech": "determiner article",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "company",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "for",
+        "partOfSpeech": "preposition",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "his",
+        "partOfSpeech": "determiner pronoun",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "pioneering",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "research",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "in",
+        "partOfSpeech": "preposition",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "business",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "analytics",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "and",
+        "partOfSpeech": "conjunction",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "clean",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "technologies",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": ".",
+        "partOfSpeech": "undefined",
+        "btnStatus": "disabled"
+    },
+    {
+        "wordItself": "A",
+        "partOfSpeech": "determiner article",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "noted",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "speaker",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": ",",
+        "partOfSpeech": "undefined",
+        "btnStatus": "disabled"
+    },
+    {
+        "wordItself": "Kobayashi",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "helped promote",
+        "partOfSpeech": "verb",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "IBM's",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "Blue Gene/Q",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": ",",
+        "partOfSpeech": "undefined",
+        "btnStatus": "disabled"
+    },
+    {
+        "wordItself": "the",
+        "partOfSpeech": "determiner article",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "world's",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "most",
+        "partOfSpeech": "determiner",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "energy-efficient",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "supercomputer",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": ".",
+        "partOfSpeech": "undefined",
+        "btnStatus": "disabled"
+    },
+    {
+        "wordItself": "He",
+        "partOfSpeech": "pronoun",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "is",
+        "partOfSpeech": "verb",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "also",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "the",
+        "partOfSpeech": "determiner article",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "author",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "of",
+        "partOfSpeech": "preposition",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "the",
+        "partOfSpeech": "determiner article",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "best-selling",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "book",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": ",",
+        "partOfSpeech": "undefined",
+        "btnStatus": "disabled"
+    },
+    {
+        "wordItself": "CleanTech",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": ":",
+        "partOfSpeech": "undefined",
+        "btnStatus": "disabled"
+    },
+    {
+        "wordItself": "The",
+        "partOfSpeech": "determiner article",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "Art",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "and",
+        "partOfSpeech": "conjunction",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "Science",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "of",
+        "partOfSpeech": "preposition",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "Renewable",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "Energy",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": ".",
+        "partOfSpeech": "undefined",
+        "btnStatus": "disabled"
+    },
+    {
+        "wordItself": "Kobayashi",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "holds",
+        "partOfSpeech": "verb",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "a",
+        "partOfSpeech": "determiner article",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "BA",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "from",
+        "partOfSpeech": "preposition",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "UCLA",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "and",
+        "partOfSpeech": "conjunction",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "an",
+        "partOfSpeech": "determiner article",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "MBA",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "from",
+        "partOfSpeech": "preposition",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "the",
+        "partOfSpeech": "determiner article",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "Harvard",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "School",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "of",
+        "partOfSpeech": "preposition",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "Business",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": ".",
+        "partOfSpeech": "undefined",
+        "btnStatus": "disabled"
     }
 ]
+

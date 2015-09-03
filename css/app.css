@@ -58,9 +58,17 @@ p {
   background-color: #63737b;
   min-height: 100%;
   overflow: hidden;
+  /*
+  .tabs-left {
+    .nav-tabs {
+      border-right: 10px solid $color-theme;
+    }
+  }
+  */
 }
 .game-practice-area h2 {
   font-family: 'Luckiest Guy', cursive;
+  color: #ffffff;
   -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-color: #68CBDA;
   -webkit-text-stroke-width: 2px;
@@ -71,11 +79,12 @@ p {
 .game-practice-area .nav-tabs li a {
   border: none;
   background-color: rgba(186, 234, 255, 0.3);
+  color: #000000;
+  font-weight: normal;
 }
 .game-practice-area .nav-tabs li a:hover, .game-practice-area .nav-tabs li a:visited, .game-practice-area .nav-tabs li a:focus {
   background-color: #BAEAFF;
   border: none;
-  color: #000000;
 }
 .game-practice-area .nav-tabs .active a {
   background-color: #BAEAFF;
@@ -95,17 +104,22 @@ p {
   -ms-border-radius: 0 20px 0 0;
   border-radius: 0 20px 0 0;
 }
-.game-practice-area .tabs-left .nav-tabs {
-  border-right: 10px solid #68CBDA;
-}
 
 .game-challenge-area {
   background-color: #63737b;
   min-height: 100%;
   overflow: hidden;
+  /*
+  .tabs-left {
+    .nav-tabs {
+      border-right: 10px solid $color-theme;
+    }
+  }
+  */
 }
 .game-challenge-area h2 {
   font-family: 'Luckiest Guy', cursive;
+  color: #ffffff;
   -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-color: #ffbc95;
   -webkit-text-stroke-width: 2px;
@@ -116,11 +130,12 @@ p {
 .game-challenge-area .nav-tabs li a {
   border: none;
   background-color: rgba(255, 221, 154, 0.3);
+  color: #000000;
+  font-weight: normal;
 }
 .game-challenge-area .nav-tabs li a:hover, .game-challenge-area .nav-tabs li a:visited, .game-challenge-area .nav-tabs li a:focus {
   background-color: #ffdd9a;
   border: none;
-  color: #000000;
 }
 .game-challenge-area .nav-tabs .active a {
   background-color: #ffdd9a;
@@ -139,9 +154,6 @@ p {
   -moz-border-radius: 0 20px 0 0;
   -ms-border-radius: 0 20px 0 0;
   border-radius: 0 20px 0 0;
-}
-.game-challenge-area .tabs-left .nav-tabs {
-  border-right: 10px solid #ffbc95;
 }
 
 .home {
@@ -171,6 +183,7 @@ p {
   text-align: center;
   font-size: 7vw;
   font-family: 'Luckiest Guy', cursive;
+  color: #ffffff;
   -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-color: #68CBDA;
   -webkit-text-stroke-width: 4px;
@@ -191,6 +204,7 @@ p {
   text-align: center;
   font-size: 7vw;
   font-family: 'Luckiest Guy', cursive;
+  color: #ffffff;
   -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-color: #ffbc95;
   -webkit-text-stroke-width: 4px;
@@ -208,9 +222,11 @@ p {
 }
 .game-area .tab-content .task-tab-content .challenge-amount {
   font-family: 'Luckiest Guy', cursive;
+  color: #ffffff;
   -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-color: #ffbc95;
   -webkit-text-stroke-width: 1px;
+  color: #ffbc95;
   font-size: 1.5em;
 }
 .game-area .tab-content .task-tab-content .challenge-unit, .game-area .tab-content .task-tab-content .part-of-speech {
@@ -266,13 +282,16 @@ p {
 
 .current-score, .total-current-score {
   font-family: 'Luckiest Guy', cursive;
+  color: #ffffff;
   -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-color: #43D01C;
   -webkit-text-stroke-width: 1px;
+  color: #84eb67;
 }
 
 .current-score-slash {
   font-family: 'Luckiest Guy', cursive;
+  color: #ffffff;
   -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-color: #ececec;
   -webkit-text-stroke-width: 1px;
@@ -280,9 +299,11 @@ p {
 
 .tab-counter, .current-score-tab-counter, .total-tab-counter {
   font-family: 'Luckiest Guy', cursive;
+  color: #ffffff;
   -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-color: #0d003e;
   -webkit-text-stroke-width: 1px;
+  color: #cbbeff;
 }
 
 .score-label, .display-scores, .display-timer {
@@ -302,9 +323,11 @@ p {
 
 .timer .countdown {
   font-family: 'Luckiest Guy', cursive;
+  color: #ffffff;
   -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-color: #ffbc95;
   -webkit-text-stroke-width: 1px;
+  color: #ffbc95;
   padding: 20px 1px 10px 10px;
 }
 .timer .countdown .item {
@@ -367,7 +390,7 @@ p {
   border-radius: 0 5px 5px 0;
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 1.3em;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .btn-home {
@@ -415,7 +438,7 @@ p {
   .tabs-right > .nav-tabs {
     padding-top: 20px;
     height: 75vh;
-    min-height: 600px;
+    min-height: 800px;
     border-bottom: 0;
     float: right;
     margin-left: 19px;
@@ -438,8 +461,15 @@ p {
     background-color: #BAEAFF;
   }
 
+  .tabs-left {
+    /*
+    .task-tab-content-for-short-tab-names {
+      padding-left: 175px;
+    }
+    */
+  }
   .tabs-left .nav-tabs {
-    min-height: 800px;
+    height: 85vh;
     padding-top: 20px;
     border-bottom: 0;
     float: left;
@@ -463,7 +493,24 @@ p {
     padding-right: 27px;
   }
   .tabs-left .task-tab-content {
-    padding: 35px 40px 20px 210px;
+    /*      padding: 30px 40px 20px 210px; */
+    padding: 40px;
+    height: 85vh;
+    overflow-y: scroll;
+  }
+  .tabs-left .task-tab-content::-webkit-scrollbar {
+    width: 15px;
+  }
+  .tabs-left .task-tab-content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px 0 #6d7c86;
+    border-radius: 10px;
+    /*  background-color: $color-lightest; */
+  }
+  .tabs-left .task-tab-content::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 3px 5px 11px 3px #6d7c86;
+    box-shadow: inset 3px 5px 11px 3px #6d7c86;
+    /*  background-color: $color-practice; */
+    border-radius: 10px;
   }
 
   .tab-content .tab-pane {
@@ -790,6 +837,7 @@ p {
     text-align: center;
     font-size: 7vw;
     font-family: 'Luckiest Guy', cursive;
+    color: #ffffff;
     -webkit-text-fill-color: #ffffff;
     -webkit-text-stroke-color: #68CBDA;
     -webkit-text-stroke-width: 1.5px;
@@ -804,6 +852,7 @@ p {
     text-align: center;
     font-size: 7vw;
     font-family: 'Luckiest Guy', cursive;
+    color: #ffffff;
     -webkit-text-fill-color: #ffffff;
     -webkit-text-stroke-color: #ffbc95;
     -webkit-text-stroke-width: 1.5px;
@@ -880,6 +929,7 @@ p {
     text-align: center;
     font-size: 7vw;
     font-family: 'Luckiest Guy', cursive;
+    color: #ffffff;
     -webkit-text-fill-color: #ffffff;
     -webkit-text-stroke-color: #68CBDA;
     -webkit-text-stroke-width: 1.5px;
@@ -897,6 +947,7 @@ p {
     text-align: center;
     font-size: 7vw;
     font-family: 'Luckiest Guy', cursive;
+    color: #ffffff;
     -webkit-text-fill-color: #ffffff;
     -webkit-text-stroke-color: #ffbc95;
     -webkit-text-stroke-width: 1.5px;

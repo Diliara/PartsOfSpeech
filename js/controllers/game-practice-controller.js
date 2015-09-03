@@ -11,7 +11,7 @@ angular.module('gameApp')
             $scope.tabs = tabsContent;
         });
 
-        $scope.getTemplateUrl = function(name){
+        $scope.getTemplateUrl = function (name) {
             return 'partials/game/definitions/' + name + '.html';
         };
 
@@ -43,9 +43,9 @@ angular.module('gameApp')
             lookingForPartOfSpeech = lookingForThis;
             whereAreWeLooking = theWordIs;
 
-            //  console.log("lookingForPartOfSpeech: " + lookingForPartOfSpeech);
-            //   console.log("whereAreWeLooking: " + whereAreWeLooking);
-            //   console.log("whereAreWeLooking.indexOf(lookingForPartOfSpeech): " + whereAreWeLooking.indexOf(lookingForPartOfSpeech));
+            console.log("lookingForPartOfSpeech: " + lookingForPartOfSpeech);
+            console.log("whereAreWeLooking: " + whereAreWeLooking);
+            console.log("whereAreWeLooking.indexOf(lookingForPartOfSpeech): " + whereAreWeLooking.indexOf(lookingForPartOfSpeech));
 
             if (whereAreWeLooking.indexOf(lookingForPartOfSpeech) != -1) {
 
