@@ -344,10 +344,28 @@ p {
         font-size: 1.2em;
         font-weight: bold;
       }
+
+      .btn-openDefinition {
+        margin-bottom: 10px;
+        padding: 5px;
+        width: 160px;
+        background-color: lighten($color-practice, 10%);
+        text-align: center;
+        color: $color-darkest;
+
+        @include border-radius(5px, 5px, 5px, 5px);
+        font-family: 'Alegreya Sans SC', sans-serif;
+        font-size: 1.3em;
+        font-weight: normal;
+
+      }
+
       .definition {
         p, ul {
           font-size: 15px;
         }
+        display: none;
+        padding: 20px;
       }
 
       .text {

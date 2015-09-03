@@ -34,6 +34,23 @@ angular.module('gameApp')
         correctWords = [];
 
 
+        console.log("here");
+
+        $scope.showHideDefinition = true;
+
+        $scope.openDefinition = function () {
+
+            if ($scope.showHideDefinition == true) {
+                $scope.showHideDefinition = false;
+            } else {
+                $scope.showHideDefinition = true;
+            }
+
+            $(".definition").slideToggle();
+
+        };
+
+
         //Looking for
         $scope.lookingFor = function (partOfSpeechTitle, lookingForThis, taskNumber, theWordIs, wordIndex) {
 

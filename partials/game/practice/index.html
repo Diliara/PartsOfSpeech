@@ -14,7 +14,9 @@
 
                                 <p>Find <span class="tab-counter">{{ tab.counter }}</span> different <span class="part-of-speech">{{ tab.title }}</span> in the paragraph.</p>
 
-                                <div ng-include="getTemplateUrl(tab.partOfSpeech)" class="definition"></div>
+
+                                <p class="btn-openDefinition" ng-click="openDefinition()">{{ showHideDefinition ? "Show Definition" : "Hide Definition"}}  </p>
+                                <div ng-include="getTemplateUrl(tab.partOfSpeech)" class="definition panel panel-default"></div>
 
                                 <hr>
                                 <p class="text">
