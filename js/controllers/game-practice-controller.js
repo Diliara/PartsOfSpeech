@@ -1,6 +1,6 @@
 angular.module('gameApp')
     .controller('GamePracticeController', function ($scope, $http) {
-        $http.get('json/game/content_option_2.json').success(function (text) {
+        $http.get('json/game/content_option_3.json').success(function (text) {
             $scope.words = text;
         });
 

@@ -1,8 +1,439 @@
 [
     {
-        "wordItself": "3",
+        "wordItself": "Bernard Yung",
         "partOfSpeech": "undefined",
         "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "has",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "been",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "a",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "successful",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "entrepreneur",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": ",",
+        "partOfSpeech": "undefined",
+        "btnStatus": "disabled"
+    },
+    {
+        "wordItself": "venture",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "capitalist",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": ",",
+        "partOfSpeech": "undefined",
+        "btnStatus": "disabled"
+    },
+    {
+        "wordItself": "and",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "business",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "advisor",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "in",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "Silicon Valley",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "for",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "over",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "25",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "years",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": ".",
+        "partOfSpeech": "undefined",
+        "btnStatus": "disabled"
+    },
+
+    {
+        "wordItself": "Yung",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "applies",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "his",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "investment",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "talent",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "and",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "China",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "expertise",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "to",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "advise",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": ",",
+        "partOfSpeech": "undefined",
+        "btnStatus": "disabled"
+    },
+    {
+        "wordItself": "invest",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "in",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": ",",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "and",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "build",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "high",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "tech",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "companies",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "with",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "a",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "global",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "vision",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": ".",
+        "partOfSpeech": "undefined",
+        "btnStatus": "disabled"
+    },
+    {
+        "wordItself": "He",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "is",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "the",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "founder",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "of",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "Matrix",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "TechVentures",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "and",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "CNet",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "Communications",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": ".",
+        "partOfSpeech": "undefined",
+        "btnStatus": "disabled"
+    },
+    {
+        "wordItself": "Yung",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "is",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "an",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "advisor",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "to",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "several",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "non-profit",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "organizations",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "and",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "is",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "active",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "in",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "community",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "organizations",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": ".",
+        "partOfSpeech": "undefined",
+        "btnStatus": "disabled"
+    },
+
+    {
+        "wordItself": "He",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "holds",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "a",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "BSc",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "in",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "Engineering",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "from",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "the",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "University",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "of",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "Alberta",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "and",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "an",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "MBA",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "from",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": "Berkeley-Haas",
+        "partOfSpeech": "undefined",
+        "btnStatus": "enabled"
+    },
+    {
+        "wordItself": ".",
+        "partOfSpeech": "undefined",
+        "btnStatus": "disabled"
     }
 ]
-
