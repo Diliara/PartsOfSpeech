@@ -1,13 +1,13 @@
 angular.module('gameApp')
     .controller('GamePracticeController', function ($scope, $http) {
-        $http.get('json/game/game.json').success(function (text) {
+        $http.get('json/game/content_option_2.json').success(function (text) {
             $scope.words = text;
         });
 
     })
     .controller('GamePracticeTabsController', function ($scope, $http, $modal) {
 
-        $http.get('json/game/game_tabs.json').success(function (tabsContent) {
+        $http.get('json/game/sections.json').success(function (tabsContent) {
             $scope.tabs = tabsContent;
         });
 
