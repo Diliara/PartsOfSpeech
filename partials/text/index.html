@@ -1,0 +1,7 @@
+<div ng-controller="TextWordsController">
+    <!--<p>Testing - <span ng-init="getTotalNumberOfInstance('determiner')">click</span></p>-->
+
+    <p class="text">
+        <a ng-repeat="word in words" id="{{'word_' + section.taskNumber + '_' + $index}}" class="word {{word.btnStatus}}" data-partOfSpeech="{{ word.partOfSpeech }}" ng-click="lookingFor(section.title, section.partOfSpeech, section.taskNumber, word.partOfSpeech, $index) ">{{word.wordItself}}</a>
+    </p>
+</div>

@@ -1,14 +1,8 @@
 angular.module('gameApp')
-    .controller('GamePracticeController', function ($scope, $http) {
-        $http.get('json/game/content_option_3.json').success(function (text) {
-            $scope.words = text;
-        });
+    .controller('GamePracticeSectionsController', function ($scope, $http, $modal) {
 
-    })
-    .controller('GamePracticeTabsController', function ($scope, $http, $modal) {
-
-        $http.get('json/game/sections.json').success(function (tabsContent) {
-            $scope.tabs = tabsContent;
+        $http.get('json/game/sections.json').success(function (sectionsContent) {
+            $scope.sections = sectionsContent;
         });
 
         $scope.getTemplateUrl = function (name) {
@@ -32,9 +26,6 @@ angular.module('gameApp')
         };
 
         correctWords = [];
-
-
-        console.log("here");
 
         $scope.showHideDefinition = true;
 

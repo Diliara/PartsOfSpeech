@@ -346,6 +346,7 @@ p {
       }
 
       .btn-openDefinition {
+        cursor: pointer;
         margin-bottom: 10px;
         padding: 5px;
         width: 160px;
@@ -414,7 +415,7 @@ p {
     }
   }
 
-  .tab-counter {
+  .total-number-of-instances {
     font-size: 30px;
   }
 
@@ -431,7 +432,7 @@ p {
 
 }
 
-.tab-counter, .current-score-tab-counter, .total-tab-counter {
+.total-number-of-instances, .current-score-tab-counter, .total-tab-counter {
   @include font-stroke($color-lightest, $color-counter, 1px);
   color: lighten($color-counter, 75%);
 }

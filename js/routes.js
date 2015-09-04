@@ -6,12 +6,6 @@ angular.module('gameApp')
             .when('/test', {
                 templateUrl: 'partials/test/index.html'
             })
-
-            .when('/game', {
-                templateUrl: 'partials/game/index.html'
-            })
-
-
             .when('/test/practice', {
                 templateUrl: 'partials/test/practice/index.html',
                 controller: 'TestPracticeController'
@@ -21,19 +15,22 @@ angular.module('gameApp')
                 controller: 'TestChallengeController'
             })
 
+            .when('/game', {
+                templateUrl: 'partials/game/index.html'
+            })
             .when('/game/practice', {
                 templateUrl: 'partials/game/practice/index.html',
-                controller: 'GamePracticeController'
+                controller: 'GamePracticeSectionsController'
             })
+
             .when('/game/challenge', {
                 templateUrl: 'partials/game/challenge/index.html',
-                controller: 'GameChallengeController'
+                controller: 'GameChallengeSectionsController'
             })
 
             .when('/home', {
                 redirectTo: '/'
             })
-
             .otherwise({
                 redirectTo: '/'
             });
