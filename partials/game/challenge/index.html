@@ -1,1 +1,91 @@
-<p>challenge</p>
+<div class="game-challenge-area">
+    <div class="container-fluid">
+        <h2>Challenge</h2>
+
+        <div class="row">
+            <div class="col-lg-9 col-md-8">
+                <section class="game-area">
+                    <tabset class="tabs-left">
+                        <tab ng-repeat="section in sections" heading="{{section.title}}" active="section.active" disabled="section.disabled" ng-click="changeTab()">
+
+                            <div class="task-tab-content" id="{{section.partOfSpeech}}">
+                                <div>
+
+                                    <button class="btn btn-start" ng-click="startChallenge('tab_' + section.taskNumber, section.timer)">
+                                        <span>Task:</span><br>
+                                        <span>Complete all the tasks<br> within 5 minutes</span><br>
+                                        Start
+
+                                    </button>
+
+
+                                    <div class="start-challenge">
+
+                                        <p>Find <span class="total-number-of-instances">{{ getTotalNumberOfInstance(section.partOfSpeech) }}</span> different
+                                            <span class="part-of-speech">{{ section.title }}</span> in the paragraph in <span class="challenge-amount">{{ section.challengeAmount }}</span>
+                                            <span class="challenge-unit">{{ section.challengeUnit }}</span>.
+                                        </p>
+
+                                        <p class="btn-openDefinition" ng-click="openDefinition()">{{ showHideDefinition ? "Hide Definition" : "Show Definition"}}</p>
+
+                                        <div ng-include="getTemplateUrl(section.partOfSpeech)" class="definition panel panel-default"></div>
+
+                                        <hr>
+
+
+                                        <text-words></text-words>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </tab>
+                    </tabset>
+                </section>
+            </div>
+
+            <div class="col-lg-3 col-md-4">
+
+                <div class="i-pad">
+                    <div class="device-screen"></div>
+                    <div class="device-btn"></div>
+                </div>
+
+                <div class="display-scores">
+                    <p>Score:</p>
+                    <dl class="score-sections" ng-repeat="section in sections">
+                        <dt>{{ section.title }}:</dt>
+                        <dd class="section-score"><span class="section-score-current">0</span> <span class="total-current-score-slash">/</span> <span class="total-number-of-instances">{{ getTotalNumberOfInstance(section.partOfSpeech) }}</span>
+                        </dd>
+                    </dl>
+                    <hr>
+                    <p>Total:</p>
+                    <p class="total-score"><span class="total-current-score">0</span> <span class="total-current-score-slash">/</span> <span class="total-tab-counter">{{ totalCounter }}</span></p>
+
+                </div>
+
+
+                <div class="display-timer">
+                    <p>Timer:</p>
+
+                    <div class="set-timer">
+                        <p class="timer" timer-plugin="{css_class: 'countdown', always_show_days: false, with_labels: true, with_seconds: true, with_separators: true, label_dd: '', label_hh: '', label_mm: 'M', label_ss: 'S', separator: ' ', separator_days: ',' }">0h 5m 0s</p>
+                    </div>
+                </div>
+
+
+                <p class="nav-buttons">
+
+
+                    <a class="btn btn-home" href="#/game">Home</a>
+                    <a class="btn btn-practice" href="#/game/practice">Practice</a>
+                </p>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+

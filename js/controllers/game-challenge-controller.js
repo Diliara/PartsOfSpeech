@@ -1,23 +1,19 @@
 angular.module('gameApp')
 
-    .controller('GameChallengeController', function ($scope, $http) {
+    .controller('GameChallengeSectionsController', function ($scope, $http, $modal) {
 
-        $http.get('json/game/game.json').success(function (text) {
-            $scope.words = text;
+        $http.get('json/game/sections.json').success(function (sectionsContent) {
+            $scope.sections = sectionsContent;
         });
+
+        $scope.getTemplateUrl = function (name) {
+            return 'partials/game/definitions/' + name + '.html';
+        };
 
         $scope.totalCounter = 33;
         window.scoreCounterLocal = 0;
         window.scoreCounterTotal = 0;
 
-    })
-
-    .controller('GameChallengeTabsController', function ($scope, $http, $modal) {
-
-        $http.get('json/game/game_tabs.json').success(function (tabsContent) {
-            $scope.tabs = tabsContent;
-            $scope.sections = tabsContent;
-        });
 
         $scope.startChallenge = function () {
             $('.start-challenge').slideDown();
@@ -41,6 +37,19 @@ angular.module('gameApp')
         };
 
         correctWords = [];
+
+        $scope.openDefinition = function () {
+
+            if ($scope.showHideDefinition == true) {
+                $scope.showHideDefinition = false;
+            } else {
+                $scope.showHideDefinition = true;
+            }
+
+            $(".definition").slideToggle();
+
+        };
+
 
         //Looking for
         $scope.lookingFor = function (partOfSpeechTitle, lookingForThis, taskNumber, theWordIs, wordIndex) {
@@ -112,6 +121,25 @@ angular.module('gameApp')
 
 
         };
+
+        $scope.getTotalNumberOfInstance = function (partOfSpeech) {
+            // console.log("partOfSpeech: " + partOfSpeech);
+
+            var collection = $('#' + partOfSpeech).find('.' + partOfSpeech);
+            var knownWords = [];
+            for(var i=0; i<collection.length; i++) {
+                if (knownWords.indexOf(collection[i].text.toUpperCase()) == -1) {
+                    knownWords.push(collection[i].text.toUpperCase());
+                }
+            }
+
+            // console.log("numberOfInstances: " + knownWords.length);
+
+            return knownWords.length;
+
+
+        };
+
 
     })
 

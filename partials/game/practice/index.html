@@ -12,7 +12,8 @@
 
                                 <h5>Task:</h5>
 
-                                <p>Find <span class="total-number-of-instances">{{ getTotalNumberOfInstance(section.partOfSpeech) }}</span> different <span class="part-of-speech">{{ section.title }}</span> in the paragraph.
+                                <p>Find <span class="total-number-of-instances">{{ getTotalNumberOfInstance(section.partOfSpeech) }}</span> different
+                                    <span class="part-of-speech">{{ section.title }}</span> in the paragraph.
                                 </p>
 
                                 <p class="btn-openDefinition" ng-click="openDefinition()">{{ showHideDefinition ? "Show Definition" : "Hide Definition"}}</p>
@@ -25,7 +26,8 @@
 
 
                                 <p class="score-label">Score:</p>
-                                <p class="score"><span class="current-score">0</span> <span class="current-score-slash">/</span> <span class="current-score-tab-counter">{{ getTotalNumberOfInstance(section.partOfSpeech) }}</span>
+                                <p class="score"><span class="current-score">0</span> <span class="current-score-slash">/</span>
+                                    <span class="current-score-tab-counter">{{ getTotalNumberOfInstance(section.partOfSpeech) }}</span>
                                 </p>
 
                             </div>
@@ -42,8 +44,10 @@
                     <div class="device-screen"></div>
                     <div class="device-btn"></div>
                 </div>
-                <p class="nav-buttons"><a class="btn btn-home" href="#/game">Home</a>
-                    <a class="btn btn-challenge" href="#/game/challenge">Challenge</a></p>
+                <p class="nav-buttons">
+                    <a class="btn btn-home" href="#/game">Home</a>
+                    <a class="btn btn-challenge" href="#/game/challenge">Challenge</a>
+                </p>
 
             </div>
         </div>
