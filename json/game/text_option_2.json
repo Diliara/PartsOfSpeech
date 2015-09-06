@@ -107,7 +107,7 @@
     },
     {
         "wordItself": "and",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "conjunction",
         "btnStatus": "enabled"
     },
     {
@@ -147,7 +147,7 @@
     },
     {
         "wordItself": "a",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "determiner",
         "btnStatus": "enabled"
     },
     {
@@ -182,7 +182,7 @@
     },
     {
         "wordItself": "a",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "determiner",
         "btnStatus": "enabled"
     },
     {
@@ -232,7 +232,7 @@
     },
     {
         "wordItself": "a",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "determiner",
         "btnStatus": "enabled"
     },
     {
@@ -262,7 +262,7 @@
     },
     {
         "wordItself": "the",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "determiner article",
         "btnStatus": "enabled"
     },
     {
@@ -287,7 +287,7 @@
     },
     {
         "wordItself": "and",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "conjunction",
         "btnStatus": "enabled"
     },
     {
@@ -332,7 +332,7 @@
     },
     {
         "wordItself": "the",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "determiner article",
         "btnStatus": "enabled"
     },
     {
@@ -362,7 +362,7 @@
     },
     {
         "wordItself": "is",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "verb",
         "btnStatus": "enabled"
     },
     {
@@ -387,7 +387,7 @@
     },
     {
         "wordItself": "the",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "determiner article",
         "btnStatus": "enabled"
     },
     {
@@ -427,7 +427,7 @@
     },
     {
         "wordItself": "and",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "conjunction",
         "btnStatus": "enabled"
     },
     {
@@ -442,7 +442,7 @@
     },
     {
         "wordItself": "the",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "determiner article",
         "btnStatus": "enabled"
     },
     {
@@ -457,7 +457,7 @@
     },
     {
         "wordItself": "the",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "determiner article",
         "btnStatus": "enabled"
     },
     {

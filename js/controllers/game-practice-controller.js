@@ -67,11 +67,11 @@ angular.module('gameApp')
 
                 scoreCounter = scoreCounter + 1;
                 wordIDElem.closest('.task-tab-content').find('.current-score').text(scoreCounter);
-                outOfNumberLocal = parseInt(wordIDElem.closest('.task-tab-content').find('.tab-counter').text());
+                outOfNumberLocal = parseInt(wordIDElem.closest('.task-tab-content').find('.total-number-of-instances').text());
 
-                // console.log ("scoreCounter: " + scoreCounter);
-                //console.log("outOfNumberLocal: " + outOfNumberLocal);
-                //console.log("partOfSpeechTitle: " + partOfSpeechTitle);
+               // console.log ("scoreCounter: " + scoreCounter);
+               // console.log("outOfNumberLocal: " + outOfNumberLocal);
+               // console.log("partOfSpeechTitle: " + partOfSpeechTitle);
 
 
                 if (scoreCounter == outOfNumberLocal) {
