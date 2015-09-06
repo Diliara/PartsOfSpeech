@@ -1,14 +1,13 @@
 angular.module('gameApp')
     .controller('TextWordsController', function ($scope, $http) {
-        $http.get('json/game/text_option_1.json').success(function (text) {
+
+        //random number between 1 and 3
+        var randomNumber = Math.floor((Math.random() * 3) + 1);
+
+
+        $http.get('json/game/text_option_' + randomNumber + '.json').success(function (text) {
             $scope.words = text;
         });
-
-        /*
-        $scope.getTotalNumberOfInstance = function (partOfSpeech) {
-            console.log("partOfSpeech: " + partOfSpeech);
-        };
-        */
 
 
     });

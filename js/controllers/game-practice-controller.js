@@ -1,7 +1,7 @@
 angular.module('gameApp')
     .controller('GamePracticeSectionsController', function ($scope, $http, $modal) {
 
-        $http.get('json/game/sections_for_option_1.json').success(function (sectionsContent) {
+        $http.get('json/game/sections.json').success(function (sectionsContent) {
             $scope.sections = sectionsContent;
         });
 
@@ -103,6 +103,24 @@ angular.module('gameApp')
             $('a').removeClass('correct').removeClass('wrong');
             $('.current-score').text(scoreCounter);
             correctWords = [];
+        };
+
+        $scope.getTotalNumberOfInstance = function (partOfSpeech) {
+           // console.log("partOfSpeech: " + partOfSpeech);
+
+            var collection = $('#' + partOfSpeech).find('.' + partOfSpeech);
+            var knownWords = [];
+            for(var i=0; i<collection.length; i++) {
+                if (knownWords.indexOf(collection[i].text.toUpperCase()) == -1) {
+                    knownWords.push(collection[i].text.toUpperCase());
+                }
+            }
+
+           // console.log("numberOfInstances: " + knownWords.length);
+
+            return knownWords.length;
+
+
         };
 
 

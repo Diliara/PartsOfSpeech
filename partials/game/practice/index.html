@@ -8,13 +8,12 @@
                     <tabset class="tabs-left">
                         <tab ng-repeat="section in sections" heading="{{section.title}}" active="section.active" disabled="section.disabled" ng-click="changeTab()">
 
-                            <div class="task-tab-content">
+                            <div class="task-tab-content" id="{{section.partOfSpeech}}">
 
                                 <h5>Task:</h5>
 
-
-                                <p>Find <span class="total-number-of-instances">{{ section.counter }}</span> different <span class="part-of-speech">{{ section.title }}</span> in the paragraph.</p>
-
+                                <p>Find <span class="total-number-of-instances">{{ getTotalNumberOfInstance(section.partOfSpeech) }}</span> different <span class="part-of-speech">{{ section.title }}</span> in the paragraph.
+                                </p>
 
                                 <p class="btn-openDefinition" ng-click="openDefinition()">{{ showHideDefinition ? "Show Definition" : "Hide Definition"}}</p>
                                 <div ng-include="getTemplateUrl(section.partOfSpeech)" class="definition panel panel-default"></div>
@@ -26,7 +25,7 @@
 
 
                                 <p class="score-label">Score:</p>
-                                <p class="score"><span class="current-score">0</span> <span class="current-score-slash">/</span> <span class="current-score-tab-counter">{{ section.counter }}</span>
+                                <p class="score"><span class="current-score">0</span> <span class="current-score-slash">/</span> <span class="current-score-tab-counter">{{ getTotalNumberOfInstance(section.partOfSpeech) }}</span>
                                 </p>
 
                             </div>
