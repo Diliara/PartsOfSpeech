@@ -124,6 +124,8 @@ angular.module('gameApp')
         };
 
 
+
+
     })
     .controller('ModalWindowController', function ($scope, $modalInstance, msg) {
         //$('.text a').addClass('disabled');

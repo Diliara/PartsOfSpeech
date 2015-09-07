@@ -10,7 +10,6 @@ angular.module('gameApp')
             return 'partials/game/definitions/' + name + '.html';
         };
 
-        $scope.totalCounter = 33;
         window.scoreCounterLocal = 0;
         window.scoreCounterTotal = 0;
 
@@ -125,19 +124,34 @@ angular.module('gameApp')
         $scope.getTotalNumberOfInstance = function (partOfSpeech) {
             // console.log("partOfSpeech: " + partOfSpeech);
 
-            var collection = $('#' + partOfSpeech).find('.' + partOfSpeech);
-            var knownWords = [];
-            for(var i=0; i<collection.length; i++) {
-                if (knownWords.indexOf(collection[i].text.toUpperCase()) == -1) {
-                    knownWords.push(collection[i].text.toUpperCase());
+            var collectionOfInstances = $('#' + partOfSpeech).find('.' + partOfSpeech);
+            var totalNumberOfInstance = [];
+            for (var i = 0; i < collectionOfInstances.length; i++) {
+                if (totalNumberOfInstance.indexOf(collectionOfInstances[i].text.toUpperCase()) == -1) {
+                    totalNumberOfInstance.push(collectionOfInstances[i].text.toUpperCase());
                 }
             }
 
-            // console.log("numberOfInstances: " + knownWords.length);
+            // console.log("numberOfInstances: " + totalNumberOfInstance.length);
 
-            return knownWords.length;
+            return totalNumberOfInstance.length;
 
 
+        };
+
+        $scope.getTotalNumberFromAllSections = function () {
+
+            var collectionOfTotalNumbers = $('.total-number-from-all-sections');
+            //console.log("collectionOfTotalNumbers.length: " + collectionOfTotalNumbers.length);
+
+            var totalNumberFromAllSections = 0;
+
+            for (var i = 0; i < collectionOfTotalNumbers.length; i++) {
+                // console.log("collectionOfTotalNumbers[i].text: " + $(collectionOfTotalNumbers[i]).text());
+                totalNumberFromAllSections = totalNumberFromAllSections + Number($(collectionOfTotalNumbers[i]).text());
+                // console.log('totalNumberFromAllSections: ' + totalNumberFromAllSections);
+            }
+            return totalNumberFromAllSections;
         };
 
 

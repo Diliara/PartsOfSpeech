@@ -56,12 +56,22 @@
                     <p>Score:</p>
                     <dl class="score-sections" ng-repeat="section in sections">
                         <dt>{{ section.title }}:</dt>
-                        <dd class="section-score"><span class="section-score-current">0</span> <span class="total-current-score-slash">/</span> <span class="total-number-of-instances">{{ getTotalNumberOfInstance(section.partOfSpeech) }}</span>
+                        <dd class="section-score"><span class="section-score-current">0</span> <span class="total-current-score-slash">/</span> <span class="total-number-of-instances total-number-from-all-sections">{{ getTotalNumberOfInstance(section.partOfSpeech) }}</span>
                         </dd>
                     </dl>
                     <hr>
                     <p>Total:</p>
-                    <p class="total-score"><span class="total-current-score">0</span> <span class="total-current-score-slash">/</span> <span class="total-tab-counter">{{ totalCounter }}</span></p>
+                    <p class="total-score"><span class="total-current-score">0</span> <span class="total-current-score-slash">/</span>
+
+
+                        <span class="total-tab-counter ">{{ getTotalNumberFromAllSections() }}</span>
+
+
+
+
+
+
+                    </p>
 
                 </div>
 
