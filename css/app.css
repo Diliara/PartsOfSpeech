@@ -317,7 +317,7 @@ p {
   -webkit-text-stroke-width: 1px;
 }
 
-.total-number-of-instances, .current-score-tab-counter, .total-tab-counter {
+.total-number-of-instances, .current-score-tab-counter, .total-score-all-sections {
   font-family: 'Luckiest Guy', cursive;
   color: #ffffff;
   -webkit-text-fill-color: #ffffff;

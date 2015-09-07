@@ -21,7 +21,10 @@ angular.module('gameApp')
         };
 
 
-        $scope.open = function (msg) {
+        $scope.open = function (msg, sectionName) {
+
+            // console.log('sectionName: ' + sectionName);
+            $('#' + sectionName + ' .text a').addClass('disabled');
 
             var modalInstance = $modal.open({
                 templateUrl: 'partials/congratulations.html',
@@ -59,7 +62,10 @@ angular.module('gameApp')
             lookingForPartOfSpeech = lookingForThis;
             whereAreWeLooking = theWordIs;
 
-            /* console.log("lookingForPartOfSpeech: " + lookingForPartOfSpeech + '\n' + "whereAreWeLooking: " + whereAreWeLooking); */
+            scoreSection = "score-" + lookingForPartOfSpeech;
+            scoreSectionIDElem = $('#' + scoreSection);
+
+            //console.log("lookingForPartOfSpeech: " + lookingForPartOfSpeech + '\n' + "whereAreWeLooking: " + whereAreWeLooking);
 
             if (whereAreWeLooking.indexOf(lookingForPartOfSpeech) != -1) {
 
@@ -72,15 +78,21 @@ angular.module('gameApp')
                 }).addClass('correct');
 
                 scoreCounterLocal = scoreCounterLocal + 1;
-                console.log("scoreCounterLocal: " + scoreCounterLocal);
+
+                // console.log("scoreCounterLocal: " + scoreCounterLocal);
+
                 scoreCounterTotal = scoreCounterTotal + 1;
-                wordIDElem.closest('.game-challenge-area').find('.total-current-score').text(scoreCounterTotal);
-                /*   wordIDElem.closest('.game-challenge-area').find('.section-score-current').text(scoreCounterLocal); */
+
+                scoreSectionIDElem.find('.section-score-current').text(scoreCounterLocal);
+                $('.total-current-score').text(scoreCounterTotal);
 
 
-                outOfNumberLocal = parseInt(wordIDElem.closest('.task-tab-content').find('.tab-counter').text());
-                outOfNumberTotal = parseInt(wordIDElem.closest('.game-challenge-area').find('.total-tab-counter').text());
-                console.log("found scoreCounterLocal: " + scoreCounterLocal + " outOfNumberLocal: " + outOfNumberLocal);
+                outOfNumberLocal = parseInt(scoreSectionIDElem.find('.total-number-for-the-section').text());
+                outOfNumberTotal = parseInt($('.total-score-all-sections').text());
+
+
+                console.log("scoreCounterLocal: " + scoreCounterLocal + " outOfNumberLocal: " + outOfNumberLocal);
+
 
                 if (scoreCounterLocal == outOfNumberLocal) {
 
@@ -91,7 +103,7 @@ angular.module('gameApp')
                     }
 
 
-                    $scope.open(congratsMsg);
+                    $scope.open(congratsMsg, lookingForPartOfSpeech);
                     correctWords = [];
                     console.log("scoreCounterTotal: " + scoreCounterTotal);
                 }
@@ -139,9 +151,9 @@ angular.module('gameApp')
 
         };
 
-        $scope.getTotalNumberFromAllSections = function () {
+        $scope.getTotalNumberFromAllSections = function (totalNumberForTheSection) {
 
-            var collectionOfTotalNumbers = $('.total-number-from-all-sections');
+            var collectionOfTotalNumbers = $(totalNumberForTheSection);
             //console.log("collectionOfTotalNumbers.length: " + collectionOfTotalNumbers.length);
 
             var totalNumberFromAllSections = 0;
@@ -159,7 +171,7 @@ angular.module('gameApp')
 
 
     .controller('ModalWindowController', function ($scope, $modalInstance, msg) {
-        //$('.text a').addClass('disabled');
+
         $scope.message = msg;
         $scope.ok = function () {
             $modalInstance.close();

@@ -432,7 +432,7 @@ p {
 
 }
 
-.total-number-of-instances, .current-score-tab-counter, .total-tab-counter {
+.total-number-of-instances, .current-score-tab-counter, .total-score-all-sections {
   @include font-stroke($color-lightest, $color-counter, 1px);
   color: lighten($color-counter, 75%);
 }

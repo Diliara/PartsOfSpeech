@@ -11,7 +11,10 @@ angular.module('gameApp')
 
         window.scoreCounter = 0;
 
-        $scope.open = function (msg) {
+        $scope.open = function (msg, sectionName) {
+
+            // console.log('sectionName: ' + sectionName);
+            $('#' + sectionName + ' .text a').addClass('disabled');
 
             var modalInstance = $modal.open({
                 templateUrl: 'partials/congratulations.html',
@@ -69,9 +72,9 @@ angular.module('gameApp')
                 wordIDElem.closest('.task-tab-content').find('.current-score').text(scoreCounter);
                 outOfNumberLocal = parseInt(wordIDElem.closest('.task-tab-content').find('.total-number-of-instances').text());
 
-               // console.log ("scoreCounter: " + scoreCounter);
-               // console.log("outOfNumberLocal: " + outOfNumberLocal);
-               // console.log("partOfSpeechTitle: " + partOfSpeechTitle);
+                // console.log ("scoreCounter: " + scoreCounter);
+                // console.log("outOfNumberLocal: " + outOfNumberLocal);
+                // console.log("partOfSpeechTitle: " + partOfSpeechTitle);
 
 
                 if (scoreCounter == outOfNumberLocal) {
@@ -83,7 +86,7 @@ angular.module('gameApp')
                     }
 
 
-                    $scope.open(congratsMsg);
+                    $scope.open(congratsMsg, lookingForPartOfSpeech);
                     correctWords = [];
                 }
 
@@ -106,24 +109,22 @@ angular.module('gameApp')
         };
 
         $scope.getTotalNumberOfInstance = function (partOfSpeech) {
-           // console.log("partOfSpeech: " + partOfSpeech);
+            // console.log("partOfSpeech: " + partOfSpeech);
 
             var collection = $('#' + partOfSpeech).find('.' + partOfSpeech);
             var knownWords = [];
-            for(var i=0; i<collection.length; i++) {
+            for (var i = 0; i < collection.length; i++) {
                 if (knownWords.indexOf(collection[i].text.toUpperCase()) == -1) {
                     knownWords.push(collection[i].text.toUpperCase());
                 }
             }
 
-           // console.log("numberOfInstances: " + knownWords.length);
+            // console.log("numberOfInstances: " + knownWords.length);
 
             return knownWords.length;
 
 
         };
-
-
 
 
     })

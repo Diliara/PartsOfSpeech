@@ -26,9 +26,12 @@
                                             <span class="challenge-unit">{{ section.challengeUnit }}</span>.
                                         </p>
 
+
+                                        <!--
                                         <p class="btn-openDefinition" ng-click="openDefinition()">{{ showHideDefinition ? "Hide Definition" : "Show Definition"}}</p>
 
                                         <div ng-include="getTemplateUrl(section.partOfSpeech)" class="definition panel panel-default"></div>
+                                        -->
 
                                         <hr>
 
@@ -54,27 +57,26 @@
 
                 <div class="display-scores">
                     <p>Score:</p>
-                    <dl class="score-sections" ng-repeat="section in sections">
+                    <dl class="score-sections" id="score-{{section.partOfSpeech}}" ng-repeat="section in sections">
                         <dt>{{ section.title }}:</dt>
-                        <dd class="section-score"><span class="section-score-current">0</span> <span class="total-current-score-slash">/</span> <span class="total-number-of-instances total-number-from-all-sections">{{ getTotalNumberOfInstance(section.partOfSpeech) }}</span>
+
+                        <dd class="section-score">
+                            <span class="section-score-current">0</span>
+                            <span class="total-current-score-slash">/</span>
+                            <span class="total-number-of-instances total-number-for-the-section">{{ getTotalNumberOfInstance(section.partOfSpeech) }}</span>
                         </dd>
                     </dl>
                     <hr>
+
                     <p>Total:</p>
-                    <p class="total-score"><span class="total-current-score">0</span> <span class="total-current-score-slash">/</span>
 
-
-                        <span class="total-tab-counter ">{{ getTotalNumberFromAllSections() }}</span>
-
-
-
-
-
-
+                    <p class="total-score">
+                        <span class="total-current-score">0</span>
+                        <span class="total-current-score-slash">/</span>
+                        <span class="total-score-all-sections ">{{ getTotalNumberFromAllSections('.total-number-for-the-section') }}</span>
                     </p>
 
                 </div>
-
 
                 <div class="display-timer">
                     <p>Timer:</p>
