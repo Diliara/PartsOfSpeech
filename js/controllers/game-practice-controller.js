@@ -1,7 +1,7 @@
 angular.module('gameApp')
     .controller('GamePracticeSectionsController', function ($scope, $http, $modal) {
 
-        $http.get('json/game/sections.json').success(function (sectionsContent) {
+        $http.get('json/game/sections_1-3.json').success(function (sectionsContent) {
             $scope.sections = sectionsContent;
         });
 

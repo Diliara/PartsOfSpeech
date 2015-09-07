@@ -636,7 +636,8 @@ p {
     margin: 7px auto;
   }
   .game-challenge-area .nav-buttons {
-    margin-top: 90px;
+    position: absolute;
+    top: 950px;
   }
 }
 @media screen and (min-width: 993px) {

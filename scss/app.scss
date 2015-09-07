@@ -39,7 +39,7 @@ $i-pad-padding-top: 35px;
 $i-pad-display-top: -460px;
 $i-pad-display-left: 20px;
 
-$nav-buttons-under-i-pad-margin-top: 90px;
+$nav-buttons-absolute-top: 950px;
 $nav-buttons-under-i-phone-margin-top: 90px;
 
 @mixin vertical-align($position, $top, $left) {
@@ -789,7 +789,8 @@ p {
     }
 
     .nav-buttons {
-      margin-top: $nav-buttons-under-i-pad-margin-top;
+      position: absolute;
+      top: $nav-buttons-absolute-top;
     }
 
   }

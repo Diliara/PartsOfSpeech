@@ -1,0 +1,32 @@
+[
+    {
+        "taskNumber": 1,
+        "title": "Determines",
+        "partOfSpeech": "determiner"
+    },
+    {
+        "taskNumber": 2,
+        "title": "Articles",
+        "partOfSpeech": "article"
+    },
+    {
+        "taskNumber": 3,
+        "title": "Pronouns",
+        "partOfSpeech": "pronoun"
+    },
+    {
+        "taskNumber": 4,
+        "title": "Prepositions",
+        "partOfSpeech": "preposition"
+    },
+    {
+        "taskNumber": 5,
+        "title": "Verbs",
+        "partOfSpeech": "verb"
+    },
+    {
+        "taskNumber": 6,
+        "title": "Conjunctions",
+        "partOfSpeech": "conjunction"
+    }
+]

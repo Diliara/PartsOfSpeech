@@ -1,0 +1,17 @@
+[
+    {
+        "taskNumber": 1,
+        "title": "Determines",
+        "partOfSpeech": "determiner"
+    },
+    {
+        "taskNumber": 2,
+        "title": "Articles",
+        "partOfSpeech": "article"
+    },
+    {
+        "taskNumber": 3,
+        "title": "Pronouns",
+        "partOfSpeech": "pronoun"
+    }
+]
