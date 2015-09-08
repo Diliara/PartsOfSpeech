@@ -17,7 +17,8 @@ angular.module('gameApp')
         $scope.startChallenge = function () {
             $('.start-challenge').slideDown();
             $('.btn-start').hide();
-            $('.set-timer').show();
+
+
         };
 
 
@@ -219,6 +220,13 @@ angular.module('gameApp')
             return totalNumberFromAllSections;
         };
 
+
+/*
+        $scope.add5Seconds = function () {
+            $scope.$broadcast('timer-add-cd-seconds', 5);
+            console.log("add 5");
+        }
+*/
 
     })
 

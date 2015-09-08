@@ -80,8 +80,22 @@
                 <div class="display-timer">
                     <p>Timer:</p>
 
-                    <div class="set-timer">
-                        <p class="timer" timer-plugin="{css_class: 'countdown', always_show_days: false, with_labels: true, with_seconds: true, with_separators: true, label_dd: '', label_hh: '', label_mm: 'M', label_ss: 'S', separator: ' ', separator_days: ',' }">0h 5m 0s</p>
+                    <div class="set-timer" id="start-stop-timer">
+                        <!-- <timer-plugin></timer-plugin>-->
+                        <!--   <p class="timer" timer-plugin="{css_class: 'countdown', always_show_days: false, with_labels: true, with_seconds: true, with_separators: true, label_dd: '', label_hh: '', label_mm: 'M', label_ss: 'S', separator: ' ', separator_days: ',' }">0h 5m 0s</p>
+                        -->
+
+                        <p class="timer">
+                            <timer autostart="false" class="countdown" countdown="60" interval="1000">{{countdown}} s</timer>
+                        </p>
+
+                        <button class="btn" onclick="stopResumeTimer('start-stop-timer', this)" type="button">Start</button>
+
+
+                        <!--
+                        <button style="background-color: #000000" ng-click="add5Seconds()">Add 5 Seconds</button>
+                        -->
+
                     </div>
                 </div>
 
