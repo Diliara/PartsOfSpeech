@@ -21,13 +21,14 @@ angular.module('gameApp')
         };
 
 
-        $scope.open = function (msg, sectionName) {
+        $scope.open = function (msg, loadTemplate) {
 
-            // console.log('sectionName: ' + sectionName);
-            $('#' + sectionName + ' .text a').addClass('disabled');
+            //  console.log('sectionName: ' + sectionName);
+            //var sectionNameElem = '#' + sectionName;
+            //$(sectionNameElem + ' .text a').addClass('disabled');
 
             var modalInstance = $modal.open({
-                templateUrl: 'partials/congratulations.html',
+                templateUrl: 'partials/feedback/' + loadTemplate + '.html',
                 controller: 'ModalWindowController',
                 resolve: {
                     msg: function () {
@@ -36,7 +37,26 @@ angular.module('gameApp')
                     }
                 }
             });
+
+            /*
+             var currentTab = '#tab_' + sectionName;
+             //console.log('currentTab: ' + currentTab);
+
+             $(currentTab).removeClass('active');
+             $(currentTab).next().addClass('active');
+
+             var currentTabContent = '#tabContent_' + sectionName;
+             console.log('currentTabContent: ' + currentTabContent);
+
+             $(sectionNameElem).closest('.tab-pane').removeClass('active');
+             $(sectionNameElem).closest('.tab-pane').next().addClass('active');
+
+             $scope.changeTab();
+             */
+
+
         };
+
 
         correctWords = [];
 
@@ -91,21 +111,51 @@ angular.module('gameApp')
                 outOfNumberTotal = parseInt($('.total-score-all-sections').text());
 
 
-                console.log("scoreCounterLocal: " + scoreCounterLocal + " outOfNumberLocal: " + outOfNumberLocal);
+                // console.log("scoreCounterLocal: " + scoreCounterLocal + " outOfNumberLocal: " + outOfNumberLocal);
 
 
-                if (scoreCounterLocal == outOfNumberLocal) {
-
-                    if (outOfNumberLocal == 1) {
-                        congratsMsg = outOfNumberLocal + " " + partOfSpeechTitle.substring(0, partOfSpeechTitle.length - 1) + ": " + correctWords.join(', ');
-                    } else {
-                        congratsMsg = outOfNumberLocal + " " + partOfSpeechTitle + ": " + correctWords.join(', ');
-                    }
+                if ((scoreCounterLocal == outOfNumberLocal) && (scoreCounterTotal !== outOfNumberTotal)) {
 
 
-                    $scope.open(congratsMsg, lookingForPartOfSpeech);
-                    correctWords = [];
-                    console.log("scoreCounterTotal: " + scoreCounterTotal);
+                     if (outOfNumberLocal == 1) {
+                     congratsMsg = outOfNumberLocal + " " + partOfSpeechTitle.substring(0, partOfSpeechTitle.length - 1) + ": " + correctWords.join(', ');
+                     } else {
+                     congratsMsg = outOfNumberLocal + " " + partOfSpeechTitle + ": " + correctWords.join(', ');
+                     }
+
+
+                     $scope.open(congratsMsg, 'congratsTryNext');
+                     correctWords = [];
+
+
+                    var lookingForPartOfSpeechElem = '#' + lookingForPartOfSpeech;
+
+                    var currentTab = '#tab_' + lookingForPartOfSpeech;
+                    //console.log('currentTab: ' + currentTab);
+
+                    $(currentTab).removeClass('active');
+                    $(currentTab).next().addClass('active');
+
+                    var currentTabContent = '#tabContent_' + lookingForPartOfSpeech;
+                    console.log('currentTabContent: ' + currentTabContent);
+
+                    $(lookingForPartOfSpeechElem).closest('.tab-pane').removeClass('active');
+                    $(lookingForPartOfSpeechElem).closest('.tab-pane').next().addClass('active');
+
+                    $scope.changeTab();
+
+
+
+
+                }
+
+                if (scoreCounterTotal == outOfNumberTotal) {
+                    finalCongratsMsg = "Yay, you've completed the challenge!!!";
+
+
+                    $scope.open(finalCongratsMsg, 'congratsFinal');
+
+
                 }
 
 
@@ -122,7 +172,10 @@ angular.module('gameApp')
 
             //reset level - reset score, clean up the paragraph.
             window.scoreCounterLocal = 0;
-            $('a').removeClass('correct').removeClass('wrong');
+
+            //$('a').removeClass('correct').removeClass('wrong');
+
+
             // $('.total-current-score').text(scoreCounterTotal);
             correctWords = [];
 

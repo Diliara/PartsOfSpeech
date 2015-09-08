@@ -11,13 +11,13 @@ angular.module('gameApp')
 
         window.scoreCounter = 0;
 
-        $scope.open = function (msg, sectionName) {
+        $scope.open = function (msg, loadTemplate) {
 
             // console.log('sectionName: ' + sectionName);
-            $('#' + sectionName + ' .text a').addClass('disabled');
+            //$('#' + sectionName + ' .text a').addClass('disabled');
 
             var modalInstance = $modal.open({
-                templateUrl: 'partials/congratulations.html',
+                templateUrl: 'partials/feedback/' + loadTemplate + '.html',
                 controller: 'ModalWindowController',
                 resolve: {
                     msg: function () {
@@ -86,7 +86,7 @@ angular.module('gameApp')
                     }
 
 
-                    $scope.open(congratsMsg, lookingForPartOfSpeech);
+                    $scope.open(congratsMsg, 'congratsTryDifferent');
                     correctWords = [];
                 }
 

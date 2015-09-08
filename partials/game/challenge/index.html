@@ -6,7 +6,7 @@
             <div class="col-lg-9 col-md-8">
                 <section class="game-area">
                     <tabset class="tabs-left">
-                        <tab ng-repeat="section in sections" heading="{{section.title}}" active="section.active" disabled="section.disabled" ng-click="changeTab()">
+                        <tab ng-repeat="section in sections" heading="{{section.title}}" active="section.active" disabled="section.disabled" ng-click="changeTab()" id="tab_{{section.partOfSpeech}}">
 
                             <div class="task-tab-content" id="{{section.partOfSpeech}}">
                                 <div>
