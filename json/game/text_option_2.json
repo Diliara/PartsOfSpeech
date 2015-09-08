@@ -7,7 +7,7 @@
     },
     {
         "wordItself": "has",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "verb",
         "btnStatus": "enabled"
     },
     {
@@ -17,7 +17,7 @@
     },
     {
         "wordItself": "20",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "determiner",
         "btnStatus": "enabled"
     },
     {
@@ -27,7 +27,7 @@
     },
     {
         "wordItself": "of",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "preposition",
         "btnStatus": "enabled"
     },
     {
@@ -42,7 +42,7 @@
     },
     {
         "wordItself": "at",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "preposition",
         "btnStatus": "enabled"
     },
     {
@@ -67,7 +67,7 @@
     },
     {
         "wordItself": "held",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "verb",
         "btnStatus": "enabled"
     },
     {
@@ -82,7 +82,7 @@
     },
     {
         "wordItself": "at",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "preposition",
         "btnStatus": "enabled"
     },
     {
@@ -142,12 +142,12 @@
     },
     {
         "wordItself": "was",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "verb",
         "btnStatus": "enabled"
     },
     {
         "wordItself": "a",
-        "partOfSpeech": "determiner",
+        "partOfSpeech": "determiner article",
         "btnStatus": "enabled"
     },
     {
@@ -162,7 +162,7 @@
     },
     {
         "wordItself": "of",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "preposition",
         "btnStatus": "enabled"
     },
     {
@@ -187,7 +187,7 @@
     },
     {
         "wordItself": "$150",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "determiner",
         "btnStatus": "enabled"
     },
     {
@@ -227,12 +227,12 @@
     },
     {
         "wordItself": "has",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "verb",
         "btnStatus": "enabled"
     },
     {
         "wordItself": "a",
-        "partOfSpeech": "determiner",
+        "partOfSpeech": "determiner article",
         "btnStatus": "enabled"
     },
     {
@@ -242,7 +242,7 @@
     },
     {
         "wordItself": "in",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "preposition",
         "btnStatus": "enabled"
     },
     {
@@ -257,7 +257,7 @@
     },
     {
         "wordItself": "from",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "preposition",
         "btnStatus": "enabled"
     },
     {
@@ -277,7 +277,7 @@
     },
     {
         "wordItself": "of",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "preposition",
         "btnStatus": "enabled"
     },
     {
@@ -292,7 +292,7 @@
     },
     {
         "wordItself": "an",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "determiner article",
         "btnStatus": "enabled"
     },
     {
@@ -302,7 +302,7 @@
     },
     {
         "wordItself": "from",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "preposition",
         "btnStatus": "enabled"
     },
     {
@@ -317,7 +317,7 @@
     },
     {
         "wordItself": "of",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "preposition",
         "btnStatus": "enabled"
     },
     {
@@ -327,7 +327,7 @@
     },
     {
         "wordItself": "at",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "preposition",
         "btnStatus": "enabled"
     },
     {
@@ -342,7 +342,7 @@
     },
     {
         "wordItself": "of",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "preposition",
         "btnStatus": "enabled"
     },
     {
@@ -367,7 +367,7 @@
     },
     {
         "wordItself": "an",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "determiner article",
         "btnStatus": "enabled"
     },
     {
@@ -382,7 +382,7 @@
     },
     {
         "wordItself": "of",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "preposition",
         "btnStatus": "enabled"
     },
     {
@@ -402,7 +402,7 @@
     },
     {
         "wordItself": "of",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "preposition",
         "btnStatus": "enabled"
     },
     {
@@ -432,12 +432,12 @@
     },
     {
         "wordItself": "sits",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "verb",
         "btnStatus": "enabled"
     },
     {
         "wordItself": "on",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "preposition",
         "btnStatus": "enabled"
     },
     {
@@ -452,7 +452,7 @@
     },
     {
         "wordItself": "of",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "preposition",
         "btnStatus": "enabled"
     },
     {
@@ -472,7 +472,7 @@
     },
     {
         "wordItself": "of",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "preposition",
         "btnStatus": "enabled"
     },
     {

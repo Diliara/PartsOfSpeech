@@ -6,7 +6,7 @@
     },
     {
         "wordItself": "has",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "verb",
         "btnStatus": "enabled"
     },
     {
@@ -16,7 +16,7 @@
     },
     {
         "wordItself": "a",
-        "partOfSpeech": "determiner",
+        "partOfSpeech": "determiner article",
         "btnStatus": "enabled"
     },
     {
@@ -66,7 +66,7 @@
     },
     {
         "wordItself": "in",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "preposition",
         "btnStatus": "enabled"
     },
     {
@@ -76,7 +76,7 @@
     },
     {
         "wordItself": "for",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "preposition",
         "btnStatus": "enabled"
     },
     {
@@ -86,7 +86,7 @@
     },
     {
         "wordItself": "25",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "determiner",
         "btnStatus": "enabled"
     },
     {
@@ -107,7 +107,7 @@
     },
     {
         "wordItself": "applies",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "verb",
         "btnStatus": "enabled"
     },
     {
@@ -142,12 +142,12 @@
     },
     {
         "wordItself": "to",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "preposition",
         "btnStatus": "enabled"
     },
     {
         "wordItself": "advise",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "verb",
         "btnStatus": "enabled"
     },
     {
@@ -157,18 +157,18 @@
     },
     {
         "wordItself": "invest",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "verb",
         "btnStatus": "enabled"
     },
     {
         "wordItself": "in",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "preposition",
         "btnStatus": "enabled"
     },
     {
         "wordItself": ",",
         "partOfSpeech": "undefined",
-        "btnStatus": "enabled"
+        "btnStatus": "disabled"
     },
     {
         "wordItself": "and",
@@ -177,7 +177,7 @@
     },
     {
         "wordItself": "build",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "verb",
         "btnStatus": "enabled"
     },
     {
@@ -197,12 +197,12 @@
     },
     {
         "wordItself": "with",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "preposition",
         "btnStatus": "enabled"
     },
     {
         "wordItself": "a",
-        "partOfSpeech": "determiner",
+        "partOfSpeech": "determiner article",
         "btnStatus": "enabled"
     },
     {
@@ -242,7 +242,7 @@
     },
     {
         "wordItself": "of",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "preposition",
         "btnStatus": "enabled"
     },
     {
@@ -287,7 +287,7 @@
     },
     {
         "wordItself": "an",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "determiner article",
         "btnStatus": "enabled"
     },
     {
@@ -297,7 +297,7 @@
     },
     {
         "wordItself": "to",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "preposition",
         "btnStatus": "enabled"
     },
     {
@@ -332,7 +332,7 @@
     },
     {
         "wordItself": "in",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "preposition",
         "btnStatus": "enabled"
     },
     {
@@ -358,12 +358,12 @@
     },
     {
         "wordItself": "holds",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "verb",
         "btnStatus": "enabled"
     },
     {
         "wordItself": "a",
-        "partOfSpeech": "determiner",
+        "partOfSpeech": "determiner article",
         "btnStatus": "enabled"
     },
     {
@@ -373,7 +373,7 @@
     },
     {
         "wordItself": "in",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "preposition",
         "btnStatus": "enabled"
     },
     {
@@ -383,7 +383,7 @@
     },
     {
         "wordItself": "from",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "preposition",
         "btnStatus": "enabled"
     },
     {
@@ -398,7 +398,7 @@
     },
     {
         "wordItself": "of",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "preposition",
         "btnStatus": "enabled"
     },
     {
@@ -413,7 +413,7 @@
     },
     {
         "wordItself": "an",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "determiner article",
         "btnStatus": "enabled"
     },
     {
@@ -423,7 +423,7 @@
     },
     {
         "wordItself": "from",
-        "partOfSpeech": "undefined",
+        "partOfSpeech": "preposition",
         "btnStatus": "enabled"
     },
     {
