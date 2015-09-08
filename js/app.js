@@ -1,1 +1,1 @@
-angular.module('gameApp', ['ngRoute', 'ui.bootstrap', 'timer']);
+angular.module('gameApp', ['ngRoute', 'ui.bootstrap']);
