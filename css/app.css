@@ -335,7 +335,7 @@ p {
 
 .section-score {
   font-family: 'Alegreya Sans SC', sans-serif;
-  font-size: 14px;
+  font-size: 15px;
 }
 .section-score .section-score-current {
   color: #43D01C;
@@ -345,19 +345,28 @@ p {
   display: none;
 }
 
+.timer {
+  padding-right: 10px;
+}
 .timer .countdown, .timer .initialTimer {
   font-family: 'Luckiest Guy', cursive;
   color: #ffffff;
   -webkit-text-fill-color: #ffffff;
-  -webkit-text-stroke-color: #ffbc95;
+  -webkit-text-stroke-color: rgba(255, 0, 30, 0.67);
   -webkit-text-stroke-width: 1px;
-  color: #ffbc95;
-  padding: 20px 1px 10px 10px;
-  font-size: 37px;
+  font-size: 40px;
 }
-.timer .countdown .unit, .timer .initialTimer .unit {
+.timer .countdown {
+  padding: 20px 1px 10px 10px;
+}
+.timer .countdown .unit {
   font-size: 20px;
   font-weight: normal;
+  padding-left: 8px;
+}
+.timer .initialTimer {
+  padding-left: 10px;
+  margin-right: -10px;
 }
 
 .modal-header {
@@ -483,6 +492,14 @@ p {
   }
   .tabs-right > .nav-tabs .active > a {
     background-color: #BAEAFF;
+  }
+
+  .disable-not-active li:not(.active) {
+    pointer-events: none;
+  }
+  .disable-not-active li:not(.active) a {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.4);
   }
 
   .tabs-left {

@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-lg-9 col-md-8">
                 <section class="game-area">
-                    <tabset class="tabs-left">
+                    <tabset class="tabs-left disable-not-active">
                         <tab ng-repeat="section in sections" heading="{{section.title}}" active="section.active" disabled="section.disabled" ng-click="changeTab()" id="tab_{{section.partOfSpeech}}">
 
                             <div class="task-tab-content" id="{{section.partOfSpeech}}">
@@ -13,7 +13,7 @@
 
                                     <button class="btn btn-start" ng-click="startChallenge('tab_' + section.taskNumber, section.timer)" type="button">
                                         <span>Task:</span><br>
-                                        <span class="task-description">Complete all the tasks within given time.</span><br>
+                                        <span class="task-description">Complete ALL the tasks within the given time.</span><br>
                                         Start
 
                                     </button>
@@ -78,9 +78,7 @@
 
                     <div id="start-stop-timer" class="set-timer">
                         <p class="timer">
-                            <span class="initialTimer"></span>
-                            <timer autostart="false" class="countdown" countdown="getTimerForASection(getTotalNumberFromAllSections('.total-number-for-the-section'), 10)" interval="1000">{{ countdown }}
-                                <span class="unit">s</span></timer>
+                            <span class="initialTimer"></span><timer autostart="false" class="countdown" countdown="getTimerForASection(getTotalNumberFromAllSections('.total-number-for-the-section'), 10)" interval="1000">{{ countdown }}<span class="unit">s</span></timer>
                         </p>
 
                        <button id="start-stop-btn" class="btn" onclick="stopResumeTimer('start-stop-timer', this)" type="button">Start</button>

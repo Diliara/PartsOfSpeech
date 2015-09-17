@@ -2,7 +2,7 @@ angular.module('gameApp')
 
     .controller('GameChallengeSectionsController', function ($scope, $http, $modal) {
 
-        $http.get('json/game/sections_1-3.json').success(function (sectionsContent) {
+        $http.get('json/game/sections_1-6.json').success(function (sectionsContent) {
             $scope.sections = sectionsContent;
         });
 
@@ -147,7 +147,7 @@ angular.module('gameApp')
                     $(currentTab).next().addClass('active');
 
                     var currentTabContent = '#tabContent_' + lookingForPartOfSpeech;
-                    console.log('currentTabContent: ' + currentTabContent);
+                    //console.log('currentTabContent: ' + currentTabContent);
 
                     $(lookingForPartOfSpeechElem).closest('.tab-pane').removeClass('active');
                     $(lookingForPartOfSpeechElem).closest('.tab-pane').next().addClass('active');
@@ -233,7 +233,7 @@ angular.module('gameApp')
         $scope.getTimerForASection = function (totalNumberFromAllSections, secondsPerOneInstance) {
 
             var numberOfSeconds = totalNumberFromAllSections * secondsPerOneInstance;
-            console.log(numberOfSeconds);
+            //console.log(numberOfSeconds);
 
             $('.initialTimer').text(numberOfSeconds);
 
