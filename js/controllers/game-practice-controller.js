@@ -1,7 +1,7 @@
 angular.module('gameApp')
     .controller('GamePracticeSectionsController', function ($scope, $http, $modal) {
 
-        $http.get('json/game/sections_1-6.json').success(function (sectionsContent) {
+        $http.get('json/game/sections_1-3.json').success(function (sectionsContent) {
             $scope.sections = sectionsContent;
         });
 
@@ -18,7 +18,7 @@ angular.module('gameApp')
 
             var modalInstance = $modal.open({
                 templateUrl: 'partials/feedback/' + loadTemplate + '.html',
-                controller: 'ModalWindowController',
+                controller: 'GamePracticeModalWindowController',
                 resolve: {
                     msg: function () {
                         $scope.message = angular.copy(msg);
@@ -127,14 +127,7 @@ angular.module('gameApp')
         };
 
 
-    })
-    .controller('ModalWindowController', function ($scope, $modalInstance, msg) {
-        //$('.text a').addClass('disabled');
-        $scope.message = msg;
-        $scope.ok = function () {
-            $modalInstance.close();
-        };
-
     });
+
 
 

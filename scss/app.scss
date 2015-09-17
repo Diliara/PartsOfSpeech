@@ -461,27 +461,23 @@ p {
   }
 }
 
+#start-stop-btn {
+  display: none;
+}
+
 .timer {
 
-  .countdown {
+  .countdown, .initialTimer {
     @include font-stroke($color-lightest, $color-challenge, 1px);
     color: $color-challenge;
 
     padding: 20px 1px 10px 10px;
 
+    font-size: 37px;
 
-    .item {
-      font-size: 37px;
-    }
-
-    .label {
-      text-transform: uppercase;
-      font-size: 25px;
+    .unit {
+      font-size: 20px;
       font-weight: normal;
-    }
-
-    .item-hh {
-      display: none;
     }
 
   }
@@ -527,6 +523,13 @@ p {
   text-align: center;
 
   margin-bottom: 10px;
+
+  .task-description {
+    font-size: 0.6em;
+    line-height: 0.5em;
+    font-style: italic;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif
+   }
 
 }
 

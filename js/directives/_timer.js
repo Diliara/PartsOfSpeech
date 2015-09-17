@@ -16,6 +16,8 @@ var timerModule = angular.module('timer', [])
             },
             controller: ['$scope', '$element', '$attrs', '$timeout', 'I18nService', '$interpolate', 'progressBarService', function ($scope, $element, $attrs, $timeout, I18nService, $interpolate, progressBarService) {
 
+
+
                 // Checking for trim function since IE8 doesn't have it
                 // If not a function, create tirm with RegEx to mimic native trim
                 if (typeof String.prototype.trim !== 'function') {
@@ -34,8 +36,8 @@ var timerModule = angular.module('timer', [])
                 $scope.fallback = $scope.fallback || 'en';
 
                 //allow to change the language of the directive while already launched
-                $scope.$watch('language', function(newVal, oldVal) {
-                    if(newVal !== undefined) {
+                $scope.$watch('language', function (newVal, oldVal) {
+                    if (newVal !== undefined) {
                         i18nService.init(newVal, $scope.fallback);
                     }
                 });
@@ -90,13 +92,13 @@ var timerModule = angular.module('timer', [])
                     }
                 }
 
-                $scope.$watch('startTimeAttr', function(newValue, oldValue) {
+                $scope.$watch('startTimeAttr', function (newValue, oldValue) {
                     if (newValue !== oldValue && $scope.isRunning) {
                         $scope.start();
                     }
                 });
 
-                $scope.$watch('endTimeAttr', function(newValue, oldValue) {
+                $scope.$watch('endTimeAttr', function (newValue, oldValue) {
                     if (newValue !== oldValue && $scope.isRunning) {
                         $scope.start();
                     }
@@ -156,7 +158,7 @@ var timerModule = angular.module('timer', [])
                 function calculateTimeUnits() {
                     var timeUnits = {}; //will contains time with units
 
-                    if ($attrs.startTime !== undefined){
+                    if ($attrs.startTime !== undefined) {
                         $scope.millis = moment().diff(moment($scope.startTimeAttr));
                     }
 
@@ -210,9 +212,9 @@ var timerModule = angular.module('timer', [])
                     $scope.secondsS = ($scope.seconds === 1) ? '' : 's';
                     $scope.minutesS = ($scope.minutes === 1) ? '' : 's';
                     $scope.hoursS = ($scope.hours === 1) ? '' : 's';
-                    $scope.daysS = ($scope.days === 1)? '' : 's';
-                    $scope.monthsS = ($scope.months === 1)? '' : 's';
-                    $scope.yearsS = ($scope.years === 1)? '' : 's';
+                    $scope.daysS = ($scope.days === 1) ? '' : 's';
+                    $scope.monthsS = ($scope.months === 1) ? '' : 's';
+                    $scope.yearsS = ($scope.years === 1) ? '' : 's';
 
 
                     // new plural-singular unit decision functions (for custom units and multilingual support)
@@ -285,7 +287,7 @@ var timerModule = angular.module('timer', [])
                         $scope.stop();
                         $scope.millis = 0;
                         calculateTimeUnits();
-                        if($scope.finishCallback) {
+                        if ($scope.finishCallback) {
                             $scope.$eval($scope.finishCallback);
                         }
                         return;
@@ -305,16 +307,16 @@ var timerModule = angular.module('timer', [])
                     }
                     else if ($scope.countdown <= 0) {
                         $scope.stop();
-                        if($scope.finishCallback) {
+                        if ($scope.finishCallback) {
                             $scope.$eval($scope.finishCallback);
                         }
                     }
 
-                    if(typeTimer !== null){
+                    if (typeTimer !== null) {
                         //calculate progress bar
                         $scope.progressBar = progressBarService.calculateProgressBar($scope.startTime, $scope.millis, $scope.endTime, $scope.countdownattr);
 
-                        if($scope.progressBar === 100){
+                        if ($scope.progressBar === 100) {
                             $scope.displayProgressActive = ''; //No more Bootstrap active effect
                         }
                     }
@@ -328,6 +330,6 @@ var timerModule = angular.module('timer', [])
     }]);
 
 /* commonjs package manager support (eg componentjs) */
-if (typeof module !== "undefined" && typeof exports !== "undefined" && module.exports === exports){
+if (typeof module !== "undefined" && typeof exports !== "undefined" && module.exports === exports) {
     module.exports = timerModule;
 }

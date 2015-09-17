@@ -2,7 +2,7 @@ angular.module('gameApp')
 
     .controller('GameChallengeSectionsController', function ($scope, $http, $modal) {
 
-        $http.get('json/game/sections_1-6.json').success(function (sectionsContent) {
+        $http.get('json/game/sections_1-3.json').success(function (sectionsContent) {
             $scope.sections = sectionsContent;
         });
 
@@ -17,6 +17,12 @@ angular.module('gameApp')
         $scope.startChallenge = function () {
             $('.start-challenge').slideDown();
             $('.btn-start').hide();
+            $('.initialTimer').hide();
+            /*
+             $('#start-stop-btn').show().click();
+             */
+
+            $('#start-stop-btn').click();
 
 
         };
@@ -24,13 +30,16 @@ angular.module('gameApp')
 
         $scope.open = function (msg, loadTemplate) {
 
+            $('#start-stop-btn').click();
+
+
             //  console.log('sectionName: ' + sectionName);
             //var sectionNameElem = '#' + sectionName;
             //$(sectionNameElem + ' .text a').addClass('disabled');
 
             var modalInstance = $modal.open({
                 templateUrl: 'partials/feedback/' + loadTemplate + '.html',
-                controller: 'ModalWindowController',
+                controller: 'GameChallengeModalWindowController',
                 resolve: {
                     msg: function () {
                         $scope.message = angular.copy(msg);
@@ -118,15 +127,15 @@ angular.module('gameApp')
                 if ((scoreCounterLocal == outOfNumberLocal) && (scoreCounterTotal !== outOfNumberTotal)) {
 
 
-                     if (outOfNumberLocal == 1) {
-                     congratsMsg = outOfNumberLocal + " " + partOfSpeechTitle.substring(0, partOfSpeechTitle.length - 1) + ": " + correctWords.join(', ');
-                     } else {
-                     congratsMsg = outOfNumberLocal + " " + partOfSpeechTitle + ": " + correctWords.join(', ');
-                     }
+                    if (outOfNumberLocal == 1) {
+                        congratsMsg = outOfNumberLocal + " " + partOfSpeechTitle.substring(0, partOfSpeechTitle.length - 1) + ": " + correctWords.join(', ');
+                    } else {
+                        congratsMsg = outOfNumberLocal + " " + partOfSpeechTitle + ": " + correctWords.join(', ');
+                    }
 
 
-                     $scope.open(congratsMsg, 'congratsTryNext');
-                     correctWords = [];
+                    $scope.open(congratsMsg, 'congratsTryNext');
+                    correctWords = [];
 
 
                     var lookingForPartOfSpeechElem = '#' + lookingForPartOfSpeech;
@@ -144,8 +153,6 @@ angular.module('gameApp')
                     $(lookingForPartOfSpeechElem).closest('.tab-pane').next().addClass('active');
 
                     $scope.changeTab();
-
-
 
 
                 }
@@ -188,7 +195,7 @@ angular.module('gameApp')
         };
 
         $scope.getTotalNumberOfInstance = function (partOfSpeech) {
-            // console.log("partOfSpeech: " + partOfSpeech);
+
 
             var collectionOfInstances = $('#' + partOfSpeech).find('.' + partOfSpeech);
             var totalNumberOfInstance = [];
@@ -198,12 +205,11 @@ angular.module('gameApp')
                 }
             }
 
-            // console.log("numberOfInstances: " + totalNumberOfInstance.length);
-
+            //console.log("partOfSpeech: " + partOfSpeech + "; numberOfInstances: " + totalNumberOfInstance.length);
             return totalNumberOfInstance.length;
 
-
         };
+
 
         $scope.getTotalNumberFromAllSections = function (totalNumberForTheSection) {
 
@@ -221,22 +227,30 @@ angular.module('gameApp')
         };
 
 
-/*
-        $scope.add5Seconds = function () {
-            $scope.$broadcast('timer-add-cd-seconds', 5);
-            console.log("add 5");
+        $scope.timerIndex = 0;
+
+
+        $scope.getTimerForASection = function (totalNumberFromAllSections, secondsPerOneInstance) {
+
+            var numberOfSeconds = totalNumberFromAllSections * secondsPerOneInstance;
+            console.log(numberOfSeconds);
+
+            $('.initialTimer').text(numberOfSeconds);
+
+            return Number(numberOfSeconds);
+
+
         }
-*/
-
-    })
 
 
-    .controller('ModalWindowController', function ($scope, $modalInstance, msg) {
-
-        $scope.message = msg;
-        $scope.ok = function () {
-            $modalInstance.close();
-        };
+        /*
+         $scope.add5Seconds = function () {
+         $scope.$broadcast('timer-add-cd-seconds', 5);
+         console.log("add 5");
+         }
+         */
 
     });
+
+
 
