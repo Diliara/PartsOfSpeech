@@ -12,5 +12,7 @@ angular.module('gameApp')
         $scope.okFinal = function () {
             $modalInstance.close();
         };
+        
+
 
     });
