@@ -1,13 +1,24 @@
 angular.module('gameApp')
-    .controller('GamePracticeSectionsController', function ($scope, $http, $modal) {
+    .controller('GamePracticeSectionsController', function ($scope, $http, $modal, $location) {
 
-        $http.get('json/game/sections_1-3.json').success(function (sectionsContent) {
-            $scope.sections = sectionsContent;
-        });
+        if ((typeof globalSectionId === 'undefined') || ( $.inArray(globalSectionId, possibleSections) == -1)) {
+            console.log("no such location");
+            $location.path("/home");
+        } else {
+            // console.log("$.inArray(globalSectionId, possibleSections : " + $.inArray(globalSectionId, possibleSections));
+            $http.get('json/game/sections_' + globalSectionId + '.json').success(function (sectionsContent) {
+                $scope.sections = sectionsContent;
+            });
+        }
+
 
         $scope.getTemplateUrl = function (name) {
             return 'partials/game/definitions/' + name + '.html';
         };
+
+        $scope.getSectionId = function () {
+            return globalSectionId;
+        }
 
         window.scoreCounter = 0;
 

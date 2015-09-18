@@ -14,9 +14,13 @@ angular.module('gameApp')
                 templateUrl: 'partials/test/challenge/index.html',
                 controller: 'TestChallengeController'
             })
+            .when('/game-development', {
+                templateUrl: 'partials/game/development.html'
+            })
 
-            .when('/game', {
-                templateUrl: 'partials/game/index.html'
+            .when('/game:sectionId', {
+                templateUrl: 'partials/game/index.html',
+                controller: 'GameController'
             })
             .when('/game/practice', {
                 templateUrl: 'partials/game/practice/index.html',

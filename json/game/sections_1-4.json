@@ -18,15 +18,5 @@
         "taskNumber": 4,
         "title": "Prepositions",
         "partOfSpeech": "preposition"
-    },
-    {
-        "taskNumber": 5,
-        "title": "Verbs",
-        "partOfSpeech": "verb"
-    },
-    {
-        "taskNumber": 6,
-        "title": "Conjunctions",
-        "partOfSpeech": "conjunction"
     }
 ]
