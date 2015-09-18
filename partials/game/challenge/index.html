@@ -78,12 +78,10 @@
 
                     <div id="start-stop-timer" class="set-timer">
                         <p class="timer">
-                            <span class="initialTimer"></span>
-                            <timer autostart="false" class="countdown" countdown="getTimerForASection(getTotalNumberFromAllSections('.total-number-for-the-section'), 10)" interval="1000">{{ countdown }}<span class="unit">s</span>
-                            </timer>
+                            <span class="initialTimer"></span><timer autostart="false" class="countdown" countdown="getTimerForASection(getTotalNumberFromAllSections('.total-number-for-the-section'), 10)" interval="1000">{{ countdown }}<span class="unit">s</span></timer>
                         </p>
 
-                        <button id="start-stop-btn" class="btn" onclick="stopResumeTimer('start-stop-timer', this)" type="button">Start</button>
+                       <button id="start-stop-btn" class="btn" onclick="stopResumeTimer('start-stop-timer', this)" type="button">Start</button>
 
                     </div>
 
@@ -104,3 +102,4 @@
 
     </div>
 </div>
+

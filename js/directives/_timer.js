@@ -1,6 +1,6 @@
 var timerModule = angular.module('timer', [])
     .directive('timer', ['$compile', function ($compile) {
-        return {
+        return  {
             restrict: 'EA',
             replace: false,
             scope: {
@@ -128,14 +128,7 @@ var timerModule = angular.module('timer', [])
                 $scope.stop = $scope.pause = $element[0].stop = $element[0].pause = function () {
                     var timeoutId = $scope.timeoutId;
                     $scope.clear();
-                    $scope.$emit('timer-stopped', {
-                        timeoutId: timeoutId,
-                        millis: $scope.millis,
-                        seconds: $scope.seconds,
-                        minutes: $scope.minutes,
-                        hours: $scope.hours,
-                        days: $scope.days
-                    });
+                    $scope.$emit('timer-stopped', {timeoutId: timeoutId, millis: $scope.millis, seconds: $scope.seconds, minutes: $scope.minutes, hours: $scope.hours, days: $scope.days});
                 };
 
                 $scope.clear = $element[0].clear = function () {
@@ -307,14 +300,12 @@ var timerModule = angular.module('timer', [])
                         $scope.$digest();
                     }, $scope.interval - adjustment);
 
-                    $scope.$emit('timer-tick', {
-                        timeoutId: $scope.timeoutId,
-                        millis: $scope.millis
-                    });
+                    $scope.$emit('timer-tick', {timeoutId: $scope.timeoutId, millis: $scope.millis});
 
                     if ($scope.countdown > 0) {
                         $scope.countdown--;
-                    } else if ($scope.countdown <= 0) {
+                    }
+                    else if ($scope.countdown <= 0) {
                         $scope.stop();
                         if ($scope.finishCallback) {
                             $scope.$eval($scope.finishCallback);
