@@ -45,7 +45,8 @@ angular.module('gameApp')
                         $scope.message = angular.copy(msg);
                         return $scope.message;
                     }
-                }
+                },
+                backdrop : 'static'
             });
 
             /*
