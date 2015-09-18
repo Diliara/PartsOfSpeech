@@ -16,7 +16,7 @@ $color-correct: #43D01C;
 $color-wrong: #DD3970;
 $color-btn: transparent;
 $color-counter: #0d003e;
-$color-timer: #fdffe3;
+$color-timer: rgba(255, 0, 30, 0.67);
 
 $color-phone-border: #ffd829;
 $color-tablet-border: #cfc9bf;
@@ -446,7 +446,7 @@ p {
 
 .section-score {
   font-family: 'Alegreya Sans SC', sans-serif;
-  font-size: 14px;
+  font-size: 15px;
 
   .section-score-current {
     color: $color-correct;
@@ -461,28 +461,34 @@ p {
   }
 }
 
+#start-stop-btn {
+  display: none;
+}
+
 .timer {
 
+  padding-right: 10px;
+
+  .countdown, .initialTimer {
+    @include font-stroke($color-lightest, $color-timer, 1px);
+
+    font-size: 40px;
+
+  }
+
   .countdown {
-    @include font-stroke($color-lightest, $color-challenge, 1px);
-    color: $color-challenge;
-
     padding: 20px 1px 10px 10px;
-
-    .item {
-      font-size: 37px;
-    }
-
-    .label {
-      text-transform: uppercase;
-      font-size: 25px;
+    .unit {
+      font-size: 20px;
       font-weight: normal;
+      padding-left: 8px;
     }
 
-    .item-hh {
-      display: none;
-    }
+  }
 
+  .initialTimer {
+    padding-left: 10px;
+    margin-right: -10px;
   }
 
 }
@@ -526,6 +532,13 @@ p {
   text-align: center;
 
   margin-bottom: 10px;
+
+  .task-description {
+    font-size: 0.6em;
+    line-height: 0.5em;
+    font-style: italic;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+  }
 
 }
 
@@ -606,6 +619,16 @@ p {
     .active > a {
       background-color: $color-sticky-practice;
 
+    }
+  }
+
+  .disable-not-active {
+    li:not(.active) {
+      pointer-events: none;
+      a {
+        background-color: transparentize($color-darkest, 0.9);
+        color: transparentize($color-darkest, 0.6);
+      }
     }
   }
 

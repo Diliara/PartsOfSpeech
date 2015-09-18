@@ -5,15 +5,15 @@
         <div class="row">
             <div class="col-lg-9 col-md-8">
                 <section class="game-area">
-                    <tabset class="tabs-left">
+                    <tabset class="tabs-left disable-not-active">
                         <tab ng-repeat="section in sections" heading="{{section.title}}" active="section.active" disabled="section.disabled" ng-click="changeTab()" id="tab_{{section.partOfSpeech}}">
 
                             <div class="task-tab-content" id="{{section.partOfSpeech}}">
                                 <div>
 
-                                    <button class="btn btn-start" ng-click="startChallenge('tab_' + section.taskNumber, section.timer)">
+                                    <button class="btn btn-start" ng-click="startChallenge('tab_' + section.taskNumber, section.timer)" type="button">
                                         <span>Task:</span><br>
-                                        <span>Complete all the tasks<br> within 5 minutes</span><br>
+                                        <span class="task-description">Complete ALL the tasks within the given time.</span><br>
                                         Start
 
                                     </button>
@@ -25,15 +25,7 @@
                                             <span class="part-of-speech">{{ section.title }}</span> in the paragraph.
                                         </p>
 
-
-                                        <!--
-                                        <p class="btn-openDefinition" ng-click="openDefinition()">{{ showHideDefinition ? "Hide Definition" : "Show Definition"}}</p>
-
-                                        <div ng-include="getTemplateUrl(section.partOfSpeech)" class="definition panel panel-default"></div>
-                                        -->
-
                                         <hr>
-
 
                                         <text-words></text-words>
 
@@ -55,6 +47,8 @@
                 </div>
 
                 <div class="display-scores">
+
+
                     <p>Score:</p>
                     <dl class="score-sections" id="score-{{section.partOfSpeech}}" ng-repeat="section in sections">
                         <dt>{{ section.title }}:</dt>
@@ -64,6 +58,7 @@
                             <span class="total-current-score-slash">/</span>
                             <span class="total-number-of-instances total-number-for-the-section">{{ getTotalNumberOfInstance(section.partOfSpeech) }}</span>
                         </dd>
+
                     </dl>
                     <hr>
 
@@ -80,9 +75,19 @@
                 <div class="display-timer">
                     <p>Timer:</p>
 
-                    <div class="set-timer">
-                        <p class="timer" timer-plugin="{css_class: 'countdown', always_show_days: false, with_labels: true, with_seconds: true, with_separators: true, label_dd: '', label_hh: '', label_mm: 'M', label_ss: 'S', separator: ' ', separator_days: ',' }">0h 5m 0s</p>
+
+                    <div id="start-stop-timer" class="set-timer">
+                        <p class="timer">
+                            <span class="initialTimer"></span>
+                            <timer autostart="false" class="countdown" countdown="getTimerForASection(getTotalNumberFromAllSections('.total-number-for-the-section'), 10)" interval="1000">{{ countdown }}<span class="unit">s</span>
+                            </timer>
+                        </p>
+
+                        <button id="start-stop-btn" class="btn" onclick="stopResumeTimer('start-stop-timer', this)" type="button">Start</button>
+
                     </div>
+
+
                 </div>
 
 
@@ -99,4 +104,3 @@
 
     </div>
 </div>
-

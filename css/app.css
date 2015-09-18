@@ -335,31 +335,38 @@ p {
 
 .section-score {
   font-family: 'Alegreya Sans SC', sans-serif;
-  font-size: 14px;
+  font-size: 15px;
 }
 .section-score .section-score-current {
   color: #43D01C;
 }
 
-.timer .countdown {
+#start-stop-btn {
+  display: none;
+}
+
+.timer {
+  padding-right: 10px;
+}
+.timer .countdown, .timer .initialTimer {
   font-family: 'Luckiest Guy', cursive;
   color: #ffffff;
   -webkit-text-fill-color: #ffffff;
-  -webkit-text-stroke-color: #ffbc95;
+  -webkit-text-stroke-color: rgba(255, 0, 30, 0.67);
   -webkit-text-stroke-width: 1px;
-  color: #ffbc95;
+  font-size: 40px;
+}
+.timer .countdown {
   padding: 20px 1px 10px 10px;
 }
-.timer .countdown .item {
-  font-size: 37px;
-}
-.timer .countdown .label {
-  text-transform: uppercase;
-  font-size: 25px;
+.timer .countdown .unit {
+  font-size: 20px;
   font-weight: normal;
+  padding-left: 8px;
 }
-.timer .countdown .item-hh {
-  display: none;
+.timer .initialTimer {
+  padding-left: 10px;
+  margin-right: -10px;
 }
 
 .modal-header {
@@ -399,6 +406,12 @@ p {
   height: 200px;
   text-align: center;
   margin-bottom: 10px;
+}
+.btn-start .task-description {
+  font-size: 0.6em;
+  line-height: 0.5em;
+  font-style: italic;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .btn-home, .btn-challenge, .btn-practice {
@@ -479,6 +492,14 @@ p {
   }
   .tabs-right > .nav-tabs .active > a {
     background-color: #BAEAFF;
+  }
+
+  .disable-not-active li:not(.active) {
+    pointer-events: none;
+  }
+  .disable-not-active li:not(.active) a {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.4);
   }
 
   .tabs-left {

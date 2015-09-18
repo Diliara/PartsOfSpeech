@@ -18,7 +18,7 @@ angular.module('gameApp')
 
             var modalInstance = $modal.open({
                 templateUrl: 'partials/feedback/' + loadTemplate + '.html',
-                controller: 'ModalWindowController',
+                controller: 'GamePracticeModalWindowController',
                 resolve: {
                     msg: function () {
                         $scope.message = angular.copy(msg);
@@ -127,14 +127,7 @@ angular.module('gameApp')
         };
 
 
-    })
-    .controller('ModalWindowController', function ($scope, $modalInstance, msg) {
-        //$('.text a').addClass('disabled');
-        $scope.message = msg;
-        $scope.ok = function () {
-            $modalInstance.close();
-        };
-
     });
+
 
 
