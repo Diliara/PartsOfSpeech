@@ -369,12 +369,20 @@ p {
   margin-right: -10px;
 }
 
-.modal-header {
+.modal-header-positive {
   background-color: rgba(67, 208, 28, 0.05);
 }
 
-.modal-title {
+.modal-header-negative {
+  background-color: rgba(221, 57, 112, 0.05);
+}
+
+.modal-title-positive {
   color: #40c71b;
+}
+
+.modal-title-negative {
+  color: #dc306a;
 }
 
 .message {
@@ -383,7 +391,7 @@ p {
   padding-top: 10px;
 }
 
-.congratsMsg {
+.feedbackMsg {
   font-style: italic;
   margin-left: 20px;
   padding-bottom: 10px;

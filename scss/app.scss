@@ -493,12 +493,20 @@ p {
 
 }
 
-.modal-header {
+.modal-header-positive {
   background-color: transparentize($color-correct, 0.95);
 }
 
-.modal-title {
+.modal-header-negative {
+  background-color: transparentize($color-wrong, 0.95);
+}
+
+.modal-title-positive {
   color: darken($color-correct, 2%);
+}
+
+.modal-title-negative {
+  color: darken($color-wrong, 2%);
 }
 
 .message {
@@ -507,7 +515,7 @@ p {
   padding-top: 10px;
 }
 
-.congratsMsg {
+.feedbackMsg {
   font-style: italic;
   margin-left: 20px;
   padding-bottom: 10px;

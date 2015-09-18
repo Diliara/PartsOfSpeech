@@ -12,7 +12,12 @@ angular.module('gameApp')
         $scope.okFinal = function () {
             $modalInstance.close();
         };
-        
+
+        $scope.okTryAgain = function () {
+            $modalInstance.close();
+            location.reload();
+
+        };
 
 
     });

@@ -2,7 +2,7 @@ angular.module('gameApp')
 
     .controller('GameChallengeSectionsController', function ($scope, $http, $modal) {
 
-        $http.get('json/game/sections_1-6.json').success(function (sectionsContent) {
+        $http.get('json/game/sections_1-3.json').success(function (sectionsContent) {
             $scope.sections = sectionsContent;
         });
 
@@ -28,7 +28,7 @@ angular.module('gameApp')
         };
 
 
-        $scope.open = function (msg, loadTemplate) {
+        $scope.openModalWindow = function (msg, loadTemplate) {
 
             $('#start-stop-btn').click();
 
@@ -134,7 +134,7 @@ angular.module('gameApp')
                     }
 
 
-                    $scope.open(congratsMsg, 'congratsTryNext');
+                    $scope.openModalWindow(congratsMsg, 'congratsTryNext');
                     correctWords = [];
 
 
@@ -158,12 +158,7 @@ angular.module('gameApp')
                 }
 
                 if (scoreCounterTotal == outOfNumberTotal) {
-                    finalCongratsMsg = "Yay, you've completed the challenge!!!";
-
-
-                    $scope.open(finalCongratsMsg, 'congratsFinal');
-
-
+                    $scope.openModalWindow("Yay, you've completed the challenge!!!", 'congratsFinal');
                 }
 
 
@@ -243,12 +238,18 @@ angular.module('gameApp')
         }
 
 
-        /*
-         $scope.add5Seconds = function () {
-         $scope.$broadcast('timer-add-cd-seconds', 5);
-         console.log("add 5");
-         }
-         */
+
+        $scope.callbackTimer = {};
+       // $scope.callbackTimer.status = 'Running';
+       // $scope.callbackTimer.callbackCount = 0;
+
+        $scope.callbackTimer.finished = function () {
+          //  $scope.callbackTimer.status = 'COMPLETE!!';
+          //  $scope.callbackTimer.callbackCount++;
+            $scope.openModalWindow("You are out of time. Try again!", 'gameOverOutOfTime');
+            $scope.$apply();
+        };
+
 
     });
 

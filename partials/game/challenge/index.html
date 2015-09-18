@@ -79,10 +79,12 @@
                     <div id="start-stop-timer" class="set-timer">
                         <p class="timer">
                             <span class="initialTimer"></span>
-                            <timer autostart="false" class="countdown" countdown="getTimerForASection(getTotalNumberFromAllSections('.total-number-for-the-section'), 10)" interval="1000">{{ countdown }}<span class="unit">s</span>
+                            <timer autostart="false" class="countdown" countdown="getTimerForASection(getTotalNumberFromAllSections('.total-number-for-the-section'), 10)" interval="1000" finish-callback="callbackTimer.finished()">{{ countdown }} <span class="unit">s</span>
                             </timer>
-                        </p>
+                          </p>
 
+
+                        <!--Hidden Button -->
                         <button id="start-stop-btn" class="btn" onclick="stopResumeTimer('start-stop-timer', this)" type="button">Start</button>
 
                     </div>
