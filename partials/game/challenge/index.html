@@ -11,7 +11,7 @@
                             <div class="task-tab-content" id="{{section.partOfSpeech}}">
                                 <div>
 
-                                    <button class="btn btn-start" ng-click="startChallenge('tab_' + section.taskNumber, section.timer)" type="button">
+                                    <button class="btn btn-start" ng-click="startChallenge()" type="button">
                                         <span>Task:</span><br>
                                         <span class="task-description">Complete ALL the tasks within the given time.</span><br>
                                         Start
@@ -78,10 +78,12 @@
 
                     <div id="start-stop-timer" class="set-timer">
                         <p class="timer">
-                            <span class="initialTimer"></span><timer autostart="false" class="countdown" countdown="getTimerForASection(getTotalNumberFromAllSections('.total-number-for-the-section'), 10)" interval="1000">{{ countdown }}<span class="unit">s</span></timer>
+                            <span class="initialTimer"></span>
+                            <timer autostart="false" class="countdown" countdown="getTimerForASection(getTotalNumberFromAllSections('.total-number-for-the-section'), 10)" interval="1000">{{ countdown }}<span class="unit">s</span>
+                            </timer>
                         </p>
 
-                       <button id="start-stop-btn" class="btn" onclick="stopResumeTimer('start-stop-timer', this)" type="button">Start</button>
+                        <button id="start-stop-btn" class="btn" onclick="stopResumeTimer('start-stop-timer', this)" type="button">Start</button>
 
                     </div>
 
