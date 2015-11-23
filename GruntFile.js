@@ -3,6 +3,16 @@ module.exports = function (grunt) {
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
     grunt.initConfig({
+
+        connect: {
+            server: {
+                options: {
+                    port: 8080,
+                    base: ''
+                }
+            }
+        },
+
         pkg: grunt.file.readJSON('package.json'),
         jshint: {
             files: ['Gruntfile.js', 'js/*.js'],
@@ -47,6 +57,7 @@ module.exports = function (grunt) {
 
     /* Default task. Run `grunt` on the command line */
     grunt.registerTask('default', [
+        'connect',
         'jshint',
         'sass:dev',
         'watch'
